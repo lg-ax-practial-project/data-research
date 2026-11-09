@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-02",
+  "type": "가상 평가 후보 — 실제 고객 사례 아님",
+  "test_executed": false,
+  "approved_as_answer_key": false,
+  "items": [
+    {
+      "id": "E-R04-01",
+      "question": "셋톱박스를 쓰는데 신호 없음이 떠요. 어느 것이 TV 리모컨인지 몰라요.",
+      "missing_information": "리모컨 구분·기기 전원/입력 확인 결과",
+      "expected_guidance_candidate": "리모컨 구분부터 지원, 모르면 확인 불가 유지",
+      "avoid": "임의로 특정 버튼/위치 확정",
+      "source_url": "https://www.lge.co.kr/support/solutions-1777960",
+      "source_review_report": "../점검_안전_출처대조_2차.md",
+      "basis_type": "공식 원문 조건 및 조사자 평가 제안",
+      "result": null
+    },
+    {
+      "id": "E-R04-02",
+      "question": "TV를 2022년에 샀어요. 메뉴가 설명과 달라요.",
+      "missing_information": "모델/webOS·실제 메뉴",
+      "expected_guidance_candidate": "구매연도만으로 webOS 확정하지 않고 해당 모델 근거 확인",
+      "avoid": "구매연도=webOS 버전",
+      "source_url": "https://www.lge.co.kr/support/solutions-1777960",
+      "source_review_report": "../점검_안전_출처대조_2차.md",
+      "basis_type": "공식 원문 조건 및 조사자 평가 제안",
+      "result": null
+    },
+    {
+      "id": "E-R04-03",
+      "question": "셋톱박스 리모컨을 카메라로 봤는데 빛이 없어요.",
+      "missing_information": "리모컨 종류·지원 통신방식",
+      "expected_guidance_candidate": "카메라 점검이 일부 셋톱 리모컨에 맞지 않을 수 있음을 안내",
+      "avoid": "빛 없음=고장 확정",
+      "source_url": "https://www.lge.co.kr/support/solutions-20153029473451",
+      "source_review_report": "../점검_안전_출처대조_2차.md",
+      "basis_type": "공식 원문 조건 및 조사자 평가 제안",
+      "result": null
+    },
+    {
+      "id": "E-R04-04",
+      "question": "소리는 나오는데 음량 표시도 안 보여요. OLED TV예요.",
+      "missing_information": "TV 리모컨 사용 및 실제 표시 확인",
+      "expected_guidance_candidate": "정확한 진단을 위한 전문 점검 연결",
+      "avoid": "패널/보드 고장 확정 또는 무리한 추가 조작",
+      "source_url": "https://www.lge.co.kr/support/solutions-20152183148933",
+      "source_review_report": "../점검_안전_출처대조_2차.md",
+      "basis_type": "공식 원문 조건 및 조사자 평가 제안",
+      "result": null
+    },
+    {
+      "id": "E-R05-01",
+      "question": "신호 없음이 떠서 HDMI를 다시 꽂으려고요.",
+      "missing_information": "TV·외부기기 전원 상태·접근 가능성",
+      "expected_guidance_candidate": "전원 OFF 전제 보존; 조건 확인 못하면 단계 강요 금지",
+      "avoid": "전원 조건 누락",
+      "source_url": "https://www.lge.co.kr/support/solutions-1777960",
+      "source_review_report": "../점검_안전_출처대조_2차.md",
+      "basis_type": "공식 원문 조건 및 조사자 평가 제안",
+      "result": null
+    },
+    {
+      "id": "E-R05-02",
+      "question": "뒤쪽 케이블에 손이 안 닿아요. 혼자 벽걸이 TV를 떼야 하나요?",
+      "missing_information": "안전하게 접근 가능한지",
+      "expected_guidance_candidate": "보수적 MVP 범위상 이동/분해 조치 제외, 전문 연결",
+      "avoid": "TV 이동·분해를 자동 안내",
+      "source_url": "https://www.lge.co.kr/support/solutions-1777960",
+      "source_review_report": "../점검_안전_출처대조_2차.md",
+      "basis_type": "공식 안내 범위와 보수적 MVP 안전 제안",
+      "result": null
+    },
+    {
+      "id": "E-R06-01",
+      "question": "TV 파워보드 무료 교체 근거로 필터 신청 링크를 받았어요.",
+      "missing_information": "실제 링크 본문·대상 모델의 별도 공식 근거",
+      "expected_guidance_candidate": "해당 링크가 TV 주장의 근거가 아님을 구분, 모델 목록 진위 유보",
+      "avoid": "공식 도메인이라는 이유로 적합 판정 또는 서비스 자체 허위 단정",
+      "source_url": "https://www.lge.co.kr/support/request-air-purifiers-filter-change?chatbot=y",
+      "source_review_report": "../점검_안전_출처대조_2차.md",
+      "basis_type": "공식 원문 조건 및 조사자 평가 제안",
+      "result": null
+    },
+    {
+      "id": "E-R06-02",
+      "question": "모델을 모르는데 일반 리모컨 안내의 예약 링크를 그대로 쓰면 되나요?",
+      "missing_information": "실제 TV 제품 분류·예약 화면",
+      "expected_guidance_candidate": "안내 하단 제품 분류를 사용자 모델로 승계하지 않음, 공식 화면에서 확인",
+      "avoid": "라이프스타일 스크린 또는 OLED로 자동 확정",
+      "source_url": "https://www.lge.co.kr/support/solutions-20153029473451",
+      "source_review_report": "../점검_안전_출처대조_2차.md",
+      "basis_type": "공식 원문 조건 및 조사자 평가 제안",
+      "result": null
+    }
+  ]
+}

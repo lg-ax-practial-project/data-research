@@ -1,0 +1,24 @@
+{
+  "markdown": "죄송합니다.\n\n\n요청하신 페이지를\n\n\n찾을 수 없습니다.\n\n\n안녕하세요. LG전자 홈페이지 운영팀입니다.\n\n\n요청하신 페이지를 찾을 수 없습니다.\n\n\n![](https://account.lge.co.kr/lg5-common-member/lg5-common/images/header/logo.svg)\n\n[되돌아가기](https://account.lge.co.kr/redirect/clientBack)",
+  "rawHtml": "<!DOCTYPE html><html lang=\"ko\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n\t\n\t<meta http-equiv=\"X-UA-TextLayoutMetrics\" content=\"gdi\">\n\t<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no\">\n\t<meta name=\"description\" content=\"\">\n\t<title></title>\n\n\t<link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"https://account.lge.co.kr/lg5-common-member/lg5-common/images/favicon.ico\">\n\t<link rel=\"stylesheet\" href=\"https://account.lge.co.kr/lg5-common-member/lg5-common/css/reset.min.css\">\n\t<link rel=\"stylesheet\" href=\"https://account.lge.co.kr/lg5-common-member/lg5-common/css/app.min.css\">\n\n\t<script>\n\t\tvar digitalData = digitalData || {};\n\t</script>\n\n\t<link rel=\"stylesheet\" href=\"https://account.lge.co.kr/lg5-common-member/lg5-common/css/pages/UTS/UTS.min.css\">\n</head>\n<body>\n<div class=\"wrap\">\n\t<div class=\"container\">\n\t\t<div class=\"contents error-page\">\n\t\t\t<div class=\"error-inner\">\n\t\t\t\t<p class=\"tit\">\n\t\t\t\t\t죄송합니다.\n\t\t\t\t\t<br>\n\t\t\t\t\t요청하신 페이지를\n\t\t\t\t\t<br class=\"m-br\">\n\t\t\t\t\t찾을 수 없습니다.\n\t\t\t\t</p>\n\t\t\t\t<p class=\"desc\">\n\t\t\t\t\t안녕하세요. LG전자 홈페이지 운영팀입니다.\n\t\t\t\t\t<br>\n\t\t\t\t\t요청하신 페이지를 찾을 수 없습니다.\n\t\t\t\t</p>\n\t\t\t\t<div class=\"ci\" aria-hidden=\"true\">\n\t\t\t\t\t<img src=\"https://account.lge.co.kr/lg5-common-member/lg5-common/images/header/logo.svg\" alt=\"\" width=\"300\" height=\"150\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"btns\">\n\t\t\t\t\t<a href=\"https://account.lge.co.kr/redirect/clientBack\" class=\"btn\"><span>되돌아가기</span></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n</body></html>",
+  "links": [
+    "https://account.lge.co.kr/redirect/clientBack"
+  ],
+  "metadata": {
+    "language": "ko",
+    "title": "",
+    "viewport": "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no",
+    "description": "",
+    "favicon": "https://account.lge.co.kr/lg5-common-member/lg5-common/images/favicon.ico",
+    "scrapeId": "01a1306e-84eb-7009-9719-bda368c6d55b",
+    "sourceURL": "https://account.lge.co.kr/terms/emp/detailView?tmsId=A_ITG_CUP_CARESOL&tmsDvdCd=RQD",
+    "url": "https://account.lge.co.kr/error/404",
+    "statusCode": 200,
+    "contentType": "text/html;charset=utf-8",
+    "timezone": "America/New_York",
+    "proxyUsed": "basic",
+    "indexId": "c6ec6094-1e95-42d1-98c7-8c36910c60d1",
+    "creditsUsed": 1,
+    "concurrencyLimited": false
+  }
+}

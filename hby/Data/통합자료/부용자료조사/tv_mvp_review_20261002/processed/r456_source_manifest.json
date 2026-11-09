@@ -1,0 +1,46 @@
+{
+  "confirmed_at": "2026-10-02",
+  "review_scope": [
+    "R04",
+    "R05",
+    "R06"
+  ],
+  "format": "Markdown本文抽出・전체 HTML 아님",
+  "public_redistribution_review": "미완료",
+  "actual_device_operations": 0,
+  "agent_test_executed": false,
+  "files": [
+    {
+      "file": "../raw/r456_purifier.md",
+      "sha256": "AB57C2A68F7234FD27655319E3C1AF47A46947392BBE84858A1A2B8BE1207395",
+      "url": "https://www.lge.co.kr/support/request-air-purifiers-filter-change?chatbot=y",
+      "title": "공기청정필터신청 | 고객지원 | LG전자",
+      "body_display_date": null,
+      "http_status": 200
+    },
+    {
+      "file": "../raw/r456_remote.md",
+      "sha256": "C27F70E858B6FE5C3FDD3A12F8A46BC118FFFDCAE1D6CD30DB55D5100A432636",
+      "url": "https://www.lge.co.kr/support/solutions-20153029473451",
+      "title": "[LG TV] 일반 리모컨 점검방법 | 스스로 해결 | 고객지원 | LG전자",
+      "body_display_date": "2026-05-29",
+      "http_status": 200
+    },
+    {
+      "file": "../raw/r456_signal.md",
+      "sha256": "892B52EC52004FA7E827C9C45D20A73C6EA9661378A9F71D707F3804DB8FFC67",
+      "url": "https://www.lge.co.kr/support/solutions-1777960",
+      "title": "손쉬운 설명 - LG TV 신호 없음 메시지 해결 가이드 | 스스로 해결 | 고객지원 | LG전자",
+      "body_display_date": "2026-06-22",
+      "http_status": 200
+    },
+    {
+      "file": "../raw/r456_sound.md",
+      "sha256": "DE54AEA225FDF2B26480D5593DD04765B9BEA4189B5E182DBBC029AC3960D20E",
+      "url": "https://www.lge.co.kr/support/solutions-20152183148933",
+      "title": "[LG 올레드 TV 화면] 화면은 안 나오고 소리만 나와요 | 스스로 해결 | 고객지원 | LG전자",
+      "body_display_date": "2026-06-22",
+      "http_status": 200
+    }
+  ]
+}

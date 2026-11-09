@@ -1,0 +1,38 @@
+{
+  "observed_date": "2026-10-02",
+  "method": "비로그인 공개 브라우저 UI 관찰",
+  "interview_count": 0,
+  "chatbot_scenario_conversation_count": 0,
+  "notes": "가상 시나리오 전체 입력이 아닌 검색 관찰. 기존 comparison_scenarios.json의 대화 미실행 상태는 유지한다.",
+  "records": [
+    {
+      "id": "WEB-01",
+      "input": "TV 화면은 안 나오고 소리만 나와요",
+      "route": "고객지원 메인 검색 → 고객지원 탭",
+      "url": "https://www.lge.co.kr/search?keyword=TV+%ED%99%94%EB%A9%B4%EC%9D%80+%EC%95%88+%EB%82%98%EC%98%A4%EA%B3%A0+%EC%86%8C%EB%A6%AC%EB%A7%8C+%EB%82%98%EC%99%80%EC%9A%94&tab=support",
+      "result_count": 14,
+      "ai_summary_label_observed": true,
+      "reference_url": "https://www.lge.co.kr/support/solutions-20152183148933",
+      "summary_paraphrase": "음량 표시 유무에 따른 점검 분기, 전원 OFF 후 HDMI 재연결, 조건에 맞는 셋톱박스 재시작 안내",
+      "original_response": null,
+      "screenshot_file": null,
+      "limitation": "첫 고장·구입 8개월 조건을 입력하지 않았고 대화 질문을 관찰하지 않았다."
+    },
+    {
+      "id": "WEB-02",
+      "input": "TV 11개월 영수증 없는데 무료 수리되나요",
+      "route": "검색창 → 통합검색",
+      "url": "https://www.lge.co.kr/search?keyword=TV+11%EA%B0%9C%EC%9B%94+%EC%98%81%EC%88%98%EC%A6%9D+%EC%97%86%EB%8A%94%EB%8D%B0+%EB%AC%B4%EB%A3%8C+%EC%88%98%EB%A6%AC%EB%90%98%EB%82%98%EC%9A%94&burl=%2Fsearch",
+      "observed_result": "검색결과가 없습니다.",
+      "screenshot_file": null,
+      "limitation": "WEB-01과 검색 경로가 달라 동일 조건 성능 비교로 사용하지 않는다."
+    },
+    {
+      "id": "DOC-01",
+      "url": "https://www.lge.co.kr/support/rates-warranty-guide",
+      "route": "공식 문서 직접 열람 → 보증기간 안내 탭",
+      "observed_topics": ["구입·배송일", "구입 증빙 부재", "제품·핵심부품 보증 구분", "구매·사용 형태 예외"],
+      "limitation": "개별 무상 수리 확정 및 정부 기준 대조는 수행하지 않았다."
+    }
+  ]
+}

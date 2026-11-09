@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-04",
+  "method": "Firecrawl official-domain search; full HTML retrieval required before inclusion",
+  "queries": [
+    {
+      "topic": "리모컨 작동 안",
+      "results": [
+        {
+          "title": "LG TV 매직 리모컨 연결 안 됨 및 음성 인식 오류 해결 가이드 - LG전자",
+          "url": "https://www.lge.co.kr/support/solutions-20153749094807"
+        },
+        {
+          "title": "[LG TV 리모컨] 리모컨 작동이 안 돼요 | 스스로 해결 | 고객지원 - LG전자",
+          "url": "https://www.lge.co.kr/support/solutions-1777854?category=CT50019021&subCategory=CT50019052&mktModelCd=55LH90QD-NA&sort=update&page=0&cstFlag=Y&productCode=SDLED&seq=137"
+        },
+        {
+          "title": "[LG TV 매직리모컨] 매직모션 리모컨 포인트 작동이 안 되거나 부자연스럽 ...",
+          "url": "https://www.lge.co.kr/support/solutions-1333004114799?category=CT50019021&subCategory=CT50019082&mktModelCd=75QNED85TKA&sort=update&page=0&cstFlag=Y&seq=80"
+        },
+        {
+          "title": "LG TV 매직 리모컨 연결 안 됨 및 음성 인식 오류 해결 가이드 - LG전자",
+          "url": "https://www.lge.co.kr/support/solutions-20153749094807?category=CT50019021&subCategory=CT50019037&mktModelCd=OLED65B1FNA&sort=update&page=1&productCode=OTLED&seq=30"
+        }
+      ]
+    },
+    {
+      "topic": "화면 세로줄",
+      "results": [
+        {
+          "title": "[LG 모니터 화면] 화면이 늦게 나오거나 안 나와요 | 스스로 해결 | 고객 ...",
+          "url": "https://www.lge.co.kr/support/solutions-20152129549244?category=CT50019563&subCategory=CT50019602&mktModelCd=27GN60R-BB&sort=update&page=0&cstFlag=Y&productCode=PCMNT&seq=5"
+        }
+      ]
+    },
+    {
+      "topic": "와이파이 연결 안",
+      "results": [
+        {
+          "title": "[LG TV 인터넷연결] 인터넷 연결이 안 되고, 연결 끊김 / 장애 발생(DNS ...",
+          "url": "https://www.lge.co.kr/support/solutions-1300176600136?category=CT50019021&subCategory=CT50019052&mktModelCd=52LB5DF-UC&sort=update&page=0&cstFlag=Y&productCode=SDLED&seq=174"
+        },
+        {
+          "title": "[LG TV] 인터넷 연결이 안 될 때 어떻게 해결하나요? - LG전자",
+          "url": "https://www.lge.co.kr/support/solutions-20151952645799?category=CT50019021&subCategory=CT50019022&mktModelCd=SU50NS-KR&sort=update&page=1&cstFlag=Y&productCode=MOVPJ&seq=60"
+        },
+        {
+          "title": "스마트폰 화면을 LG TV로 크게 보는 방법 (안드로이드, 아이폰 무선 연결)",
+          "url": "https://www.lge.co.kr/support/solutions-20152091718481?category=CT50019021&subCategory=CT50019037&mktModelCd=OLED65C1KNA&sort=update&page=0&cstFlag=Y&seq=37"
+        },
+        {
+          "title": "LG TV 화면에 셋톱박스 오류 문구가 뜨고 방송이 안 나올 때 해결 방법",
+          "url": "https://www.lge.co.kr/support/solutions-20152081551580?category=CT50019021&subCategory=CT50109024&sort=update&page=0&cstFlag=Y&productCode=LSLED&seq=200"
+        }
+      ]
+    }
+  ],
+  "screen_query_results": [
+    {
+      "title": "[LG 노트북 화면] PC 화면의 밝기가 자동으로 변해요 | 스스로 해결",
+      "url": "https://www.lge.co.kr/support/solutions-20150756927988"
+    },
+    {
+      "title": "[LG Soundbar] 사운드바 본체와 무선 우퍼, 후면 스피커 페어링 하기 ...",
+      "url": "https://www.lge.co.kr/support/solutions-20153645765950?category=CT50019021&subCategory=CT50019052&mktModelCd=OPTION-HP&sort=update&page=0&cstFlag=Y&productCode=SDLED&seq=39"
+    },
+    {
+      "title": "[LG 노트북] LG Security Guard 경고 알람 해제가 안 돼요 | 스스로 해결",
+      "url": "https://www.lge.co.kr/support/solutions-20153988667500?category=CT50019563&subCategory=CT50019564&mktModelCd=14T30Q-E&sort=update&page=0&cstFlag=Y&productCode=GRNTB&seq=86"
+    }
+  ],
+  "scope_note": "Screen lines/flickering search results did not establish a suitable TV article; monitor, laptop and soundbar results excluded. Counts are document counts, not customer incidents."
+}

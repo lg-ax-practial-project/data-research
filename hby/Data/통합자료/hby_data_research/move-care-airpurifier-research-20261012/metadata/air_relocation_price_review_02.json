@@ -1,0 +1,47 @@
+{
+  "date_kst": "2026-10-12",
+  "issuer": "LX판토스",
+  "public_page": "https://move.lxpantos.com/mvinst/priceTable.jsp",
+  "public_data_url": "https://move.lxpantos.com/mvinst/mvInstProd/retrievePriceTable.ajax?callback=priceTableSearchInfo_callbackFunc",
+  "source_record_count": 78,
+  "column_counts": {
+    "attribute1": 78,
+    "cdNm": 78,
+    "olType2Nm": 78,
+    "rmvSaleCost": 78,
+    "instSaleCost": 78,
+    "mvSaleCost": 78
+  },
+  "column_mapping": {
+    "attribute1": "구분",
+    "cdNm": "품목",
+    "olType2Nm": "품명",
+    "rmvSaleCost": "철거비용",
+    "instSaleCost": "설치비용",
+    "mvSaleCost": "이전설치 비용 (철거+설치+기본운송비용4만원)"
+  },
+  "selected_rows": [
+    {
+      "source_record_number": 72,
+      "attribute1": "기타",
+      "cdNm": "공기청정기",
+      "olType2Nm": "공기청정기",
+      "rmvSaleCost": "24,000",
+      "instSaleCost": "34,000",
+      "mvSaleCost": "98,000"
+    }
+  ],
+  "base_transport_krw": 40000,
+  "base_distance": "0km 이상 10km 미만",
+  "table_arithmetic_consistent": true,
+  "ui_rendering_verified": false,
+  "verification_method": "공개 페이지 showTable 열 매핑 및 공개 응답의 동일 레코드 순서를 대조. 전체6열 각78개. 표기 합산 일치 확인. 클릭한 화면 캡처는 없음.",
+  "limits": [
+    "AS192DSFAM 모델별 적용 확정 아님",
+    "구독 무상 혜택 적용 여부 미확인",
+    "정기 방문관리 가능 지역과 이전설치 운송 가능 지역은 다름",
+    "해지 회수비39,000원/35,000원과 다른 비용",
+    "운송거리·추가 작업·출장비 조건 별도",
+    "거리 경계 올림·거리 산정법·VAT 처리 미확인"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "source_id": "LG_INSTALL",
+  "data_kind": "official_guidance_paraphrase",
+  "unit": "mm",
+  "source_content": "설치 체크리스트 이미지 대체텍스트",
+  "universal_rule": false,
+  "examples": [
+    {
+      "tap_position": "side",
+      "space_width": 900,
+      "space_height": 2000,
+      "space_depth": 900,
+      "door_open_depth": 1500
+    },
+    {
+      "tap_position": "rear",
+      "space_width": 1050,
+      "space_height": 2000,
+      "space_depth": 1000,
+      "door_open_depth": 1600
+    }
+  ],
+  "note": "공용 안내 수치. 제품 외형 치수 아님. 모델별 설치 확정 판정에 단독 사용 금지."
+}

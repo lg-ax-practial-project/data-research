@@ -1,0 +1,394 @@
+{
+  "date": "2026-10-12",
+  "queries": [
+    {
+      "query": "site:lge.co.kr 공기청정기 구독 방문주기 3개월 6개월 회수비",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/story/subscription-guide/12\", #2 \"https://www.lge.co.kr/care-solutions/rentalService\", #3 \"https://www.lge.co.kr/care-solutions/rentalService-aboutcare\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/story/subscription-guide/12",
+              "title": "360˚ 공기청정기 구독가이드 - LG전자",
+              "description": "4 days ago · 복합필터는 12개월마다 교체, 극세필터는 방문 주기마다 교체합니다. ... 회수비(인건비 + 운송비)가 부과됩니다. 제품별 회수비 : 정수기·맥주 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService",
+              "title": "가전 구독 서비스 안내 - LG전자",
+              "description": "- [홈](https://www.lge.co.kr/)\n- [가전 구독](https://www.lge.co.kr/care-solutions)\n- 구독 안내/혜택\n- **구독 이용 가이드**\n\n# 가전 구독 서비스 안내\n## 대표 제품별 구독 서비스를 확인해 보세요\n### 공기청정필터\n![2명의 기사님이 공기청정필터를 교체하고 있는 이미지](https://www.lge.co.kr/kr/home_app_subscribe/src/images/service-air02.png)\n\n## 구독으로 시작하기 좋은 제품\n43. [![LG 트롬 건조기](https://static-store.lge.co.kr/kr/images/dryers/md10241826/md10241826-450x450.jpg)\\\n\\\n**LG 트롬 건조기**\\\n\\\n\\\n**10Kg**\\\n\\\n**3등급**\\\n\\\nRH10WTW\\\n\\\n\\\n**23,900**\\\n**원**](https://www.lge.co.kr/care-solutions/dryers/rh10wtw-akor?dpType=careTab)\n44. [![LG 트롬 오브제컬렉션 건조기](https://static-store.lge.co.kr/kr/images/dryers/md10373835/md10373835-450x450.jpg)\\\n\\\n**LG 트롬 오브제컬렉션 건조기**\\\n\\\n\\\n**20kg**\\\n\\\n**3등급**\\\n\\\nRG20KN\\\n\\\n\\\n**34,900**\\\n**원**](https://www.lge.co.kr/care-solutions/dryers/rg20kn?dpType=careTab)\n49. [![LG 퓨리케어 AI 오브제컬렉션 에어로퍼니처](https://static-store.lge.co.kr/kr/images/air-purifier/md10570829/md10570829-450x450.jpg)\\\n\\\n**LG 퓨리케어 AI 오브제컬렉션 에어로퍼니처**\\\n\\\n\\\n**19.8㎡**\\\n\\\n**3등급**\\\n\\\nAS065PWHA\\\n\\\n\\\n**20,900**\\\n**원**](https://www.lge.co.kr/care-solutions/air-purifiers/as065pwha?dpType=careTab)\n50. [![LG 퓨리케어 AI 오브제컬렉션 에어로캣타워](https://static-store.lge.co.kr/kr/images/air-purifier/md10570830/md10570830-450x450.jpg)\\\n\\\n**LG 퓨리케어 AI 오브제컬렉션 에어로캣타워**\\\n\\\n\\\n**19.8㎡**\\\n\\\n**3등급**\\\n\\\nAS065CWHA\\\n\\\n\\\n**30,900**\\\n**원**](https://www.lge.co.kr/care-solutions/air-purifiers/as065cwha?dpType=careTab)",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService-aboutcare",
+              "title": "케어 서비스/케어십 소개 | 케어십 | 서비스 구독 | 가전 구독 | LG 전자",
+              "description": "## LG전자 공기청정기 케어서비스\n공기청정기 가전 구독은\n\n- 프리미엄은 3/6개월(분해 케어_완전 분해는 30/60개월) 방문 주기로\n\n- 라이트 플러스는 3/6개월 방문 주기로 제공됩니다.\n\n![](https://www.lge.co.kr/kr/main/caresolution/renew_2206/assets/rmsf2022/s-common/img_airpurifier05.jpg)\n\n## LG전자 청소기 회수관리 케어서비스\n![](https://www.lge.co.kr/kr/main/caresolution/renew_2206/assets/rmsf2023/s-common/img_vacuum07.jpg)\n\n## LG전자 제습기 케어서비스\n공기청정필터는 12개월 주기로 교체해드립니다.",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/story/subscription-guide/16",
+              "title": "에어로타워구독 가이드 - LG전자",
+              "description": "에어로타워는 구독 서비스를 이용하면 복합/ 극세필터, 공기청정기 넓은 거실을 사용하는 3~5인 가족 AI 공기질 센서, UV ・ 정기 케어 주기 3/6개월 3/6/12개월 요금제 ...",
+              "position": 4
+            },
+            {
+              "url": "https://www.lge.co.kr/story/buying-guide/care-solutions-guide1",
+              "title": "우리집 공기를 청정하게 관리하는 에어컨/에어케어 가전 구독 가이드",
+              "description": "프리미엄/라이트플러스 모두 방문 케어서비스는 12개월 마다, 분해/기본 세척은 36개월 마다 서비스 제공해드려요. LG전자에서 공기청정기를 구독하면 무엇이 좋은가요 ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12faf-c975-7006-8756-d999026367df",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr 공기청정기 구독 이사 주소 변경 관리 불가 지역",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/care-solutions/rentalService\", #2 \"https://www.lge.co.kr/support\", #3 \"https://www.lge.co.kr/support/find-service-center\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService",
+              "title": "가전 구독 서비스 안내 - LG전자",
+              "description": "구독은 제품 이용과 케어서비스를 ・ 정기 방문서비스는 중단되고, '고객'은 월요금 납입 없이 ・ 1544-7777)하며, 뉴에서 납부정보 변경을 통하여 변경하실 수 있습니다. ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/support",
+              "title": "고객지원 - LG전자",
+              "description": "고객센터로 전화하지 ・ 제품 구입/사용 ・ 예약 조회/ 변경 서비스 전문 상담 ・ 공기청정기 자가 LG전자 대표번호 : 02-3777-1114 1:1 문의 전화상담 ・ 운영합니다. 대 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/support/find-service-center",
+              "title": "센터 찾기 | 서비스 예약 | 고객지원 - LG전자",
+              "description": "# 센터찾기\n- [지역](https://www.lge.co.kr/support/find-service-center#tab1)",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/air-purifier/as206nsham?sKwd=AI%20%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0&sTab=unit_product_list&sRank=9",
+              "title": "LG 퓨리케어 AI 오브제컬렉션 360˚ 공기청정기 M5 + 무빙휠 세트",
+              "description": "Rating 5.0(67)케어서비스구독하면 관리까지! 5.0. Total rating count(67). AI 리뷰 요약. AI ... 인수고객과 통화 불가 및 수령지 주소가 불명확할 경우 지연될 수 있습니다. 폐 ...",
+              "position": 4
+            },
+            {
+              "url": "https://www.lge.co.kr/support/service-engineer-reservation",
+              "title": "출장 서비스 예약 | 서비스 예약 | 고객지원 - LG전자",
+              "description": "LG전자 고객지원에서 간편하고 편리한 출장 서비스 예약을 만나보세요. 문의 (가구/조명/패브릭 등) (구독)1544-7777",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12faf-c928-76bd-8f9d-8f8ac64dfa48",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:kca.go.kr 물품대여서비스업 해외 이주 50% 관리 불가능 지역",
+      "result": {
+        "agent_hints": [
+          "All 3 web results are excerpts only (#1 \"https://www.kca.go.kr/home/board/downloadlink.do?bid=00000032&did=1003862939\", #2 \"https://www.kca.go.kr/home/board/downloadlink.do?bid=00000032&did=1003301310\", #3 \"https://www.kca.go.kr/home/board/downloadlink.do?bid=00000032&did=1003528062\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.kca.go.kr/home/board/downloadlink.do?bid=00000032&did=1003862939",
+              "title": "[PDF] 2024년 소비자 피해구제 연보 - 한국소비자원",
+              "description": "또한, 물품대여서비스업을 기존 1개 업종에서 2개 업종(장기·단기)로 변경하고. 의상, 액세서리 등 일회성 단기대여 품목에 대한 기간별 계약해지의 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.kca.go.kr/home/board/downloadlink.do?bid=00000032&did=1003301310",
+              "title": "[PDF] 2021년 소비자 피해구제 연보 - 한국소비자원",
+              "description": "가 가능토록 하였고, 해외 이주, 장기유학의 경우 관련 자료 제출 시에는 위. 약금 없이 계약해지(단, 할인 혜택 금액은 반납)가 가능토록 규정을 보완 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.kca.go.kr/home/board/downloadlink.do?bid=00000032&did=1003528062",
+              "title": "[PDF] 2022년 소비자 피해구제 연보 - 한국소비자원",
+              "description": "가능토록 하였고, 해외 이주, 장기유학의 경우 관련 자료 제출 시에는 위약금. 없이 계약해지(단, 할인 혜택 금액은 반납)가 가능토록 규정을 보완하였음. 애완견판매업 ...",
+              "position": 3
+            }
+          ]
+        },
+        "id": "01a12faf-c8ef-7765-8735-f055ec5ab506",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "air_product_search",
+      "result": {
+        "agent_hints": [
+          "No web results were returned. If the task is still unresolved, use firecrawl_search again with {\"query\":\"<broader or alternative query>\",\"sources\":[\"web\"]}."
+        ],
+        "success": true,
+        "data": {
+          "web": []
+        },
+        "id": "01a12fb0-69f1-7060-bbc4-12d872b471a0",
+        "creditsUsed": 0
+      }
+    },
+    {
+      "query": "site:lge.co.kr 공기청정기 구독 AS 3개월 5년 라이트",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/care-solutions/rentalService-aboutcare\", #2 \"https://www.lge.co.kr/story/buying-guide/care-solutions-guide1\", #3 \"https://www.lge.co.kr/story/buying-guide/care-solutions-guide-2-air-conditioners\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService-aboutcare",
+              "title": "케어 서비스/케어십 소개 | 케어십 | 서비스 구독 | 가전 구독 | LG 전자",
+              "description": "## LG전자 제습기 케어서비스\n![라이트](https://www.lge.co.kr/kr/main/caresolution/renew_2206/assets/rmsf2026/s-common/img_dehumidifier_04_260415.jpg)",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/story/buying-guide/care-solutions-guide1",
+              "title": "우리집 공기를 청정하게 관리하는 에어컨/에어케어 가전 구독 가이드",
+              "description": "프리미엄/라이트플러스 모두 방문 케어서비스는 12개월 마다, 분해/기본 세척은 36개월 마다 서비스 제공해드려요. LG전자에서 공기청정기를 구독하면 무엇이 좋은가요 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/story/buying-guide/care-solutions-guide-2-air-conditioners",
+              "title": "LG 스탠드 에어컨 구독 가이드 : 구독 혜택, 케어서비스, 요금제 - LG전자",
+              "description": "프리미엄은 스팀, UV, 피톤치드 케어를 36개월마다 제공해드립니다. 라이트 플러스는 스팀 케어는 36개월마다, UV와 피톤치드 케어는 12개월마다 제공해 드립니다. ... 필터 ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/story/subscription-guide/12",
+              "title": "360˚ 공기청정기 구독가이드 - LG전자",
+              "description": "# 360˚ 공기청정기   구독가이드\n## 360˚ 공기청정기 구독 신청 방법\n### 편한 방법을 골라 신청하세요\nREVIEW",
+              "position": 4
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService",
+              "title": "가전 구독 서비스 안내 - LG전자",
+              "description": "# 가전 구독 서비스 안내\n## 구독으로 시작하기 좋은 제품\n13. [![LG 그램 Pro AI 2026, Copilot+ PC](https://static-store.lge.co.kr/kr/images/notebook/md10744830/md10744830-450x450.jpg)\\\n\\\n**LG 그램 Pro AI 2026, Copilot+ PC**\\\n\\\n\\\n**40.6cm**\\\n\\\n**AMD 라이젠™ AI 5**\\\n\\\n16Z95U-G\\\n\\\n\\\n9%\\\n**78,800**\\\n**원**\\\n\\\n최대혜택가 **71,700**\\\n**원**](https://www.lge.co.kr/care-solutions/notebook/16z95u-gs5wk?dpType=careTab)",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12fb1-8d20-76ed-8b3a-baab15f8b9a5",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"구독\" \"주소 변경\"",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/care-solutions/rentalService-aboutcare\", #2 \"https://www.lge.co.kr/kr/business/contents/rental-care/rental-care-info.do\", #3 \"https://www.lge.co.kr/story/faq/ai-home-faq\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService-aboutcare",
+              "title": "케어 서비스/케어십 소개 | 케어십 | 서비스 구독 | 가전 구독 | LG 전자",
+              "description": "## LG 가전 케어 전문가의 케어서비스\n- [케어서비스](https://www.lge.co.kr/care-solutions/rentalService-aboutcare#service-rental)\n\n### 보이는 ARS 서비스\n1. 이용가능 서비스\n   - 결제정보변경, 주소변경, 요금납부, 매니저 방문요청, AS 접수 가능",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/kr/business/contents/rental-care/rental-care-info.do",
+              "title": "LG 가전 구독 케어 서비스 - LG전자",
+              "description": "... 구독 가전구독 하위 메뉴 펼치기. 오래오래 깨끗하게, 안심하고 사용할 수 ... 주소변경; 요금납부. 2. 계약문의 및 유지관리. 계약정보 및 케어십 문의; 계약해지 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/story/faq/ai-home-faq",
+              "title": "AI Home, 자주 묻는 질문 살펴보기 | FAQ | 가이드 | 스토리 - LG전자",
+              "description": "상세주소 변경은 가상 계좌에 입금이 되기 전 상태인 '주문 접수'와 '배송 ... 구독)1544-7777; 복지몰 제휴사 구매 문의 : (가전)1544-8777, (구독)1544-7777 ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/kr/ebook/2023/november/careship_b2b/catImage/309/202311_careship_b2b_catalogue.pdf",
+              "title": "[PDF] 가전 구독도 역시 - LG전자",
+              "description": "LG전자의 편리한 가전/서비스 구독 이용 방법. 결제정보 변경. 명의변경. 요금납부. 이전설치. 주소변경. 제품문의 및 A/S접수. 매니저 방문요청. 가전/서비스 구독 문의.",
+              "position": 4
+            },
+            {
+              "url": "https://www.lge.co.kr/story/newsroom/167027",
+              "title": "LG 케어솔루션 고객 편의 위해 '보이는 ARS' 본격 도입 | LG전자 뉴스룸",
+              "description": "... 주소 변경 △요금 납부 △케어솔루션 매니저의 연락 요청 △A/S접수 등을 365일 ... 구독) : 1544-7777; 홈스타일 문의 (가구/조명/패브릭 등) : 1544-7599; LG전자/LG계열사 ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12fb1-8dba-743d-ad4d-c768a67ebb20",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"정기관리가\" \"지역\"",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/support/solutions-20153048324676?category=CT50019441&subCategory=CT50019442&mktModelCd=K337TS25&sort=update&page=0&cstFlag=Y&productCode=STKRE&seq=48\", #2 \"https://www.lge.co.kr/refrigerators/m876gga161?sKwd=1%EB%93%B1%EA%B8%89%EB%83%89%EC%9E%A5%EA%B3%A0%20UV%EC%B2%AD%EC%A0%95%ED%83%88%EC%B7%A8%ED%95%84%ED%84%B0&sTab=unit_product_list&sRank=23\", #3 \"https://www.lge.co.kr/refrigerators/m875gcc582s\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/support/solutions-20153048324676?category=CT50019441&subCategory=CT50019442&mktModelCd=K337TS25&sort=update&page=0&cstFlag=Y&productCode=STKRE&seq=48",
+              "title": "[LG ThinQ] UP가전이 궁금해요 | 스스로 해결 | 고객지원 | LG전자",
+              "description": "[LG ThinQ] UP가전이 궁금해요 에 대한 LG전자 공식 해결 방법을 확인하세요. 증상별 원인과 단계별 조치 방법을 안내합니다.",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/refrigerators/m876gga161?sKwd=1%EB%93%B1%EA%B8%89%EB%83%89%EC%9E%A5%EA%B3%A0%20UV%EC%B2%AD%EC%A0%95%ED%83%88%EC%B7%A8%ED%95%84%ED%84%B0&sTab=unit_product_list&sRank=23",
+              "title": "LG 디오스 오브제컬렉션 STEM 베이직 냉장고 (매직스페이스) | 주방가전",
+              "description": "또한, 석회질 지역, 도서지역에는 설치가 불가능합니다. * 얼음 트레이에 물이 자동으로 급수되어 얼음이 얼려지며, 완전히 얼린 얼음은 얼음 저장통에 떨어져 저장 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/refrigerators/m875gcc582s",
+              "title": "LG 디오스 오브제컬렉션 STEM 베이직 냉장고 (노크온 더블매직 ...",
+              "description": "전체 용량 (L) : 854; 색상 : 오브제컬렉션 클레이 브라운 / 클레이 브라운; 도어스타일/재질 : 글라스; 냉각방식 : 멀티냉각방식; 에너지 소비효율등급 : 2등급.",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/water-purifiers/wu523as?sKwd=%ED%93%A8%EB%A6%AC%EC%BC%80%EC%96%B4%EC%A0%95%EC%88%98%EA%B8%B0%EB%B9%8C%ED%8A%B8%EC%9D%B8&sTab=unit_product_list&sRank=9",
+              "title": "LG 퓨리케어 정수기 (빌트인, 냉온정) | WU523AS | 정수기 | 주방가전 ...",
+              "description": "LG 퓨리케어 정수기 (빌트인, 냉온정) WU523AS은 온수/정수/냉수를 간편하게 사용할 수 있고 중금속과 노로바이러스를 걸러주는 필터 시스템과 필터부터 출수구까지 ...",
+              "position": 4
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/system-air-conditioners/pw1101t9ksl?dpType=careTab&sKwd=%EC%83%81%EC%97%85%EC%9A%A9%20%EC%8A%A4%ED%83%A0%EB%93%9C&sTab=unit_subscribe_list&sRank=3",
+              "title": "LG 상업용스탠드에어컨 프리미엄 PLUS | PW1101T9KSL | 가전 구독",
+              "description": "LG 상업용스탠드에어컨 프리미엄 PLUS PW1101T9KSL은 냉난방 기능, 아이스쿨파워, 롱파워바람을 적용한 상업용스탠드에어컨입니다.",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12fb1-8d1d-703f-84da-d48fc4a46b2e",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:kca.go.kr \"공기청정기\" \"이사\" \"위약금\"",
+      "result": {
+        "agent_hints": [
+          "All 4 web results are excerpts only (#1 \"https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1002635860&page=61\", #2 \"https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1001456288\", #3 \"https://www.kca.go.kr/kca/board/download.do?menukey=5084&fno=10022190&bid=00000013&did=1002685344\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1002635860&page=61",
+              "title": "한국소비자원 > 소비자뉴스 > 보도자료 > 상세보기",
+              "description": "... 공기청정기'(24.2%), '이동전화서비스'(20.0%) 등의 ... 위약금 미지원 등 계약불이행 단순변심으로 인한 ... 1,304. 2.0. 결합상품 중도해지 시 설치비용 및 위약금 과다청구 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1001456288",
+              "title": "소비자뉴스 - 한국소비자원",
+              "description": "포장이사서비스업체, 60%이상은 소비자피해에 모르쇠. 등록일, 2013-11-26, 조회수 ... 인터넷교육서비스 중도해지 시, 과다 위약금 청구 피해 많아. 이전글, 나에게 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.kca.go.kr/kca/board/download.do?menukey=5084&fno=10022190&bid=00000013&did=1002685344",
+              "title": "[PDF] 보 도 자 료 - 한국소비자원",
+              "description": "해지/위약금'(13,939건), '계약불이행'(9,906건) 등의 순임. * '품질'은 에어컨, 침대, 치과, '계약해제·해지/위약금'은 헬스장·휘트니스센터, 초고속인터넷, 투자.",
+              "position": 3
+            },
+            {
+              "url": "https://www.kca.go.kr/home/board/downloadlink.do?bid=00000032&did=1003301310",
+              "title": "[PDF] 2021년 소비자 피해구제 연보 - 한국소비자원",
+              "description": "에 서비스가 되지 않는 지역으로 이사할 경우 위약금 없이 계약해지가 가능 ... 공기청정기대여(렌트). 0. 0.0. 0. 0.0. 38. 5.9. 시스템에어컨. 57. 8.2.",
+              "position": 4
+            }
+          ]
+        },
+        "id": "01a12fb1-c049-75af-b129-d60953ecc564",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"공기청정기\" \"이사\" \"구독\"",
+      "result": {
+        "agent_hints": [
+          "All 4 web results are excerpts only (#1 \"https://www.lge.co.kr/m/category/care-solutions/air-purifiers\", #2 \"https://www.lge.co.kr/care-solutions/rentalService\", #3 \"https://www.lge.co.kr/story/buying-guide/care-solutions-guide1\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/m/category/care-solutions/air-purifiers",
+              "title": "LG 공기청정기 렌탈,구독/케어십 | 전체 - LG전자",
+              "description": "LG전자 공기청정기 렌탈,구독/케어십 전체 제품입니다. 가전 전문가의 케어로 깨끗한 공기를 유지할 수 있습니다.구독/케어십의 특별한 혜택을 경험해 보세요.",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService",
+              "title": "가전 구독 서비스 안내 - LG전자",
+              "description": "이사 시 철거/재설치를 1회 무료로 제공합니다. 무상 A/S 기간과 적용 범위는 ... 공기청정기 제습기 에어컨 전기레인지 식기세척기 광파오븐 의류관리기 안마 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/story/buying-guide/care-solutions-guide1",
+              "title": "우리집 공기를 청정하게 관리하는 에어컨/에어케어 가전 구독 가이드",
+              "description": "LG전자 가전 구독은 에어컨·공기청정기·가습기·제습기 등 공기 관련 가전의 전문가 점검과 소모품 교체 케어를 월 구독료 하나로 모두 제공하는 서비스입니다.",
+              "position": 3
+            },
+            {
+              "url": "https://bestshop.lge.co.kr/story/insight/brand/IN10009002",
+              "title": "가전제품 구독 서비스 케어 총정리 | 관리·수리·혜택 상세 가이드",
+              "description": "공기청정기, 필터 클리닝, 클린 부스터 클리닝(연 1회), 내/외부 토탈 ... 이사할 때 구독 가전 재설치, 가능한가요?",
+              "position": 4
+            }
+          ]
+        },
+        "id": "01a12fb1-c0c0-733f-a180-6023a00d3a41",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"구독\" \"주소\" \"변경\" \"마이페이지\"",
+      "result": {
+        "agent_hints": [
+          "All 4 web results are excerpts only (#1 \"https://www.lge.co.kr/support/solutions-20151827307151?category=CT50019441&subCategory=CT50019468&mktModelCd=R-T686LHZ&sort=update&page=0&cstFlag=Y&seq=74\", #2 \"https://www.lge.co.kr/support/solutions-20153048324676?category=CT50019441&subCategory=CT50019468&mktModelCd=S831SN75&sort=update&page=0&cstFlag=Y&seq=72\", #3 \"https://www.lge.co.kr/support/solutions-20152223975658?category=CT50019563&subCategory=CT50019564&mktModelCd=16ZD90Q-G&sort=update&page=1&productCode=GRNTB&seq=75\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/support/solutions-20151827307151?category=CT50019441&subCategory=CT50019468&mktModelCd=R-T686LHZ&sort=update&page=0&cstFlag=Y&seq=74",
+              "title": "[LG 냉장고] 고무패킹에 곰팡이와 검은 이물이 묻어 있어요 ...",
+              "description": "... 마이페이지마이페이지 · 로그인회원가입 · 주문/배송/구독 조회 · 멤버십 · 보유제품 관리 ... 변경. 서비스 예약. 출장 서비스 예약 · 센터 방문 예약 · 센터찾기 · 예약 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/support/solutions-20153048324676?category=CT50019441&subCategory=CT50019468&mktModelCd=S831SN75&sort=update&page=0&cstFlag=Y&seq=72",
+              "title": "[LG ThinQ] UP가전이 궁금해요 | 스스로 해결 | 고객지원 | LG전자",
+              "description": "... 마이페이지마이페이지 · 로그인회원가입 · 주문/배송/구독 조회 · 멤버십 · 보유제품 관리 ... 변경. 서비스 예약. 출장 서비스 예약 · 센터 방문 예약 · 센터찾기 · 예약 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/support/solutions-20152223975658?category=CT50019563&subCategory=CT50019564&mktModelCd=16ZD90Q-G&sort=update&page=1&productCode=GRNTB&seq=75",
+              "title": "[LG 노트북] LG DnA Center Plus 앱이 궁금해요 | 스스로 해결 ...",
+              "description": "... 마이페이지마이페이지 · 로그인회원가입 · 주문/배송/구독 조회 · 멤버십 · 보유제품 관리 ... 변경. 서비스 예약. 출장 서비스 예약 · 센터 방문 예약 · 센터찾기 · 예약 ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/support/solutions-1286501730003?category=CT50019441&subCategory=CT50109002&mktModelCd=D870BB-GBW&sort=update&page=0&cstFlag=Y&productCode=ULSBS&seq=50",
+              "title": "[LG 냉장고 냄새] 도어를 열면 냄새가 심하게 나요 | 스스로 해결 ...",
+              "description": "... 마이페이지마이페이지 · 로그인회원가입 · 주문/배송/구독 조회 · 멤버십 · 보유제품 관리 ... 변경. 서비스 예약. 출장 서비스 예약 · 센터 방문 예약 · 센터찾기 · 예약 ...",
+              "position": 4
+            }
+          ]
+        },
+        "id": "01a12fb1-c119-737c-84c0-fad9631dec85",
+        "creditsUsed": 2
+      }
+    }
+  ]
+}

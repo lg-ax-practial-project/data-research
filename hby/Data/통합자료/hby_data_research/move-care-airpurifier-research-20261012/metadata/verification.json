@@ -1,0 +1,19 @@
+{
+  "date_kst": "2026-10-12",
+  "source_count": 9,
+  "new_unique_sources": 3,
+  "official_pdf_copies_identical": 2,
+  "reused_files_identical": 10,
+  "evidence_anchors_verified": 9,
+  "authored_relative_links_checked": 31,
+  "missing_links": [],
+  "evaluation_questions": 20,
+  "search_or_calculator_tests_executed": false,
+  "criteria_pdf_pages_visually_checked": [
+    69,
+    70
+  ],
+  "old_personal_files_snapshotted": 67,
+  "stage_file_count_before_verification": 34,
+  "git_actions": "no commit, push, merge, staging or interface change"
+}

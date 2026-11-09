@@ -1,0 +1,102 @@
+[
+  {
+    "source_id": "LG-SERVICE-TERMS-PUBLIC-001",
+    "claim": "일반 서비스 약관 시행일",
+    "path": "raw/additional_04/LG-SERVICE-TERMS-PUBLIC-001.firecrawl.md",
+    "format": "markdown",
+    "exact_anchor": "본 약관은 2026년 6월 30일부터 시행합니다.",
+    "first_character_offset_zero_based": 24039,
+    "line_number": 469,
+    "sha256": "5057ea5104a8509c36db071fb59d7c2d9593ba947608a4487df5b93edb8e9ac3"
+  },
+  {
+    "source_id": "LG-ECOM-TERMS-PUBLIC-001",
+    "claim": "일반 전자상거래 약관 시행일",
+    "path": "raw/additional_04/LG-ECOM-TERMS-PUBLIC-001.firecrawl.md",
+    "format": "markdown",
+    "exact_anchor": "본 약관은 2025년 12월 11일부터 시행됩니다.",
+    "first_character_offset_zero_based": 22143,
+    "line_number": 497,
+    "sha256": "000efe2d70291c4d3b75631b847b16660fff73369186842ab577becd5b14e120"
+  },
+  {
+    "source_id": "LG-ECOM-TERMS-PUBLIC-001",
+    "claim": "제3조4항 구매계약 변경 조항의 과거 계약 취급. 구독 전부에 법적 우선 적용 확정 금지.",
+    "path": "raw/additional_04/LG-ECOM-TERMS-PUBLIC-001.firecrawl.md",
+    "format": "markdown",
+    "exact_anchor": "그 이전에 이미 체결된 계약에 대해서는 변경 전의 조항이 적용됩니다.",
+    "first_character_offset_zero_based": 2905,
+    "line_number": 57,
+    "sha256": "000efe2d70291c4d3b75631b847b16660fff73369186842ab577becd5b14e120"
+  },
+  {
+    "source_id": "LG-AIR-PRODUCT-001",
+    "claim": "상품 유의사항의 계약 성립 기준",
+    "path": "raw/additional_04/LG-AIR-PRODUCT-001.recheck.firecrawl.raw.html",
+    "format": "html",
+    "exact_anchor": "상품 인도/설치 후 계약이 성립되며",
+    "first_character_offset_zero_based": 672653,
+    "line_number": 13018,
+    "sha256": "420d628d9d81d343b5ad9fbed5db0091d97d2e595ca463d99d0c9136e03388ac"
+  },
+  {
+    "source_id": "LG-AIR-PRODUCT-001",
+    "claim": "결합상품 일부 해지에 따른 잔존 상품 요금 변화",
+    "path": "raw/additional_04/LG-AIR-PRODUCT-001.recheck.firecrawl.raw.html",
+    "format": "html",
+    "exact_anchor": "한 제품만 남을 경우 결합할인이 적용되지 않은 정상요금이 차 월부터 청구됩니다.",
+    "first_character_offset_zero_based": 673019,
+    "line_number": 13018,
+    "sha256": "420d628d9d81d343b5ad9fbed5db0091d97d2e595ca463d99d0c9136e03388ac"
+  },
+  {
+    "source_id": "LG-AIR-PRODUCT-001",
+    "claim": "청구월 예외",
+    "path": "raw/additional_04/LG-AIR-PRODUCT-001.recheck.firecrawl.raw.html",
+    "format": "html",
+    "exact_anchor": "당월 1일~4일까지 해지된 건은 당월 정상요금 청구",
+    "first_character_offset_zero_based": 673071,
+    "line_number": 13018,
+    "sha256": "420d628d9d81d343b5ad9fbed5db0091d97d2e595ca463d99d0c9136e03388ac"
+  },
+  {
+    "source_id": "LG-FAQ-001",
+    "claim": "회수비 기준일과 계약서 금액 조건 재확인",
+    "path": "raw/additional_04/LG-FAQ-001.recheck.firecrawl.raw.html",
+    "format": "html",
+    "exact_anchor": "상기금액은 26년 3 월 24일 기준의 회수비 금액, 회수비는 계약서에 명기 된 금액을 따름",
+    "first_character_offset_zero_based": 209331,
+    "line_number": 1018,
+    "sha256": "f10ede0ba3299a8772e7b3bf11c15f9f9d07c79dd96378df4e37bb3403435192"
+  },
+  {
+    "source_id": "LG-SERVICE-001",
+    "claim": "3년 만기 조건 및 제품 예외",
+    "path": "raw/additional_04/LG-SERVICE-001.recheck.firecrawl.md",
+    "format": "markdown",
+    "exact_anchor": "3년계약 구독상품은 계약 종료시점에 제품 소유권 취득 여부 선택이 가능합니다. (전자칠판,마이컵 제외)",
+    "first_character_offset_zero_based": 1604,
+    "line_number": 74,
+    "sha256": "03e65898fb6e4fa94eaf57ffba0bc1a58414952b2d5eb47d2c345e8f761ee7a1"
+  },
+  {
+    "source_id": "LG-SERVICE-001",
+    "claim": "3년 만기 소유권 취득 선택 비용",
+    "path": "raw/additional_04/LG-SERVICE-001.recheck.firecrawl.md",
+    "format": "markdown",
+    "exact_anchor": "일반 판매가의 10%를 납부하고, 제품 소유권 취득 후 지속 사용",
+    "first_character_offset_zero_based": 1671,
+    "line_number": 75,
+    "sha256": "03e65898fb6e4fa94eaf57ffba0bc1a58414952b2d5eb47d2c345e8f761ee7a1"
+  },
+  {
+    "source_id": "LG-SERVICE-001",
+    "claim": "3년 만기 반납 선택지. 반납 비용이 0원이라는 문구 아님",
+    "path": "raw/additional_04/LG-SERVICE-001.recheck.firecrawl.md",
+    "format": "markdown",
+    "exact_anchor": "계약기간 종료 후 제품 반납",
+    "first_character_offset_zero_based": 1717,
+    "line_number": 76,
+    "sha256": "03e65898fb6e4fa94eaf57ffba0bc1a58414952b2d5eb47d2c345e8f761ee7a1"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "source_id": "LG-FAQ-001",
+    "collected_on_kst": "2026-10-12",
+    "url": "https://www.lge.co.kr/support/usage-guide-faq",
+    "raw_capture": "raw/additional_04/LG-FAQ-001.recheck.firecrawl.json",
+    "markdown_capture": "raw/additional_04/LG-FAQ-001.recheck.firecrawl.md",
+    "html_capture": "raw/additional_04/LG-FAQ-001.recheck.firecrawl.raw.html",
+    "raw_sha256": "6ada272186584af85815b3e71845ac079e7b1942415dd47817f704373323667a",
+    "markdown_sha256": "df3b32342d0a5cdbe160c7c98d084d4833181f90eed45175ba280078f5051e96",
+    "html_sha256": "f10ede0ba3299a8772e7b3bf11c15f9f9d07c79dd96378df4e37bb3403435192",
+    "note": "같은 출처 재열람, 기존 원본 보존. FAQ의 접힌 답변은 이번 Markdown에 없고 rawHtml에서 확인함."
+  },
+  {
+    "source_id": "LG-AIR-PRODUCT-001",
+    "collected_on_kst": "2026-10-12",
+    "url": "https://www.lge.co.kr/product/care-solutions/air-purifiers/as192dsfam-akor2",
+    "raw_capture": "raw/additional_04/LG-AIR-PRODUCT-001.recheck.firecrawl.json",
+    "markdown_capture": "raw/additional_04/LG-AIR-PRODUCT-001.recheck.firecrawl.md",
+    "html_capture": "raw/additional_04/LG-AIR-PRODUCT-001.recheck.firecrawl.raw.html",
+    "raw_sha256": "794d5d2701c835ef2a337e86924c84283b0e1b6a52ffad07b7242c1bd2689b44",
+    "markdown_sha256": "df1efaf20a52b0fe564b66f4577ef0fdc1652e6faa9644682f600ca6f66720a7",
+    "html_sha256": "420d628d9d81d343b5ad9fbed5db0091d97d2e595ca463d99d0c9136e03388ac",
+    "note": "같은 공식 출처의 적용 조건을 추가 확인; 정책 변경이 확인되었다는 뜻 아님."
+  },
+  {
+    "source_id": "LG-SERVICE-001",
+    "collected_on_kst": "2026-10-12",
+    "url": "https://www.lge.co.kr/care-solutions/rentalService",
+    "raw_capture": "raw/additional_04/LG-SERVICE-001.recheck.firecrawl.json",
+    "markdown_capture": "raw/additional_04/LG-SERVICE-001.recheck.firecrawl.md",
+    "html_capture": "raw/additional_04/LG-SERVICE-001.recheck.firecrawl.raw.html",
+    "raw_sha256": "473244494e68cba9f510c64bc55ea7f89b03fd2d322869f735f882767401b8f2",
+    "markdown_sha256": "03e65898fb6e4fa94eaf57ffba0bc1a58414952b2d5eb47d2c345e8f761ee7a1",
+    "html_sha256": "9706488a1fa6c67a92811102df986f2fd3e02ccdf77b0558e100ec944cf7a4ad",
+    "note": "같은 공식 출처의 적용 조건을 추가 확인; 정책 변경이 확인되었다는 뜻 아님."
+  }
+]

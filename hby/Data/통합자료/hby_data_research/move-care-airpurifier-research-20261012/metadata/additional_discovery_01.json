@@ -1,0 +1,43 @@
+{
+  "date_kst": "2026-10-12",
+  "records": [
+    {
+      "capture_key": "LG-NOTICE-2022-CANDIDATE",
+      "url": "https://bestshop.lge.co.kr/footer/notice/detail-284",
+      "capture": "raw/discovery/additional_01/LG-NOTICE-2022-CANDIDATE.json",
+      "status": "보조 경로·접근 한계 기록. 정책 본문 출처로 계산하지 않음"
+    },
+    {
+      "capture_key": "LG-TERMS-NOV2022",
+      "url": "https://qt-kr.m.lgaccount.com/customer/terms_detail?country=KR&language=ko-KR&terms_svcCode=SVC709&terms_type=A_ITG_CUP_CARESOL&terms_publish=N&division=noticeterms&terms_id=20221108002_KR",
+      "capture": "raw/discovery/additional_01/LG-TERMS-NOV2022.json",
+      "status": "보조 경로·접근 한계 기록. 정책 본문 출처로 계산하지 않음"
+    },
+    {
+      "capture_key": "LG-ACCOUNT-TERMS",
+      "url": "https://account.lge.co.kr/terms/emp/usedView",
+      "capture": "raw/discovery/additional_01/LG-ACCOUNT-TERMS.json",
+      "status": "보조 경로·접근 한계 기록. 정책 본문 출처로 계산하지 않음"
+    },
+    {
+      "capture_key": "LG-TERMS-2022-RAW",
+      "url": "https://qt-kr.m.lgaccount.com/customer/terms_detail?country=KR&language=ko-KR&terms_svcCode=SVC709&terms_type=A_ITG_CUP_CARESOL&terms_publish=N&division=noticeterms&terms_id=20221108002_KR",
+      "capture": "raw/discovery/additional_01/LG-TERMS-2022-RAW.json",
+      "status": "보조 경로·접근 한계 기록. 정책 본문 출처로 계산하지 않음"
+    },
+    {
+      "capture_key": "LG-ACCOUNT-RAW",
+      "url": "https://account.lge.co.kr/terms/emp/usedView",
+      "capture": "raw/discovery/additional_01/LG-ACCOUNT-RAW.json",
+      "status": "보조 경로·접근 한계 기록. 정책 본문 출처로 계산하지 않음"
+    },
+    {
+      "capture_key": "BUSAN-FTC-2021",
+      "url": "https://www.busan.go.kr/depart/ecnmabcustinfo/1512423?curPage=10&srchBeginDt=2020-12-08&srchEndDt=2021-12-08&srchKey=&srchText=",
+      "capture": "raw/discovery/additional_01/BUSAN-FTC-2021.json",
+      "status": "보조 경로·접근 한계 기록. 정책 본문 출처로 계산하지 않음"
+    }
+  ],
+  "coverage": "선별 경로 기록이며 웹 전체 또는 모든 버전의 완전 탐색을 뜻하지 않음",
+  "full_terms_limit": "2022년 렌탈 비매장 약관 버전 URL은 찾았으나 수집된 본문은 약관 선택/확인 화면. rawHtml에서도 약관 전문 미확보. 일반 account 약관 목록은 제품 렌탈 전문으로 인정하지 않음."
+}

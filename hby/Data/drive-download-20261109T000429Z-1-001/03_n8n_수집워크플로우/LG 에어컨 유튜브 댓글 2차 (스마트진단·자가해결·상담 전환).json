@@ -1,0 +1,281 @@
+{
+  "name": "LG 에어컨 유튜브 댓글 2차 (스마트진단·자가해결·상담 전환)",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "458cd738-4808-45dc-a270-54ca11f0c66c",
+      "name": "실행",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// ===== 설정 (여기만 수정하세요) =====\nconst API_KEY = 'AIzaSyDI0pjUJBjW2zorcIDkL7G1LCsd21gNmNQ';\nconst MAX_VIDEOS_PER_QUERY = 10;               // 검색어당 영상 수 (최대 50)\nconst PUBLISHED_AFTER = '2021-01-01T00:00:00Z';\nconst SKIP_PREVIOUS_VIDEOS = true;             // 1차 수집 때 가져온 영상 73개는 건너뜀 (중복 방지)\n\n// 가설별 검색어. 유튜브 검색 1회 = 할당량 100 (하루 기본 10,000)\nconst QUERIES = {\n  'H3 스마트진단':      ['LG 에어컨 스마트진단', 'LG 스마트진단 하는 법', '씽큐 스마트진단 에어컨', 'LG ThinQ 진단 기능', '휘센 자가진단'],\n  'H3 ThinQ 진입':      ['LG 씽큐 에어컨 등록', 'LG 씽큐 연결 안됨', 'LG ThinQ 앱 사용법 에어컨'],\n  'H3 상담·AS 전환':    ['LG전자 서비스 접수 후기', 'LG전자 고객센터 상담 후기', 'LG 에어컨 AS 후기', 'LG 에어컨 출장비'],\n  'H2 자가 해결':       ['에어컨 기사 부르기 전 확인', 'LG 에어컨 고장 아닌 경우', 'LG 에어컨 자가점검', 'LG 에어컨 안 켜질 때', 'LG 에어컨 리모컨 실내기 선택', '에어컨 차단기 리셋 LG'],\n};\nconst PREVIOUS_VIDEO_IDS = ['-gH70sNfs8o','-ld9eQIVKjQ','0IWINQerug4','17NZomj0mag','2Zhuww701m8','3AifL_NuRik','3zlMDgYan7g','4TkM0MqHlEc','6biC9Rt0U7A','75rJfkp3Jjs','8ULmmsxzk8U','AZpkg3p3Rzs','A_gPWELqQ9k','Aq4HLnR9DaI','BMV-g4mUiwI','BNQLhVyd8mo','Bt3IGZsJDMY','FhKgiZUoK10','Gv-pmw4PMeU','HM8EoX6gPn8','HPcPl9daUJQ','IlVXsn3CXzE','JEpnXXpeswM','KPpibLd0x4w','LCJyOHdyaZg','LWLeN7UFy_Y','POvkU44GrPA','QcmXeeTDb9Q','R3Xa4n1LnIs','Sor1aV_OBbA','T0scB2fskso','T1d5JQDnZQc','T2-iYxv1SqM','TEOXLKoUhuA','Tw1gHik7oug','U886aFB_npk','WntP9-7KyKY','XEyzYBnR2Fw','XOS2dQJcoCw','Z3aodyLhzuA','ZT1HucsTyeQ','_3eE-U7ehpE','_DUSoyR9kts','_yYHWQQ8rrc','aOLnN9lmdW4','aVQ9RuzBxf8','bdVtXDquLvo','cuXCjWqcYPs','ddnjApZk8S8','dg_KxBX0BlM','e1LuoWehoLk','eeUaP29xoqw','faMIUrTos7w','fbiZ42pIYBA','gTpSuBVYHCQ','gnTpjuy349U','lFEn4n21prw','nzOUHbQ6Vlk','oSwCrWQ9Gwo','odIfX9gT9n8','pH3D6-DEaaA','rbEv2YnvsPA','rmVUUqDvbmc','s9ohfBKnF8I','t0fvQyEab_I','tV90Te6Oo1U','upo0-x0nG-Y','vM6FNmtKnJQ','vdrKpDyusMY','wUWv0xFiDrA','yP-2PfaLXd4','yVjT3w6TmoM','zdJ3fD6yRuk'];\n\nconst out = [];\nfor (const [group, list] of Object.entries(QUERIES)) {\n  for (const q of list) out.push({ json: { query: q, group, apiKey: API_KEY, maxResults: MAX_VIDEOS_PER_QUERY, publishedAfter: PUBLISHED_AFTER,\n    skipIds: SKIP_PREVIOUS_VIDEOS ? PREVIOUS_VIDEO_IDS : [] } });\n}\nreturn out;\n"
+      },
+      "id": "062c8842-794a-48db-adc1-d24458539e67",
+      "name": "검색어 생성",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        64,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/youtube/v3/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "part",
+              "value": "snippet"
+            },
+            {
+              "name": "q",
+              "value": "={{ $json.query }}"
+            },
+            {
+              "name": "type",
+              "value": "video"
+            },
+            {
+              "name": "maxResults",
+              "value": "={{ $json.maxResults }}"
+            },
+            {
+              "name": "regionCode",
+              "value": "KR"
+            },
+            {
+              "name": "relevanceLanguage",
+              "value": "ko"
+            },
+            {
+              "name": "publishedAfter",
+              "value": "={{ $json.publishedAfter }}"
+            },
+            {
+              "name": "order",
+              "value": "relevance"
+            },
+            {
+              "name": "key",
+              "value": "={{ $json.apiKey }}"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 5
+            }
+          }
+        }
+      },
+      "id": "688d0b02-d8a3-43e0-88da-1c81c594b560",
+      "name": "유튜브 영상 검색",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        288,
+        240
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 검색 결과 → 영상 목록 (중복·이전 수집 영상 제거, LG/스마트진단 관련 영상만)\nconst ONLY_RELATED_VIDEOS = true;\nconst RELATED_RE = /LG|엘지|휘센|whisen|오브제|씽큐|thinq|스마트\\s*진단|자가\\s*진단|자가\\s*점검/i;\n\nconst queries = $('검색어 생성').all();\nconst apiKey = queries[0].json.apiKey;\nconst skip = new Set(queries[0].json.skipIds || []);\nconst decode = s => String(s || '').replace(/&quot;/g, '\"').replace(/&#39;/g, \"'\").replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');\n\nconst map = new Map();\n$input.all().forEach((item, i) => {\n  const idx = (item.pairedItem && item.pairedItem.item !== undefined) ? item.pairedItem.item : i;\n  const q = (queries[idx] || {}).json || {};\n  for (const v of (item.json.items || [])) {\n    const id = v.id && v.id.videoId;\n    if (!id || skip.has(id)) continue;\n    const sn = v.snippet || {};\n    const title = decode(sn.title);\n    if (ONLY_RELATED_VIDEOS && !RELATED_RE.test(title + ' ' + decode(sn.description) + ' ' + decode(sn.channelTitle))) continue;\n    if (map.has(id)) { map.get(id).queries.add(q.query); map.get(id).groups.add(q.group); continue; }\n    map.set(id, { videoId: id, videoTitle: title, channel: decode(sn.channelTitle), queries: new Set([q.query]), groups: new Set([q.group]) });\n  }\n});\nreturn [...map.values()].map(v => ({ json: { ...v, queries: [...v.queries].join(' | '), groups: [...v.groups].join(' | '), apiKey } }));\n"
+      },
+      "id": "3a3b00e8-41ec-4493-9963-deefd7544687",
+      "name": "영상 목록 정리",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        512,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/youtube/v3/commentThreads",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "part",
+              "value": "snippet,replies"
+            },
+            {
+              "name": "videoId",
+              "value": "={{ $json.videoId }}"
+            },
+            {
+              "name": "maxResults",
+              "value": "100"
+            },
+            {
+              "name": "order",
+              "value": "relevance"
+            },
+            {
+              "name": "textFormat",
+              "value": "plainText"
+            },
+            {
+              "name": "key",
+              "value": "={{ $json.apiKey }}"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 5
+            }
+          }
+        }
+      },
+      "id": "4f0bd441-6e86-4891-a93b-fe4e50fcd5b6",
+      "name": "댓글 가져오기",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        720,
+        240
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 댓글·답글 펼치기 → 가설 1·2·3 신호 태깅\nconst MIN_LEN = 8;\nconst KEEP_ONLY_RELEVANT = true; // 아래 신호가 하나라도 있는 댓글만 남김\n\nconst SYMPTOMS = {\n  '냉방불량': /찬\\s*바람이?\\s*안|안\\s*시원|시원하지\\s*않|냉방이?\\s*(약|안)|미지근|온도가?\\s*안\\s*(내려|떨어)/,\n  '냄새': /냄새|쉰내|악취|곰팡/,\n  '물샘': /물이?\\s*(새|샘|떨어|뚝뚝|흘러|넘)|누수|물샘|배수/,\n  '소음': /소음|시끄|소리가|소리\\s*(나|남)|덜덜|웅웅|윙윙|딸깍|진동/,\n  '에러코드': /CH\\s?-?\\d{1,3}|에러\\s*코드|오류\\s*코드|에러\\s*뜨|에러가/i,\n  '작동이상': /꺼져|꺼짐|꺼지|안\\s*켜|안\\s*돌|작동\\s*(이\\s*)?안|멈춰|멈춤|실외기가?\\s*안|깜빡/,\n  '결빙·냉매': /성에|얼음|결빙|냉매|가스\\s*(충전|보충|부족)/,\n  '리모컨·설정': /리모컨|리모콘|실내기\\s*선택|예약|설정/,\n};\n// 가설 1: 원인·다음 행동 판단 어려움\nconst CAUSE_UNSURE = /왜\\s*(그런|이러|이렇|그럴|안|자꾸|계속)|원인이|원인을|원인\\s*(이\\s*)?뭘|뭐가\\s*문제|무슨\\s*문제|이유가|고장\\s*인가|고장인지|정상\\s*인가|정상인지|이게\\s*맞나|모르겠/;\nconst ACTION_UNSURE = /어떻게\\s*(해야|하면|하나요|하죠)|어떡하|어쩌죠|해야\\s*(하나요|할까|되나|돼요|되나요)|불러야|(a\\s*\\/?\\s*s|수리)\\s*(를\\s*)?(받아야|불러야|신청해야)|방법\\s*(이|좀)?\\s*(있|알려|없)|해결\\s*(방법|이\\s*안|못)|알려\\s*주세요|도와\\s*주세요/i;\n// 가설 2: 상담·AS 전에 자가 해결 가능했던 상황\nconst SELF_FIXED = /해결\\s*(했|됐|되었)|됐어요|되네요|되더라|작동\\s*(하네|되네|됐)|살았|고쳤|덕분에\\s*(해결|고쳐)/;\nconst NEAR_AS = /(기사|as|a\\/s|서비스)\\s*(를\\s*)?(부르|부를|부르려|신청|접수)[^.?!]{0,15}(뻔|전에|했는데|하려다|했다가)|부를\\s*뻔|부르려다|신청\\s*(했는데|하고)/i;\nconst USER_SIDE = /리모컨\\s*(설정|건전지|배터리)|실내기\\s*선택|차단기|루버|필터\\s*(청소|막)|전원\\s*(코드|플러그)|리셋|껐다\\s*켜|콘센트|모드\\s*(가|를)?\\s*(잘못|바뀌)/;\n// 가설 3: 스마트진단·ThinQ·상담 진입/전환\nconst DIAG = /스마트\\s*진단|자가\\s*진단|씽큐\\s*진단|thinq\\s*진단|진단\\s*(결과|했|해\\s*보|돌려|기능|모드)/i;\nconst DIAG_MISMATCH = /진단[^.?!]{0,30}(정상|이상\\s*없|문제\\s*없)/;\nconst THINQ = /씽큐|thinq|띵큐|앱으로|어플/i;\nconst CS = /고객\\s*센터|상담|1544|챗봇|1:1|콜센터|전화|접수|센터에/;\nconst AS_VISIT = /기사|a\\s*\\/?\\s*s|출장|수리|방문/i;\nconst FRICTION = /연결\\s*(이\\s*)?안|등록\\s*(이\\s*)?안|인식\\s*(이\\s*)?안|못\\s*찾|어디(서|에|있)|찾을\\s*수\\s*없|메뉴|소리.{0,10}(안\\s*들|인식)|대기\\s*(가|시간)|전화\\s*(가\\s*)?안|연결\\s*(이\\s*)?어려|답변\\s*(이\\s*)?(없|안)|기다리|일주일|한\\s*달|순서|복잡|어렵/;\nconst TRIED = /해\\s*봤|해봤|했는데|했는데도|했지만|그래도|여전히|그대로/;\nconst NEGATIVE = /짜증|화나|열받|최악|다시는|후회|환불|스트레스|답답|황당|어이없|실망/;\n\nconst videos = new Map($('영상 목록 정리').all().map(i => [i.json.videoId, i.json]));\nconst today = new Date().toISOString().slice(0, 10);\nconst seen = new Set();\nconst rows = [];\nconst Y = b => b ? 'Y' : '';\n\nfunction add(sn, commentId, isReply, parentText, replyCount, videoId) {\n  if (!sn || seen.has(commentId)) return;\n  seen.add(commentId);\n  const text = String(sn.textOriginal || sn.textDisplay || '').replace(/\\s+/g, ' ').trim();\n  if (text.length < MIN_LEN) return;\n  if (/https?:\\/\\//.test(text) && /구매|할인|쿠팡|링크|교육/.test(text)) return;\n\n  const symptoms = Object.entries(SYMPTOMS).filter(([, re]) => re.test(text)).map(([k]) => k);\n  const cause = CAUSE_UNSURE.test(text), action = ACTION_UNSURE.test(text);\n  const selfFixed = SELF_FIXED.test(text), nearAs = NEAR_AS.test(text), userSide = USER_SIDE.test(text);\n  const diag = DIAG.test(text), thinq = THINQ.test(text), cs = CS.test(text), as = AS_VISIT.test(text);\n  const friction = FRICTION.test(text) && (diag || thinq || cs || as);\n\n  const h1 = (cause || action) && (symptoms.length > 0 || /\\?/.test(text));\n  const h2 = nearAs || (selfFixed && (userSide || symptoms.length > 0));\n  const h3 = diag || friction;\n  if (KEEP_ONLY_RELEVANT && !h1 && !h2 && !h3 && symptoms.length === 0 && !cs && !thinq) return;\n\n  const v = videos.get(videoId) || {};\n  rows.push({ json: {\n    '수집일': today,\n    '가설그룹': v.groups || '',\n    '검색어': v.queries || '',\n    '영상제목': v.videoTitle || '',\n    '채널': v.channel || '',\n    '영상URL': `https://www.youtube.com/watch?v=${videoId}`,\n    '댓글URL': `https://www.youtube.com/watch?v=${videoId}&lc=${commentId}`,\n    '구분': isReply ? '답글' : '댓글',\n    '원댓글': isReply ? parentText : '',\n    '댓글내용': text,\n    '좋아요': sn.likeCount || 0,\n    '답글수': isReply ? '' : (replyCount || 0),\n    '작성일': String(sn.publishedAt || '').slice(0, 10),\n    '증상분류': symptoms.join(', '),\n    'H1_원인모름': Y(cause),\n    'H1_다음행동모름': Y(action),\n    'H2_자가해결': Y(selfFixed),\n    'H2_AS부르기직전': Y(nearAs),\n    'H2_사용자쪽원인언급': Y(userSide),\n    'H3_스마트진단언급': Y(diag),\n    'H3_진단은정상인데문제': Y(diag && DIAG_MISMATCH.test(text)),\n    'H3_ThinQ앱언급': Y(thinq),\n    'H3_상담·고객센터언급': Y(cs),\n    'H3_AS·기사언급': Y(as),\n    'H3_진입·전환불편': Y(friction),\n    '이미시도한조치': Y(TRIED.test(text)),\n    '부정감정': Y(NEGATIVE.test(text)),\n    '가설1후보': Y(h1), '가설2후보': Y(h2), '가설3후보': Y(h3),\n    '댓글ID': commentId,\n  }});\n}\n\nfor (const item of $input.all()) {\n  for (const t of (item.json.items || [])) {\n    const s = t.snippet || {};\n    const top = s.topLevelComment || {};\n    const topText = String((top.snippet || {}).textOriginal || '').replace(/\\s+/g, ' ').trim();\n    add(top.snippet, top.id, false, '', s.totalReplyCount, s.videoId);\n    for (const r of ((t.replies || {}).comments || [])) add(r.snippet, r.id, true, topText.slice(0, 300), 0, s.videoId);\n  }\n}\nconst score = j => (j['가설3후보'] ? 4 : 0) + (j['가설2후보'] ? 2 : 0) + (j['가설1후보'] ? 1 : 0);\nrows.sort((a, b) => score(b.json) - score(a.json) || b.json['좋아요'] - a.json['좋아요']);\nreturn rows;\n"
+      },
+      "id": "32855e49-6db9-4f96-9cf9-d074bdb95a8e",
+      "name": "댓글 펼치기·가설 태깅",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        944,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "xlsx",
+        "options": {
+          "fileName": "LG에어컨_유튜브댓글_2차_스마트진단.xlsx",
+          "sheetName": "댓글"
+        }
+      },
+      "id": "aac0ab77-d8f5-4ff3-9f02-c19fde1d32d2",
+      "name": "엑셀 파일 만들기",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1168,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 2차 수집: 스마트진단·자가해결·상담 전환\n1. **검색어 생성** 노드의 `API_KEY`에 1차 때 쓴 YouTube API 키 입력\n2. **Execute workflow** → 마지막 노드 Binary 탭에서 Download\n\n- 검색어 18개 ≈ 할당량 1,900 (하루 10,000)\n- 1차에서 수집한 영상 73개는 자동 제외 (`SKIP_PREVIOUS_VIDEOS`)\n- 가설1/2/3후보 열로 필터링",
+        "height": 240,
+        "width": 440
+      },
+      "id": "54a63643-3c51-40cb-9ab2-59df67885e17",
+      "name": "사용법",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        -64
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "실행": {
+      "main": [
+        [
+          {
+            "node": "검색어 생성",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "검색어 생성": {
+      "main": [
+        [
+          {
+            "node": "유튜브 영상 검색",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "유튜브 영상 검색": {
+      "main": [
+        [
+          {
+            "node": "영상 목록 정리",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "영상 목록 정리": {
+      "main": [
+        [
+          {
+            "node": "댓글 가져오기",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "댓글 가져오기": {
+      "main": [
+        [
+          {
+            "node": "댓글 펼치기·가설 태깅",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "댓글 펼치기·가설 태깅": {
+      "main": [
+        [
+          {
+            "node": "엑셀 파일 만들기",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "d059aefd-0bcf-48e7-88d6-a74b449d7717",
+  "meta": {
+    "instanceId": "ab9f9699cb762f4a1fe3301e9ccaf6c0aeb08a34a8014fa9c9318ca2785ed0aa"
+  },
+  "nodeGroups": [],
+  "id": "Kb1y45pZi2k0axnu",
+  "tags": []
+}

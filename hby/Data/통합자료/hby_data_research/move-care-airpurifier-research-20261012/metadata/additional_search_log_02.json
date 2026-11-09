@@ -1,0 +1,550 @@
+{
+  "date_kst": "2026-10-12",
+  "searches": [
+    {
+      "query": "site:lge.co.kr \"가전 구독 이용약관\"",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/care-solutions/refrigerators/b602s33\", #2 \"https://www.lge.co.kr/care-solutions/kimchi-refrigerators/k572ts343?dpType=careTab\", #3 \"https://www.lge.co.kr/tvs/oled55g4kna-stand?dpType=careTab\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/care-solutions/refrigerators/b602s33",
+              "title": "LG 일반냉장고 | B602S33 | 냉장고 | 주방가전 | 가전 구독 | LG전자",
+              "description": "... 가전 구독 이용약관을 반드시 참고하시기 바랍니다. 배송지역: 전국 (단, 일부 도서산간지역의 경우 배송이 제한될 수 있습니다.) 배송비: 무료배송 (단, 도서산간지역 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/kimchi-refrigerators/k572ts343?dpType=careTab",
+              "title": "LG 디오스 김치톡톡 | K572TS343 | 김치냉장고 | 주방가전 | 가전 구독 ...",
+              "description": "상기 기재된 내용 외 자세한 사항은 본 계약서 및 LG 가전 구독 이용약관을 반드시 참고하시기 바랍니다. 배송지역: 전국 (단, 일부 도서산간지역의 경우 배송이 제한 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/tvs/oled55g4kna-stand?dpType=careTab",
+              "title": "LG 올레드 evo (스탠드형) | OLED55G4KNA | TV | TV/노트북 | 가전 ...",
+              "description": "... 가전 구독 이용약관을 반드시 참고하시기 바랍니다. 배송지역: 전국 (단, 일부 도서산간지역의 경우 배송이 제한될 수 있습니다.) 배송비: 무료배송 (단, 도서산간지역 ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/refrigerators/m875svv021s",
+              "title": "LG 디오스 오브제컬렉션 베이직 냉장고 | M875SVV021S | 냉장고 ...",
+              "description": "... 가전 구독 이용약관을 반드시 참고하시기 바랍니다. 배송지역: 전국 (단, 일부 도서산간지역의 경우 배송이 제한될 수 있습니다.) 배송비: 무료배송 (단, 도서산간지역 ...",
+              "position": 4
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/lg-styler/s5pbp",
+              "title": "LG 스타일러 오브제컬렉션 | S5PBP | 의류관리기 | 생활가전 | 가전 ...",
+              "description": "상기 기재된 내용 외 자세한 사항은 본 계약서 및 LG 가전 구독 이용약관을 반드시 참고하시기 바랍니다. 배송지역: 전국 (단, 일부 도서산간지역의 경우 배송이 제한 ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12fe7-b8fa-721a-be00-21459b6db16a",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"회수비\" \"변경\" \"공기청정기\"",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/story/subscription-guide/12\", #2 \"https://www.lge.co.kr/story/subscription-guide/16\", #3 \"https://www.lge.co.kr/story/subscription-guide/7\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/story/subscription-guide/12",
+              "title": "360˚ 공기청정기 구독가이드 - LG전자",
+              "description": "# 360˚ 공기청정기   구독가이드\n![360˚ 공기청정기](https://static.lge.co.kr/kr/story/subscribe-guide/img/air-purifier/kv_icon.jpg)\n\n```\n부담을 덜 수 있어 편리해요.\n```\n\n## 360˚ 공기청정기에 대해   좀 더 알고 싶다면?\n- 계약 해지 시\n  - 계약 기간 이내 해지 : **회수비**\n    - **① 위약금 :** 의무 사용 기간 내에 고객 요청으로 임의 해지하는 경우 위약금이 부과됩니다. 위약금 산정 시 월 요금은 할인 전 기본요금을 기준으로 합니다.\n      - 1년 이내 : 잔여 의무 사용 기간 내 총요금의 30%\n      - 1년 경과 후 2년 경과 이전 : 잔여 의무 사용 기간 내 총요금의 20%\n      - 2년 경과 후 의무 사용 기간 이전 : 잔여 의무 사용 기간 내 총요금의 10%\n    - **② 회수비 :** 의무 사용 기간 경과 여부와 관계없이 총계약 기간 내에 고객 요청으로 임의 해지하는 경우 회수비(인건비 + 운송비)가 부과됩니다.\n      - 제품별 회수비 : 정수기·맥주 제조기 50,000원, 공기청정기 35,000원, 스타일러 65,000원, 전기레인지 39,000원, 건조기 56,000원, 안마의자 144,000원, 식기세척기 39,000원, 얼음정수기냉장고 98,500원, 식물재배기 62,000원, 에어컨 100,000원(23평 이상 2in1 150,000원), 노트북 35,000원, 세탁기 68,000원, A9 청소기 50,000원\n        - 상기 금액은 2021년 11월 5일 이후 계약 건에 적용되는 회수비입니다. 이전 계약 건의 회수비는 계약서에 명시된 금액을 따릅니다.\n    - **③ 소모성 부품 비용 :** 설치받은 제품의 소모성 부품(예: 필터) 비용을 합산한 금액입니다.\n      - 계약 후 고객의 요청으로 임의 해지하는 경우 위약금과 회수비 외에 사은품 비용, 미납·연체 비용 등이 추가로 부과될 수 있습니다.\n      - 추가로 궁금한 사항은 1:1 게시판 또는 고객센터(1544-7777)로 문의해 주시면 상세히 안내해 드리겠습니다. 단, 설치 비용은 판매처 또는 담당 설치 기사에게 문의해 주시기 바랍니다.",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/story/subscription-guide/16",
+              "title": "에어로타워구독 가이드 - LG전자",
+              "description": "② 회수비 : 의무 사용 기간 경과 여부와 관계없이 회수비(인건비 + 운송비)가 ... 공기청정기 35,000원, 스타일러 65,000원, 전기레인지 39,000원, 건조기 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/story/subscription-guide/7",
+              "title": "에어로시리즈 구독가이드 - LG전자",
+              "description": "... 공기청정기 필터가 새 필터로 교체된 모습입니다. AFTER. 본 이미지는 영상의 일부 ... 회수비를 모두 납부해야 해지할 수 있습니다. 의무 사용 기간 이내인 경우 ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/air-purifiers/as204ng3a",
+              "title": "LG 퓨리케어 오브제컬렉션 360˚ 알파UP (G 필터) | 공기청정기",
+              "description": "공기청정기 프리미엄으로 제공되는 핵심 전문가 ... 회수비(회수 불가 시 분실료)+사은품 비용+ 미납 ... 변경 등으로 배송 일정은 변경될 수 있습니다. 결제 ...",
+              "position": 4
+            },
+            {
+              "url": "https://www.lge.co.kr/story/buying-guide/care-solutions-guide1",
+              "title": "우리집 공기를 청정하게 관리하는 에어컨/에어케어 가전 구독 가이드",
+              "description": "필터가 오염된 관리 전 공기청정기 After 필터가 깨끗해진 관리 후 공기청정기 ... 본 구독료 시나리오는 당사 및 제휴사의 사정에 따라 내용이 변경되거나 조기 종료될 수 ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12fe7-b81e-736c-904b-ac8f3384bbe8",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"해외이주\" \"위약금\"",
+      "result": {
+        "agent_hints": [
+          "All 1 web results are excerpts only (#1 \"https://www.lge.co.kr/care-solutions/rentalService\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService",
+              "title": "가전 구독 서비스 안내 - LG전자",
+              "description": "- [홈](https://www.lge.co.kr/)",
+              "position": 1
+            }
+          ]
+        },
+        "id": "01a12fe7-b9a8-76cc-b561-d86123dad55a",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"관리\" \"불가\" \"지역\" \"해지\"",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/care-solutions/rentalService\", #2 \"https://www.lge.co.kr/water-purifiers/ws400gw?dpType=careTab\", #3 \"https://www.lge.co.kr/refrigerators/m875gcc582s\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService",
+              "title": "가전 구독 서비스 안내 - LG전자",
+              "description": "에어컨 재설치 시 배관은 재사용이 불가하여 별도 배관 비용이 발생합니다. 제품 ... 홈페이지 [마이페이지] > 구독관리 > 계약관리에서 해지상담신청이 가능하며,",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/water-purifiers/ws400gw?dpType=careTab",
+              "title": "LG 퓨리케어 정수기(스탠드, 냉온) | WS400GW | 정수기 | 주방가전 ...",
+              "description": "* 제품에 따라 자가관리 불가한 경우 있습니다. LG ... 지역'은 설치가 불가한 점 참고해 주세요. Q질문 ... 해지 시 위약금 반환 기준, 가전 구독 총 비용 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/refrigerators/m875gcc582s",
+              "title": "LG 디오스 오브제컬렉션 STEM 베이직 냉장고 (노크온 더블매직 ...",
+              "description": "... 해지시 서비스 계약도 자동으로 해지됩니다. ... 불가합니다. * 환불 금액은 실제 결제한 금액으로 진행됩니다. [서비스 사용 ... 제품 케어서비스구독하면 관리까지!",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/water-purifiers/wd120mcb?dpType=careTab&sKwd=%ED%93%A8%EB%A6%AC%EC%BC%80%EC%96%B4%20%EC%A0%95%EC%88%98%EA%B8%B0%EB%9E%9C%ED%83%88&sTab=unit_subscribe_list&sRank=18",
+              "title": "LG 퓨리케어 오브제컬렉션 정수기 (라이트온, 정수전용) | WD120MCB",
+              "description": "관리방법(방문관리, 자가관리) 및 관리항목(방문주기, 필터교체, 출수구 살균 ... 지역'은 설치가 불가한 점 참고해 주세요. Q질문. 정수기의 필터 종류와 역할이 ...",
+              "position": 4
+            },
+            {
+              "url": "https://www.lge.co.kr/lg-styler/s5wbp?dpType=careTab",
+              "title": "LG 스타일러 오브제컬렉션5벌+바지 1벌 - LG전자",
+              "description": "정장이나 코트처럼 자주 세탁하기 어려운 옷도 깨끗하게 관리할 수 있어서 정말 편합니다. ... 해지 시 ... 불가하며, 일시불 구매로의 변경도 불가합니다. 상기 ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12fe7-b854-760b-abcf-a963469afb60",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "LG \"구독\" \"이용약관\" filetype:pdf",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lg.com/content/dam/lge/global/sustainability/pdf/2024-2025_LGE_Sustainability_Report_Korean.pdf\", #2 \"https://www.lg.com/content/dam/lge/global/sustainability/pdf/2025-2026_LGE_Sustainability_Report_KR.pdf\", #3 \"https://www.apple.com/legal/privacy/pdfs/apple-privacy-policy-kr.pdf\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lg.com/content/dam/lge/global/sustainability/pdf/2024-2025_LGE_Sustainability_Report_Korean.pdf",
+              "title": "[PDF] LG전자 지속가능경영보고서",
+              "description": "이에 따라, 2024년에는 구독 서비스 인프라와 운영 프로세스를 체계적으로 구축하여 구독 고객의 ... (개인정보 처리방침·동의서 및 각 이용약관 등).",
+              "position": 1
+            },
+            {
+              "url": "https://www.lg.com/content/dam/lge/global/sustainability/pdf/2025-2026_LGE_Sustainability_Report_KR.pdf",
+              "title": "[PDF] 2026년 지속가능경영 보고서 - LG Electronics",
+              "description": "... 구독 서비스로 자원의 효율성을 높입니다. 이 외에도 폐기 단계에서는 칠서 ... (개인정보 처리방침·동의서 및 각 이용약관 등). 규정. 규칙. 기준. 전사 관계 규정과 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.apple.com/legal/privacy/pdfs/apple-privacy-policy-kr.pdf",
+              "title": "[PDF] Apple 개인정보 처리방침",
+              "description": "고객에게 구독을 제공하는 개발자 또는 게시자. App Store에서 또는 Apple News ... 또한 Apple은 Apple 이용 약관을 실행하거나 Apple의 운영 또는 사용자 보호 ...",
+              "position": 3
+            },
+            {
+              "url": "https://ru.easymobile.co.kr/main/download/250423_%EA%B0%80%EC%9E%85%EC%8B%A0%EC%B2%AD%EC%84%9C.pdf",
+              "title": "[PDF] 250423 가입신청서_모바일main(3)",
+              "description": "이용약관에 명시된 할인프로그램 이외의 약정에 대해서는 (주)LG ... LG유플러스 서비스 이용약관과. 가입 시에 ... LG 헬로렌탈 구독 서비스(이용자에 한함). 이름 ...",
+              "position": 4
+            },
+            {
+              "url": "https://www.kisdi.re.kr/report/fileDown.do?key=m2101113024770&arrMasterId=3934580&id=557398",
+              "title": "[PDF] 이용자 권익증진을 위한 이동통신서비스 불공정 이용약관 개선 방안 연구",
+              "description": "그러나 구독경제 유료전환 시 안내가 미흡하거나, 구독 해지 절차가 복 ... 자 고지 사항을 명시하지 않고 있다(LG유플러스 LTE 이용약관, '20. 6월 ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12fe8-066b-759e-8fd1-7b49d5046c57",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"회수비\" \"2025\"",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/story/buying-guide/care-solutions-guide3\", #2 \"https://www.lge.co.kr/water-purifiers/ws400gw?dpType=careTab\", #3 \"https://www.lge.co.kr/story/buying-guide/care-solutions-guide1\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/story/buying-guide/care-solutions-guide3",
+              "title": "물때 한 점 없는 완벽한 주방 필수템 세팅, 주방가전 관리 구독가이드",
+              "description": "- 회수비 : 의무사용기간 경과 여부와 무관하게 총 계약기간 내 고객 요청에 의한 임의해지 시 회수비(인건비+운송비)가 부과됩니다. ※ 제품별 회수비 : 정수기/맥주 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/water-purifiers/ws400gw?dpType=careTab",
+              "title": "LG 퓨리케어 정수기(스탠드, 냉온) | WS400GW | 정수기 | 주방가전 ...",
+              "description": "BBKI 2025 수상 LG PuriCare 정수기 2025 우리아이를 위한 베스트브랜드 1위 ... 한글2025-09-08. 다운로드바로 ... 회수비(회수 불가 시 분실료)+사은품 비용+ 미납 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/story/buying-guide/care-solutions-guide1",
+              "title": "우리집 공기를 청정하게 관리하는 에어컨/에어케어 가전 구독 가이드",
+              "description": "조사 기간 : 2025. 5. 8. ~ 5. 13. 조사 대상 : LG 가전 구독 이용 고객 2,979명 ... ※ 해약금: 위약금 + 회수비 + 사용료 비용 + 미납/연체 비용 등. 월 구독료를 ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/story/buying-guide/care-solutions-guide2",
+              "title": "매일 입는 옷을 더 위생적으로, 세탁/의류 관리 가전 구독 가이드 - LG전자",
+              "description": "3. 계약 해지 시\n   - - 의무사용기간 이내 해지 시 : 위약금 + 회수비\n   - - 계약기간 이내 해지 시 : 회수비\n   - - 회수비 : 의무사용기간 경과 여부와 무관하게 총 계약기간 내 고객 요청에 의한 임의해지 시 회수비(인건비+운송비)가 부과됩니다. ※ 제품별 회수비 : 정수기/맥주제조기 50,000원, 공기청정기 35,000원, 스타일러 65,000원, 전기레인지 39,000원, 건조기 56,000원, 안마의자 144,000원, 식기세척기 39,000원, 얼음정수기냉장고 98,500원, 식물재배기 62,000원, 에어컨 100,000원 (23평 이상 2in1 150,000원), 노트북 35,000원, 세탁기 68,000원, A9청소기 50,000원 ※ 상기금액은 21년 11월 5일 계약부터의 회수비 금액, 이전 계약건의 회수비는 계약서에 명기 된 금액을 따름",
+              "position": 4
+            },
+            {
+              "url": "https://www.lge.co.kr/story/subscription-guide/28",
+              "title": "TV 구독가이드 - LG전자",
+              "description": "인증 대상: 2025년형 QNED 전 모델 TV 세트 기준. 인증 내용 (인증 번호) ... ② 회수비 : 의무 사용 기간 경과 여부와 관계없이 회수비(인건비 + 운송비)가 ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12fe8-0765-73dc-9587-7245ae6fc1c6",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lgaccount.com \"렌탈 이용약관\"",
+      "result": {
+        "agent_hints": [
+          "No web results were returned. If the task is still unresolved, use firecrawl_search again with {\"query\":\"<broader or alternative query>\",\"sources\":[\"web\"]}."
+        ],
+        "success": true,
+        "data": {
+          "web": []
+        },
+        "id": "01a12fe8-067f-748b-b9c2-d2a767b7bf90",
+        "creditsUsed": 0
+      }
+    },
+    {
+      "query": "site:bestshop.lge.co.kr \"약관\" \"2025\" \"렌탈\"",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://bestshop.lge.co.kr/footer/notice/detail-267\", #2 \"https://bestshop.lge.co.kr/footer/notice/detail-284\", #3 \"https://bestshop.lge.co.kr/story/insight/detail/IN10009003\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://bestshop.lge.co.kr/footer/notice/detail-267",
+              "title": "LG전자 서비스 이용약관 및 개인정보 처리방침 개정 안내",
+              "description": "## LG전자 서비스 이용약관 및 개인정보 처리방침 개정 안내\n- 적용약관: LG전자 서비스 이용약관, LG전자 렌탈(케어솔루션) 이용약관, LG전자 케어십 이용약관\n\n“케어솔루션”을 “렌탈(케어솔루션)”으로 변경\n\n2. LG전자 렌탈(케어솔루션) 및 케어십 이용약관 변경 (개정된 이용약관은 신규 이용자에 한하여 적용)\n\n-렌탈(케어솔루션) 상품의 인도 및 설치 관련 변경사항 및 신설 조항 기술\n\n-렌탈(케어솔루션) 상품의 사용, 보관 및 유지 관련 변경사항 기술\n\n-렌탈(케어솔루션) 및 케어십 청약의 철회권 및 고객 부과금 관련 변경사항 기술\n\n-렌탈(케어솔루션) 및 케어십 서비스 및 담보책임 관련 변경사항 및 신설 조항 기술\n\n-렌탈(케어솔루션) 및 케어십 미납요금에 대한 연체료 관련 정책 변경사항 기술\n\n-렌탈(케어솔루션) 및 케어십 계약의 해지 및 위약금 관련 변경사항 기술\n\n-렌탈(케어솔루션) 및 케어십 자동거래 이체(출금) 관련 일부 조항 삭제",
+              "position": 1
+            },
+            {
+              "url": "https://bestshop.lge.co.kr/footer/notice/detail-284",
+              "title": "LG전자 서비스 이용약관 및 개인정보 처리방침 개정 안내",
+              "description": "## LG전자 서비스 이용약관 및 개인정보 처리방침 개정 안내\n1) 렌탈 서비스 명칭 관련 변경사항 기술",
+              "position": 2
+            },
+            {
+              "url": "https://bestshop.lge.co.kr/story/insight/detail/IN10009003",
+              "title": "가전제품 구매, 렌탈, 구독, 고민 된다면? 가전 마련 팁과 LG 가전 ...",
+              "description": "기존 렌탈 방식에서 더 나아가 전문가의 케어까지 받으면서 항상 ... 이용약관 · 개인정보처리방침 · 이벤트 개인정보 처리방침 · 고정형 영상정보 ...",
+              "position": 3
+            },
+            {
+              "url": "https://bestshop.lge.co.kr/story/insight/detail/IN10003000",
+              "title": "가전제품 구독 서비스로 최대 15% 할인받는 방법 | 렌탈·멤버십 완벽 가이드",
+              "description": "2025년 12월 31일 이전에 케어십을 이용하셨던 고객님이 대상입니다. 2개 ... 이용약관 · 개인정보처리방침 · 이벤트 개인정보 처리방침 · 고정형 영상 ...",
+              "position": 4
+            },
+            {
+              "url": "https://bestshop.lge.co.kr/story/insight/detail/IN10009000",
+              "title": "LG 가전 저렴하게 쓰는 구독 서비스 정리 | 6가지 혜택·이용 제품",
+              "description": "가전제품을 렌탈이나 구독으로 합리적으로 이용하고 싶으신가요? ... 실제로 구독 고객 89%가 만족, 92%가 주변에 추천한다고 응답했습니다(2025년 조사, ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12fe8-0717-74cf-b5a4-fc50f2ecc1e5",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"공기청정기\" \"이사\" \"운송\"",
+      "result": {
+        "error_code": "INVALID_ARGUMENT"
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"구독\" \"관리 불가\"",
+      "result": {
+        "agent_hints": [
+          "All 4 web results are excerpts only (#1 \"https://www.lge.co.kr/care-solutions/rentalService-aboutcare\", #2 \"https://www.lge.co.kr/water-purifiers/ws400gw?dpType=careTab\", #3 \"https://www.lge.co.kr/water-purifiers/wu523as?sKwd=%EB%B9%8C%ED%8A%B8%EC%9D%B8%EC%A0%95%EC%88%98%EA%B8%B0&sTab=unit_product_list&sRank=7\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService-aboutcare",
+              "title": "케어 서비스/케어십 소개 | 케어십 | 서비스 구독 | 가전 구독 | LG 전자",
+              "description": "* 제품에 따라 자가관리 불가한 경우 있음. 우리집 공기를 책임지는 공기청정기 ... 무상 A/S는 가전 구독 고객에 한하며, 고객 과실로 인한 제품 고장은 제외됩니다. 가전 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/water-purifiers/ws400gw?dpType=careTab",
+              "title": "LG 퓨리케어 정수기(스탠드, 냉온) | WS400GW | 주방가전 | 가전 구독",
+              "description": "... 구독/케어십 서비스로 만나보세요. 가전 ... * 제품에 따라 자가관리 불가한 경우 있습니다. LG ... 가전 구독가전 구독 홈. 주방가전. 정수기 · 냉장고 · 김치 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/water-purifiers/wu523as?sKwd=%EB%B9%8C%ED%8A%B8%EC%9D%B8%EC%A0%95%EC%88%98%EA%B8%B0&sTab=unit_product_list&sRank=7",
+              "title": "LG 퓨리케어 정수기 (빌트인, 냉온정) | WU523AS | 정수기 | 주방가전 ...",
+              "description": "* 제품에 따라 자가관리 불가한 경우 있습니다.LG ... 그때 알게 된 것이 바로 LG 퓨리케어의 정수기 구독 ... 가전 구독가전 구독 홈. 주방가전. 정수기 · 냉장고 · 김치 ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/kr/ebook/2024/march/careship_bestshop/catImage/356/202403_careship_bestshop_catalogue.pdf",
+              "title": "[PDF] 가전 구독도 역시 가전 구독도 역시 - LG전자",
+              "description": "※ 상하좌우/듀얼정수기 가전 구독/케어십 구독 신청 시, 자가관리를 선택할 수 있으며, 제품에 따라 자가관리 불가한 경우 있음. ※ 제품 상단의 직수관살균, 출수구 ...",
+              "position": 4
+            }
+          ]
+        },
+        "id": "01a12fe8-5aa0-720a-ba98-9f3596a4935b",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"회수비\" \"인상\"",
+      "result": {
+        "agent_hints": [
+          "All 4 web results are excerpts only (#1 \"https://www.lge.co.kr/product/care-solutions/refrigerators/s656p033\", #2 \"https://www.lge.co.kr/product/care-solutions/notebook/16zb90s-ga5wk\", #3 \"https://www.lge.co.kr/care-solutions/microwaves-and-ovens/mlj39er?dpType=careTab&sKwd=%EC%A0%84%EC%9E%90%EB%A0%88%EC%9D%B8%EC%A7%80%EC%98%A4%EB%B8%90&sTab=unit_subscribe_list&sRank=3\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/product/care-solutions/refrigerators/s656p033",
+              "title": "LG 디오스 AI 오브제컬렉션 냉장고 (양문형) | S656P033 | 가전 구독",
+              "description": "In stock Rating 4.8(26)... 인상깊었고 괜찬았습니다 잘 사용하도록 하겠습니다. 기존에 쓰던 냉장고가 물이 ... 회수비(회수 불가 시 분실료)+사은품 비용+ 미납/연체 비용 등이 부과됩니다 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/product/care-solutions/notebook/16zb90s-ga5wk",
+              "title": "LG 그램 | 16ZB90S-GA5WK | 노트북 | TV/노트북 | 가전 구독 - LG전자",
+              "description": "In stock Rating 4.9(37)... 인상을 받았습니다. 16인치 대화면임에도 약 1.2kg의 가벼운 무게라 외부에서 ... 회수비(회수 불가 시 분실료)+사은품 비용+ 미납/연체 비용 등이 부과됩니다 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/microwaves-and-ovens/mlj39er?dpType=careTab&sKwd=%EC%A0%84%EC%9E%90%EB%A0%88%EC%9D%B8%EC%A7%80%EC%98%A4%EB%B8%90&sTab=unit_subscribe_list&sRank=3",
+              "title": "LG 디오스 오브제컬렉션 광파오븐 | MLJ39ER | 주방가전 - LG전자",
+              "description": "In stock Rating 4.9(104)디스플레이와 버튼이 군더더기 없이 일체형으로 마감되어 있어 가전이라기보다 고급 가구 같은 인상을 줍니다. ... 회수비(회수 불가 시 분실료)+사은품 비용+ 미납/연체 ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/product/care-solutions/electric-stoves/bei3amb4e",
+              "title": "LG 디오스 인덕션 | BEI3AMB4E | 전기레인지 | 주방가전 | 가전 구독 - LG전자",
+              "description": "블랙 색상으로 견고한 인상을 주며, 안전성이 더 높아지고 활용성이 뛰어나 좋음. ... 회수비(회수 불가 시 분실료)+사은품 비용+ 미납/연체 비용 등이 부과됩니다 ...",
+              "position": 4
+            }
+          ]
+        },
+        "id": "01a12fe8-5ac5-73ec-8134-2b4da74434af",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "\"LG\" \"렌탈 이용약관\" \"2024\"",
+      "result": {
+        "error_code": "INVALID_ARGUMENT"
+      }
+    },
+    {
+      "query": "LG 공기청정기 구독 이사 운반 site:lge.co.kr",
+      "result": {
+        "agent_hints": [
+          "All 4 web results are excerpts only (#1 \"https://www.lge.co.kr/support/solutions-20150471884849?category=CT50019695&subCategory=CT50019648&mktModelCd=WD524APB&sort=update&page=1&productCode=HCHWI&seq=13\", #2 \"https://www.lge.co.kr/support/solutions-20154362473191?category=CT50019695&subCategory=CT50019648&mktModelCd=WU903AS&sort=update&page=1&productCode=HCHWI&seq=67\", #3 \"https://www.lge.co.kr/support/solutions-20154629562553?category=CT50019441&subCategory=CT50019468&mktModelCd=GC-M297SSLT&sort=update&page=1&productCode=SISBS&seq=18\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/support/solutions-20150471884849?category=CT50019695&subCategory=CT50019648&mktModelCd=WD524APB&sort=update&page=1&productCode=HCHWI&seq=13",
+              "title": "[LG 정수기] 정수기 운반 시 눕혀서 이동해도 될까요? | 스스로 해결 | 고객지원",
+              "description": "정수기는 반드시 세워서 이동해야 합니다. 정수기를 눕혀서 이동할 경우 제품의 누수뿐만 아니라 컴프레서(압축기) 고장의 원인이 될 수 있습니다. 특히 냉각수 또는 저수 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/support/solutions-20154362473191?category=CT50019695&subCategory=CT50019648&mktModelCd=WU903AS&sort=update&page=1&productCode=HCHWI&seq=67",
+              "title": "[LG전자] 가전제품 이전설치 신청 방법 및 비용 안내 | 스스로 해결 | 고객지원",
+              "description": "이전설치 비용은 기본 철거/설치비에 운송비와 추가 작업비가 합산되어 청구됩니다. 운반 비용: 이동 거리에 따라 차등 적용됩니다. 사다리차 비용: 현장 상황에 따라 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/support/solutions-20154629562553?category=CT50019441&subCategory=CT50019468&mktModelCd=GC-M297SSLT&sort=update&page=1&productCode=SISBS&seq=18",
+              "title": "[LG 가전 구독] 가전제품 구독, 한 눈에 살펴보는 모든 정보 | 스스로 해결",
+              "description": "구독 기간이 끝나면 재구독 할인과 함께 자연스럽게 신제품으로 업그레이드하고 기존 제품을 쉽게 처분할 수 있습니다. ... 이사나 제품 위치 변경이 필요할 때, 안심할 수 ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/lg-best-care/service-installation-removal",
+              "title": "이전설치 | LG 베스트 케어 | 고객지원 - LG전자",
+              "description": "LG전자 제품 이전설치 전문 업체인 LX판토스가 철거/이동/재설치를 한 번에 도와드립니다. 고객 맞춤 서비스: 제품별, 설치 환경별 고객이 원하는 대로 맞춤형 서비스를 ...",
+              "position": 4
+            }
+          ]
+        },
+        "id": "01a12fe9-909b-742f-aa8e-7fc09f1fccbf",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "LG 구독 해외 이주 위약금 감면 공식",
+      "result": {
+        "agent_hints": [
+          "All 4 web results are excerpts only (#1 \"https://www.lg.com/us/mylg/subscription?srsltid=AU7gw4UtR4nK6ZTUKVqHMFOBM9OYjbeYwYxxiTvWMdJoo2TNfDANzM0A\", #2 \"https://www.lge.co.kr/care-solutions/rentalService\", #3 and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lg.com/us/mylg/subscription?srsltid=AU7gw4UtR4nK6ZTUKVqHMFOBM9OYjbeYwYxxiTvWMdJoo2TNfDANzM0A",
+              "title": "https://www.lg.com/us/mylg/subscription?srsltid=AU...",
+              "description": "No information is available for this page. · Learn why",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService",
+              "title": "가전 구독 서비스 안내 - LG전자",
+              "description": "3. 계약 해지 시; 의무사용기간 이내 해지 시: 위약금 + 회수비; 계약기간 이내 해지 시: 회수비; 위약금: 의무사용기간 내 고객 요청에 의한 임의 해지 시, 위약금이 부과 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.ajd.co.kr/contents/basic-tip/detail/SK_KT_LG_%EC%9D%B8%ED%84%B0%EB%84%B7_%ED%95%B4%EC%A7%80_%EB%B0%A9%EB%B2%95,_%EC%9D%B4%EB%8C%80%EB%A1%9C_%EC%95%88%ED%95%98%EB%A9%B4_%EC%9C%84%EC%95%BD%EA%B8%88_%ED%8F%AD%ED%83%84!-27823",
+              "title": "SK KT LG 인터넷 해지 방법, 이대로 안하면 위약금 폭탄! - 아정당",
+              "description": "이사 장소에 기존 통신사 설치 불가 ... 위약금 없이 해지가 가능합니다. 군입대. 공익근무(사회복무) 요원은. 위약금 면제 대상에서 제외됩니다.",
+              "position": 3
+            },
+            {
+              "url": "https://m.lguplus.com/internet-iptv/popup/PaybackPop",
+              "title": "공식 온라인 스토어 - LG U+",
+              "description": "월별 약정할인반환금율 · 서비스 제공이 되지 않는 지역으로 이전해 약정기간 중 해지할 경우 할인반환금이 면제됩니다. · u+와이파이 임대료 할인 반환금의 세부적인 이용 ...",
+              "position": 4
+            }
+          ]
+        },
+        "id": "01a12fe9-90d9-7746-a396-0f4c7a5bbb24",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"39,000원\" \"계약\" \"회수비\"",
+      "result": {
+        "agent_hints": [
+          "All 4 web results are excerpts only (#1 \"https://www.lge.co.kr/story/buying-guide/care-solutions-guide3\", #2 \"https://www.lge.co.kr/story/subscription-guide/28\", #3 \"https://www.lge.co.kr/care-solutions/rentalService\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/story/buying-guide/care-solutions-guide3",
+              "title": "물때 한 점 없는 완벽한 주방 필수템 세팅, 주방가전 관리 구독가이드",
+              "description": "안마의자 144,000원, 식기세척기 39,000원, 얼음정수기냉장고 98,500원, 식물 ... ※ 상기금액은 21년 11월 5일 계약부터의 회수비 금액, 이전 계약건의 회수비는 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/story/subscription-guide/28",
+              "title": "TV 구독가이드 - LG전자",
+              "description": "... 계약 기간 이내 해지 : 회수비. ① 위약금 : 의무 사용 기간 내에 고객 요청으로 ... 39,000원, 건조기 56,000원, 안마의자 144,000원, 식기세척기 39,000원, 얼음 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService",
+              "title": "가전 구독 서비스 안내 - LG전자",
+              "description": "회수비. 정수기/홈브루, 50,000원. 공기청정기/가습기/제습기, 39,000원. 건조기/식물재배기, 62,000원 ... 회수비; 계약기간 이내 해지 시: 회수비; 위약금: 의무사용기간 ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/story/subscription-guide/14",
+              "title": "상업용 스탠드 에어컨 구독 가이드 - LG전자",
+              "description": "... 39,000원, 건조기 56,000원, 안마의자 144,000원, 식기세척기 39,000원, 얼음 ... 계약 건의 회수비는 계약서에 명시된 금액을 따릅니다. ③ 소모성 부품 비용 ...",
+              "position": 4
+            }
+          ]
+        },
+        "id": "01a12fe9-90b7-77e5-89ad-05d9aa38cd78",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"서비스 불가\" \"구독\"",
+      "result": {
+        "agent_hints": [
+          "All 1 web results are excerpts only (#1 \"https://www.lge.co.kr/story/user-guide/robot-vacuum-cleaners-install-guide\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/story/user-guide/robot-vacuum-cleaners-install-guide",
+              "title": "LG 코드제로 로봇청소기 설치가이드",
+              "description": "· 이미 설치되어 있는 가전제품의 재설치 서비스 불가 · 단 LG전자 제품이 설치되어 있는 경우, ... 구독)1544-7777; 복지몰 제휴사 구매 문의 : (가전)1544-8777 ...",
+              "position": 1
+            }
+          ]
+        },
+        "id": "01a12fe9-9254-716c-9dd8-f42eeb4a0b79",
+        "creditsUsed": 2
+      }
+    }
+  ],
+  "coverage": "선별 검색 16건. 오류2건은 검색 결과 없음으로 세지 않음. 웹 전체의 완전 탐색 아님.",
+  "not_indexed_discoveries": [
+    {
+      "url": "https://qt-kr.m.lgaccount.com/membership-spx-webapp/customer/terms_revision_q3",
+      "reason": "2021-11-04 공지 연결 비교표에 2021-09-30 시행 표기. 렌탈 전문이 아니므로 11월판 전문 대체 금지"
+    },
+    {
+      "url": "https://move.lxpantos.com/mvinst/mvInstProd/retrievePriceTable.ajax?callback=priceTableSearchInfo_callbackFunc",
+      "reason": "Firecrawl INVALID_ARGUMENT. 원 페이지 공개 조회 주소를 읽기 전용 GET으로 수집 성공. 인증·예약·고객정보 접근 없음."
+    }
+  ],
+  "not_used": "LG U+ 통신약관, 미국 LG 서비스, 대리점·블로그 설명, 다른 제품 관리 지역 안내는 공기청정기 정책 근거에서 제외."
+}

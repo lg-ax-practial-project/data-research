@@ -1,0 +1,1397 @@
+{
+  "review_date_kst": "2026-10-12",
+  "root": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data",
+  "physical_files": 51,
+  "unique_content_files": 42,
+  "files": [
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20240630.csv",
+      "sha256": "19fc4f688c41afeeebe88a5138da37abbb75378174d9703e4d1785cd1380109d",
+      "encoding": "cp949",
+      "rows": 13631,
+      "headers": [
+        "사건번호",
+        "접수일(년월일)",
+        "성별",
+        "연령대",
+        "지역",
+        "판매유형",
+        "물품소분류",
+        "청구이유"
+      ],
+      "date_value_min": "2024-04-01",
+      "date_value_max": "2024-06-30",
+      "date_distinct_values": 91,
+      "has_age": true,
+      "has_outcome": false,
+      "has_reason": true,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 25,
+        "공기청정기": 10
+      },
+      "kind": "피해구제 개별 레코드",
+      "date_column": "접수일(년월일)",
+      "age_column": "연령대",
+      "product_column": "물품소분류",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20240930.csv",
+      "sha256": "c39df6ed2858786c1274cc0c0fe3b0ad08d8616960628a8d9796c20cea4fdee2",
+      "encoding": "cp949",
+      "rows": 15960,
+      "headers": [
+        "사건번호",
+        "접수일(년월일)",
+        "성별",
+        "연령대",
+        "지역",
+        "판매유형",
+        "물품소분류",
+        "청구이유"
+      ],
+      "date_value_min": "2024-07-01",
+      "date_value_max": "2024-09-30",
+      "date_distinct_values": 92,
+      "has_age": true,
+      "has_outcome": false,
+      "has_reason": true,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기": 11,
+        "공기청정기대여(렌트)": 15
+      },
+      "kind": "피해구제 개별 레코드",
+      "date_column": "접수일(년월일)",
+      "age_column": "연령대",
+      "product_column": "물품소분류",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20241231.csv",
+      "sha256": "8fe256da19ba7e1b760cfc73b05424af7d6597527bad58f37234049183df1fb5",
+      "encoding": "cp949",
+      "rows": 14550,
+      "headers": [
+        "사건번호",
+        "접수일(년월일)",
+        "성별",
+        "연령대",
+        "지역",
+        "판매유형",
+        "물품소분류",
+        "청구이유"
+      ],
+      "date_value_min": "2024-10-01",
+      "date_value_max": "2024-12-31",
+      "date_distinct_values": 91,
+      "has_age": true,
+      "has_outcome": false,
+      "has_reason": true,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기": 5,
+        "공기청정기대여(렌트)": 12
+      },
+      "kind": "피해구제 개별 레코드",
+      "date_column": "접수일(년월일)",
+      "age_column": "연령대",
+      "product_column": "물품소분류",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20250331.csv",
+      "sha256": "6693f54271ecf82843367487f40d48e4d174973123402b357cb7a1bdf3ce1670",
+      "encoding": "cp949",
+      "rows": 14514,
+      "headers": [
+        "사건번호",
+        "접수일(년월일)",
+        "성별",
+        "연령대",
+        "지역",
+        "판매유형",
+        "물품소분류",
+        "청구이유"
+      ],
+      "date_value_min": "2025-01-01",
+      "date_value_max": "2025-03-31",
+      "date_distinct_values": 90,
+      "has_age": true,
+      "has_outcome": false,
+      "has_reason": true,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 9,
+        "공기청정기": 7
+      },
+      "kind": "피해구제 개별 레코드",
+      "date_column": "접수일(년월일)",
+      "age_column": "연령대",
+      "product_column": "물품소분류",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20250630.csv",
+      "sha256": "dbcf83066e9bc787fbf088bd755be18d7da297482494612366d470dcd8b02dce",
+      "encoding": "cp949",
+      "rows": 16064,
+      "headers": [
+        "사건번호",
+        "접수일(년월일)",
+        "성별",
+        "연령대",
+        "지역",
+        "판매유형",
+        "물품소분류",
+        "청구이유"
+      ],
+      "date_value_min": "2025-04-01",
+      "date_value_max": "2025-06-30",
+      "date_distinct_values": 91,
+      "has_age": true,
+      "has_outcome": false,
+      "has_reason": true,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 12,
+        "공기청정기": 6
+      },
+      "kind": "피해구제 개별 레코드",
+      "date_column": "접수일(년월일)",
+      "age_column": "연령대",
+      "product_column": "물품소분류",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20250930.csv",
+      "sha256": "fbc25f7d2ec73dc5a985149af666efff5ff1261fb1a8e02ff17930a51595cf05",
+      "encoding": "cp949",
+      "rows": 17669,
+      "headers": [
+        "사건번호",
+        "접수일(년월일)",
+        "성별",
+        "연령대",
+        "지역",
+        "판매유형",
+        "물품명",
+        "청구이유"
+      ],
+      "date_value_min": "2025-07-01",
+      "date_value_max": "2025-09-30",
+      "date_distinct_values": 92,
+      "has_age": true,
+      "has_outcome": false,
+      "has_reason": true,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 14,
+        "공기청정기": 4
+      },
+      "kind": "피해구제 개별 레코드",
+      "date_column": "접수일(년월일)",
+      "age_column": "연령대",
+      "product_column": "물품명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20251231.csv",
+      "sha256": "887514d774cdbe90b1004c6454479b276a52708907f0b5a90679ac8651ebb0c7",
+      "encoding": "cp949",
+      "rows": 15424,
+      "headers": [
+        "사건번호",
+        "접수일(년월일)",
+        "성별",
+        "연령대",
+        "지역",
+        "판매유형",
+        "물품소분류",
+        "청구이유"
+      ],
+      "date_value_min": "2025-10-01",
+      "date_value_max": "2025-12-31",
+      "date_distinct_values": 91,
+      "has_age": true,
+      "has_outcome": false,
+      "has_reason": true,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 9,
+        "공기청정기": 6
+      },
+      "kind": "피해구제 개별 레코드",
+      "date_column": "접수일(년월일)",
+      "age_column": "연령대",
+      "product_column": "물품소분류",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20260331.csv",
+      "sha256": "d1580199bfb9dac2e28b59f070e386c749f678d602b0c4aaeb3bf1bb2db08fb5",
+      "encoding": "cp949",
+      "rows": 16802,
+      "headers": [
+        "사건번호",
+        "접수일",
+        "성별",
+        "연령",
+        "지역",
+        "판매방법",
+        "물품명",
+        "청구이유"
+      ],
+      "date_value_min": "2026-01-02",
+      "date_value_max": "2026-03-31",
+      "date_distinct_values": 80,
+      "has_age": true,
+      "has_outcome": false,
+      "has_reason": true,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 14,
+        "공기청정기": 6
+      },
+      "kind": "피해구제 개별 레코드",
+      "date_column": "접수일",
+      "age_column": "연령",
+      "product_column": "물품명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20260630.csv",
+      "sha256": "f7a546b3db4ebd00a50ac99c242018ab9c615503a679f192362ad9d896ef6dcb",
+      "encoding": "cp949",
+      "rows": 12834,
+      "headers": [
+        "접수일",
+        "성별",
+        "연령",
+        "지역",
+        "판매유형",
+        "물품명",
+        "청구이유",
+        "처리결과"
+      ],
+      "date_value_min": "2026년 2분기",
+      "date_value_max": "2026년 2분기",
+      "date_distinct_values": 1,
+      "has_age": true,
+      "has_outcome": true,
+      "has_reason": true,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 12,
+        "공기청정기": 9
+      },
+      "kind": "피해구제 개별 레코드",
+      "date_column": "접수일",
+      "age_column": "연령",
+      "product_column": "물품명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자 피해구제 정보\\한국소비자원_품목별 상담 현황_20260731.csv",
+      "sha256": "9ef575d62be89452c398a003513ed4bcf2de333fc9aa17004b388e0cbf8c4363",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2026-07",
+      "date_value_max": "2026-07",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기": 1,
+        "공기청정기대여(렌트)": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240103.CSV",
+      "sha256": "965ea90bd2b7253bcd0886b01985f6cdb96f2ca7f6b0dda380f1edb1a43793e1",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "품목명(소)",
+        "상담건수",
+        "증감률_전월",
+        "증감률_전년동월"
+      ],
+      "date_value_min": null,
+      "date_value_max": null,
+      "date_distinct_values": 0,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기": 1,
+        "공기청정기대여(렌트)": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": null,
+      "age_column": null,
+      "product_column": "품목명(소)",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님",
+      "date_limitation": "본문에 연도/월/접수일 열 없음. 파일명 날짜를 통계 대상 월로 자동 변환하지 않음."
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240201.csv",
+      "sha256": "4a540d3cbb7974d2bf046f589b0902af7886bd0756495dae78782d06c47fbd20",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "품목명(소)",
+        "상담건수",
+        "증감률_전월",
+        "증감률_전년동월"
+      ],
+      "date_value_min": null,
+      "date_value_max": null,
+      "date_distinct_values": 0,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": null,
+      "age_column": null,
+      "product_column": "품목명(소)",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님",
+      "date_limitation": "본문에 연도/월/접수일 열 없음. 파일명 날짜를 통계 대상 월로 자동 변환하지 않음."
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240229.csv",
+      "sha256": "9a04e302d222b02e4a43d8c2b6769425091d2eec327bd4e156252df6ed5c1de8",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "품목명(소)",
+        "상담건수",
+        "증감률_전월",
+        "증감률_전년동월"
+      ],
+      "date_value_min": null,
+      "date_value_max": null,
+      "date_distinct_values": 0,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": null,
+      "age_column": null,
+      "product_column": "품목명(소)",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님",
+      "date_limitation": "본문에 연도/월/접수일 열 없음. 파일명 날짜를 통계 대상 월로 자동 변환하지 않음."
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240331.csv",
+      "sha256": "d281a4597edf166adbdae54560a461490ee9862f126516359c9804112f935bed",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "품목명(소)",
+        "상담건수",
+        "증감률_전월",
+        "증감률_전년동월"
+      ],
+      "date_value_min": null,
+      "date_value_max": null,
+      "date_distinct_values": 0,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": null,
+      "age_column": null,
+      "product_column": "품목명(소)",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님",
+      "date_limitation": "본문에 연도/월/접수일 열 없음. 파일명 날짜를 통계 대상 월로 자동 변환하지 않음."
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240430.csv",
+      "sha256": "4365390c7a9a50b155d1c02ffb599086f0f207ad3173f93ec414e3741d3b3dd9",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "품목명(소)",
+        "상담건수",
+        "증감률_전월",
+        "증감률_전년동월"
+      ],
+      "date_value_min": null,
+      "date_value_max": null,
+      "date_distinct_values": 0,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": null,
+      "age_column": null,
+      "product_column": "품목명(소)",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님",
+      "date_limitation": "본문에 연도/월/접수일 열 없음. 파일명 날짜를 통계 대상 월로 자동 변환하지 않음."
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240531.csv",
+      "sha256": "02b044e55b2e7d463624829d5b431f75b6325aecc8709f83991c506d480b75ca",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "품목명(소)",
+        "상담건수",
+        "증감률_전월",
+        "증감률_전년동월"
+      ],
+      "date_value_min": null,
+      "date_value_max": null,
+      "date_distinct_values": 0,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": null,
+      "age_column": null,
+      "product_column": "품목명(소)",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님",
+      "date_limitation": "본문에 연도/월/접수일 열 없음. 파일명 날짜를 통계 대상 월로 자동 변환하지 않음."
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240630.csv",
+      "sha256": "4548707ad3de7bcfc133557a9f11e6220e6026eacb1adbb5562eef2140e8a497",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "품목명(소)",
+        "상담건수",
+        " 증감률_전월 ",
+        " 증감률_전년동월 "
+      ],
+      "date_value_min": null,
+      "date_value_max": null,
+      "date_distinct_values": 0,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": null,
+      "age_column": null,
+      "product_column": "품목명(소)",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님",
+      "date_limitation": "본문에 연도/월/접수일 열 없음. 파일명 날짜를 통계 대상 월로 자동 변환하지 않음."
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240731.csv",
+      "sha256": "7c5c43fa78a1f69d98821db65251b8a95af73074961fee165a624b8d137f8c50",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2024-07",
+      "date_value_max": "2024-07",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240831.csv",
+      "sha256": "977b2c11810654451898462e528638a293631b1860e3b4bc75755394cf730eb5",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2024-08",
+      "date_value_max": "2024-08",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240930.csv",
+      "sha256": "6f077cd1f45850079beb40bea88dce251498c90dd513a37b2167115003c8edf2",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2024-09",
+      "date_value_max": "2024-09",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20241031.csv",
+      "sha256": "c827a4982ad4ec9fcd9b56e3a12c1bea115fe430614fa6528df62ffcc30b7fcc",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2024-10",
+      "date_value_max": "2024-10",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20241130.csv",
+      "sha256": "328dc9c0d8075f552683c15f83a3c7bf80e8252e26195d4aa0a9a45f0af7288d",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2024-11",
+      "date_value_max": "2024-11",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20241231.csv",
+      "sha256": "4afd45c4cbcac7e9db6b6cbd7c9d3d89b49a765aabc53ebecc0f3b77c46336ee",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2024-12",
+      "date_value_max": "2024-12",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기": 1,
+        "공기청정기대여(렌트)": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20250131.csv",
+      "sha256": "c8f70e4877d82aebde2ec2f487efb2a470d13ceca270ab7237ce7350fbae30af",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2025-01",
+      "date_value_max": "2025-01",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기": 1,
+        "공기청정기대여(렌트)": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20250228.csv",
+      "sha256": "c95c6e4b2a56d9ec1060a0ed20aca2bb3cae3bd0604d4a324ee8d78dd99865d8",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2025-02",
+      "date_value_max": "2025-02",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20250331.csv",
+      "sha256": "f9d590a6e835ae474ce5b0fa1e21f3f1df2b5479085251fc179583491a19d499",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2025-03",
+      "date_value_max": "2025-03",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20250430.csv",
+      "sha256": "8adca6bb01d1ed45613dd6c2b6b1ecd04ccd940e0100bae5167d19da8812e4ab",
+      "encoding": "utf-8-sig",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2025-04",
+      "date_value_max": "2025-04",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20250531.csv",
+      "sha256": "effe84eb8c624553b87f128020b2c3bbe696764fba7f4d1fb187c77a8e5c1fb3",
+      "encoding": "utf-8-sig",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2025-05",
+      "date_value_max": "2025-05",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20250630.csv",
+      "sha256": "3c99fc1aa87c58493befb1b88800477b5f9a29b3c41f84c287bd845a1aa5aadb",
+      "encoding": "utf-8-sig",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2025-06",
+      "date_value_max": "2025-06",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20250731.csv",
+      "sha256": "3a26eb0a5de5aaa01729264e1e189e1ece2a13a110a71c8a9e2048e6b96aaa84",
+      "encoding": "utf-8-sig",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2025-07",
+      "date_value_max": "2025-07",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20250831.csv",
+      "sha256": "88661d15ba99e0b10b8a9add969f8c0203085c48a99862ef76d7606d61cdb144",
+      "encoding": "utf-8-sig",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2025-08",
+      "date_value_max": "2025-08",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20250930.csv",
+      "sha256": "0d000afd429ed8426f354fa50119cea664f8c793027a9173b82cd72149bf5bcf",
+      "encoding": "utf-8-sig",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2025-09",
+      "date_value_max": "2025-09",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20251031.csv",
+      "sha256": "6753431ed35ae86d0c7abbfc2c8216a35679dd5408ca88c5d4cf4e587d4ac02b",
+      "encoding": "utf-8-sig",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2025-10",
+      "date_value_max": "2025-10",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20251130.csv",
+      "sha256": "7432ded474b6734d4186d7b9eab726e2fb0a1d0e936aeb2cc8af6e3304f002c1",
+      "encoding": "utf-8-sig",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2025-11",
+      "date_value_max": "2025-11",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20251231.csv",
+      "sha256": "0284a6de2255e2f619a94461dfb807d8ba8dfab89a0f7b9dec7858490b11b9dd",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2025-12",
+      "date_value_max": "2025-12",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20260131.csv",
+      "sha256": "a8b9f9612aa327341707655adb0e44fe8220c2aeb357b667bd58884f91b52095",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2026-01",
+      "date_value_max": "2026-01",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20260228.csv",
+      "sha256": "693cc572a491de80052f44e7a7e91832a31af6caff9d73268f3513dafabb57a1",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2026-02",
+      "date_value_max": "2026-02",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기": 1,
+        "공기청정기대여(렌트)": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20260331.csv",
+      "sha256": "179d87a33f04954c1c3edd331de750db3623084559ef9a24460ebbc88827c106",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2026-03",
+      "date_value_max": "2026-03",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20260430.csv",
+      "sha256": "0543f0fbfe6136710ab92b8ba5a8b97277ba236f2998ce7f2431aa66f4a2ce43",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2026-04",
+      "date_value_max": "2026-04",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20260531.csv",
+      "sha256": "5315fdff0da379359e1340a88ffc403c57ea25fbfd8be31fe256d656752ebfa2",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2026-05",
+      "date_value_max": "2026-05",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기대여(렌트)": 1,
+        "공기청정기": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20260630.csv",
+      "sha256": "c9e270c3f23a874153aa2c7adc60435636ff704231950c624c28b6f4bbd7e725",
+      "encoding": "cp949",
+      "rows": 500,
+      "headers": [
+        "연도",
+        "월",
+        "품목명",
+        "상담건수",
+        "전월대비 증감률",
+        "전년동월대비 증감률"
+      ],
+      "date_value_min": "2026-06",
+      "date_value_max": "2026-06",
+      "date_distinct_values": 1,
+      "has_age": false,
+      "has_outcome": false,
+      "has_reason": false,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기": 1,
+        "공기청정기대여(렌트)": 1
+      },
+      "kind": "품목별 월 상담 집계",
+      "date_column": "연도 + 월",
+      "age_column": null,
+      "product_column": "품목명",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20240331.csv",
+      "sha256": "44c3210019815ad78b083c8865bb319495c7fec41f8cf14b00c13a606228c032",
+      "encoding": "cp949",
+      "rows": 13516,
+      "headers": [
+        "사건번호",
+        "접수일(년월일)",
+        "성별",
+        "연령대",
+        "지역",
+        "판매유형",
+        "물품소분류",
+        "청구이유"
+      ],
+      "date_value_min": "2024-01-01",
+      "date_value_max": "2024-03-31",
+      "date_distinct_values": 91,
+      "has_age": true,
+      "has_outcome": false,
+      "has_reason": true,
+      "has_611_code_column": false,
+      "air_product_record_counts": {
+        "공기청정기": 10,
+        "공기청정기대여(렌트)": 13
+      },
+      "kind": "피해구제 개별 레코드",
+      "date_column": "접수일(년월일)",
+      "age_column": "연령대",
+      "product_column": "물품소분류",
+      "611_code_definition": "별도 상담사유 코드 열/코드북 미확인; 열 이름 검사만으로 행 값에 611이 없다고 판단하지 않음",
+      "air_count_meaning": "해당 CSV 안의 행 수. 상담건수 합산·렌탈 비율·고유 소비자 수가 아님"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20240630.csv",
+      "sha256": "19fc4f688c41afeeebe88a5138da37abbb75378174d9703e4d1785cd1380109d",
+      "duplicate_of": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20240630.csv"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20240930.csv",
+      "sha256": "c39df6ed2858786c1274cc0c0fe3b0ad08d8616960628a8d9796c20cea4fdee2",
+      "duplicate_of": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20240930.csv"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20241231.csv",
+      "sha256": "8fe256da19ba7e1b760cfc73b05424af7d6597527bad58f37234049183df1fb5",
+      "duplicate_of": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20241231.csv"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20250331.csv",
+      "sha256": "6693f54271ecf82843367487f40d48e4d174973123402b357cb7a1bdf3ce1670",
+      "duplicate_of": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20250331.csv"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20250630.csv",
+      "sha256": "dbcf83066e9bc787fbf088bd755be18d7da297482494612366d470dcd8b02dce",
+      "duplicate_of": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20250630.csv"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20250930.csv",
+      "sha256": "fbc25f7d2ec73dc5a985149af666efff5ff1261fb1a8e02ff17930a51595cf05",
+      "duplicate_of": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20250930.csv"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20251231.csv",
+      "sha256": "887514d774cdbe90b1004c6454479b276a52708907f0b5a90679ac8651ebb0c7",
+      "duplicate_of": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20251231.csv"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20260331.csv",
+      "sha256": "d1580199bfb9dac2e28b59f070e386c749f678d602b0c4aaeb3bf1bb2db08fb5",
+      "duplicate_of": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20260331.csv"
+    },
+    {
+      "path": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20260630.csv",
+      "sha256": "f7a546b3db4ebd00a50ac99c242018ab9c615503a679f192362ad9d896ef6dcb",
+      "duplicate_of": "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20260630.csv"
+    }
+  ],
+  "scope": "기존 공개 데이터 파일의 구조·기간 점검. 원본 변경 없음. 상담 원시데이터 재현 또는 최종 통계 검증 아님.",
+  "summary": {
+    "monthly_unique_files": 32,
+    "kinds": {
+      "피해구제 개별 레코드": 10,
+      "품목별 월 상담 집계": 32
+    },
+    "date_fields_missing_files": [
+      "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240103.CSV",
+      "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240201.csv",
+      "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240229.csv",
+      "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240331.csv",
+      "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240430.csv",
+      "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240531.csv",
+      "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\소비자피해구제정보\\한국소비자원_품목별 상담 현황_20240630.csv"
+    ],
+    "processing_outcome_present_files": [
+      "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20260630.csv"
+    ],
+    "same_bytes_duplicates": 9,
+    "duplication_policy": "동일 해시 파일은 감사 통계에서만 한 번 계산. 기존 파일 삭제·수정하지 않음."
+  },
+  "limitations": [
+    "파일명 일부 일치로 선별한 지정 폴더의 구조 점검; PC 전체 모든 데이터의 부재를 증명하지 않음",
+    "공식 최신 파일 재다운로드와 해시 동일성 비교는 미수행",
+    "원자료 상담/피해구제 집계 대상 혼용 금지",
+    "611 코드 정의와 초안 집계표 미확보",
+    "최신 공개 페이지 기준 월별 데이터2026-08, 피해구제2026년2분기. 로컬 각 2026-07,2026년2분기."
+  ]
+}

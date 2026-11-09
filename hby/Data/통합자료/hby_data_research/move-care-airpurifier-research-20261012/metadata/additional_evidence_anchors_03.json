@@ -1,0 +1,80 @@
+[
+  {
+    "source_id": "LG-AIR-CARE-COMPARISON-001",
+    "claim": "비교표 무상 철거/재설치의 제품 제한",
+    "exact_anchor": "스탠드/벽걸이 에어컨 계약기간 내 1회 제공",
+    "markdown_lines": [
+      213
+    ],
+    "path": "raw/additional_03/LG-AIR-CARE-COMPARISON-001.firecrawl.md",
+    "sha256": "f5f89cf3ee035822546a0922fafd81d2e1b3d475021b6eb30153834b51136a05"
+  },
+  {
+    "source_id": "LG-AIR-CARE-COMPARISON-001",
+    "claim": "별도 이동 서비스 제외 조건",
+    "exact_anchor": "제품 이동 서비스는 포함되어 있지 않습니다.",
+    "markdown_lines": [
+      224,
+      311
+    ],
+    "path": "raw/additional_03/LG-AIR-CARE-COMPARISON-001.firecrawl.md",
+    "sha256": "f5f89cf3ee035822546a0922fafd81d2e1b3d475021b6eb30153834b51136a05"
+  },
+  {
+    "source_id": "LG-AIR-CARE-COMPARISON-001",
+    "claim": "제품/모델별 제한",
+    "exact_anchor": "제품 및 모델에 따라 서비스 범위가 달라질 수 있습니다.",
+    "markdown_lines": [
+      128,
+      133
+    ],
+    "path": "raw/additional_03/LG-AIR-CARE-COMPARISON-001.firecrawl.md",
+    "sha256": "f5f89cf3ee035822546a0922fafd81d2e1b3d475021b6eb30153834b51136a05"
+  },
+  {
+    "source_id": "KCA-REDRESS-METADATA-001",
+    "claim": "피해구제 공개 행 수",
+    "exact_anchor": "12834",
+    "markdown_lines": [
+      162,
+      394
+    ],
+    "path": "raw/additional_03/KCA-REDRESS-METADATA-001.firecrawl.md",
+    "sha256": "0843a1ed5229a48139c646c134428f8b73786a1c5178d4066504aa094f333d65"
+  },
+  {
+    "source_id": "KCA-REDRESS-METADATA-001",
+    "claim": "메타데이터 수정일",
+    "exact_anchor": "2026-09-03",
+    "markdown_lines": [
+      183,
+      415
+    ],
+    "path": "raw/additional_03/KCA-REDRESS-METADATA-001.firecrawl.md",
+    "sha256": "0843a1ed5229a48139c646c134428f8b73786a1c5178d4066504aa094f333d65"
+  },
+  {
+    "source_id": "KCA-COUNSEL-MONTHLY-METADATA-001",
+    "claim": "월별 집계의 범위",
+    "exact_anchor": "상위 다발 품목 500개",
+    "markdown_lines": [
+      112,
+      352
+    ],
+    "path": "raw/additional_03/KCA-COUNSEL-MONTHLY-METADATA-001.firecrawl.md",
+    "sha256": "9daab7fe54aa80f47ec4b8ee79021160bbe247ed1dfda464d5c31e413fded98e"
+  },
+  {
+    "source_id": "KCA-COUNSEL-MONTHLY-METADATA-001",
+    "claim": "8월 자료 메타데이터 등록/수정일",
+    "exact_anchor": "2026-10-01",
+    "markdown_lines": [
+      169,
+      172,
+      383,
+      386
+    ],
+    "path": "raw/additional_03/KCA-COUNSEL-MONTHLY-METADATA-001.firecrawl.md",
+    "sha256": "9daab7fe54aa80f47ec4b8ee79021160bbe247ed1dfda464d5c31e413fded98e"
+  }
+]

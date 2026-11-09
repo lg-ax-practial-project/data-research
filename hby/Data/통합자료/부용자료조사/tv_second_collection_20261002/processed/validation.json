@@ -1,0 +1,56 @@
+{
+  "xml": {
+    "rows": 678,
+    "headers": [
+      "일련번호",
+      "품목",
+      "출처",
+      "제목",
+      "질문",
+      "답변"
+    ],
+    "duplicate_ids": 0,
+    "keyword_candidates": 7,
+    "selected_tv": 4,
+    "excluded": [
+      {
+        "id": "284",
+        "reason": "TV홈쇼핑에서 산 청소기"
+      },
+      {
+        "id": "295",
+        "reason": "TV홈쇼핑에서 산 침대"
+      },
+      {
+        "id": "337",
+        "reason": "TV보도와 건강식품"
+      }
+    ],
+    "new_customer_case_count": 0,
+    "first_failure_explicit_count": 0,
+    "sha256": "ea94fff6d9ce2503cb60747f2a66fe022a1d40ee2a2f8af1f571229c77b7b93c"
+  },
+  "consultation_csv": {
+    "rows": 500,
+    "headers": [
+      "연도",
+      "월",
+      "품목명",
+      "상담건수",
+      "전월대비 증감률",
+      "전년동월대비 증감률"
+    ],
+    "tv_matching_rule": "품목명.strip() == 'TV'",
+    "tv_original_fields": {
+      "연도": "2026",
+      "월": "07",
+      "품목명": "TV",
+      "상담건수": "364",
+      "전월대비 증감률": "17",
+      "전년동월대비 증감률": "-1.9"
+    },
+    "sha256": "9ef575d62be89452c398a003513ed4bcf2de333fc9aa17004b388e0cbf8c4363",
+    "meaning": "2026년 7월 TV 품목 전체 상담 364건; LG TV만의 건수·첫 고장·고장 증상 통계 아님"
+  },
+  "new_lg_guides": 3
+}

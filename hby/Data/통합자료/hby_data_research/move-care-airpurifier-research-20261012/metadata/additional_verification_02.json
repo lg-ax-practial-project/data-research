@@ -1,0 +1,41 @@
+{
+  "review_date_kst": "2026-10-12",
+  "source_count": 20,
+  "added_source_records": 5,
+  "new_unique_global_web_sources": 1,
+  "revisited_washtower_sources": 4,
+  "exact_markdown_anchors_verified": 9,
+  "public_price_rows": 78,
+  "public_price_columns": 6,
+  "air_price_record_number": 72,
+  "table_arithmetic_consistent": true,
+  "ui_other_tab_screenshot_obtained": false,
+  "search_count": 16,
+  "search_error_count": 2,
+  "baseline_personal_files": 129,
+  "current_individual_contract_terms_obtained": false,
+  "rag_or_calculation_tests_executed": false,
+  "inquiry_sent": false,
+  "status": "D 드라이브 개인 폴더 반영 및 검증 완료",
+  "unresolved": [
+    "현행 해당 계약 약관 전문",
+    "35,000원/39,000원 적용 계약 경계",
+    "LG 실제 관리 불가 지역·해외 이주 처리 조건",
+    "공기청정기 구독 무상 이전 혜택"
+  ],
+  "branch": "hby",
+  "existing_files_preserved_unchanged": 126,
+  "deleted_files": [],
+  "changed_existing_files": [
+    "README.md",
+    "move-care-airpurifier-research-20261012/README.md",
+    "move-care-airpurifier-research-20261012/metadata/source_manifest.json"
+  ],
+  "added_files": 21,
+  "personal_file_count_after": 150,
+  "authored_relative_links_checked": 57,
+  "missing_local_links": [],
+  "all_source_capture_hashes_match": true,
+  "standard_answers_preserved_copy_identical": true,
+  "git_actions": "no commit, push, merge, staging or shared interface changes"
+}

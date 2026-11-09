@@ -1,0 +1,9 @@
+{
+  "run": "D:\\core-project\\cx-agent-planning\\부용자료조사\\lg_tv_support_crawl_20261004\\runs\\20261004T082735883553Z",
+  "seed_count": 13,
+  "article_count": 13,
+  "faq_count": 18,
+  "review_count": 0,
+  "raw_hashes_verified": true,
+  "coverage": "Curated public TV URLs; not the entire LG FAQ catalog"
+}

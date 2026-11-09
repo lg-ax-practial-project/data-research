@@ -1,0 +1,44 @@
+{
+  "list_url": "https://www.lge.co.kr/support/solutions",
+  "faq_url": "https://www.lge.co.kr/story/faq/tvs-faq",
+  "initial_count": 19,
+  "candidate_urls": [
+    "https://www.lge.co.kr/story/faq/tvs-faq",
+    "https://www.lge.co.kr/support/solutions-1777897",
+    "https://www.lge.co.kr/support/solutions-20152183148933",
+    "https://www.lge.co.kr/support/solutions-20150903914041",
+    "https://www.lge.co.kr/support/solutions-20150195460917",
+    "https://www.lge.co.kr/support/solutions-20155301642915",
+    "https://www.lge.co.kr/support/solutions-20152087489076",
+    "https://www.lge.co.kr/support/solutions-20150371175052",
+    "https://www.lge.co.kr/support/solutions-20153749094807",
+    "https://www.lge.co.kr/support/solutions-1777854",
+    "https://www.lge.co.kr/support/solutions-1333004114799",
+    "https://www.lge.co.kr/support/solutions-1300176600136",
+    "https://www.lge.co.kr/support/solutions-20151952645799",
+    "https://www.lge.co.kr/support/solutions-20152081551580",
+    "https://www.lge.co.kr/support/solutions-20152049798567",
+    "https://www.lge.co.kr/support/solutions-1778182",
+    "https://www.lge.co.kr/support/solutions-20152067976450",
+    "https://www.lge.co.kr/support/solutions-1778034",
+    "https://www.lge.co.kr/support/solutions-20152979818696",
+    "https://www.lge.co.kr/support/solutions-20153808286186",
+    "https://www.lge.co.kr/support/solutions-20153769451317"
+  ],
+  "links_discovered": [
+    {
+      "url": "https://www.lge.co.kr/support/solutions-20153808286186",
+      "discovered_from": "https://www.lge.co.kr/story/faq/tvs-faq",
+      "status": "queued"
+    },
+    {
+      "url": "https://www.lge.co.kr/support/solutions-20153769451317",
+      "discovered_from": "https://www.lge.co.kr/story/faq/tvs-faq",
+      "status": "queued"
+    }
+  ],
+  "not_attempted": [],
+  "site_total": null,
+  "coverage_complete": false,
+  "limitation": "Public list needs product selection; not an exhaustive TV inventory"
+}

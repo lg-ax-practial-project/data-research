@@ -1,0 +1,608 @@
+{
+  "checked_on": "2026-10-12",
+  "repository": "lg-ax-core-project/DataResearch",
+  "branch": "khh",
+  "reviewed_head": "8b90f6bd12ee396dfa8ca238da13a5fa64df9db0",
+  "acquisition": "Authenticated GitHub browser Download ZIP; read-only local snapshot audit.",
+  "scope": "File integrity, reproducible public CSV transformations, mock referential integrity and expected-value arithmetic. No live LG access; no Agent evaluation; no signed-term or production readiness validation.",
+  "checks": [
+    {
+      "check": "json_parse",
+      "status": "PASS",
+      "detail": {
+        "json": 17,
+        "jsonl": 2
+      }
+    },
+    {
+      "check": "distributed_source_hashes",
+      "status": "PASS",
+      "detail": [
+        {
+          "path": "raw/kca_subscription_report_202604.pdf",
+          "match": true
+        },
+        {
+          "path": "raw/kca_subscription_report_202604.txt",
+          "match": true
+        },
+        {
+          "path": "raw/kca_report_landing.html",
+          "match": true
+        },
+        {
+          "path": "raw/kca_relief_20260630.csv",
+          "match": true
+        },
+        {
+          "path": "raw/kca_relief_portal.html",
+          "match": true
+        }
+      ]
+    },
+    {
+      "check": "missing_sources_declared_local_only",
+      "status": "PASS",
+      "detail": [
+        {
+          "path": "raw/lg_subscription_faq.html",
+          "distribution": "local_only"
+        },
+        {
+          "path": "raw/lg_reinstallation_benefit.html",
+          "distribution": "local_only"
+        },
+        {
+          "path": "raw/lg_installation_checklist.html",
+          "distribution": "local_only"
+        }
+      ]
+    },
+    {
+      "check": "selected_rows_lineage",
+      "status": "PASS",
+      "detail": {
+        "raw_rows": 12834,
+        "selected_rows": 291,
+        "exact_match_products": 10
+      }
+    },
+    {
+      "check": "public_profile_recomputed",
+      "status": "PASS",
+      "detail": {
+        "total_rows": 12834,
+        "selected_rows": 291,
+        "columns": [
+          "접수일",
+          "성별",
+          "연령",
+          "지역",
+          "판매유형",
+          "물품명",
+          "청구이유",
+          "처리결과"
+        ],
+        "periods": {
+          "2026년 2분기": 12834
+        },
+        "missing_by_column": {
+          "접수일": 0,
+          "성별": 0,
+          "연령": 0,
+          "지역": 537,
+          "판매유형": 3,
+          "물품명": 0,
+          "청구이유": 0,
+          "처리결과": 0
+        },
+        "selected_by_product": {
+          "전기세탁기": 31,
+          "냉장고": 33,
+          "정수기대여(렌트)": 120,
+          "전기의류건조기": 8,
+          "시스템에어컨": 14,
+          "정수기": 24,
+          "룸에어컨": 33,
+          "김치냉장고": 15,
+          "가스에어컨": 8,
+          "이동식에어컨": 5
+        },
+        "selected_by_reason": {
+          "계약불이행(불완전이행)": 41,
+          "품질(물품/용역)": 64,
+          "계약해제.해지/위약금": 62,
+          "부당행위": 18,
+          "AS불만": 55,
+          "표시.광고": 11,
+          "가격.요금": 6,
+          "안전(제품/시설)": 13,
+          "청약철회": 11,
+          "단순문의.상담": 7,
+          "거래관행": 1,
+          "상담자율처리": 1,
+          "법.제도": 1
+        },
+        "selected_by_age": {
+          "30 - 39세": 73,
+          "40 - 49세": 90,
+          "50 - 59세": 61,
+          "불명": 8,
+          "20 - 29세": 11,
+          "65 - 69세": 12,
+          "80세이상": 5,
+          "60 - 64세": 18,
+          "70 - 79세": 12,
+          "10 - 19세": 1
+        }
+      }
+    },
+    {
+      "check": "cross_tab_recomputed",
+      "status": "PASS",
+      "detail": {
+        "groups": 168,
+        "sum": 291
+      }
+    },
+    {
+      "check": "primary_keys_unique",
+      "status": "PASS",
+      "detail": {
+        "customers": 100,
+        "contracts": 100,
+        "products": 1,
+        "terms": 1,
+        "quotes": 100,
+        "slots": 84,
+        "bookings": 0
+      }
+    },
+    {
+      "check": "foreign_keys_resolve",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "rule_provenance_resolves",
+      "status": "PASS",
+      "detail": {
+        "rag_rules": 9,
+        "source_count": 6
+      }
+    },
+    {
+      "check": "mock_flags",
+      "status": "PASS",
+      "detail": "All existing mock business records labelled synthetic; bookings table empty."
+    },
+    {
+      "check": "period_constraints",
+      "status": "PASS",
+      "detail": "Whole-month demo only; actual daily settlement not validated."
+    },
+    {
+      "check": "contract_dates_match_months",
+      "status": "PASS",
+      "detail": {
+        "as_of_dates": [
+          "2026-10-12"
+        ]
+      }
+    },
+    {
+      "check": "quote_totals_and_unknowns",
+      "status": "PASS",
+      "detail": {
+        "eligible_mock": 77,
+        "needs_site_check": 13,
+        "ineligible_mock": 10
+      }
+    },
+    {
+      "check": "sqlite_integrity",
+      "status": "PASS",
+      "detail": {
+        "integrity": [
+          [
+            "ok"
+          ]
+        ],
+        "foreign_key_violations": []
+      }
+    },
+    {
+      "check": "sqlite_payload_equals_json",
+      "status": "PASS",
+      "detail": {
+        "customers": true,
+        "contracts": true,
+        "products": true,
+        "terms": true,
+        "quotes": true,
+        "slots": true,
+        "bookings": true
+      }
+    },
+    {
+      "check": "normal_fixture_expected_values",
+      "status": "PASS",
+      "detail": [
+        {
+          "case_id": "N01",
+          "match": true,
+          "eligible": true
+        },
+        {
+          "case_id": "N02",
+          "match": true,
+          "eligible": true
+        },
+        {
+          "case_id": "N03",
+          "match": true,
+          "eligible": true
+        },
+        {
+          "case_id": "N04",
+          "match": true,
+          "eligible": true
+        },
+        {
+          "case_id": "N05",
+          "match": true,
+          "eligible": true
+        },
+        {
+          "case_id": "N06",
+          "match": true,
+          "eligible": true
+        },
+        {
+          "case_id": "N07",
+          "match": true,
+          "eligible": true
+        },
+        {
+          "case_id": "N08",
+          "match": true,
+          "eligible": true
+        },
+        {
+          "case_id": "N09",
+          "match": true,
+          "eligible": true
+        },
+        {
+          "case_id": "N10",
+          "match": true,
+          "eligible": true
+        },
+        {
+          "case_id": "N11",
+          "match": true,
+          "eligible": true
+        },
+        {
+          "case_id": "N12",
+          "match": true,
+          "eligible": true
+        },
+        {
+          "case_id": "N13",
+          "match": true,
+          "eligible": true
+        },
+        {
+          "case_id": "N14",
+          "match": true,
+          "eligible": true
+        },
+        {
+          "case_id": "N15",
+          "match": true,
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "check": "report_partition_sums",
+      "status": "PASS",
+      "detail": {
+        "annual_total": 2624,
+        "complaint_type": 2624,
+        "contract_subtype": 1446,
+        "note": "Checks internal partition sums, not a fresh visual verification of every PDF cell."
+      }
+    },
+    {
+      "check": "new_registry_unique_ids",
+      "status": "PASS",
+      "detail": {
+        "sources": 29,
+        "tools": 8,
+        "evaluation_cases": 14
+      }
+    },
+    {
+      "check": "new_blueprint_source_refs",
+      "status": "PASS",
+      "detail": "Explicit source-ID references resolve."
+    }
+  ],
+  "summary": {
+    "passed": 19,
+    "failed": 0
+  },
+  "findings": {
+    "product_scope": "Existing mock and RAG records target WashTower; new proposal targets air purifier. Values and installation logic are not interchangeable.",
+    "air_purifier_in_raw_csv": {
+      "products": {
+        "공기청정기대여(렌트)": 12,
+        "공기청정기": 9
+      },
+      "total": 21,
+      "reason_counts": {
+        "계약해제.해지/위약금": 8,
+        "품질(물품/용역)": 6,
+        "안전(제품/시설)": 1,
+        "청약철회": 2,
+        "부당행위": 1,
+        "AS불만": 3
+      },
+      "by_product_and_reason": {
+        "공기청정기대여(렌트)": {
+          "계약해제.해지/위약금": 8,
+          "품질(물품/용역)": 3,
+          "부당행위": 1
+        },
+        "공기청정기": {
+          "안전(제품/시설)": 1,
+          "청약철회": 2,
+          "AS불만": 3,
+          "품질(물품/용역)": 3
+        }
+      },
+      "existing_selected_contains_air_purifier": false,
+      "note": "Product-name match in 2026 Q2 relief records only. Not the user-provided 1372 counseling population; no LG or moving identification."
+    },
+    "overlapping_engineer_slot_groups": 42,
+    "slot_conflicts": [
+      {
+        "engineer_id": "MOCK-E1",
+        "starts_at": "2026-10-22T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E2",
+        "starts_at": "2026-10-22T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E3",
+        "starts_at": "2026-10-22T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E1",
+        "starts_at": "2026-10-23T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E2",
+        "starts_at": "2026-10-23T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E3",
+        "starts_at": "2026-10-23T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E1",
+        "starts_at": "2026-10-24T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E2",
+        "starts_at": "2026-10-24T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E3",
+        "starts_at": "2026-10-24T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E1",
+        "starts_at": "2026-10-25T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E2",
+        "starts_at": "2026-10-25T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E3",
+        "starts_at": "2026-10-25T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E1",
+        "starts_at": "2026-10-26T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E2",
+        "starts_at": "2026-10-26T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E3",
+        "starts_at": "2026-10-26T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E1",
+        "starts_at": "2026-10-27T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E2",
+        "starts_at": "2026-10-27T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E3",
+        "starts_at": "2026-10-27T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E1",
+        "starts_at": "2026-10-28T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E2",
+        "starts_at": "2026-10-28T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E3",
+        "starts_at": "2026-10-28T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E1",
+        "starts_at": "2026-10-29T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E2",
+        "starts_at": "2026-10-29T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E3",
+        "starts_at": "2026-10-29T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E1",
+        "starts_at": "2026-10-30T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E2",
+        "starts_at": "2026-10-30T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E3",
+        "starts_at": "2026-10-30T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E1",
+        "starts_at": "2026-10-31T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E2",
+        "starts_at": "2026-10-31T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E3",
+        "starts_at": "2026-10-31T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E1",
+        "starts_at": "2026-11-01T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E2",
+        "starts_at": "2026-11-01T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E3",
+        "starts_at": "2026-11-01T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E1",
+        "starts_at": "2026-11-02T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E2",
+        "starts_at": "2026-11-02T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E3",
+        "starts_at": "2026-11-02T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E1",
+        "starts_at": "2026-11-03T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E2",
+        "starts_at": "2026-11-03T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E3",
+        "starts_at": "2026-11-03T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E1",
+        "starts_at": "2026-11-04T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E2",
+        "starts_at": "2026-11-04T14:00:00+09:00",
+        "candidate_slots": 2
+      },
+      {
+        "engineer_id": "MOCK-E3",
+        "starts_at": "2026-11-04T14:00:00+09:00",
+        "candidate_slots": 2
+      }
+    ],
+    "all_contracts_mandatory_equals_total": true,
+    "existing_rag_missing_effective_dates": 9,
+    "evaluation_execution_status": {
+      "not_run": 30
+    },
+    "user_1372_claims": {
+      "raw_dataset_available_in_snapshot": false,
+      "status": "not_reproduced",
+      "arithmetic_only": {
+        "552/1423_percent": 38.79,
+        "ratio_to_11.78_percent": 3.29
+      }
+    },
+    "source_overlap": [
+      "KCA02 maps to existing KCA_REPORT by exact URL.",
+      "KCA01 and KCA03 are release and its attachment; YT02 covers the same study. Treat as one evidence family, not independent surveys."
+    ],
+    "survey_wording_correction": "31.4% means respondents perceived no early termination penalty; it does not mean any unspecified lack of exact fee knowledge.",
+    "coverage_and_requests_missing": [
+      "air-purifier service coverage dataset",
+      "care_mode/care_cycle/billing_schedule in existing contracts",
+      "address change request records",
+      "consent and payload-bound draft records",
+      "counseling handoff records"
+    ]
+  }
+}

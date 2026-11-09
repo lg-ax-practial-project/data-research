@@ -1,0 +1,9 @@
+﻿파일명,제목,보여주는 결론
+outputs/step3_final/reason_group_heatmap.png,Quality and AS reasons lead among selected appliance cases,"품질(물품/용역)·AS불만의 합은 3,205/5,554건(57.71%); 세부 기준 판정형은 N/A, 품목 2개는 분모 30건 미만."
+outputs/step3_final/outcome_group_100pct_stacked.png,Direct remedies account for 183 of 416 recorded appliance outcomes,2026Q2에만 처리결과가 있으며 직접 구제성 결과는 183/416건(43.99%); 품목 13개의 분모는 30건 미만.
+outputs/step4_trend_age/quarterly_total_appliance_share.png,Appliance redress fell from 2024 to 2025 while total redress rose,"2024→2025 가전 2,298/2,392건(-3.93%), 전체 피해구제 63,671/57,657건(+10.43%)."
+outputs/step4_trend_age/quarterly_appliance_lines_by_product.png,Appliance redress counts fluctuate across quarters by product,가전 피해구제의 분기별 움직임은 품목마다 달라 일괄 증가로 요약할 수 없음; 2026Q2 일자 수준 완전성은 미확인.
+outputs/step4_trend_age/age_distribution_comparison.png,Ages 30-39 have the most cases in both appliance and all redress,"가전 피해구제 신청자 중 30~39세 1,705/5,554건(30.70%)이 최다."
+outputs/step5_final/monthly_seven_appliance_timeseries.png,The seven appliance labels reach their combined peak in 2025-07,"상위 500위에서 32개월 모두 관측된 7개 표기의 상담 합계는 2025-07에 3,586건으로 최대."
+outputs/step5_final/air_conditioner_peak_vs_winter.png,Air conditioner consultations in 2025-07 are 19.54 times the winter median,"에어컨 원문 표기 2025-07 한 달 1,964건 / 동절기 관측 14개월의 월간 중앙값 100.5건 = 19.54배; 계절 평균 비교는 아님."
+outputs/step6_final/question_type_bar_chart.png,Criteria-related topics account for 30 of 71 appliance FAQ entries,기준 판정 관련 표준답변은 30/71항목(42.25%); 실제 문의 빈도가 아니며 무작위 30건 검수 전 분류.

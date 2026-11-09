@@ -1,0 +1,842 @@
+[
+  {
+    "slot_id": "S100removal",
+    "region": "서울 마포구",
+    "service": "removal",
+    "starts_at": "2026-10-22T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S100reinstallation",
+    "region": "서울 마포구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-22T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S101removal",
+    "region": "서울 강서구",
+    "service": "removal",
+    "starts_at": "2026-10-22T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S101reinstallation",
+    "region": "서울 강서구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-22T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S102removal",
+    "region": "경기 고양시",
+    "service": "removal",
+    "starts_at": "2026-10-22T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S102reinstallation",
+    "region": "경기 고양시",
+    "service": "reinstallation",
+    "starts_at": "2026-10-22T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S110removal",
+    "region": "서울 마포구",
+    "service": "removal",
+    "starts_at": "2026-10-23T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S110reinstallation",
+    "region": "서울 마포구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-23T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S111removal",
+    "region": "서울 강서구",
+    "service": "removal",
+    "starts_at": "2026-10-23T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S111reinstallation",
+    "region": "서울 강서구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-23T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S112removal",
+    "region": "경기 고양시",
+    "service": "removal",
+    "starts_at": "2026-10-23T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S112reinstallation",
+    "region": "경기 고양시",
+    "service": "reinstallation",
+    "starts_at": "2026-10-23T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S120removal",
+    "region": "서울 마포구",
+    "service": "removal",
+    "starts_at": "2026-10-24T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S120reinstallation",
+    "region": "서울 마포구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-24T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S121removal",
+    "region": "서울 강서구",
+    "service": "removal",
+    "starts_at": "2026-10-24T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S121reinstallation",
+    "region": "서울 강서구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-24T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S122removal",
+    "region": "경기 고양시",
+    "service": "removal",
+    "starts_at": "2026-10-24T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S122reinstallation",
+    "region": "경기 고양시",
+    "service": "reinstallation",
+    "starts_at": "2026-10-24T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S130removal",
+    "region": "서울 마포구",
+    "service": "removal",
+    "starts_at": "2026-10-25T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S130reinstallation",
+    "region": "서울 마포구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-25T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S131removal",
+    "region": "서울 강서구",
+    "service": "removal",
+    "starts_at": "2026-10-25T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S131reinstallation",
+    "region": "서울 강서구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-25T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S132removal",
+    "region": "경기 고양시",
+    "service": "removal",
+    "starts_at": "2026-10-25T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S132reinstallation",
+    "region": "경기 고양시",
+    "service": "reinstallation",
+    "starts_at": "2026-10-25T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S140removal",
+    "region": "서울 마포구",
+    "service": "removal",
+    "starts_at": "2026-10-26T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S140reinstallation",
+    "region": "서울 마포구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-26T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S141removal",
+    "region": "서울 강서구",
+    "service": "removal",
+    "starts_at": "2026-10-26T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S141reinstallation",
+    "region": "서울 강서구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-26T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S142removal",
+    "region": "경기 고양시",
+    "service": "removal",
+    "starts_at": "2026-10-26T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S142reinstallation",
+    "region": "경기 고양시",
+    "service": "reinstallation",
+    "starts_at": "2026-10-26T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S150removal",
+    "region": "서울 마포구",
+    "service": "removal",
+    "starts_at": "2026-10-27T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S150reinstallation",
+    "region": "서울 마포구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-27T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S151removal",
+    "region": "서울 강서구",
+    "service": "removal",
+    "starts_at": "2026-10-27T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S151reinstallation",
+    "region": "서울 강서구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-27T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S152removal",
+    "region": "경기 고양시",
+    "service": "removal",
+    "starts_at": "2026-10-27T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S152reinstallation",
+    "region": "경기 고양시",
+    "service": "reinstallation",
+    "starts_at": "2026-10-27T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S160removal",
+    "region": "서울 마포구",
+    "service": "removal",
+    "starts_at": "2026-10-28T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S160reinstallation",
+    "region": "서울 마포구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-28T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S161removal",
+    "region": "서울 강서구",
+    "service": "removal",
+    "starts_at": "2026-10-28T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S161reinstallation",
+    "region": "서울 강서구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-28T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S162removal",
+    "region": "경기 고양시",
+    "service": "removal",
+    "starts_at": "2026-10-28T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S162reinstallation",
+    "region": "경기 고양시",
+    "service": "reinstallation",
+    "starts_at": "2026-10-28T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S170removal",
+    "region": "서울 마포구",
+    "service": "removal",
+    "starts_at": "2026-10-29T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S170reinstallation",
+    "region": "서울 마포구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-29T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S171removal",
+    "region": "서울 강서구",
+    "service": "removal",
+    "starts_at": "2026-10-29T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S171reinstallation",
+    "region": "서울 강서구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-29T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S172removal",
+    "region": "경기 고양시",
+    "service": "removal",
+    "starts_at": "2026-10-29T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S172reinstallation",
+    "region": "경기 고양시",
+    "service": "reinstallation",
+    "starts_at": "2026-10-29T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S180removal",
+    "region": "서울 마포구",
+    "service": "removal",
+    "starts_at": "2026-10-30T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S180reinstallation",
+    "region": "서울 마포구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-30T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S181removal",
+    "region": "서울 강서구",
+    "service": "removal",
+    "starts_at": "2026-10-30T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S181reinstallation",
+    "region": "서울 강서구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-30T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S182removal",
+    "region": "경기 고양시",
+    "service": "removal",
+    "starts_at": "2026-10-30T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S182reinstallation",
+    "region": "경기 고양시",
+    "service": "reinstallation",
+    "starts_at": "2026-10-30T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S190removal",
+    "region": "서울 마포구",
+    "service": "removal",
+    "starts_at": "2026-10-31T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S190reinstallation",
+    "region": "서울 마포구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-31T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S191removal",
+    "region": "서울 강서구",
+    "service": "removal",
+    "starts_at": "2026-10-31T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S191reinstallation",
+    "region": "서울 강서구",
+    "service": "reinstallation",
+    "starts_at": "2026-10-31T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S192removal",
+    "region": "경기 고양시",
+    "service": "removal",
+    "starts_at": "2026-10-31T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S192reinstallation",
+    "region": "경기 고양시",
+    "service": "reinstallation",
+    "starts_at": "2026-10-31T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S200removal",
+    "region": "서울 마포구",
+    "service": "removal",
+    "starts_at": "2026-11-01T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S200reinstallation",
+    "region": "서울 마포구",
+    "service": "reinstallation",
+    "starts_at": "2026-11-01T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S201removal",
+    "region": "서울 강서구",
+    "service": "removal",
+    "starts_at": "2026-11-01T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S201reinstallation",
+    "region": "서울 강서구",
+    "service": "reinstallation",
+    "starts_at": "2026-11-01T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S202removal",
+    "region": "경기 고양시",
+    "service": "removal",
+    "starts_at": "2026-11-01T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S202reinstallation",
+    "region": "경기 고양시",
+    "service": "reinstallation",
+    "starts_at": "2026-11-01T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S210removal",
+    "region": "서울 마포구",
+    "service": "removal",
+    "starts_at": "2026-11-02T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S210reinstallation",
+    "region": "서울 마포구",
+    "service": "reinstallation",
+    "starts_at": "2026-11-02T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S211removal",
+    "region": "서울 강서구",
+    "service": "removal",
+    "starts_at": "2026-11-02T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S211reinstallation",
+    "region": "서울 강서구",
+    "service": "reinstallation",
+    "starts_at": "2026-11-02T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S212removal",
+    "region": "경기 고양시",
+    "service": "removal",
+    "starts_at": "2026-11-02T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S212reinstallation",
+    "region": "경기 고양시",
+    "service": "reinstallation",
+    "starts_at": "2026-11-02T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S220removal",
+    "region": "서울 마포구",
+    "service": "removal",
+    "starts_at": "2026-11-03T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S220reinstallation",
+    "region": "서울 마포구",
+    "service": "reinstallation",
+    "starts_at": "2026-11-03T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S221removal",
+    "region": "서울 강서구",
+    "service": "removal",
+    "starts_at": "2026-11-03T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S221reinstallation",
+    "region": "서울 강서구",
+    "service": "reinstallation",
+    "starts_at": "2026-11-03T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S222removal",
+    "region": "경기 고양시",
+    "service": "removal",
+    "starts_at": "2026-11-03T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S222reinstallation",
+    "region": "경기 고양시",
+    "service": "reinstallation",
+    "starts_at": "2026-11-03T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S230removal",
+    "region": "서울 마포구",
+    "service": "removal",
+    "starts_at": "2026-11-04T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S230reinstallation",
+    "region": "서울 마포구",
+    "service": "reinstallation",
+    "starts_at": "2026-11-04T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E1",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S231removal",
+    "region": "서울 강서구",
+    "service": "removal",
+    "starts_at": "2026-11-04T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S231reinstallation",
+    "region": "서울 강서구",
+    "service": "reinstallation",
+    "starts_at": "2026-11-04T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E2",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S232removal",
+    "region": "경기 고양시",
+    "service": "removal",
+    "starts_at": "2026-11-04T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  },
+  {
+    "slot_id": "S232reinstallation",
+    "region": "경기 고양시",
+    "service": "reinstallation",
+    "starts_at": "2026-11-04T14:00:00+09:00",
+    "capacity": 1,
+    "remaining_capacity": 1,
+    "engineer_id": "MOCK-E3",
+    "is_synthetic": true
+  }
+]

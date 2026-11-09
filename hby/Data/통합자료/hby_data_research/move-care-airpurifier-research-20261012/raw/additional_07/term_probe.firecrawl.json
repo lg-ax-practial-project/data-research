@@ -1,0 +1,24 @@
+{
+  "markdown": "죄송합니다.\n\n\n요청하신 페이지를\n\n\n찾을 수 없습니다.\n\n\n안녕하세요. LG전자 홈페이지 운영팀입니다.\n\n\n요청하신 페이지를 찾을 수 없습니다.\n\n\n![](https://account.lge.co.kr/lg5-common-member/lg5-common/images/header/logo.svg)\n\n[되돌아가기](https://account.lge.co.kr/redirect/clientBack)",
+  "html": "<!DOCTYPE html><html lang=\"ko\">\n<body>\n<div class=\"wrap\">\n\t<div class=\"container\">\n\t\t<div class=\"contents error-page\">\n\t\t\t<div class=\"error-inner\">\n\t\t\t\t<p class=\"tit\">\n\t\t\t\t\t죄송합니다.\n\t\t\t\t\t<br>\n\t\t\t\t\t요청하신 페이지를\n\t\t\t\t\t<br class=\"m-br\">\n\t\t\t\t\t찾을 수 없습니다.\n\t\t\t\t</p>\n\t\t\t\t<p class=\"desc\">\n\t\t\t\t\t안녕하세요. LG전자 홈페이지 운영팀입니다.\n\t\t\t\t\t<br>\n\t\t\t\t\t요청하신 페이지를 찾을 수 없습니다.\n\t\t\t\t</p>\n\t\t\t\t<div class=\"ci\" aria-hidden=\"true\">\n\t\t\t\t\t<img src=\"https://account.lge.co.kr/lg5-common-member/lg5-common/images/header/logo.svg\" alt=\"\" width=\"300\" height=\"150\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"btns\">\n\t\t\t\t\t<a href=\"https://account.lge.co.kr/redirect/clientBack\" class=\"btn\"><span>되돌아가기</span></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n</body></html>",
+  "links": [
+    "https://account.lge.co.kr/redirect/clientBack"
+  ],
+  "metadata": {
+    "language": "ko",
+    "title": "",
+    "viewport": "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no",
+    "description": "",
+    "favicon": "https://account.lge.co.kr/lg5-common-member/lg5-common/images/favicon.ico",
+    "scrapeId": "01a130b7-9461-7682-b6e4-f7f566580ac4",
+    "sourceURL": "https://account.lge.co.kr/terms/emp/detailView?tmsId=A_ITG_CUP_CARESOL&tmsDvdCd=RQD",
+    "url": "https://account.lge.co.kr/error/404",
+    "statusCode": 200,
+    "contentType": "text/html;charset=utf-8",
+    "timezone": "America/New_York",
+    "proxyUsed": "basic",
+    "indexId": "1097181d-7acd-4a3c-a0d9-6dcd3d901f51",
+    "creditsUsed": 1,
+    "concurrencyLimited": false
+  }
+}

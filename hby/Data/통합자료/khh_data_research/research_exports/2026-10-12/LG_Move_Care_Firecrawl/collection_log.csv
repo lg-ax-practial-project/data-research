@@ -1,0 +1,13 @@
+﻿log_id,operation,query_or_target,parameters,result,note
+L01,Firecrawl search + scrape,워시타워 이사 이전설치 비용 후기 구독 해지,limit=12; South Korea; web; markdown; redactPII=true,12개 검색 결과; 본문/대화와 후보 분리,후기뿐 아니라 일반 안내·공식 페이지가 섞여 있어 재분류.
+L02,Firecrawl search,"""워시타워"" ""구독"" ""이사"" 후기 -site:lge.co.kr -site:lxpantos.com",limit=12,실패: HTTP 429,새로운 자료를 수집한 것으로 계산하지 않음.
+L03,Firecrawl 도구 탐색,YouTube comments provider,semantic discovery / provider youtube,전용 댓글 도구 없음; read는 메타데이터·설명·자막만 제공,자막을 댓글로 대체하지 않음.
+L04,Firecrawl interact,https://www.youtube.com/watch?v=wLyPfiOg4Cs,공개 화면 읽기; 스크롤·일부 답글 펼치기; 읽기 전용,표시 30개 중 고유 댓글 본문 14개 확보,중복 DOM 제거: lc ID 기준. 답글 parent ID는 lc의 첫 점 앞 값으로 연결.
+L05,Firecrawl interact 재시도,https://www.youtube.com/watch?v=wLyPfiOg4Cs,답글 확장 및 기존 DOM 재확인,시간초과; 추가 댓글 없음,14개 부분 표본 유지. 전체 댓글 수집 완료라고 표시하지 않음.
+L06,Firecrawl search,워시타워 구독 이사 해지 후기,limit=10; South Korea; LG/Pantos 제외,10개 검색 발췌; 관련 영상·개인 블로그를 선택해 본문 확인,검색 발췌만 있는 후보를 본문 수집으로 계산하지 않음.
+L07,Firecrawl scrape,https://www.youtube.com/watch?v=OewkQmHQfHM,JSON 메타데이터,영상 제목·채널·게시일 확보,가전각색 / 2025-04-24. 스키마 지정 오류 뒤 prompt 방식으로 조회.
+L08,Firecrawl interact,https://www.youtube.com/watch?v=OewkQmHQfHM,공개 댓글 DOM 조회 시도,시간초과 및 후속 도구 요청 차단; 댓글 0개,접근 제한을 우회하지 않음. 검색 발췌의 댓글 추정 문장 미포함.
+L09,Firecrawl search + page query,LG 가전 구독 해지 위약금 후기 블로그,limit=10; query extraction; LG/다나와 제외,"9개 페이지 질의 응답, 1개 검색 발췌",질의 응답은 자동 추출 요약이며 원문 전체 검토와 다름.
+L10,Firecrawl scrape,https://blog.naver.com/ysys795123/224177970547,모바일 블로그 markdown,"구매 후기 본문 확보; 표시 댓글 26개, 실제 댓글 0개",본문 제목에서 구독 아님을 명시; 협찬·제휴 여부 미확인.
+L11,Firecrawl scrape 재검증,https://gall.dcinside.com/board/view/?id=appliance&no=20784,markdown; redactPII=true,해당 게시글 본문·댓글 11개 확인,질의에서 잘못 뽑힌 옆 글 제목·날짜를 제거. 자동 뉴스 댓글·광고·IP 미포함.
+L12,수동 정규화·질적 코딩,게시글·댓글 전체,원문 URL/플랫폼 ID 보존; 본문은 짧은 비식별 요약,댓글 60행: 분석 포함 42 / 제외 18,학습용 원문 코퍼스가 아니라 출처 추적 가능한 분석용 데이터. 코드·해석은 분석자가 부여.
