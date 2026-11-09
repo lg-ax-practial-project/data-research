@@ -114,6 +114,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
+          REPO: ${{ github.repository }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
         shell: bash
         run: |
           files=$(gh pr view "$PR_URL" --json files --jq '.files[].path')
@@ -129,3 +131,13 @@ jobs:
 
           echo "자동 Squash Merge 설정"
           gh pr merge --auto --squash "$PR_URL"
+
+          # 봇이 병합한 경우 브랜치 자동 삭제가 동작하지 않으므로 직접 삭제
+          sleep 5
+          state=$(gh pr view "$PR_URL" --json state --jq '.state')
+          if [ "$state" = "MERGED" ]; then
+            echo "병합 완료 — 작업 브랜치 삭제: $HEAD_REF"
+            gh api -X DELETE "repos/$REPO/git/refs/heads/$HEAD_REF" || true
+          else
+            echo "아직 병합 대기 중 (state: $state) — 브랜치는 병합 후 수동 정리"
+          fi
