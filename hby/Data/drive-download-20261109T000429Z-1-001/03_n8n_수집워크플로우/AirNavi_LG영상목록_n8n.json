@@ -1,0 +1,191 @@
+{
+  "name": "Air-Navi · LG전자서비스 공식 영상 목록 갱신",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "c7adc767-1c64-4d45-9812-3181459a9114",
+      "name": "직접 실행",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "weeksInterval": 1,
+              "triggerAtDay": [
+                1
+              ],
+              "triggerAtHour": 6
+            }
+          ]
+        }
+      },
+      "id": "bda8e6b6-3256-4dba-a171-2126bb6d5073",
+      "name": "매주 월요일 06시",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7309dfba-aac5-46d4-bba8-cb830c4e1d0a",
+              "name": "apiKey",
+              "value": "여기에_YouTube_API_키_붙여넣기",
+              "type": "string"
+            },
+            {
+              "id": "74ac7d48-ba82-47fb-a0d5-d2e7e4d07ae9",
+              "name": "playlistId",
+              "value": "PLb6cAxxTlz5KgAy4K-dRepPyq0CELMaXt",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a87d922c-a265-4af0-a6cc-21d4e627fa6e",
+      "name": "여기에 API 키 입력",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        240,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/youtube/v3/playlistItems",
+        "authentication": "none",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "part",
+              "value": "snippet,contentDetails"
+            },
+            {
+              "name": "maxResults",
+              "value": "50"
+            },
+            {
+              "name": "playlistId",
+              "value": "={{ $json.playlistId }}"
+            },
+            {
+              "name": "key",
+              "value": "={{ $json.apiKey }}"
+            }
+          ]
+        },
+        "options": {
+          "pagination": {
+            "pagination": {
+              "paginationMode": "updateAParameterInEachRequest",
+              "parameters": {
+                "parameters": [
+                  {
+                    "type": "qs",
+                    "name": "pageToken",
+                    "value": "={{ $response.body.nextPageToken }}"
+                  }
+                ]
+              },
+              "paginationCompleteWhen": "other",
+              "completeExpression": "={{ !$response.body.nextPageToken }}",
+              "limitPagesFetched": true,
+              "maxRequests": 30,
+              "requestInterval": 200
+            }
+          }
+        }
+      },
+      "id": "637b88a4-2f38-4826-8bd5-b21ea39dac38",
+      "name": "YouTube 재생목록 받기",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        480,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// YouTube 재생목록 응답(페이지별) → 영상 목록 → 주제·제품·사용 여부 태그 → lg_videos.csv\n// 태그 규칙은 agent-server/tools/fetch_lg_videos.py 와 같음 (+ 퓨리케어 제외)\nconst TOPICS = {\n  '필터': /필터/i,\n  '청소·세척': /청소|세척|건조\\s*기능|자동\\s*건조/i,\n  '리모컨': /리모컨|건전지/i,\n  '냄새': /냄새|악취/i,\n  '물': /물이|물\\s*떨|물\\s*샘|배수|누수|이슬|물받이/i,\n  '소리': /소리|소음/i,\n  '에러·표시': /에러|오류|표시|코드|CH\\d|Od|깜빡/i,\n  '실외기': /실외기/i,\n  '냉방': /냉방|시원|온도|찬\\s*바람/i,\n  '전원': /전원|켜지|꺼지|차단기/i,\n  '스마트진단': /스마트\\s*진단|ThinQ|씽큐|진단/i,\n};\nconst EXCLUDE = /시스템|천장형|상업용|업소용|창문형|이동식|공기청정기|제습기|가습기|바스에어|라이트플러스|환기\\s*시스템|전열교환|케어서비스|케어십|가전구독|구독|멀티\\s*V|덕트|퓨리케어/;\nconst HIDDEN = ['Private video', 'Deleted video', '비공개 동영상', '삭제된 동영상'];\n\nconst rows = [];\nfor (const page of $input.all()) {\n  for (const it of (page.json.items || [])) {\n    const sn = it.snippet || {};\n    const title = sn.title || '';\n    if (HIDDEN.includes(title)) continue;\n    const vid = (it.contentDetails || {}).videoId;\n    if (!vid) continue;\n    const topics = Object.keys(TOPICS).filter(k => TOPICS[k].test(title));\n    const product = /스탠드/.test(title) ? '스탠드' : /벽걸이/.test(title) ? '벽걸이' : '공통';\n    rows.push({\n      position: (sn.position ?? rows.length) + 1,\n      video_id: vid,\n      title,\n      url: `https://www.youtube.com/watch?v=${vid}`,\n      published: ((it.contentDetails || {}).videoPublishedAt || '').slice(0, 10),\n      description: (sn.description || '').split(/\\s+/).join(' ').slice(0, 200),\n      product,\n      topics: topics.join('|'),\n      use: topics.length && !EXCLUDE.test(title) ? 'Y' : 'N',\n    });\n  }\n}\n// 받아 온 게 너무 적으면(키 오류·재생목록 변경 등) 기존 파일을 덮어쓰지 않도록 멈춘다\nif (rows.length < 30) throw new Error(`영상이 ${rows.length}개만 받아졌어요. API 키와 재생목록 ID를 확인하세요. 기존 lg_videos.csv는 그대로 둡니다.`);\n\nconst cols = ['position', 'video_id', 'title', 'url', 'published', 'description', 'product', 'topics', 'use'];\nconst esc = v => { const s = String(v ?? ''); return /[\",\\n]/.test(s) ? '\"' + s.replace(/\"/g, '\"\"') + '\"' : s; };\nconst csv = '﻿' + [cols.join(','), ...rows.map(r => cols.map(c => esc(r[c])).join(','))].join('\\r\\n') + '\\r\\n';\nconst used = rows.filter(r => r.use === 'Y');\nreturn [{\n  json: { total: rows.length, used: used.length, sample: used.slice(0, 10).map(r => `[${r.product}] ${r.title} (${r.topics})`) },\n  binary: { data: { data: Buffer.from(csv, 'utf8').toString('base64'), mimeType: 'text/csv', fileName: 'lg_videos.csv', fileExtension: 'csv' } },\n}];"
+      },
+      "id": "8a14bd29-fbf4-47a9-b86d-f6f28f6668aa",
+      "name": "주제·제품 태그 + lg_videos.csv 만들기",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        100
+      ]
+    }
+  ],
+  "connections": {
+    "직접 실행": {
+      "main": [
+        [
+          {
+            "node": "여기에 API 키 입력",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "매주 월요일 06시": {
+      "main": [
+        [
+          {
+            "node": "여기에 API 키 입력",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube 재생목록 받기": {
+      "main": [
+        [
+          {
+            "node": "주제·제품 태그 + lg_videos.csv 만들기",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "여기에 API 키 입력": {
+      "main": [
+        [
+          {
+            "node": "YouTube 재생목록 받기",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Seoul"
+  },
+  "pinData": {},
+  "active": false
+}

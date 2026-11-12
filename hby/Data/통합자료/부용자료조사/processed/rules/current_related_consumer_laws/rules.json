@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "title": "가전 A/S 표준답변 관련 현행 소비자법 규칙 후보",
+    "verified_date": "2026-09-28",
+    "source_index": "resources/raw/consumer_law/current_2026/sources.md"
+  },
+  "installment_payment_defense": {
+    "law": "할부거래에 관한 법률 제16조 및 같은 법 시행령 제11조",
+    "grounds_include": [
+      "할부계약이 무효·취소 또는 해제된 경우",
+      "재화 등이 전부 또는 일부 공급되지 않은 경우",
+      "할부거래업자가 하자담보책임을 이행하지 않은 경우",
+      "그 밖의 채무불이행으로 계약 목적을 달성할 수 없는 경우",
+      "다른 법률에 따라 적법하게 청약철회한 경우"
+    ],
+    "indirect_installment_minimum_price_krw": 100000,
+    "credit_card_installment_minimum_price_krw": 200000,
+    "required_action_for_indirect_installment": "신용제공자에게 할부금 지급 거절 의사를 통지한 후 지급 거절",
+    "written_notice_effect": "지급 거절 의사를 표시한 서면을 발송한 날 효력 발생",
+    "rejection_notice_deadline_business_days": {
+      "installment_trader": 5,
+      "credit_provider": 7
+    },
+    "status": "verified_current_law",
+    "not_automatic": ["계약이 법상 할부계약인지", "항변 사유가 실제로 성립하는지", "통지 상대와 방식", "이미 연체된 금액의 처리"]
+  },
+  "ecommerce_advertisement_mismatch_withdrawal": {
+    "law": "전자상거래 등에서의 소비자보호에 관한 법률 제17조제3항·제18조제10항",
+    "conditions": ["재화의 내용이 표시·광고 또는 계약 내용과 다르게 이행됨"],
+    "time_limits": ["공급받은 날부터 3개월 이내", "그 사실을 안 날 또는 알 수 있었던 날부터 30일 이내"],
+    "return_cost_bearer": "통신판매업자",
+    "status": "verified_current_law",
+    "not_automatic": ["실제 표시·광고 내용", "상품과 광고의 차이", "인지 시점", "전자상거래법 적용대상 여부"]
+  },
+  "door_to_door_sales_withdrawal": {
+    "law": "방문판매 등에 관한 법률 제8조·제9조",
+    "basic_time_limit_days": 14,
+    "start": "계약서를 받은 날. 재화 공급이 더 늦으면 재화를 공급받거나 공급이 시작된 날",
+    "major_limitations": [
+      "소비자 책임으로 재화가 멸실·훼손된 경우(내용 확인을 위한 포장 훼손 제외)",
+      "소비자가 사용하거나 일부 소비하여 가치가 현저히 낮아진 경우",
+      "시간 경과로 다시 판매하기 어려울 정도로 가치가 현저히 낮아진 경우"
+    ],
+    "seller_duty_for_restricted_goods": "철회 불가 사실을 쉽게 알 수 있는 곳에 분명히 표시하거나 시용상품을 제공하는 등 권리행사가 방해받지 않도록 조치",
+    "return_cost_bearer": "방문판매자 등",
+    "status": "verified_current_law",
+    "not_automatic": ["방문판매 해당 여부", "누가 제품을 사용했는지", "사용으로 가치가 현저히 낮아졌는지", "판매자가 제한 고지·시용 기회를 제공했는지"]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "collected_on_kst": "2026-10-13",
+  "status": "D 드라이브 개인 조사 폴더 반영 및 검증 완료",
+  "new_sources": 2,
+  "rechecked_existing_sources": 3,
+  "total_sources": 32,
+  "core_contract_research_complete": false,
+  "original_manifest_preserved": true,
+  "curated_units_unchanged": true,
+  "new_pdf_pages": 168,
+  "pdf_pages_visually_reviewed": [
+    13,
+    168
+  ],
+  "official_notice_link_verified": true,
+  "pdf_distribution_date_verified": "2026-08-28",
+  "terms_current_version_verified": false,
+  "recovery_fee_transition_contract_date_verified": false,
+  "source_date_not_confused_with_effective_date": true,
+  "search_request_failures_recorded": true,
+  "retrieval_implemented": false,
+  "retrieval_tests_executed": false,
+  "inquiry_sent": false,
+  "application_submitted": false,
+  "shared_interface_changed": false,
+  "all_source_capture_hashes_match": true,
+  "source_capture_hash_checks": 87,
+  "evidence_anchors_verified": 8,
+  "authored_relative_links_checked": 123,
+  "missing_local_links": [],
+  "branch": "hby",
+  "existing_files_before": 256,
+  "existing_files_preserved_unchanged": 254,
+  "changed_existing_files": [
+    "README.md",
+    "move-care-airpurifier-research-20261012/README.md"
+  ],
+  "deleted_files": [],
+  "added_files": 29,
+  "personal_file_count_after": 285,
+  "git_actions": "no staging, commit, push or merge"
+}

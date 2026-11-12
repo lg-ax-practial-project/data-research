@@ -1,0 +1,26 @@
+{
+  "review_date_kst": "2026-10-13",
+  "historical_contract_text_collected": true,
+  "current_contract_text_collected": false,
+  "terms_id": "20221108002_KR",
+  "source_id": "LG-RENTAL-TERMS-202211-001",
+  "prior_capture_comparison": "과거 attachment1과 문구 차이를 확인. 회수비 명칭·분실료 분모·선결제 문구 등 차이가 있으므로 동일 버전 취급 금지.",
+  "service_same_page_fee_conflict": {
+    "present_in_20261012_capture": true,
+    "present_in_20261013_capture": true,
+    "new_policy_change_claimed": false
+  },
+  "failed_paths": [
+    {
+      "capture": "raw/additional_07/term_probe.firecrawl.json",
+      "method": "공식 일반약관 조회 경로에 과거 공개 약관 식별자를 대입한 탐색 URL. 공식 페이지에서 이 조합으로 링크된 것은 아님.",
+      "result": "HTTP200이지만 본문은404오류 안내. 약관 미확보."
+    },
+    {
+      "capture": "raw/additional_07/terms_history.firecrawl.json",
+      "method": "과거 공개 약관 화면의 이력 표시 매개변수로 현행 문서 조회 시도.",
+      "result": "약관 선택/확인만 표시. 본문·선택 항목 미수집. 공개 약관이 존재하지 않는다는 증명 아님."
+    }
+  ],
+  "caveat": "조회 실패·검색 미발견은 수집 불가능 또는 비공개라는 단정의 근거가 아니다. 서명값·인증정보를 재사용한 별도 API 요청은 하지 않음."
+}

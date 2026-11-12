@@ -1,0 +1,457 @@
+{
+  "name": "LG 에어컨 유튜브 댓글 3차 (대량 수집 + 무작위 표본)",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "c1a8e5d8-7d21-455f-bd85-e6cae658d11e",
+      "name": "실행",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// ===== 설정 (여기만 수정하세요) =====\nconst CONFIG = {\n  API_KEY: 'AIzaSyDI0pjUJBjW2zorcIDkL7G1LCsd21gNmNQ',\n  MAX_VIDEOS_PER_QUERY: 50,          // 검색어당 영상 수 (최대 50, 할당량은 10개일 때와 같음)\n  PUBLISHED_AFTER: '2021-01-01T00:00:00Z',\n  MAX_TOTAL_VIDEOS: 800,             // 댓글을 가져올 영상 최대 수 (많을수록 오래 걸림)\n  SAMPLE_SIZE: 400,                  // 사람이 읽을 무작위 표본 수\n  RANDOM_SEED: 20261002,             // 같은 값이면 같은 표본이 뽑힘 (재현 가능)\n  // 채널 단위 수집: 이 영상들이 속한 채널의 '에어컨 관련 영상 전체'를 가져옵니다.\n  // 기본값: LG전자서비스 공식 채널(1차에서 댓글이 가장 많던 영상), 냉난방이야기, 에어컨의 모든것 청년\n  CHANNEL_SEED_VIDEO_IDS: ['wUWv0xFiDrA', 'cuXCjWqcYPs', 'upo0-x0nG-Y'],\n};\n\n// 1차·2차 검색어 통합 (검색 1회 = 할당량 100, 하루 기본 10,000)\nconst QUERIES = [\n  // 증상\n  'LG 에어컨 안 시원함', '휘센 냉방 약함', '휘센 에어컨 냄새', 'LG 에어컨 쉰내', 'LG 에어컨 물 떨어짐', '휘센 물샘',\n  'LG 에어컨 소음', '휘센 실외기 소음', '휘센 에러코드', 'LG 에어컨 CH05', 'LG 에어컨 CH38', '휘센 실외기 안 돌아요',\n  'LG 에어컨 저절로 꺼짐', '휘센 에어컨 전원 안 켜짐', 'LG 에어컨 성에 얼음', '휘센 자동건조', 'LG 에어컨 필터 청소',\n  '휘센 냉매 가스 충전', 'LG 에어컨 고장 원인',\n  // 스마트진단·ThinQ\n  'LG 에어컨 스마트진단', '씽큐 스마트진단 에어컨', '휘센 자가진단', 'LG 씽큐 에어컨 등록', 'LG 씽큐 연결 안됨',\n  // 상담·AS\n  'LG 에어컨 AS 후기', 'LG전자 서비스 접수 후기', 'LG 에어컨 출장비',\n  // 자가 해결\n  '에어컨 기사 부르기 전 확인', 'LG 에어컨 고장 아닌 경우', 'LG 에어컨 자가점검', 'LG 에어컨 리모컨 실내기 선택',\n];\n\nreturn QUERIES.map(q => ({ json: { query: q, ...CONFIG } }));\n"
+      },
+      "id": "6f8e0233-f99a-42e1-b368-179df1104957",
+      "name": "설정",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        208,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/youtube/v3/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "part",
+              "value": "snippet"
+            },
+            {
+              "name": "q",
+              "value": "={{ $json.query }}"
+            },
+            {
+              "name": "type",
+              "value": "video"
+            },
+            {
+              "name": "maxResults",
+              "value": "={{ $json.MAX_VIDEOS_PER_QUERY }}"
+            },
+            {
+              "name": "regionCode",
+              "value": "KR"
+            },
+            {
+              "name": "relevanceLanguage",
+              "value": "ko"
+            },
+            {
+              "name": "publishedAfter",
+              "value": "={{ $json.PUBLISHED_AFTER }}"
+            },
+            {
+              "name": "order",
+              "value": "relevance"
+            },
+            {
+              "name": "key",
+              "value": "={{ $json.API_KEY }}"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 5,
+              "batchInterval": 500
+            }
+          }
+        }
+      },
+      "id": "3996291c-2da7-45db-b1f9-ab45ba87615d",
+      "name": "유튜브 영상 검색",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        400,
+        320
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 검색 결과 → 영상 목록 (LG 관련만, 중복 제거)\nconst RELATED_RE = /LG|엘지|휘센|whisen|오브제|씽큐|thinq|스마트\\s*진단|자가\\s*진단|자가\\s*점검/i;\nconst queries = $('설정').all();\nconst decode = s => String(s || '').replace(/&quot;/g, '\"').replace(/&#39;/g, \"'\").replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');\nconst map = new Map();\n$input.all().forEach((item, i) => {\n  const idx = (item.pairedItem && item.pairedItem.item !== undefined) ? item.pairedItem.item : i;\n  const q = ((queries[idx] || {}).json || {}).query || '';\n  for (const v of (item.json.items || [])) {\n    const id = v.id && v.id.videoId; if (!id) continue;\n    const sn = v.snippet || {};\n    const title = decode(sn.title);\n    if (!RELATED_RE.test(title + ' ' + decode(sn.description) + ' ' + decode(sn.channelTitle))) continue;\n    if (map.has(id)) { map.get(id).hits += 1; map.get(id).queries.push(q); continue; }\n    map.set(id, { videoId: id, videoTitle: title, channel: decode(sn.channelTitle), source: '검색', hits: 1, queries: [q] });\n  }\n});\nconst out = [...map.values()].map(v => ({ json: { ...v, queries: v.queries.join(' | ') } }));\nreturn out.length ? out : [{ json: { empty: true } }];\n"
+      },
+      "id": "0c20c901-50ed-4380-bcfa-0a7689018a86",
+      "name": "검색 결과 정리",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        608,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/youtube/v3/videos",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "part",
+              "value": "snippet"
+            },
+            {
+              "name": "id",
+              "value": "={{ $('설정').first().json.CHANNEL_SEED_VIDEO_IDS.join(',') }}"
+            },
+            {
+              "name": "key",
+              "value": "={{ $('설정').first().json.API_KEY }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "36601e10-cc97-49ce-8d55-8fa66dc9fa8d",
+      "name": "채널 찾기",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        800,
+        320
+      ],
+      "executeOnce": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 시드 영상 → 채널의 '업로드 전체' 재생목록 ID (채널ID UC... → UU...)\nconst map = new Map();\nfor (const item of $input.all()) for (const v of (item.json.items || [])) {\n  const sn = v.snippet || {}, ch = sn.channelId;\n  if (ch && ch.startsWith('UC') && !map.has(ch)) map.set(ch, { playlistId: 'UU' + ch.slice(2), channel: sn.channelTitle || '' });\n}\nconst out = [...map.values()].map(j => ({ json: j }));\nreturn out.length ? out : [{ json: { playlistId: 'NONE', channel: '' } }];\n"
+      },
+      "id": "d622c5d6-7335-4c57-86db-e4fd3e7484d4",
+      "name": "업로드 목록 ID",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1008,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/youtube/v3/playlistItems",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "part",
+              "value": "snippet"
+            },
+            {
+              "name": "playlistId",
+              "value": "={{ $json.playlistId }}"
+            },
+            {
+              "name": "maxResults",
+              "value": "50"
+            },
+            {
+              "name": "key",
+              "value": "={{ $('설정').first().json.API_KEY }}"
+            }
+          ]
+        },
+        "options": {
+          "pagination": {
+            "pagination": {
+              "parameters": {
+                "parameters": [
+                  {
+                    "name": "pageToken",
+                    "value": "={{ $response.body.nextPageToken }}"
+                  }
+                ]
+              },
+              "paginationCompleteWhen": "other",
+              "completeExpression": "={{ !$response.body.nextPageToken }}",
+              "limitPagesFetched": true,
+              "maxRequests": 40,
+              "requestInterval": 200
+            }
+          }
+        }
+      },
+      "id": "9ac022c2-b40a-4f3d-92bb-06c5756408ef",
+      "name": "채널 영상 목록",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1200,
+        320
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 검색 영상 + 채널 영상(에어컨 관련 제목만) 합치기 → 댓글 가져올 영상 목록\nconst AIRCON_TITLE = /에어컨|에어콘|휘센|whisen|냉방|냉난방|실외기|실내기|씽큐|thinq|스마트\\s*진단|자가\\s*진단|자가\\s*점검|시스템\\s*에어/i;\nconst cfg = $('설정').first().json;\nconst map = new Map();\nfor (const it of $('검색 결과 정리').all()) if (it.json.videoId) map.set(it.json.videoId, { ...it.json });\nfor (const item of $input.all()) for (const p of (item.json.items || [])) {\n  const sn = p.snippet || {};\n  const id = (sn.resourceId || {}).videoId;\n  if (!id || !AIRCON_TITLE.test(sn.title || '')) continue;\n  if (map.has(id)) { map.get(id).source = '검색+채널'; map.get(id).hits += 1; continue; }\n  map.set(id, { videoId: id, videoTitle: sn.title, channel: sn.channelTitle || sn.videoOwnerChannelTitle || '', source: '채널', hits: 1, queries: '' });\n}\n// 여러 검색어에 걸린 영상을 우선해서 최대 개수까지\nconst list = [...map.values()].sort((a, b) => b.hits - a.hits).slice(0, cfg.MAX_TOTAL_VIDEOS);\nreturn list.map(v => ({ json: { ...v, apiKey: cfg.API_KEY } }));\n"
+      },
+      "id": "0375fe4d-6b41-4b85-b236-234184f8b755",
+      "name": "영상 목록 합치기",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1408,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/youtube/v3/commentThreads",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "part",
+              "value": "snippet,replies"
+            },
+            {
+              "name": "videoId",
+              "value": "={{ $json.videoId }}"
+            },
+            {
+              "name": "maxResults",
+              "value": "100"
+            },
+            {
+              "name": "order",
+              "value": "time"
+            },
+            {
+              "name": "textFormat",
+              "value": "plainText"
+            },
+            {
+              "name": "key",
+              "value": "={{ $json.apiKey }}"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 5,
+              "batchInterval": 500
+            }
+          },
+          "pagination": {
+            "pagination": {
+              "parameters": {
+                "parameters": [
+                  {
+                    "name": "pageToken",
+                    "value": "={{ $response.body.nextPageToken }}"
+                  }
+                ]
+              },
+              "paginationCompleteWhen": "other",
+              "completeExpression": "={{ !$response.body.nextPageToken }}",
+              "limitPagesFetched": true,
+              "maxRequests": 20,
+              "requestInterval": 200
+            }
+          }
+        }
+      },
+      "id": "4c252282-bdee-441a-855b-539d79e89c7b",
+      "name": "댓글 전부 가져오기",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1600,
+        320
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 댓글 펼치기 → 넓은 키워드 필터 → 신호 태깅 → 무작위 표본 표시\nconst cfg = $('설정').first().json;\nconst MIN_LEN = 8;\n\n// 넓게 거르는 필터: 놓치지 않는 쪽(재현율)을 우선. 정확한 판정은 표본을 사람이 읽어서 함.\nconst KEEP = /\\?|까요|나요|가요|는지|인가요|되나요|어떻게|어떡|왜|모르|원인|고장|정상|문제|안\\s*(돼|되|나와|켜|꺼|시원|돌)|에러|오류|CH\\s?\\d|냄새|곰팡|쉰내|물이?\\s*(새|떨어)|누수|소음|시끄|소리|진단|씽큐|thinq|앱|어플|고객\\s*센터|상담|접수|기사|a\\s*\\/?\\s*s|수리|출장|서비스|리모컨|리모콘|실외기|냉매|가스|해결|됐어요|되네요|부를|불러/i;\nconst DROP_ONLY = /^(감사|고맙|좋은\\s*(영상|정보)|잘\\s*봤|최고|구독|좋아요)/; // 질문·증상 없는 단순 인사\n\nconst SYMPTOMS = {\n  '냉방불량': /찬\\s*바람이?\\s*안|안\\s*시원|시원하지\\s*않|냉방이?\\s*(약|안)|미지근/, '냄새': /냄새|쉰내|악취|곰팡/,\n  '물샘': /물이?\\s*(새|샘|떨어|뚝뚝|흘러|넘)|누수|배수/, '소음': /소음|시끄|소리가|소리\\s*(나|남)|덜덜|진동/,\n  '에러코드': /CH\\s?-?\\d{1,3}|에러\\s*코드|오류\\s*코드|에러\\s*뜨|에러가/i, '작동이상': /꺼져|꺼짐|꺼지|안\\s*켜|안\\s*돌|작동\\s*(이\\s*)?안|멈춰|멈춤|깜빡/,\n  '냉매·결빙': /성에|얼음|결빙|냉매|가스\\s*(충전|보충|부족)/, '리모컨·설정': /리모컨|리모콘|실내기\\s*선택|예약/, '청소·필터': /청소|필터|세척|분해/,\n};\nconst SIG = {\n  '원인모름': /왜\\s*(그런|이러|이렇|그럴|안|자꾸|계속)|원인이|원인을|뭐가\\s*문제|무슨\\s*문제|이유가|고장\\s*인가|고장인지|정상\\s*인가|정상인지|이게\\s*맞나|모르겠/,\n  '다음행동모름': /어떻게\\s*(해야|하면|하나요|하죠)|어떡하|어쩌죠|해야\\s*(하나요|할까|되나|돼요|되나요)|불러야|방법\\s*(이|좀)?\\s*(있|알려|없)|해결\\s*(방법|이\\s*안|못)|알려\\s*주세요|도와\\s*주세요/,\n  '자가해결': /해결\\s*(했|됐|되었)|됐어요|되네요|되더라|작동\\s*(하네|되네|됐)|고쳤/,\n  'AS부르기직전': /(기사|as|a\\/s|서비스)\\s*(를\\s*)?(부르|부를|신청|접수)[^.?!]{0,15}(뻔|전에|했는데|하려다|했다가)|부를\\s*뻔|부르려다/i,\n  '스마트진단': /스마트\\s*진단|자가\\s*진단|씽큐\\s*진단|thinq\\s*진단|진단\\s*(결과|했|해\\s*보|돌려|기능)/i,\n  'ThinQ': /씽큐|thinq|띵큐|어플|앱으로/i,\n  '상담·고객센터': /고객\\s*센터|상담|1544|챗봇|1:1|콜센터|접수/,\n  'AS·기사': /기사|a\\s*\\/?\\s*s|출장|수리\\s*(비|받|기사)/i,\n};\n\nconst videos = new Map($('영상 목록 합치기').all().map(i => [i.json.videoId, i.json]));\nconst seen = new Set(), seenText = new Set(), rows = [];\nconst Y = b => b ? 'Y' : '';\nfunction add(sn, id, isReply, parentText, replyCount, videoId) {\n  if (!sn || seen.has(id)) return; seen.add(id);\n  const text = String(sn.textOriginal || sn.textDisplay || '').replace(/\\s+/g, ' ').trim();\n  if (text.length < MIN_LEN || seenText.has(text)) return;\n  if (!KEEP.test(text)) return;\n  if (DROP_ONLY.test(text) && !/\\?|왜|어떻게|안\\s*(돼|되)/.test(text) && text.length < 40) return;\n  if (/https?:\\/\\//.test(text) && /구매|할인|쿠팡|링크|교육|창업/.test(text)) return;\n  seenText.add(text);\n  const v = videos.get(videoId) || {};\n  const row = {\n    '표본': '', '표본순번': '',\n    '수집경로': v.source || '', '영상제목': v.videoTitle || '', '채널': v.channel || '',\n    '댓글URL': `https://www.youtube.com/watch?v=${videoId}&lc=${id}`,\n    '구분': isReply ? '답글' : '댓글', '원댓글': isReply ? parentText : '', '댓글내용': text,\n    '좋아요': sn.likeCount || 0, '작성일': String(sn.publishedAt || '').slice(0, 10),\n    '증상분류': Object.entries(SYMPTOMS).filter(([, re]) => re.test(text)).map(([k]) => k).join(', '),\n  };\n  for (const [k, re] of Object.entries(SIG)) row['키워드_' + k] = Y(re.test(text));\n  row['댓글ID'] = id;\n  rows.push(row);\n}\nfor (const item of $input.all()) for (const t of (item.json.items || [])) {\n  const s = t.snippet || {}, top = s.topLevelComment || {};\n  const topText = String((top.snippet || {}).textOriginal || '').replace(/\\s+/g, ' ').trim();\n  add(top.snippet, top.id, false, '', s.totalReplyCount, s.videoId);\n  for (const r of ((t.replies || {}).comments || [])) add(r.snippet, r.id, true, topText.slice(0, 300), 0, s.videoId);\n}\n\n// 재현 가능한 무작위 표본 (시드 고정 셔플)\nlet seed = cfg.RANDOM_SEED >>> 0;\nconst rand = () => { seed = (seed + 0x6D2B79F5) >>> 0; let t = seed; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };\nconst order = rows.map((_, i) => i);\nfor (let i = order.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }\norder.slice(0, cfg.SAMPLE_SIZE).forEach((ri, k) => { rows[ri]['표본'] = 'Y'; rows[ri]['표본순번'] = k + 1; });\n\nrows.sort((a, b) => (a['표본순번'] || 1e9) - (b['표본순번'] || 1e9));\nreturn rows.map(r => ({ json: r }));\n"
+      },
+      "id": "5267eba5-a5b4-4b52-8604-4195caa9e0c9",
+      "name": "필터·태깅·표본 추출",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1808,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "xlsx",
+        "options": {
+          "fileName": "LG에어컨_유튜브댓글_3차_대량.xlsx",
+          "sheetName": "댓글"
+        }
+      },
+      "id": "bd8bbe73-54a7-44ed-a40f-d00e6e2c5f70",
+      "name": "엑셀 파일 만들기",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        2000,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 3차 대량 수집 + 무작위 표본\n1. **설정** 노드의 `API_KEY` 입력 (필요하면 SAMPLE_SIZE, MAX_TOTAL_VIDEOS 조정)\n2. **Execute workflow** (수십 분 걸릴 수 있음)\n3. 마지막 노드 → Binary → Download\n\n- 검색 31개(≈3,100) + 채널 목록·댓글 페이지(1개당 1) ≈ 하루 할당량 10,000 안쪽\n- 결과: 키워드로 넓게 거른 전체 댓글 + `표본=Y` 400건 (맨 위 정렬)\n- 표본 400건만 사람이 읽고 분류",
+        "height": 260,
+        "width": 460
+      },
+      "id": "d9020cf7-8fe0-4463-930a-240d6bd32f04",
+      "name": "사용법",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "실행": {
+      "main": [
+        [
+          {
+            "node": "설정",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "설정": {
+      "main": [
+        [
+          {
+            "node": "유튜브 영상 검색",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "유튜브 영상 검색": {
+      "main": [
+        [
+          {
+            "node": "검색 결과 정리",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "검색 결과 정리": {
+      "main": [
+        [
+          {
+            "node": "채널 찾기",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "채널 찾기": {
+      "main": [
+        [
+          {
+            "node": "업로드 목록 ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "업로드 목록 ID": {
+      "main": [
+        [
+          {
+            "node": "채널 영상 목록",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "채널 영상 목록": {
+      "main": [
+        [
+          {
+            "node": "영상 목록 합치기",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "영상 목록 합치기": {
+      "main": [
+        [
+          {
+            "node": "댓글 전부 가져오기",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "댓글 전부 가져오기": {
+      "main": [
+        [
+          {
+            "node": "필터·태깅·표본 추출",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "필터·태깅·표본 추출": {
+      "main": [
+        [
+          {
+            "node": "엑셀 파일 만들기",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "adcafd01-6c5a-473a-b1a8-2d43f47a5690",
+  "meta": {
+    "instanceId": "ab9f9699cb762f4a1fe3301e9ccaf6c0aeb08a34a8014fa9c9318ca2785ed0aa"
+  },
+  "nodeGroups": [],
+  "id": "Khb2A0eXSs7uC8E9",
+  "tags": []
+}

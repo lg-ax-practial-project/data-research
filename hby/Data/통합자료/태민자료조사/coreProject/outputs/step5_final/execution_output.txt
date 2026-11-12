@@ -1,0 +1,41 @@
+SOURCE_ROWS=16000 SELECTED_ROWS=224 MONTHS=32 GROUPS=7 ALL_SELECTED_NAN_MONTHS=0
+SEVEN LABEL COVERAGE AND RECORDED SUMS
+가전품목군  관측월수  NaN월수  전체파일월수  관측월_상담건수합
+  냉장고    32      0      32      10832
+김치냉장고    32      0      32       3634
+  세탁기    32      0      32       5866
+의류건조기    32      0      32       1376
+   TV    32      0      32       9024
+식기세척기    32      0      32       2440
+  에어컨    32      0      32      13891
+SEVEN_LABEL_TOTAL_SUM=47063 PEAK=2025-07:3586
+AC WINTER MONTHS
+    기준월  에어컨_상담건수
+2023-12        76
+2024-01        70
+2024-02        76
+2024-03       104
+2024-11       145
+2024-12        86
+2025-01        84
+2025-02        97
+2025-03       132
+2025-11       164
+2025-12       106
+2026-01       106
+2026-02        76
+2026-03       130
+AC_PEAK=2025-07:1964 WINTER_MONTHS=14 WINTER_MEDIAN=100.5 RATIO=19.542289 ROUNDED=19.54
+OUTPUTS
+air_conditioner_peak_ratio.csv
+air_conditioner_peak_vs_winter.png
+air_conditioner_winter_observations.csv
+analyze_step5.py
+excluded_candidate_labels_audit.csv
+execution_output.txt
+monthly_seven_appliance_timeseries.png
+monthly_seven_appliance_total.csv
+monthly_seven_appliances_long.csv
+monthly_seven_appliances_wide.csv
+preprocessing_log.md
+seven_appliance_coverage.csv

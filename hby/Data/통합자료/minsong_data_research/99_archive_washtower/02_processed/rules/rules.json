@@ -1,0 +1,41 @@
+{
+  "version": "minsong-rules-20261012",
+  "checked_date": "2026-10-12",
+  "product": "LG 워시타워 (구독)",
+  "termination": {
+    "penalty_base": "monthly_base_fee_before_discount",
+    "penalty_rates": {
+      "default": [
+        {"elapsed": "< 1년", "rate": 0.30},
+        {"elapsed": "1년 이상 ~ 2년 미만", "rate": 0.20},
+        {"elapsed": "2년 이상 ~ 의무사용기간 이전", "rate": 0.10}
+      ],
+      "contract_2_years": [
+        {"elapsed": "< 1년", "rate": 0.20},
+        {"elapsed": "1년 이상 ~ 의무사용기간 이전", "rate": 0.10}
+      ]
+    },
+    "penalty_formula_faq": "monthly_base_fee * remaining_months * rate",
+    "penalty_formula_terms_art13": "(monthly_fee / 30) * (mandatory_days - used_days) * rate",
+    "boundary_12_24_months": "확인 필요 - 자동 산정 보류",
+    "recovery_fee_washtower": {"amount": 111000, "reference_date": "2026-03-24", "note": "실제는 계약서 기재 금액"},
+    "gift_clawback": "계약 성립 후 12개월 이내 해지 시 사은품 금액 전액",
+    "cooling_off": "설치가 필요한 제품은 설치 완료 후 청약철회 불가",
+    "sources": ["LG01", "LG02", "KCA01 p.25"]
+  },
+  "relocation": {
+    "free_removal_reinstall": {"times": 1, "scope": "계약기간 내", "includes_removal": true, "includes_transport": false, "reference_date": "2026-04 (LG07)"},
+    "paid_price_washtower": {"removal": 97000, "install": 134000, "base_transport": 40000, "total": 271000, "reference_date": "표기 없음 (확인일 2026-10-12)"},
+    "transport_fee": [
+      {"range_km": "0-10 미만", "fee": "40000"},
+      {"range_km": "10-100 미만", "fee": "40000 + 20000 per 10km"},
+      {"range_km": "100 이상", "fee": "40000 + 180000 + 10000 per 10km"}
+    ],
+    "transport_rounding": "확인 필요 - Mock은 10km 단위 올림 가정",
+    "pre_survey_fee": 25000,
+    "failed_visit_fee": 25000,
+    "special_equipment": "고객 부담",
+    "jeju_mainland": "별도 운임",
+    "sources": ["LG01", "LG03", "LG04", "LG05", "LG06", "LG07"]
+  }
+}

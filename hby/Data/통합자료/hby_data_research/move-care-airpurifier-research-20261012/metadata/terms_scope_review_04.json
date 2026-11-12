@@ -1,0 +1,27 @@
+{
+  "review_date_kst": "2026-10-12",
+  "general_service": {
+    "source_id": "LG-SERVICE-TERMS-PUBLIC-001",
+    "effective": "2026-06-30",
+    "literal_matches": {
+      "회수비": 0,
+      "위약금": 0,
+      "공기청정기": 0
+    },
+    "provides_appliance_termination_rule": false
+  },
+  "ecommerce": {
+    "source_id": "LG-ECOM-TERMS-PUBLIC-001",
+    "effective": "2025-12-11",
+    "literal_matches": {
+      "회수비": 0,
+      "위약금": 0,
+      "공기청정기": 0
+    },
+    "provides_appliance_termination_rule": false
+  },
+  "caution": "문서 전체를 읽고 적용 범위·관련 조항을 검토했으며 단순 키워드 수만으로 판정하지 않음. 일반 반품 규정/정기구매 규정을 설치 완료된 구독 중도해지에 자동 적용 금지.",
+  "current_rental_terms_fulltext_obtained": false,
+  "recovery_fee_transition_contract_date_verified": false,
+  "retrospective_fee_application_verified": false
+}

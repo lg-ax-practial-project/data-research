@@ -1,0 +1,212 @@
+[
+  {
+    "source_id": "tvs-faq",
+    "url": "https://www.lge.co.kr/story/faq/tvs-faq",
+    "retrieved_at": "2026-10-04T15:38:01.528285+00:00",
+    "raw_path": "raw/tvs-faq.html",
+    "sha256": "bf32c48e7ea5d82160830e17f63a794644c69e9df3c89d6f027b9dc5671452c8",
+    "bytes": 418554,
+    "final_url": "https://www.lge.co.kr/story/faq/tvs-faq",
+    "status": "extracted"
+  },
+  {
+    "source_id": "1777897",
+    "url": "https://www.lge.co.kr/support/solutions-1777897",
+    "retrieved_at": "2026-10-04T15:38:04.235440+00:00",
+    "raw_path": "raw/1777897.html",
+    "sha256": "a74ccfd21316f86cc8a7c0a1d264cf66301d4cff0a4f674f22154f7ec8a9a8a2",
+    "bytes": 238559,
+    "final_url": "https://www.lge.co.kr/support/solutions-1777897",
+    "status": "extracted"
+  },
+  {
+    "source_id": "20152183148933",
+    "url": "https://www.lge.co.kr/support/solutions-20152183148933",
+    "retrieved_at": "2026-10-04T15:38:06.726442+00:00",
+    "raw_path": "raw/20152183148933.html",
+    "sha256": "d23df65831298cd41bd085109d7916bdd1d6cc39478001fff376838d415e0177",
+    "bytes": 232648,
+    "final_url": "https://www.lge.co.kr/support/solutions-20152183148933",
+    "status": "extracted"
+  },
+  {
+    "source_id": "20150903914041",
+    "url": "https://www.lge.co.kr/support/solutions-20150903914041",
+    "retrieved_at": "2026-10-04T15:38:08.998776+00:00",
+    "raw_path": "raw/20150903914041.html",
+    "sha256": "732b3131940b6d6a2448206bd22bc1aa9e63e74eb92f563ee6999aec0421b263",
+    "bytes": 236675,
+    "final_url": "https://www.lge.co.kr/support/solutions-20150903914041",
+    "status": "extracted"
+  },
+  {
+    "source_id": "20150195460917",
+    "url": "https://www.lge.co.kr/support/solutions-20150195460917",
+    "retrieved_at": "2026-10-04T15:38:11.340065+00:00",
+    "raw_path": "raw/20150195460917.html",
+    "sha256": "a44a49ecd8c1827c691304bf3c6686d67630936d04ff0ddbe948df1046953320",
+    "bytes": 241377,
+    "final_url": "https://www.lge.co.kr/support/solutions-20150195460917",
+    "status": "extracted"
+  },
+  {
+    "source_id": "20155301642915",
+    "url": "https://www.lge.co.kr/support/solutions-20155301642915",
+    "retrieved_at": "2026-10-04T15:38:13.785085+00:00",
+    "raw_path": "raw/20155301642915.html",
+    "sha256": "cb2fac3912e3b64e65e4e04c62a087ae529042bd3638e1e41f40a1f32708fb70",
+    "bytes": 289779,
+    "final_url": "https://www.lge.co.kr/support/solutions-20155301642915",
+    "status": "extracted"
+  },
+  {
+    "source_id": "20152087489076",
+    "url": "https://www.lge.co.kr/support/solutions-20152087489076",
+    "retrieved_at": "2026-10-04T15:38:16.073019+00:00",
+    "raw_path": "raw/20152087489076.html",
+    "sha256": "b73e6f60d67d704674de1189780bc74178ab7db4fbf724c42af06c85e4b43e3d",
+    "bytes": 237942,
+    "final_url": "https://www.lge.co.kr/support/solutions-20152087489076",
+    "status": "extracted"
+  },
+  {
+    "source_id": "20150371175052",
+    "url": "https://www.lge.co.kr/support/solutions-20150371175052",
+    "retrieved_at": "2026-10-04T15:38:18.406879+00:00",
+    "raw_path": "raw/20150371175052.html",
+    "sha256": "174fabf92b694ee14adb09628cf52f7035bee45f4a2dc21ed130af93e33d795f",
+    "bytes": 235910,
+    "final_url": "https://www.lge.co.kr/support/solutions-20150371175052",
+    "status": "extracted"
+  },
+  {
+    "source_id": "20153749094807",
+    "url": "https://www.lge.co.kr/support/solutions-20153749094807",
+    "retrieved_at": "2026-10-04T15:38:20.720937+00:00",
+    "raw_path": "raw/20153749094807.html",
+    "sha256": "e4a0cf6c8b7ae968b0b9febd2d7eae77ad43fcd74381aa327c05c9dcb59ad34e",
+    "bytes": 258665,
+    "final_url": "https://www.lge.co.kr/support/solutions-20153749094807",
+    "status": "extracted"
+  },
+  {
+    "source_id": "1777854",
+    "url": "https://www.lge.co.kr/support/solutions-1777854",
+    "retrieved_at": "2026-10-04T15:38:22.989545+00:00",
+    "raw_path": "raw/1777854.html",
+    "sha256": "15968dd87cbe579942f3067dea06b7ad034004a35e121bbb067aeba5bd6b6698",
+    "bytes": 233072,
+    "final_url": "https://www.lge.co.kr/support/solutions-1777854",
+    "status": "extracted"
+  },
+  {
+    "source_id": "1333004114799",
+    "url": "https://www.lge.co.kr/support/solutions-1333004114799",
+    "retrieved_at": "2026-10-04T15:38:25.266047+00:00",
+    "raw_path": "raw/1333004114799.html",
+    "sha256": "7108fc3a38281b015d2d70fed2d2131c87e3729533fa327a8f09bbe21a46380c",
+    "bytes": 235263,
+    "final_url": "https://www.lge.co.kr/support/solutions-1333004114799",
+    "status": "extracted"
+  },
+  {
+    "source_id": "1300176600136",
+    "url": "https://www.lge.co.kr/support/solutions-1300176600136",
+    "retrieved_at": "2026-10-04T15:38:27.601649+00:00",
+    "raw_path": "raw/1300176600136.html",
+    "sha256": "9d569a2ec4f59ca5d51825ed7ea9a32b22ca932406d5999d61048a6455015a26",
+    "bytes": 235675,
+    "final_url": "https://www.lge.co.kr/support/solutions-1300176600136",
+    "status": "extracted"
+  },
+  {
+    "source_id": "20151952645799",
+    "url": "https://www.lge.co.kr/support/solutions-20151952645799",
+    "retrieved_at": "2026-10-04T15:38:29.965918+00:00",
+    "raw_path": "raw/20151952645799.html",
+    "sha256": "8edd9612b0b84f418fbce7fe86d6d34af1a32e3ad106a6c05554c96e1fb233cf",
+    "bytes": 237540,
+    "final_url": "https://www.lge.co.kr/support/solutions-20151952645799",
+    "status": "extracted"
+  },
+  {
+    "source_id": "20152081551580",
+    "url": "https://www.lge.co.kr/support/solutions-20152081551580",
+    "retrieved_at": "2026-10-04T15:38:32.527216+00:00",
+    "raw_path": "raw/20152081551580.html",
+    "sha256": "7a6bb9bb851ff62fe0c0edd312a8c8170fb9b0072a465b8591768b7406daa72c",
+    "bytes": 238212,
+    "final_url": "https://www.lge.co.kr/support/solutions-20152081551580",
+    "status": "extracted"
+  },
+  {
+    "source_id": "20152049798567",
+    "url": "https://www.lge.co.kr/support/solutions-20152049798567",
+    "retrieved_at": "2026-10-04T15:38:34.858762+00:00",
+    "raw_path": "raw/20152049798567.html",
+    "sha256": "b04cb23ccaf9474e176854dea3f33bdbe1f6438ce6a9f15cc0f5c3ad706e3bb6",
+    "bytes": 236030,
+    "final_url": "https://www.lge.co.kr/support/solutions-20152049798567",
+    "status": "extracted"
+  },
+  {
+    "source_id": "1778182",
+    "url": "https://www.lge.co.kr/support/solutions-1778182",
+    "retrieved_at": "2026-10-04T15:38:37.363503+00:00",
+    "raw_path": "raw/1778182.html",
+    "sha256": "95c8d9aa4b559dc6c7af158606df0c02bbaac37c24bec15f3766df7863cd57cc",
+    "bytes": 246077,
+    "final_url": "https://www.lge.co.kr/support/solutions-1778182",
+    "status": "extracted"
+  },
+  {
+    "source_id": "20152067976450",
+    "url": "https://www.lge.co.kr/support/solutions-20152067976450",
+    "retrieved_at": "2026-10-04T15:38:39.682875+00:00",
+    "raw_path": "raw/20152067976450.html",
+    "sha256": "b091f28df41fa62e0182d66b34170a44c1ce627d5ea5d3957d8893823069adb2",
+    "bytes": 233547,
+    "final_url": "https://www.lge.co.kr/support/solutions-20152067976450",
+    "status": "extracted"
+  },
+  {
+    "source_id": "1778034",
+    "url": "https://www.lge.co.kr/support/solutions-1778034",
+    "retrieved_at": "2026-10-04T15:38:42.021508+00:00",
+    "raw_path": "raw/1778034.html",
+    "sha256": "4b95f042077b0e857b1c862e7f78554d90d9cb763be0afdd8e1493f20f2ca15d",
+    "bytes": 232426,
+    "final_url": "https://www.lge.co.kr/support/solutions-1778034",
+    "status": "extracted"
+  },
+  {
+    "source_id": "20152979818696",
+    "url": "https://www.lge.co.kr/support/solutions-20152979818696",
+    "retrieved_at": "2026-10-04T15:38:44.254004+00:00",
+    "raw_path": "raw/20152979818696.html",
+    "sha256": "6a8437eb927a5eaf9c35e3b39553194edcba60e1f0d271bd5aa325ee3d7b7baa",
+    "bytes": 234701,
+    "final_url": "https://www.lge.co.kr/support/solutions-20152979818696",
+    "status": "extracted"
+  },
+  {
+    "source_id": "20153808286186",
+    "url": "https://www.lge.co.kr/support/solutions-20153808286186",
+    "retrieved_at": "2026-10-04T15:38:46.554194+00:00",
+    "raw_path": "raw/20153808286186.html",
+    "sha256": "5598b4afb6df76692dba153938563fdaba630c68ee59790d55116dc6ff2432c0",
+    "bytes": 240583,
+    "final_url": "https://www.lge.co.kr/support/solutions-20153808286186",
+    "status": "extracted"
+  },
+  {
+    "source_id": "20153769451317",
+    "url": "https://www.lge.co.kr/support/solutions-20153769451317",
+    "retrieved_at": "2026-10-04T15:38:48.860146+00:00",
+    "raw_path": "raw/20153769451317.html",
+    "sha256": "1cb90b53b5cf881b39bd53a58e05a19e44fdf38fe70d2b7e23b7a8d4417811f2",
+    "bytes": 247309,
+    "final_url": "https://www.lge.co.kr/support/solutions-20153769451317",
+    "status": "extracted"
+  }
+]

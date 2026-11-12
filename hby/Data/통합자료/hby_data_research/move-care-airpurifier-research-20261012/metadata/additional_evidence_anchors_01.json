@@ -1,0 +1,128 @@
+[
+  {
+    "source_id": "LG-SERVICE-001",
+    "claim": "회수비 표",
+    "path": "raw/additional_01/LG-SERVICE-001.firecrawl.md",
+    "exact_anchor": "| 공기청정기/가습기/제습기 | 39,000원 |",
+    "line_numbers": [
+      457
+    ],
+    "sha256": "03e65898fb6e4fa94eaf57ffba0bc1a58414952b2d5eb47d2c345e8f761ee7a1",
+    "note": "줄 번호는 보존 Markdown 기준. 원 사이트 화면 줄 번호 아님."
+  },
+  {
+    "source_id": "LG-SERVICE-001",
+    "claim": "기존 FAQ",
+    "path": "raw/additional_01/LG-SERVICE-001.firecrawl.md",
+    "exact_anchor": "공기청정기 35,000원",
+    "line_numbers": [
+      588,
+      1270
+    ],
+    "sha256": "03e65898fb6e4fa94eaf57ffba0bc1a58414952b2d5eb47d2c345e8f761ee7a1",
+    "note": "줄 번호는 보존 Markdown 기준. 원 사이트 화면 줄 번호 아님."
+  },
+  {
+    "source_id": "LG-SERVICE-001",
+    "claim": "기존 FAQ의 날짜",
+    "path": "raw/additional_01/LG-SERVICE-001.firecrawl.md",
+    "exact_anchor": "21년 11월 5일 계약부터",
+    "line_numbers": [
+      591,
+      1273
+    ],
+    "sha256": "03e65898fb6e4fa94eaf57ffba0bc1a58414952b2d5eb47d2c345e8f761ee7a1",
+    "note": "줄 번호는 보존 Markdown 기준. 원 사이트 화면 줄 번호 아님."
+  },
+  {
+    "source_id": "LG-SERVICE-001",
+    "claim": "계약자/실사용자",
+    "path": "raw/additional_01/LG-SERVICE-001.firecrawl.md",
+    "exact_anchor": "계약자 본인 명의로 신청",
+    "line_numbers": [
+      919,
+      1603
+    ],
+    "sha256": "03e65898fb6e4fa94eaf57ffba0bc1a58414952b2d5eb47d2c345e8f761ee7a1",
+    "note": "줄 번호는 보존 Markdown 기준. 원 사이트 화면 줄 번호 아님."
+  },
+  {
+    "source_id": "LG-SERVICE-001",
+    "claim": "명의 변경 예외",
+    "path": "raw/additional_01/LG-SERVICE-001.firecrawl.md",
+    "exact_anchor": "해외이주, 도서지역 이사 시 명의 변경 가능",
+    "line_numbers": [
+      1016,
+      1700
+    ],
+    "sha256": "03e65898fb6e4fa94eaf57ffba0bc1a58414952b2d5eb47d2c345e8f761ee7a1",
+    "note": "줄 번호는 보존 Markdown 기준. 원 사이트 화면 줄 번호 아님."
+  },
+  {
+    "source_id": "LG-SERVICE-001",
+    "claim": "회수 후 정산",
+    "path": "raw/additional_01/LG-SERVICE-001.firecrawl.md",
+    "exact_anchor": "최종 해지비용을 정산",
+    "line_numbers": [
+      559
+    ],
+    "sha256": "03e65898fb6e4fa94eaf57ffba0bc1a58414952b2d5eb47d2c345e8f761ee7a1",
+    "note": "줄 번호는 보존 Markdown 기준. 원 사이트 화면 줄 번호 아님."
+  },
+  {
+    "source_id": "LG-SERVICE-001",
+    "claim": "분실료 조건",
+    "path": "raw/additional_01/LG-SERVICE-001.firecrawl.md",
+    "exact_anchor": "본체·세트 구성품을 반납하지 못하면",
+    "line_numbers": [
+      449
+    ],
+    "sha256": "03e65898fb6e4fa94eaf57ffba0bc1a58414952b2d5eb47d2c345e8f761ee7a1",
+    "note": "줄 번호는 보존 Markdown 기준. 원 사이트 화면 줄 번호 아님."
+  },
+  {
+    "source_id": "LG-RENTAL-NOTICE-2022-001",
+    "claim": "효력 발생일",
+    "path": "raw/additional_01/LG-RENTAL-NOTICE-2022-001.firecrawl.md",
+    "exact_anchor": "2022년 11월 28일",
+    "line_numbers": [
+      15,
+      33
+    ],
+    "sha256": "4f43c28bbb18d86e9c3054ba44d736e4bc491af0145b46c0d9f7d81dea6e6002",
+    "note": "줄 번호는 보존 Markdown 기준. 원 사이트 화면 줄 번호 아님."
+  },
+  {
+    "source_id": "LG-RENTAL-REVISION-2022-001",
+    "claim": "과거 개정 비교표",
+    "path": "raw/additional_01/LG-RENTAL-REVISION-2022-001.firecrawl.md",
+    "exact_anchor": "제 12조 (계약의 해지 및 위약금)",
+    "line_numbers": [
+      7
+    ],
+    "sha256": "b4bf5b0f83c8eea94694e8bdd51162bdcd10043a6cd5fe3a30d0ad944a8e1f6e",
+    "note": "줄 번호는 보존 Markdown 기준. 원 사이트 화면 줄 번호 아님."
+  },
+  {
+    "source_id": "LG-AIR-PRODUCT-001",
+    "claim": "기존 상품 원문 재검토",
+    "path": "raw/LG-AIR-PRODUCT-001.firecrawl.md",
+    "exact_anchor": "(무)방문 타입 변경은 불가",
+    "line_numbers": [
+      1579
+    ],
+    "sha256": "f9871633a2890eb39acc0f2bb79d07736330e0aa7cc1f6a75689bc3eb7b16085",
+    "note": "줄 번호는 보존 Markdown 기준. 원 사이트 화면 줄 번호 아님."
+  },
+  {
+    "source_id": "LG-FAQ-001",
+    "claim": "별도 이용 FAQ 기준일",
+    "path": "raw/LG-FAQ-001.firecrawl.md",
+    "exact_anchor": "26년 3 월 24일 기준",
+    "line_numbers": [
+      142
+    ],
+    "sha256": "61ffe7dbfb0774263092ee1992109a98c7d7ab0480ad2e23be271cea9c604895",
+    "note": "줄 번호는 보존 Markdown 기준. 원 사이트 화면 줄 번호 아님."
+  }
+]

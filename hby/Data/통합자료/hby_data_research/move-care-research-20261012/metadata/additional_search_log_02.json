@@ -1,0 +1,697 @@
+{
+  "captured_on_kst": "2026-10-12",
+  "phase": "additional_research_02",
+  "query_count": 19,
+  "method": "공개 검색 및 Firecrawl maxAge=0 공개 페이지 수집. 검색 결과는 문서 본문과 구분.",
+  "results": [
+    {
+      "query": "site:lge.co.kr \"구독\" \"이용약관\" \"제13조\"",
+      "result": {
+        "agent_hints": [
+          "All 3 web results are excerpts only (#1 \"https://www.lge.co.kr/kr/business/common/common/common-agreement-detail.do?part=C&fsite=AM0102&category=AM0203\", #2 \"https://bestshop.lge.co.kr/footer/notice/detail-249\", #3 \"https://www.lge.co.kr/company/investor/articles\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/kr/business/common/common/common-agreement-detail.do?part=C&fsite=AM0102&category=AM0203",
+              "title": "LG전자 B2B : 이용약관",
+              "description": "... 구독 가전구독 하위 메뉴 펼치기. 오래오래 깨끗하게, 안심하고 사용할 수 있도록 ... 제13조 손해배상. 회사와 이용자는 서비스 이용과 관련하여 고의 또는 과실로 ...",
+              "position": 1
+            },
+            {
+              "url": "https://bestshop.lge.co.kr/footer/notice/detail-249",
+              "title": "LG전자 BEST SHOP 멤버십 이용약관 개정안내",
+              "description": "이벤트/혜택. 모든 이벤트: 구매 혜택 · 쿠폰 · 참여형 이벤트 · 제휴 할인: 제휴사별 혜택 · 결제 할인: 카드 혜택 · 구독 혜택 · 무이자 ... 제13조 (손해 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/company/investor/articles",
+              "title": "정관 | 경영정보 | 투자자정보 | 회사소개 - LG전자",
+              "description": "이용약관 · 이메일 무단수집거부 · 개인정보처리방침 · 이벤트개인정보처리방침 · 영상 ... 구독)1544-7777; 복지몰 제휴사 구매 문의 : (가전)1544-8777, (구독)1544-7777 ...",
+              "position": 3
+            }
+          ]
+        },
+        "id": "01a12f85-650b-755b-b4b5-172530788d88",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"워시타워\" \"기존\" \"무상\" \"철거\"",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/wash-tower/wl21egzu?sKwd=%EC%98%A4%EB%B8%8C%EC%A0%9C%20%EC%9B%8C%EC%8B%9C%ED%83%80%EC%9B%8C%2025/25&sTab=unit_product_list&sRank=4\", #2 \"https://www.lge.co.kr/wash-tower/w20wznm?dpType=careTab\", #3 \"https://www.lge.co.kr/care-solutions/wash-tower/w20wan?dpType=careTab&sKwd=20&sTab=unit_subscribe_list&sRank=23\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/wash-tower/wl21egzu?sKwd=%EC%98%A4%EB%B8%8C%EC%A0%9C%20%EC%9B%8C%EC%8B%9C%ED%83%80%EC%9B%8C%2025/25&sTab=unit_product_list&sRank=4",
+              "title": "LG 트롬 오브제컬렉션 워시타워 | WL21EGZU | 워시타워 | 생활가전 ...",
+              "description": "무상 철거/재설치. 워시타워는 무상 철거/재설치 서비스를 제공해 드립니다. 단, 무상 철거/재설치는 25년 3월 1일부터 제공됩니다. 가전 구독 고객에 한하여 계약기간 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/wash-tower/w20wznm?dpType=careTab",
+              "title": "Untitled",
+              "description": "제품 성능 유지를 위한 교체 주기별 소모품 무상 교체. 무상 철거/재설치. 무상 철거/재설치 ... 기존 직렬설치 세탁기 F21VDD + 건조기 RH16VS 대비 기준 ... (워시타워 모델 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/wash-tower/w20wan?dpType=careTab&sKwd=20&sTab=unit_subscribe_list&sRank=23",
+              "title": "LG 트롬 워시타워 | W20WAN - LG전자",
+              "description": "워시타워는 무상 철거/재설치 서비스를 제공해 드립니다. 단, 무상 철거/재설치는 25년 3월 1일부터 제공됩니다. 가전 구독 고객에 한하여 계약기간 내 1회 무상 제공( ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/wash-tower/wa2525tap6z?dpType=careTab&sKwd=%EC%84%B8%ED%83%81%EA%B8%B0%20%ED%8A%B8%EB%A3%A8%EC%8A%A4%ED%8C%80&sTab=unit_subscribe_list&sRank=16",
+              "title": "LG 트롬 AI 오브제컬렉션 워시타워 | WA2525TAP6Z | 가전 구독 - LG전자",
+              "description": "Rating 4.8(31)6 days ago · 워시타워는 무상 철거/재설치 서비스를 제공해 드립니다. 단, 무상 철거 ... 기존 제품 종류에 따라 철거 및 회수가 제한될 수 있습니다. 일반 ...",
+              "position": 4
+            },
+            {
+              "url": "https://www.lge.co.kr/product/care-solutions/wash-tower/w1310bhn",
+              "title": "LG 트롬 오브제컬렉션 워시타워 컴팩트 | W1310BHN - LG전자",
+              "description": "기존 워시타워 ... 소모품 교체. 제품 성능 유지를 위한 교체 주기별 소모품 무상 교체. 무상 철거/재설치. 무상 철거/재설치 ... 기존 워시타워 대비 높이 23.5cm / 폭 10cm / ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12f85-652f-7429-9a9b-7ad3f96da044",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "\"워시타워\" \"2025년 3월 1일\" 구독",
+      "result": {
+        "agent_hints": [
+          "All 4 web results are excerpts only (#1 \"https://www.instagram.com/p/DGnEbQnRm_8/\", #2 \"https://blog.naver.com/sey3615/223727943266\", #3 \"https://slowlife1115.tistory.com/entry/%EC%A7%80%EA%B8%88-%EC%95%88%ED%95%98%EB%A9%B4-%EA%B3%A7-%ED%9B%84%ED%9A%8C%ED%95%A0%EC%A7%80%EB%8F%84-%EB%AA%B0%EB%9D%BC%EC%9A%94\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.instagram.com/p/DGnEbQnRm_8/",
+              "title": "LG전자 베스트샵 강진점 베스트 위크! 황금연휴 역대급 혜택 행사 기간 ...",
+              "description": "... 2025년 3월 1일(토) ~ 3월 10일(월) 최대 1,076만 ... ✓ 워시타워 ✓ 에어컨 ✓ TV ✓ 생활가전 구매 가능 ... 구독의 정석 LG 구독 서비스 LG전자 베스트샵 강진점 ...",
+              "position": 1
+            },
+            {
+              "url": "https://blog.naver.com/sey3615/223727943266",
+              "title": "인천 결혼가전 LG전자 베스트샵 동인천점 리뉴얼 오픈점 행사 : 네이버 블로그",
+              "description": "구입하는 게 좋지 않을까요? ​. 2025년 3월 1일 리뉴얼 오픈 행사 ... 워시타워 ... ​. 신혼집 인테리어에 맞춰서. 취향에 맞게 컬러도 선택할 수 ...",
+              "position": 2
+            },
+            {
+              "url": "https://slowlife1115.tistory.com/entry/%EC%A7%80%EA%B8%88-%EC%95%88%ED%95%98%EB%A9%B4-%EA%B3%A7-%ED%9B%84%ED%9A%8C%ED%95%A0%EC%A7%80%EB%8F%84-%EB%AA%B0%EB%9D%BC%EC%9A%94",
+              "title": "지금 안하면 곧 후회할지도 몰라요 - 슬로우라이프 - 티스토리",
+              "description": "... 워시타워, 워시콤보, 스타일러 ... LG전자 공식 서비스센터 바로가기(2025년 3월1일 ~ 4월30일까지) ... 구독하기슬로우라이프. 티스토리툴바.",
+              "position": 3
+            },
+            {
+              "url": "https://andy169.tistory.com/m/130",
+              "title": "가전을 관리하는 가장 스마트한 방법! LG전자 B2B 사업자몰에서 ...",
+              "description": "... 구독가전 서비스, 이제 사업자님만을 위한 전용 특가 ... 트롬 오브제컬렉션 워시타워 – 24/20kg – W20EGZ ... 2025년 3월 1일 ~ 3월 31일LG전자 사업자몰에서 ...",
+              "position": 4
+            }
+          ]
+        },
+        "id": "01a12f85-64d6-760a-8fcd-7365992b6ca2",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"구독\" \"약관\" filetype:pdf",
+      "result": {
+        "agent_hints": [
+          "All 3 web results are excerpts only (#1 \"https://bestshop.lge.co.kr/kr/ebook/2026/march/best/catImage/630/20260304_best_catalogue.pdf\", #2 \"https://www.lge.co.kr/kr/ebook/2026/august/mart/mart/catImage/658/20260910_mart_catalogue.pdf\", #3 \"https://www.lge.co.kr/kr/company/upload/sustainability/report/corporate_sustainability_management/2024-2025_LGE_Sustainability_Report%28KOR%29.pdf?utm_source=chatgpt.com\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://bestshop.lge.co.kr/kr/ebook/2026/march/best/catImage/630/20260304_best_catalogue.pdf",
+              "title": "[PDF] 베스트샵 - LG전자",
+              "description": "※ LG 가전 구독 문의 : 1544-7777 ※ LG가전구독 월요금 할인되는 제휴 ... 약관 동의가 필요합니다. ※ AI 기능 사용을 위해서는 인터넷 연결이 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/kr/ebook/2026/august/mart/mart/catImage/658/20260910_mart_catalogue.pdf",
+              "title": "[PDF] 컨버터블 드로어 - LG전자",
+              "description": "... 약관 동의가 필요합니다. ※ AI 기능 사용을 위해서는 ... 약관 동의가 필요합니다. ※ AI 기능 사용을 ... ※ 상하좌우/듀얼정수기 가전 구독/케어십 구독 신청 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/kr/company/upload/sustainability/report/corporate_sustainability_management/2024-2025_LGE_Sustainability_Report%28KOR%29.pdf?utm_source=chatgpt.com",
+              "title": "[PDF] LG전자 지속가능경영보고서",
+              "description": "이에 따라, 2024년에는 구독 서비스 인프라와 운영 프로세스를 체계적으로 구축하여 구독 고객의 ... 약관을 고지하고 동의를 받음으로써, 자사의 제품 ... 처리방침 및 동의서 ...",
+              "position": 3
+            }
+          ]
+        },
+        "id": "01a12f85-6549-72cb-b580-586051625321",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "\"LG\" \"구독 이용약관\"",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/water-purifiers/ws400gw?dpType=careTab\", #2 \"https://item.cjonstyle.com/item/2030652473\", #3 \"https://www.samsung.com/sec/store-mobile/galaxy-s24-ultra-sm-s928-7/SM-S928NZVFKOD/\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/water-purifiers/ws400gw?dpType=careTab",
+              "title": "LG 퓨리케어 정수기(스탠드, 냉온) | WS400GW | 정수기 | 주방가전 ...",
+              "description": "상기 기재된 내용 외 자세한 사항은 본 계약서 및 LG 가전 구독 이용약관을 반드시 참고하시기 바랍니다. 배송지역: 전국 (단, 일부 도서산간지역의 경우 배송이 제한 ...",
+              "position": 1
+            },
+            {
+              "url": "https://item.cjonstyle.com/item/2030652473",
+              "title": "[LG 구독/렌탈 최대상품권+최대혜택+무상A/S+후기이벤트] LG 전자 TV ...",
+              "description": "Rating 4.6(684) · $20 delivery7 days ago · ... [LG 구독/렌탈 최대상품권+최대혜택+무상A/S+후기이벤트] LG ... 정기구독 이용약관; 청소년보호정책; 법적고지; 국민은행구매안전서비스 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.samsung.com/sec/store-mobile/galaxy-s24-ultra-sm-s928-7/SM-S928NZVFKOD/",
+              "title": "갤럭시 S24 Ultra 통신사폰 (SKT/KT/LG U+) (티타늄 바이올렛 ...",
+              "description": "갤럭시 S24 Ultra 통신사폰 (SKT/KT/LG U+) 티타늄 바이올렛 대표. 갤럭시 S24 ... AI 구독 이용약관. 개인정보처리방침하위 메뉴 있음. 삼성닷컴 개인정보처리방침 ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/air-conditioners/sq09mdkwms?dpType=careTab",
+              "title": "LG 휘센 벽걸이에어컨 | SQ09MDKWMS | 에어컨 | 에어컨/에어케어 ...",
+              "description": "상기 기재된 내용 외 자세한 사항은 본 계약서 및 LG 가전 구독 이용약관을 반드시 참고하시기 바랍니다. 배송지역: 전국 (단, 일부 도서산간지역의 경우 배송이 제한 ...",
+              "position": 4
+            },
+            {
+              "url": "https://www.samsung.com/sec/support/model/SHV-E160LBK3LC/",
+              "title": "매뉴얼 & 다운로드 - Samsung 대한민국",
+              "description": "매뉴얼. 갤럭시 노트 LG U+, 약정폰 (베리 핑크)SHV-E160LBK3LC. 안전 주의사항. ver ... AI 구독 이용약관. 개인정보처리방침하위 메뉴 있음. 삼성닷컴 개인정보처리 ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12f85-ab73-7472-b21a-19d1914d8471",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "\"워시타워\" \"기존 고객\" \"이전설치\"",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/care-solutions/rentalService-aboutcare\", #2 \"https://www.instagram.com/p/DXmReP3kqnr/\", #3 \"https://caresolutionshop.com/kakao?srsltid=AU7gw4V-sRe01nsjZjgIDtJNCp1X5tnTM37hDZ-b-5cueQ1YMg0x9ndG\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService-aboutcare",
+              "title": "케어 서비스/케어십 소개 | 케어십 | 서비스 구독 | 가전 구독 | LG 전자",
+              "description": "워시타워; 에어컨; STEM; 공기청정기; 세탁기; 워시콤보; 건조기; 냉장고; 스타일러 ... 서비스접수 및 이전설치. 제품문의; 서비스 접수; 이전설치. 상담문의닫기. 평일 09~ ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.instagram.com/p/DXmReP3kqnr/",
+              "title": "울산 남구 작업 다녀왔습니다 :) 키가 조금 작으신 우리 고객님 워시타워 ...",
+              "description": "... 이전설치 #이전설치 ... 청소 전후 상태를 현장에서 직접 확인시켜 드리고, 작업 후에는 청소 종료 안내문과 함께 기존 고객 20% 할인 쿠폰까지 챙겨 ...",
+              "position": 2
+            },
+            {
+              "url": "https://caresolutionshop.com/kakao?srsltid=AU7gw4V-sRe01nsjZjgIDtJNCp1X5tnTM37hDZ-b-5cueQ1YMg0x9ndG",
+              "title": "LG케어솔루션샵 카카오상담 렌탈상담 엘지렌탈상담 엘지정수기렌탈상담 ...",
+              "description": "... 워시타워 · 미니워시 · 에어컨 · 무선청소기 · 로봇청소기 · 안마의자 · 고객혜택 · 사은품 ... 위 항목 내용 외의 사항은 아래를 확인해주세요. 기존 고객. 이전 설치 / ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/kr/business/contents/rental-care/rental-care-info.do",
+              "title": "LG 가전 구독 케어 서비스 - LG전자",
+              "description": "... 기존고객을 위한 상담문의. 자세히 보기. 1. 요금납부 및 정보변경. 결제정보 및 ... 이전설치. 제품문의; 서비스 접수; 이전설치. 닫기. 평일 09~18시, 토요일 09~13시",
+              "position": 4
+            },
+            {
+              "url": "https://www.threads.com/@clean__pick/post/DYdzdWIkzwk/%EB%82%98%EB%8A%94-%EC%97%90%EC%96%B4%EC%BB%A8-%EC%B2%AD%EC%86%8C-%ED%95%B4-%EC%9D%B8%ED%8C%94-%EC%99%84/",
+              "title": "나는 에어컨 청소 해 인팔 완 - Threads",
+              "description": "기존 고객으로 추가 매출을 만드는 방법, 내가 알려줄게. ... 워시타워 에어컨 모든 가전렌탈 문의는 생활폼으로 ... 오늘 에어컨이전 설치와 세척 같이했어 혹시 ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12f85-aaeb-708e-8cdb-f0d3df010a9c",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:live.lge.co.kr 구독 이전설치 2025 무상",
+      "result": {
+        "agent_hints": [
+          "No web results were returned. If the task is still unresolved, use firecrawl_search again with {\"query\":\"<broader or alternative query>\",\"sources\":[\"web\"]}."
+        ],
+        "success": true,
+        "data": {
+          "web": []
+        },
+        "id": "01a12f85-ab1b-774d-a95d-467ecf7ca88e",
+        "creditsUsed": 0
+      }
+    },
+    {
+      "query": "\"LG\" \"렌탈\" \"이용약관\" \"매장용\"",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://m.lguplus.com/internet-iptv/soho/internet-plan/1000003021\", #2 \"https://moa.rtmoa.co.kr/shop/goods.php?brand=9999&brand2=1034\", #3 \"http://10000wonthe.com/board_intro/intro_D1.asp\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://m.lguplus.com/internet-iptv/soho/internet-plan/1000003021",
+              "title": "유플러스 소상공인 매장/사무실 인터넷 1G < 인터넷/IPTV | LG U+",
+              "description": "In stockLG전자렌탈, 청소/방역, 인플루언서 활용 등 매장 운영에 필요한 제휴 서비스를 ... 더 자세한 내용은 LG유플러스 이용약관에서 확인할 수 있습니다. 인터넷 가족 ...",
+              "position": 1
+            },
+            {
+              "url": "https://moa.rtmoa.co.kr/shop/goods.php?brand=9999&brand2=1034",
+              "title": "렌탈모아24시접수센터",
+              "description": "BS렌탈 LG헬로비젼 동양매직렌탈 루헨스 세스코 스마트렌탈 신성I&C 오텍캐리어 ... 이용약관. 제1조 (목적). 이 약관은 (이하 “회사”라 한다)이 운영하는 (https ...",
+              "position": 2
+            },
+            {
+              "url": "http://10000wonthe.com/board_intro/intro_D1.asp",
+              "title": "사업장 인터넷 - 만원더통신",
+              "description": "KT인터넷, KT인터넷가입, SK인터넷, LG인터넷, 인터넷가입, 인터넷신청, 인터넷 ... 가정용과 동일 vs 매장용으로 추가 사은품. 만원더에서는 사업장 전용 인터넷 ...",
+              "position": 3
+            },
+            {
+              "url": "https://megapass-skbroadband-powercomm.com/m/board.html?code=inter01_board1&page=4&type=v&board_cate=&num1=999806&num2=00000&number=191&lock=N",
+              "title": "소상공인 인터넷 비교, 통신사별 상품 차이 정리",
+              "description": "... 렌탈 · 간편견적 · 꿀팁정보 · 고객후기. 꿀팁정보 통신 · 렌탈은 기본이에요 생활 ... 매장용으로 보기 쉽게 정리돼 있습니다. LG유플러스 소상공인 인터넷 요금제 안내 ...",
+              "position": 4
+            },
+            {
+              "url": "https://touchlike.kr/guides/standbyme-kiosk-event-guide",
+              "title": "스탠바이미 키오스크 이벤트 — 매장 도입 완벽 가이드 (27인치 이동식)",
+              "description": "스탠바이미키오스크 이벤트매장 마케팅LG 스탠바이미키오스크 렌탈 ... 자동차 쇼룸·명품·호텔·플래그십 매장용 50인치 벽 매립형 키오스크 완벽 가이드.",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12f85-ab6f-7473-a7b9-3c0aeffa12a1",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"워시타워\" \"구독 이용약관\"",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1, #2 \"https://www.lge.co.kr/care-solutions/wash-tower/wa2525tap6z?dpType=careTab&sKwd=%EC%84%B8%ED%83%81%EA%B8%B0%20%ED%8A%B8%EB%A3%A8%EC%8A%A4%ED%8C%80&sTab=unit_subscribe_list&sRank=16\", #3 and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/care-solutions/wash-tower/w2320vanqr?dpType=careTab&sKwd=LG%20%EC%98%A4%EB%B8%8C%EC%A0%9C%EC%BB%AC%EB%A0%89%EC%85%98%20%EC%9B%8C%EC%8B%9C%ED%83%80%EC%9B%8C&sTab=unit_subscribe_list&sRank=20",
+              "title": "LG 트롬 오브제컬렉션 워시타워 | W2320VANQR | 가전 구독 - LG전자",
+              "description": "워시타워 컴팩트는 워시타워 대비 높이 23.5cm, 폭 10cm, 깊이 17cm를 줄여 더 ... 구독 이용약관을 반드시 참고하시기 바랍니다. 배송지역: 전국 (단, 일부 도서 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/wash-tower/wa2525tap6z?dpType=careTab&sKwd=%EC%84%B8%ED%83%81%EA%B8%B0%20%ED%8A%B8%EB%A3%A8%EC%8A%A4%ED%8C%80&sTab=unit_subscribe_list&sRank=16",
+              "title": "LG 트롬 AI 오브제컬렉션 워시타워 | WA2525TAP6Z | 가전 구독 - LG전자",
+              "description": "Rating 4.8(31)6 days ago · 워시타워 컴팩트는 워시타워 대비 높이 23.5cm, 폭 10cm, 깊이 ... 구독 이용약관을 반드시 참고하시기 바랍니다. 배송지역: 전국 (단, 일부 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/wash-tower/w1310bn?dpType=careTab&sKwd=LG%ED%8A%B8%EB%A1%AC%EC%98%A4%EB%B8%8C%EC%A0%9C%EC%BB%AC%EB%A0%89%EC%85%98%20%EC%9B%8C%EC%8B%9C%ED%83%80%EC%9B%8C&sTab=unit_subscribe_list&sRank=9",
+              "title": "LG 트롬 오브제컬렉션 워시타워 컴팩트 | W1310BN | 가전 구독 - LG전자",
+              "description": "워시타워 컴팩트는 워시타워 대비 높이 23.5cm, 폭 10cm, 깊이 17cm를 줄여 더 ... 구독 이용약관을 반드시 참고하시기 바랍니다. 배송지역: 전국 (단, 일부 도서 ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/air-purifier/as352nb1a?dpType=careTab",
+              "title": "LG 퓨리케어 오브제컬렉션 360° 공기청정기 알파 (일반 필터) - LG전자",
+              "description": "LG 트롬 오브제컬렉션 워시타워 + LG 디오스 AI 오브제컬렉션 냉장고 (매직스페이스) ... 구독 이용약관을 반드시 참고하시기 바랍니다. 배송 ... 워시타워 · 워시 ...",
+              "position": 4
+            },
+            {
+              "url": "https://www.lge.co.kr/product/care-solutions/washing_machines/fx4ec",
+              "title": "LG 트롬 오브제컬렉션 미니워시 | FX4EC | 세탁기 | 생활가전 | 가전 ...",
+              "description": "... 워시타워'도 좋은 선택이 될 수 있어요. 워시 ... 구독 이용약관을 반드시 참고하시기 바랍니다. 배송 ... #세탁기#워시타워#워시타워 컴팩트#ThinQ Discover ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12f86-28fd-75de-bef6-efbe8c51c173",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"구독\" \"고객확인사항\"",
+      "result": {
+        "agent_hints": [
+          "All 1 web results are excerpts only (#1 \"https://www.lge.co.kr/support/usage-guide-faq\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/support/usage-guide-faq",
+              "title": "홈페이지 이용방법 | 고객지원 - LG전자",
+              "description": "# 홈페이지 이용방법\n- [구독](https://www.lge.co.kr/support/usage-guide-faq#caresolution)",
+              "position": 1
+            }
+          ]
+        },
+        "id": "01a12f86-2898-73bc-89b2-5ee12b92ad24",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr \"이전설치\" \"무상\" \"계약\" \"2025\"",
+      "result": {
+        "error_code": "INVALID_ARGUMENT"
+      }
+    },
+    {
+      "query": "LG전자 가전구독 이용약관 제13조 해지",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/care-solutions/rentalService\", #2 \"https://lge-subscription.com/bbs/board.php?bo_table=guide&wr_id=17\", #3 \"https://m.blog.naver.com/heena_mom/223442545132\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService",
+              "title": "가전 구독 서비스 안내 - LG전자",
+              "description": "# 가전 구독 서비스 안내\n## 중도 해지 신청시, 이렇게 진행돼요\n### 해지 비용 확인\n- 비현금성 사은품: LG전자 사은품 구매단가 기준",
+              "position": 1
+            },
+            {
+              "url": "https://lge-subscription.com/bbs/board.php?bo_table=guide&wr_id=17",
+              "title": "LG 가전 구독 자주 묻는 질문 6 — 월 이용료·계약 상대·약정 기간",
+              "description": "약정 기간 중 해지하면 LG전자 약관에 따른 위약금이 발생합니다. 금액은 ... 제3조 (약관의 명시와 개정). (1) 회사는 서비스를 이용하고자 하는 ...",
+              "position": 2
+            },
+            {
+              "url": "https://m.blog.naver.com/heena_mom/223442545132",
+              "title": "나만의 라이프스타일 맞춤 LG전자 가전 구독 방법 및 해지 - NAVER",
+              "description": "LG전자 구독 방법 · LGE.COM 가전 구독 할인 혜택 · 가전 구독 할인 혜택 · LG전자 구독 해지 시 발생하는 비용은?",
+              "position": 3
+            },
+            {
+              "url": "https://lgecds.com/article/%EC%9D%B4%EC%9A%A9%EC%95%88%EB%82%B4-faq/3/56/",
+              "title": "[구독] 가전 구독 계약 해지시 어떻게 되는지 궁금해요. 이용안내 FAQ",
+              "description": "계약 해지를 원하실 경우 고객센터(☎ 1544-7777)를 통해 해지접수가 가능합니다. > 의무사용기간이 경과한 경우: 당월 사용요금 및 회수비까지 완납이 ...",
+              "position": 4
+            },
+            {
+              "url": "https://lgecom-kr.tistory.com/79",
+              "title": "LG전자 가전 구독 해지, 어떻게 진행될까요? - LGE.COM",
+              "description": "LG전자 가전 구독은 고객센터 또는 마이페이지에서 해지 상담 신청 후 해지할 수 있어요. 다만 의무사용기간 이내 해지 시 해약금이 부과되며, 해약금은 ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12f86-7d3f-713a-98ec-892320ca0669",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "LG전자 구독 무상 철거 재설치 기존 가입 고객 2025",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/care-solutions/rentalService\", #2 \"https://www.lge.co.kr/care-solutions/rentalService-aboutcare\", #3 \"https://www.lge.co.kr/story/buying-guide/care-solutions-guide2\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService",
+              "title": "가전 구독 서비스 안내 - LG전자",
+              "description": "# 가전 구독 서비스 안내\n## 대표 제품별 구독 서비스를 확인해 보세요\n### 무상 철거/재설치 ∙ 무상 A/S\n- 무상 재설치는 25년 3월 1일부터 제공됩니다.\n- 무상 재설치는 25년 3월 1일부터 제공됩니다.\n\n### 무상 철거/재설치 · 무상 A/S\n![기사님이 제품을 철거중인 이미지](https://www.lge.co.kr/kr/home_app_subscribe/src/images/service-stem04.png)\n\n- 가전 구독 고객에 한하여 계약기간 내 1회 무상 제공(운송비 별도) 해드립니다.\n- 추가 비용 관련 자세한 사항은 LG전자 고객센터(1544-7777)에 문의 바랍니다.",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService-aboutcare",
+              "title": "케어 서비스/케어십 소개 | 케어십 | 서비스 구독 | 가전 구독 | LG 전자",
+              "description": "철거 및 재설치는. LG전자 가전 케어 전문가가 관리해드리는 서비스 입니다. 1544-7777 보이는 … 철거/재설치 / 원스톱 재설치] TV는 70인치 이상에 한하여 무상 철거/재 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/story/buying-guide/care-solutions-guide2",
+              "title": "매일 입는 옷을 더 위생적으로, 세탁/의류 관리 가전 구독 가이드 - LG전자",
+              "description": "가전 구매\n\n무상 철거/재설치\n\n가전 구독\n\n무상 철거/재설치",
+              "position": 3
+            },
+            {
+              "url": "https://blog.naver.com/gkqhddl1/224419976344?fromRss=true&trackingCode=rss",
+              "title": "LG전자 구독 전문케어, 구독이득을 따져봐야 하는 이유 : 네이버 블로그",
+              "description": "무상 철거 및 재설치 * 가전 구독 고객에 한하여 계약기간 내 1회 무상 철거 / 재설치 서비스가 제공됩니다. 무상 재설치는 25년 3월 1일부터 제공됩니다 ...",
+              "position": 4
+            },
+            {
+              "url": "https://www.lge.co.kr/kr/business/contents/rental-care/rental-care-info.do",
+              "title": "LG 가전 구독 케어 서비스 - LG전자",
+              "description": "* 무상 A/S와 식기세척기 무상 철거 및 재설치는 렌탈 고객에 한하며, 고객 과실로 인한 제품 고장은 제외됨. LG전자의 전문 가전 케어 서비스, 렌탈/케어십에 대해 더 ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12f86-7da5-73c7-9756-0a3f59373122",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr 워시타워 무상 이전 운송비 계약 이전",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/lg-best-care/service-installation-removal/reservation\", #2 \"https://www.lge.co.kr/care-solutions/rentalService\", #3 \"https://www.lge.co.kr/wash-tower/w20wznm?dpType=careTab\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/lg-best-care/service-installation-removal/reservation",
+              "title": "LG 이전설치 접수(LX판토스) - LX Pantos",
+              "description": "제품구분. 세탁기 건조기 스타일러 워시타워 워시콤보. 참고하세요: 전면부(세제통) ... 시그니처 제품 구입 후 2년 이내 무상이전설치 대상 고객께선 LG 베스트 케어 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService",
+              "title": "가전 구독 서비스 안내 - LG전자",
+              "description": "가전 구독 고객에 한하여 계약기간 내 1회 무상 제공(운송비 별도) 해드립니다. 단, 무상 재설치는 25년 3월 1일부터 제공됩니다. 단, 무상 철거 서비스는 26년 1월 5 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.lge.co.kr/wash-tower/w20wznm?dpType=careTab",
+              "title": "Untitled",
+              "description": "워시타워는 무상 철거/재설치 서비스를 제공해 드립니다. ... 가전 구독 고객에 한하여 계약기간 내 1회 무상 제공(운송비 별도) 해드립니다. ... 이전 설치로 파손이나 고장 ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.lge.co.kr/benefits/event/detail-EV00005841",
+              "title": "3년 무상 서비스 > 혜택/이벤트 - LG전자",
+              "description": "자격 취득 후, 이전 1년간 구매한 6대 가전에 대해 3년 무상 서비스 적용! 6대 가전 관련 상세 기준 및 유의사항은 아래를 참조하세요. 무상 서비스 기간은 배송일 기준 ...",
+              "position": 4
+            },
+            {
+              "url": "https://www.lge.co.kr/wash-tower/w1310egn?sKwd=%ED%8A%B8%EB%A1%AC%EC%98%A4%EB%B8%8C%EC%A0%9C%EC%BB%AC%EB%A0%89%EC%85%98&sTab=unit_product_list&sRank=5",
+              "title": "LG 트롬 오브제컬렉션 워시타워 컴팩트 | W1310EGN | 생활가전 | 제품/소모품",
+              "description": "가전 구독 고객에 한하여 계약기간 내 1회 무상 제공(운송비 별도) 해드립니다. ... 이전 설치로 파손이나 고장 걱정 없는 무상 재설치 서비스해드립니다.(안내) 구독 ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12f86-7d65-7170-a56a-388e0296861c",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:lge.co.kr 구독 약관 개정 2026",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/care-solutions/rentalService\", #2 \"https://bestshop.lge.co.kr/footer/notice/detail-258\", #3 \"https://bestshop.lge.co.kr/footer/notice/detail-246\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/care-solutions/rentalService",
+              "title": "가전 구독 서비스 안내 - LG전자",
+              "description": "납부 방법은 홈페이지 [마이페이지] > [구독 관리] > [계약 관리] 메뉴에서 납부정보 변경을 통하여 변경하실 수 있습니다. 첫 달 사용요금의 경우, 가전 구독은 계약일 ...",
+              "position": 1
+            },
+            {
+              "url": "https://bestshop.lge.co.kr/footer/notice/detail-258",
+              "title": "LG전자 멤버십 이용약관 개정 안내 | LG전자 : BEST SHOP",
+              "description": "LG전자 멤버십 이용약관 개정 안내 · 1. 회원은 가맹점에서 상품을 구매하거나 서비스를 이용할 경우 멤버십 카드를 제시하여 대금결제금액에 따라 정해진 멤버십 포인트를 ...",
+              "position": 2
+            },
+            {
+              "url": "https://bestshop.lge.co.kr/footer/notice/detail-246",
+              "title": "LG전자 BEST SHOP 멤버십 이용약관 개정 안내",
+              "description": "본 약관은 엘지전자 주식회사(이하 '회사')가 운영하는 BEST SHOP Membership 서비스의 이용과 관련한 제반 사항을 명확히 규정함으로써, 회원에 대한 고객서비스의 증진과 ...",
+              "position": 3
+            },
+            {
+              "url": "https://bestshop.lge.co.kr/footer/notice/detail-263",
+              "title": "LG전자 서비스 이용약관 개정 안내",
+              "description": "LG전자 베스트샵 공지사항입니다. 구독 혜택 … 이용약관 -변경 약관의 효력 발생일 멤버십 서비스] B 서비스 운영 유효기간 2026. 01. 29 ~ 2029.",
+              "position": 4
+            },
+            {
+              "url": "https://bestshop.lge.co.kr/footer/notice/detail-249",
+              "title": "LG전자 BEST SHOP 멤버십 이용약관 개정안내",
+              "description": "구독 혜택. BEST SHOP 멤버십 이용약관이 개정되어 변경된 내용을 안내드립니다. B 서비스 운영 유효기간 2026. 01. 29 ~ 2029.",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12f86-7dbb-757a-b1bd-13fce9de1417",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "site:blog.naver.com/lgeservice_kr 워시타워 구독 이전설치",
+      "result": {
+        "agent_hints": [
+          "No web results were returned. If the task is still unresolved, use firecrawl_search again with {\"query\":\"<broader or alternative query>\",\"sources\":[\"web\"]}."
+        ],
+        "success": true,
+        "data": {
+          "web": []
+        },
+        "id": "01a12f88-6215-7768-b9fe-6a4f118e8e19",
+        "creditsUsed": 0
+      }
+    },
+    {
+      "query": "\"LG\" \"가전 구독\" \"약관\" \"시행\"",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.lge.co.kr/support\", #2 \"https://www.news1.kr/industry/general-industry/5898928\", #3 \"https://lgdirect-rental.com/shop/goods.php?cate1=CA0110&depth=1\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.lge.co.kr/support",
+              "title": "고객지원 - LG전자",
+              "description": "... 가전 구독. 주방가전선택됨. 에어컨/에어케어. 생활가전. TV/노트북. 구독 안내 ... AI Chat 필요한 정보를 찾기 어려우신가요? 사이트맵 · 이용약관 · 이메일 무단수집 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.news1.kr/industry/general-industry/5898928",
+              "title": "삼성전자, 구독 서비스 강화 '가전 돌파구'…LG전자와 불꽃경쟁 예고",
+              "description": "가전 구독은 소비자가 매달 구독료를 내고 일정 기간 제품을 사용 ... 이는 LG전자는 시행하지 않는 서비스다. 또 고객이 원하는 날짜와 시간에 ...",
+              "position": 2
+            },
+            {
+              "url": "https://lgdirect-rental.com/shop/goods.php?cate1=CA0110&depth=1",
+              "title": "정수기 - LG구독 케어솔루션 온라인판매점",
+              "description": "LG가전구독 구독샵 · 이벤트 · 카드혜택 · 공지사항. 상담문의. 1522 ... [부칙 ] (시행일) 본 약관은 2019년 12월 1일부터 적용되며, 종전의 약관은 본 약관으로 대체합니다 ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.rental-official.com/item/form.php?it_id=1915&it_type_option=9",
+              "title": "구독신청 - LG공식접수센터주식회사",
+              "description": "[엘지 LG전자 가전구독/렌탈] 디오스 인덕션 빌트인 BEI3ASB4 등록비 면제. BEI3ASB4. 렌탈타입, 방문관리. 사용기간, 의무사용 6년 / 계약기간 6년. 고객명. 연락처. 상담 ...",
+              "position": 4
+            },
+            {
+              "url": "https://www.donga.com/news/Culture/article/all/20240923/130069409/1",
+              "title": "롯데백화점, 백화점 최초 'LG 가전 구독 서비스' 도입… 초기 비용 부담 없이 ...",
+              "description": "본점 포함 전국 7개 점포에서 시행 롯데백화점은 이달부터 서울 본점 ... LG전자 가전 구독 서비스는 최소 3년에서 최대 6년까지 구독 기간을 ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12f88-61f4-771e-9b80-6cf91a44df07",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "\"워시타워\" \"무상\" \"가입일\"",
+      "result": {
+        "agent_hints": [
+          "All 5 web results are excerpts only (#1 \"https://www.instagram.com/reel/DcsMR5hIjMD/\", #2 \"https://www.instagram.com/reel/DdDh5w4BPaD/\", #3 \"https://www.instagram.com/p/B4bqjH3gzv4/\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+        ],
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://www.instagram.com/reel/DcsMR5hIjMD/",
+              "title": "\"세탁기는 자주 돌려야 하고 건조기도 매일 사용하게 되는데 ... - Instagram",
+              "description": "#LG전자 #LG워시타워 #워시타워 #에너지효율1등급 #전기세절약 #AI절전 ... ✓ 가입일로부터 2년간 서비스 지원 ✓ 연간 최대 100만원, 서비스 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.instagram.com/reel/DdDh5w4BPaD/",
+              "title": "LG렌탈 1644-7451 on Instagram: \"엘지 AI 얼음정수기, 음성으로 편리 ...",
+              "description": "ᆞ전문 기사님 설치, 기기결함 무상 A/S 2. 케어서비스 ᆞ공기청정기, 안마의자, 티비, 냉난방기 ᆞ세탁건조기, 스타일러, 워시타워/콤보 ᆞ전기 ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.instagram.com/p/B4bqjH3gzv4/",
+              "title": "#첫줄 안녕하세요! 내 집의 모든 렌탈, 지베다렌탈입니다 . . 지 ... - Instagram",
+              "description": "- 2~3개월 정기점검 및 AS 무상, 무상 필터교체 - 실용적인 프리미엄 ... ✓ 가입일로부터 2년 서비스 ✓ 연간 100만원 한도 내 서비스 지원횟수 ...",
+              "position": 3
+            },
+            {
+              "url": "https://image.r114.co.kr/imgdata/notice_file/2023/A01030024690021.pdf",
+              "title": "[PDF] 엘리프 미아역 2단지 입주자모집공고 - 부동산114",
+              "description": "ㆍCS센터는 준공시 입주관리를 위하여 일정기간 무상으로 활용되며, 활용기간 동안(사용기간 변경 가능)은 당 시설의 이용이 제한됩니다. CS센터는 판매시설 혹은 주민공동 ...",
+              "position": 4
+            },
+            {
+              "url": "https://naver-file.ebunyang.co.kr/files/naver_bunyang/pdf/60268/uploadfile_202304243165411.pdf",
+              "title": "[PDF] 광명자이더샵포레나 입주자모집공고",
+              "description": "단지 주변의 도시계획도로 등 도시계획시설 및 기반시설 등은 해당관청에 기부채납 또는 무상양도 예정이며, 조성계획 및 설치 일정은 변경될 수 있습니다 ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "01a12f88-61e0-767a-8b5a-518b24296bb9",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "query": "\"워시타워\" \"무상\" \"2025\" \"이전 가입\"",
+      "result": {
+        "agent_hints": [
+          "No web results were returned. If the task is still unresolved, use firecrawl_search again with {\"query\":\"<broader or alternative query>\",\"sources\":[\"web\"]}."
+        ],
+        "success": true,
+        "data": {
+          "web": []
+        },
+        "id": "01a12f88-61c3-744d-909e-18fd0a5ed195",
+        "creditsUsed": 0
+      }
+    }
+  ],
+  "access_limitations": [
+    {
+      "tool": "Codex in-app browser",
+      "target": "https://www.lge.co.kr/product/care-solutions/wash-tower/w2420whnr",
+      "action": "새 탭에서 약관 열람 경로 확인",
+      "result": "자동 승인 검토가 재시도 한도 및 429 Too Many Requests로 완료되지 않아 작업 미실행. UI 직접 열람을 재시도하거나 우회하지 않음. 이미 확보한 공개 수집본으로 조사 기록을 작성함."
+    }
+  ],
+  "excluded_policy_sources": [
+    {
+      "path": "metadata/discovery/LG-TERMS-NOTICE-2021-EXCLUDED.phase2.firecrawl.json",
+      "reason": "검색 결과의 2026년은 사이트 인증 정보에 등장할 뿐이며, 본문 개정 효력일은 2021-08-16인 서비스/멤버십 포인트 약관 공지. 현행 구독 약관 증거로 사용하지 않음."
+    }
+  ],
+  "scope_limits": [
+    "로그인·본인인증·개인 계약 조회 미실행",
+    "문의·상담 신청·예약·구매·개인정보 입력·동의 미실행",
+    "검색 결과 없음은 문서의 부존재를 의미하지 않음"
+  ],
+  "query_error_count": 1
+}

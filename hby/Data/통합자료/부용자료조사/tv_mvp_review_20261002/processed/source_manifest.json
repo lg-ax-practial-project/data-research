@@ -1,0 +1,50 @@
+{
+  "verified_at": "2026-10-02",
+  "scope": "R01-R03 partial source crosscheck; no team approval",
+  "files": [
+    {
+      "file": "../raw/annex2_page7.png",
+      "sha256": "6C0766CB4855FF3C016033496C892E580C03BAF909A626B24473FABABA18AD86"
+    },
+    {
+      "file": "../raw/easylaw_explanation.md",
+      "sha256": "8574C8378F269AEB1CFD43E0635F53271B2F34798CD1B19ED7AB06294660C02B"
+    },
+    {
+      "file": "../raw/general_criteria_page1_20261002.png",
+      "sha256": "34D218D7FD75654FAA5D60A5F69A9D99AAC119090D63B2E06A2986A4515AF6EB"
+    },
+    {
+      "file": "../raw/general_criteria_page2_20261002.png",
+      "sha256": "53536363246D03B0EBC809BA667BCE0092E1239A2BB89C1BE14A225CBDDBBFB7"
+    },
+    {
+      "file": "../raw/lawgo_annex2_20261002.pdf",
+      "sha256": "242401B8AE436E786A1B3C33AA5F568D7C8CB3A0927484A25ED933346BF72083"
+    },
+    {
+      "file": "../raw/lawgo_general_criteria.md",
+      "sha256": "AFA81C285B2396A50D6D2548A854BC84FD8A2877C2C5916EC2EC2F63317B4BEC"
+    },
+    {
+      "file": "../raw/lawgo_notice.md",
+      "sha256": "64C8E7545CA320E3BE550D8FBB91652E1117589492604DD45EBE33E3C028E3EF"
+    },
+    {
+      "file": "../raw/lg_warranty.md",
+      "sha256": "6EA094F208A4863EFDF50120AB63C5B7A3B43FBBA65FEB8CDCED8AD23B08A080"
+    }
+  ],
+  "urls": {
+    "notice": "https://www.law.go.kr/행정규칙/소비자분쟁해결기준",
+    "lg": "https://www.lge.co.kr/support/rates-warranty-guide",
+    "general": "https://www.law.go.kr/lsBylInfoPLinkR.do?bylCls=BE&lsNm=%EC%86%8C%EB%B9%84%EC%9E%90%EA%B8%B0%EB%B3%B8%EB%B2%95+%EC%8B%9C%ED%96%89%EB%A0%B9&bylNo=0001&bylBrNo=00",
+    "annex2": "https://www.law.go.kr/LSW/flDownload.do?flSeq=159470209&flNm=%5B%EB%B3%84%ED%91%9C+2%5D+%ED%92%88%EB%AA%A9%EB%B3%84+%ED%95%B4%EA%B2%B0%EA%B8%B0%EC%A4%80&bylClsCd=200201",
+    "general_images": [
+      "https://www.law.go.kr/LSW/flDownload.do?flSeq=168880677",
+      "https://www.law.go.kr/LSW/flDownload.do?flSeq=168880679"
+    ]
+  },
+  "redistribution_review": "미완료 — 공개 업로드 전 이용 조건 확인",
+  "existing_rule_file_modified": false
+}

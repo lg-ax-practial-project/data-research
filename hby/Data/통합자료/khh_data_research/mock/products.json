@@ -1,0 +1,9 @@
+[
+  {
+    "product_id": "MOCK-WASHTOWER-01",
+    "product_family": "LG WashTower",
+    "model_code": null,
+    "description": "데모 제품군. 실판매 모델·실제 월요금으로 해석 금지.",
+    "is_synthetic": true
+  }
+]

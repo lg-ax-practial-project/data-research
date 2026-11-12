@@ -1,0 +1,147 @@
+{
+  "project": "LG Move Care",
+  "review_date_kst": "2026-10-12",
+  "phase": "additional_research_02",
+  "new_source_count": 2,
+  "total_source_count_after_review": 16,
+  "ready_for_unconditional_contract_application": false,
+  "sources": [
+    {
+      "id": "LG-CARE-ABOUT-001",
+      "document_name": "케어 서비스/케어십 소개 — 워시타워 케어서비스",
+      "issuer": "LG전자",
+      "url": "https://www.lge.co.kr/care-solutions/rentalService-aboutcare",
+      "published_at": "원문 미기재",
+      "updated_at": "원문 미기재",
+      "effective_date": "약관 시행일 원문 미기재",
+      "policy_reference_date": "워시타워 영상 설명에 무상 철거·재설치 2025-03-01 제공 시작",
+      "contract_date_scope": "과거 계약 포함·소급 및 계약일/설치일 기준은 원문 미기재",
+      "collected_on_kst": "2026-10-12",
+      "product": "워시타워. 컴팩트·다른 제품 섹션과 구분",
+      "contract_type": "가전 구독 혜택 안내. 케어십 전체나 일시불 구매 고객으로 일반화하지 않음",
+      "location": "LG전자 워시타워 케어서비스 > 무상 철거/재설치 및 해당 영상 설명",
+      "raw_capture": "raw/LG-CARE-ABOUT-001.firecrawl.json",
+      "markdown_capture": "raw/LG-CARE-ABOUT-001.firecrawl.md",
+      "capture_type": "Firecrawl maxAge=0 공개 페이지 수집본(JSON 안에 Markdown·처리 HTML·링크·상태 코드 포함). 원본 HTML 바이트 파일 아님",
+      "conditions": [
+        "가전 구독 고객에게 계약기간 내 1회 무상 철거·재설치",
+        "운송은 희망 시 유상이며 고객 부담",
+        "설치 환경에 따른 추가비 가능",
+        "동일 페이지의 드럼 케어·직수세척 적용 모델/가입 조건을 철거 혜택 조건으로 옮기지 않음"
+      ],
+      "status": "공식 안내 본문 확인. 과거 계약 자격·소급 여부 추가 확인 필요",
+      "purpose": "subscription_service_scope_reference"
+    },
+    {
+      "id": "LG-RELOCATION-BOOKING-001",
+      "document_name": "LG 이전설치 접수 연결 페이지 / LX판토스 이전설치 주문접수",
+      "issuer": "LX판토스 (LG전자 공식 사이트 연결)",
+      "url": "https://www.lge.co.kr/lg-best-care/service-installation-removal/reservation",
+      "final_url": "https://move.lxpantos.com/mvinst/order.jsp?channel=LGC",
+      "published_at": "원문 미기재",
+      "updated_at": "원문 미기재",
+      "effective_date": "원문 미기재",
+      "policy_reference_date": "원문 미기재",
+      "contract_date_scope": "계약 시작일·종료일 입력/표시 항목은 있으나 혜택 적용 날짜의 판정 규칙은 미기재",
+      "collected_on_kst": "2026-10-12",
+      "product": "일반 이전설치 공통 안내; 제품 추가 목록에 워시타워 포함",
+      "contract_type": "일반 이전설치 접수 안내 및 LG 구독 대상 조회 양식. 개별 계약 조회 결과 아님",
+      "location": "정보입력 > LG전자 구독 대상 여부; 설치유형 안내; LG전자 구독 대상 조회 레이어; 본문/희망일 레이어 출장비 안내",
+      "raw_capture": "raw/LG-RELOCATION-BOOKING-001.firecrawl.json",
+      "markdown_capture": "raw/LG-RELOCATION-BOOKING-001.firecrawl.md",
+      "html_observation": "metadata/booking_html_observations_02.json",
+      "capture_type": "Firecrawl maxAge=0 공개 페이지 수집본. 본인인증·개인 계약 조회·신청·실제 화면 표시 검증 미실행",
+      "conditions": [
+        "구독 고객은 대상 조회 후 선택하도록 안내",
+        "조회 양식에 철거/설치별 무상 잔여 횟수·무상 유형·모델·계약 유형/상태/기간 열이 있음",
+        "설치유형은 철거만·설치만·이전설치로 안내하며 철거+운송·운송+설치 유형은 접수 불가 문구 존재",
+        "철거만과 설치만을 함께 접수하면 기사 및 결제가 분리될 수 있음",
+        "초기 예상비용 0원은 미선택 양식 값으로 실제 무료 견적 근거가 아님",
+        "본문 일반가전 출장비 25,000원과 희망일 레이어 20,000원이 같은 수집본에 공존. 시행일·실제 노출/적용을 확인하기 전 하나로 확정하지 않음",
+        "다른 제품 섹션의 제한·금액을 워시타워 정책으로 전용하지 않음"
+      ],
+      "status": "공개 접수 절차·폼 구조 확인. 혜택 실제 적용·운송 정산·출장비 상충 문구 추가 확인 필요",
+      "purpose": "relocation_procedure_and_eligibility_lookup_reference"
+    }
+  ],
+  "rechecks": [
+    {
+      "id": "LG-WASHTOWER-001",
+      "raw_capture": "raw/rechecks/LG-WASHTOWER-001.phase2.firecrawl.json",
+      "markdown_capture": "raw/rechecks/LG-WASHTOWER-001.phase2.firecrawl.md",
+      "same_document_not_new_source": true,
+      "location": "구매 시 유의사항 > 구독 확인사항 (#pNoteTab1)",
+      "finding": "계약기간·의무사용기간·소유권 이전·해지 책임 및 비용 등의 확인사항을 공개하지만 계약서 및 구독 약관을 별도로 참조하도록 안내. 현행 약관 전문·개정일 증거로 대체할 수 없음."
+    }
+  ],
+  "findings": [
+    {
+      "id": "ELIGIBILITY_LOOKUP_PATH",
+      "type": "official_public_form_observation",
+      "source_ids": [
+        "LG-RELOCATION-BOOKING-001"
+      ],
+      "finding": "LG 연결 접수 페이지에서 구독 대상 조회 경로와 철거/설치별 무상 잔여 횟수 등 양식 확인",
+      "limit": "빈 양식만 확인. 특정 고객의 자격·과거 계약 소급·잔여 횟수·혜택 소진 방식은 확인하지 않음"
+    },
+    {
+      "id": "PARTIAL_MOVING_REQUESTS",
+      "type": "official_public_guidance",
+      "source_ids": [
+        "LG-RELOCATION-BOOKING-001"
+      ],
+      "finding": "철거+운송·운송+설치 유형 접수 불가 안내; 철거만과 설치만의 별도 기사/결제 가능",
+      "limit": "해당 온라인 접수 안내의 범위. 모든 채널에서 불가능하다고 일반화하거나 구독 혜택 정산 방식으로 확정하지 않음"
+    },
+    {
+      "id": "CALLOUT_FEE_CONFLICT",
+      "type": "conflicting_source_passages",
+      "source_ids": [
+        "LG-RELOCATION-BOOKING-001",
+        "LX-RELOCATION-PRICE-001"
+      ],
+      "finding": "본문 일반가전 출장비 25,000원, 같은 접수 수집본의 희망일 레이어에는 20,000원. 기존 가격표 안내는 25,000원",
+      "limit": "원문 위치·표시 조건과 시행일을 추가 확인해야 함. 어떤 값을 실제 비용에 적용할지 결정하지 않음. 요청 사전답사 25,000원과 구분"
+    },
+    {
+      "id": "CURRENT_TERMS_GAP",
+      "type": "research_limit",
+      "source_ids": [
+        "LG-WASHTOWER-001"
+      ],
+      "finding": "상품의 구독 확인사항에서 계약서·이용약관 참조 확인, 현행 버전 전문과 개정 이력은 확보하지 못함",
+      "limit": "공개 문서가 없다는 결론이 아님. 직접 약관 화면 열람은 자동 승인 검토 오류로 미실행"
+    }
+  ],
+  "remaining": [
+    {
+      "id": "LG-CURRENT-TERMS",
+      "status": "추가 확인 필요",
+      "reason": "현행 매장용·비매장용 전문/고객확인사항/일반항목 및 효력·개정 이력 필요"
+    },
+    {
+      "id": "LG-HISTORICAL-RELOCATION",
+      "status": "추가 확인 필요",
+      "reason": "제공 시작일과 과거 계약의 대상 여부는 별개. 공개 조회 경로만 확보"
+    },
+    {
+      "id": "LG-FREE-BENEFIT-PRICE",
+      "status": "추가 확인 필요",
+      "reason": "혜택 고객의 운송 단가·추가비·철거/설치 분리 이용·혜택 소진 정산 규칙 미확보"
+    },
+    {
+      "id": "LX-CALLOUT-FEE-VERSION",
+      "status": "상충 문구 / 추가 확인 필요",
+      "reason": "본문과 희망일 레이어의 일반가전 출장비 25,000원/20,000원 차이 및 적용 버전 확인 필요"
+    }
+  ],
+  "out_of_scope_actions": [
+    "개발",
+    "공통 인터페이스 변경",
+    "실제 고객 인증 또는 계약 조회",
+    "문의 전송",
+    "예약/구매",
+    "기존 원본 삭제",
+    "커밋/Push/Merge"
+  ]
+}

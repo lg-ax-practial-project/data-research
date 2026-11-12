@@ -1,0 +1,20 @@
+{
+  "copied_on_kst": "2026-10-12",
+  "note": "기존 원본을 수정하지 않고 조사 묶음에 보존 사본을 추가함. 원래 조사 기록의 절대 경로는 출처 이력이며 아래 bundle_path는 이 묶음 기준 상대 경로임.",
+  "copies": [
+    {
+      "original_path": "C:\\Users\\HanBuyong\\.codex\\.chatgpt-projects\\g-p-6ab9dd6b80348191a1e31b2d957d4506\\sources\\진짜 찐최종_기획안.pdf",
+      "bundle_path": "references/진짜 찐최종_기획안.pdf",
+      "role": "service_planning_not_contract_policy",
+      "sha256": "46918fb336319657331d2e6d17ff20586f5ee7fcd39a21f3a84ec85e567181fb",
+      "size_bytes": 1100457
+    },
+    {
+      "original_path": "C:\\Users\\HanBuyong\\.codex\\.chatgpt-projects\\g-p-6ab9dd6b80348191a1e31b2d957d4506\\resources\\raw\\consumer_dispute\\current_2025\\소비자분쟁해결기준_2025.pdf",
+      "bundle_path": "raw/reference/소비자분쟁해결기준_2025.pdf",
+      "role": "existing_official_reference",
+      "sha256": "136aa0abd0c73b91ce53dd602a98a22a9fd2a56068fbb1f037091e3994b41061",
+      "size_bytes": 3407547
+    }
+  ]
+}

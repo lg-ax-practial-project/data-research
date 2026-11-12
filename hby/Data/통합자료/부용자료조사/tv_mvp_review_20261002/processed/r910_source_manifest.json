@@ -1,0 +1,69 @@
+{
+  "checked_at": "2026-10-02",
+  "scope": [
+    "R09",
+    "R10"
+  ],
+  "status": "부분 검수; 자동계산/접수/법적적합성 승인 아님",
+  "files": [
+    {
+      "file": "../raw/lawgo_annex4_20261002.pdf",
+      "sha256": "F6D4E6570D0BD34F527D023E1A5F4EE13FF4A7C0730515B8CB6A7845296704E4"
+    },
+    {
+      "file": "../raw/annex4_review.png",
+      "sha256": "B523103D45ECF7A5422F468F60ACAF55877010C5F938294A7779D96162E2A2ED"
+    },
+    {
+      "file": "../raw/r910_process.md",
+      "sha256": "AC77B2696DD21E3CBE3442CE1C3E30846F1903094FFE4A82F609D88BDE95CF15"
+    },
+    {
+      "file": "../raw/r910_requirements.md",
+      "sha256": "C233BB30CE147665970CBA34BA582899C086A4DC8F73AEE0EC73BE180CFFC931"
+    },
+    {
+      "file": "../raw/r910_submission.md",
+      "sha256": "CDA5D0D5BB96AA278884F728571E6AAB8D5867464D952721C91EC6D000C18BAC"
+    },
+    {
+      "file": "../raw/r910_consultation.md",
+      "sha256": "90E8AA0EF2946BDAD981927BB23AB8AB0C74970AF9C02026BF44BEDB5B9D9B89"
+    }
+  ],
+  "sources": [
+    {
+      "file": "../raw/r910_process.md",
+      "url": "https://www.kca.go.kr/odr/pg/ma/pgProcssInfo.do",
+      "title": "피해구제 절차 안내",
+      "published_or_effective_date": null
+    },
+    {
+      "file": "../raw/r910_requirements.md",
+      "url": "https://www.kca.go.kr/odr/pg/ma/pgProcssInfo1.do",
+      "title": "피해구제 요건 및 양식",
+      "published_or_effective_date": null
+    },
+    {
+      "file": "../raw/r910_submission.md",
+      "url": "https://www.kca.go.kr/odr/pg/ma/pgProcssInfo2.do",
+      "title": "피해구제 접수방법",
+      "published_or_effective_date": null
+    },
+    {
+      "file": "../raw/r910_consultation.md",
+      "url": "https://www.kca.go.kr/odr/pg/ma/cnsutInfo1.do",
+      "title": "상담신청 방법",
+      "published_or_effective_date": null
+    }
+  ],
+  "pdf": {
+    "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=159470225&bylClsCd=200201",
+    "notice": "제2025-14호",
+    "effective_date": "2025-12-18",
+    "pages": 1
+  },
+  "privacy_policy_full_review_completed": false,
+  "existing_rule_file_modified": false,
+  "redistribution_review": "미완료"
+}

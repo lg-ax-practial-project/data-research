@@ -1,0 +1,280 @@
+{
+  "reviewed_on_kst": "2026-10-12",
+  "repository": "https://github.com/lg-ax-core-project/DataResearch.git",
+  "commits": {
+    "khh": "48058365e1406b073082e1170645b95ede172101",
+    "minsong": "a12aadc6a0c195e49a7125dae24a82cca7dd7a0a"
+  },
+  "branch_file_counts": {
+    "khh": 43,
+    "minsong": 40
+  },
+  "branch_file_inventories": {
+    "khh": [
+      ".gitattributes",
+      ".gitignore",
+      "README.md",
+      "docs/ANALYSIS_NOTES.md",
+      "docs/DATA_DICTIONARY.md",
+      "docs/LG_MOVE_CARE_DATA_GUIDE.md",
+      "docs/PROJECT_SUMMARY.md",
+      "docs/lg_move_care_air_purifier_relief_2026q2.jsonl",
+      "docs/lg_move_care_data_audit.json",
+      "docs/lg_move_care_fastmcp_blueprint.json",
+      "docs/lg_move_care_sources.json",
+      "docs/mcp/BOOKING_AND_TESTING.md",
+      "docs/mcp/BUSINESS_DATA_GUIDE.md",
+      "docs/mcp/INTEGRATION.md",
+      "docs/mcp/README.md",
+      "docs/mcp/TOOL_CONTRACTS.md",
+      "docs/mcp/sources.json",
+      "docs/original_proposal.txt",
+      "docs/validation.json",
+      "mock/assumptions.json",
+      "mock/bookings.json",
+      "mock/contracts.json",
+      "mock/customers.json",
+      "mock/evaluation_cases.json",
+      "mock/lg_move_care.sqlite",
+      "mock/products.json",
+      "mock/quotes.json",
+      "mock/slots.json",
+      "mock/terms.json",
+      "processed/installation_reference.json",
+      "processed/kca_product_reason_age.json",
+      "processed/kca_public_profile.json",
+      "processed/kca_report_statistics.json",
+      "processed/kca_selected_appliances.jsonl",
+      "processed/product_filter.json",
+      "processed/rag_rules.jsonl",
+      "raw/kca_relief_20260630.csv",
+      "raw/kca_relief_portal.html",
+      "raw/kca_report_landing.html",
+      "raw/kca_subscription_report_202604.pdf",
+      "raw/kca_subscription_report_202604.txt",
+      "scripts/build_dataset.py",
+      "sources.json"
+    ],
+    "minsong": [
+      "01_raw/kca/.gitkeep",
+      "01_raw/kca/KCA01_subscription_rental_report_202604.pdf",
+      "01_raw/kca/KCA01_subscription_rental_report_202604.txt",
+      "01_raw/lg_official/.gitkeep",
+      "01_raw/lg_official/LG01_rental_service_guide_20261012.md",
+      "01_raw/lg_official/LG02_support_faq_extra_cost_20261012.md",
+      "01_raw/lg_official/LG03_washtower_wl21wdu_product_20261012.md",
+      "01_raw/lg_official/LG04_bestcare_relocation_20261012.md",
+      "01_raw/lg_official/LG05_lxpantos_relocation_price_20261012.md",
+      "01_raw/lg_official/LG06_washtower_install_guide_20261012.md",
+      "01_raw/lg_official/LG07_bestshop_care_guide_reinstall_20261012.md",
+      "01_raw/lg_official/LG08_washtower_moving_install_order_20261012.md",
+      "01_raw/lg_official/LG09_faq_user_and_name_change_20261012.md",
+      "01_raw/public_data/.gitkeep",
+      "01_raw/public_data/GOV01_mods_domestic_migration_2025.md",
+      "01_raw/public_data/GOV02_molit_housing_survey_2024.md",
+      "01_raw/public_data/PD01_kca_relief_20260630_cp949.csv",
+      "02_processed/evaluation/.gitkeep",
+      "02_processed/evaluation/evaluation_evidence.md",
+      "02_processed/rag/.gitkeep",
+      "02_processed/rag/move_care_rag.md",
+      "02_processed/rules/.gitkeep",
+      "02_processed/rules/calc_check.py",
+      "02_processed/rules/relocation_cost_rules.md",
+      "02_processed/rules/rules.json",
+      "02_processed/rules/termination_cost_rules.md",
+      "03_mock/.gitkeep",
+      "03_mock/mock_design_basis.md",
+      "04_insight/.gitkeep",
+      "04_insight/callcenter_questions_20261012.md",
+      "04_insight/kca_report_verification.md",
+      "04_insight/lg_ai_chat_answers_20261012.md",
+      "04_insight/moving_context.md",
+      "04_insight/public_data_analysis.py",
+      "04_insight/public_data_analysis_result.json",
+      "04_insight/public_data_columns.md",
+      "04_insight/qa_findings.md",
+      "04_insight/team_share_20261012.md",
+      "README.md",
+      "sources.md"
+    ]
+  },
+  "preserved_reference_files": [
+    {
+      "branch": "khh",
+      "commit": "48058365e1406b073082e1170645b95ede172101",
+      "path": "docs/LG_MOVE_CARE_DATA_GUIDE.md",
+      "preserved_copy": "references/team_review_05/khh/docs/LG_MOVE_CARE_DATA_GUIDE.md",
+      "sha256": "0cad6d3e93e455c9ba1201da92d86ac7259855ff3a596cc2ea69c2163647b92b",
+      "git_blob_id": "e7505413ebc47020e13c567bd9e623c93123d390",
+      "source_url": "https://github.com/lg-ax-core-project/DataResearch/blob/48058365e1406b073082e1170645b95ede172101/docs/LG_MOVE_CARE_DATA_GUIDE.md",
+      "kind": "team_reference_not_official_policy"
+    },
+    {
+      "branch": "khh",
+      "commit": "48058365e1406b073082e1170645b95ede172101",
+      "path": "docs/lg_move_care_sources.json",
+      "preserved_copy": "references/team_review_05/khh/docs/lg_move_care_sources.json",
+      "sha256": "e4e3c0a06a0650d85309e004918c3d5e686a2bba457874a0688bb6be3c5d1257",
+      "git_blob_id": "a9bde79ee57931324a2e52a20596a3824fdfd207",
+      "source_url": "https://github.com/lg-ax-core-project/DataResearch/blob/48058365e1406b073082e1170645b95ede172101/docs/lg_move_care_sources.json",
+      "kind": "team_reference_not_official_policy"
+    },
+    {
+      "branch": "khh",
+      "commit": "48058365e1406b073082e1170645b95ede172101",
+      "path": "docs/lg_move_care_data_audit.json",
+      "preserved_copy": "references/team_review_05/khh/docs/lg_move_care_data_audit.json",
+      "sha256": "77ebd424a2d201195784327bd6c869295422fa07e43764424e09b25a8d9bbe76",
+      "git_blob_id": "554a629df5018328903a90307ccd99dcea2d0cc6",
+      "source_url": "https://github.com/lg-ax-core-project/DataResearch/blob/48058365e1406b073082e1170645b95ede172101/docs/lg_move_care_data_audit.json",
+      "kind": "team_reference_not_official_policy"
+    },
+    {
+      "branch": "khh",
+      "commit": "48058365e1406b073082e1170645b95ede172101",
+      "path": "docs/lg_move_care_fastmcp_blueprint.json",
+      "preserved_copy": "references/team_review_05/khh/docs/lg_move_care_fastmcp_blueprint.json",
+      "sha256": "71e745a367338806b65a3df3a2213b6a4477019d5904a8ffd0c42a3cf21baf1e",
+      "git_blob_id": "4e7bd1992919cb366289ea4f348d0ba3078e25e9",
+      "source_url": "https://github.com/lg-ax-core-project/DataResearch/blob/48058365e1406b073082e1170645b95ede172101/docs/lg_move_care_fastmcp_blueprint.json",
+      "kind": "team_reference_not_official_policy"
+    },
+    {
+      "branch": "khh",
+      "commit": "48058365e1406b073082e1170645b95ede172101",
+      "path": "docs/mcp/TOOL_CONTRACTS.md",
+      "preserved_copy": "references/team_review_05/khh/docs/mcp/TOOL_CONTRACTS.md",
+      "sha256": "05ef9a56aeb46c1ec13a1397f5a57117f365c80e7e8b2016217572eb0a5d5b70",
+      "git_blob_id": "a44a6dc53dfc8e366f1b026c011f3f534cc226a5",
+      "source_url": "https://github.com/lg-ax-core-project/DataResearch/blob/48058365e1406b073082e1170645b95ede172101/docs/mcp/TOOL_CONTRACTS.md",
+      "kind": "team_reference_not_official_policy"
+    },
+    {
+      "branch": "khh",
+      "commit": "48058365e1406b073082e1170645b95ede172101",
+      "path": "docs/lg_move_care_air_purifier_relief_2026q2.jsonl",
+      "preserved_copy": "references/team_review_05/khh/docs/lg_move_care_air_purifier_relief_2026q2.jsonl",
+      "sha256": "047205238c62af5fc30e369cdcf538fecbcafd1b093c8fbb30d771672bccc1a3",
+      "git_blob_id": "13d692f65c793413d6c27e868fcd7f28e35e6a92",
+      "source_url": "https://github.com/lg-ax-core-project/DataResearch/blob/48058365e1406b073082e1170645b95ede172101/docs/lg_move_care_air_purifier_relief_2026q2.jsonl",
+      "kind": "team_reference_not_official_policy"
+    },
+    {
+      "branch": "khh",
+      "commit": "48058365e1406b073082e1170645b95ede172101",
+      "path": "raw/kca_relief_20260630.csv",
+      "preserved_copy": "references/team_review_05/khh/raw/kca_relief_20260630.csv",
+      "sha256": "f7a546b3db4ebd00a50ac99c242018ab9c615503a679f192362ad9d896ef6dcb",
+      "git_blob_id": "273501ef5e09b04002d1848b14843569b40dc4bc",
+      "source_url": "https://github.com/lg-ax-core-project/DataResearch/blob/48058365e1406b073082e1170645b95ede172101/raw/kca_relief_20260630.csv",
+      "kind": "team_reference_not_official_policy"
+    },
+    {
+      "branch": "minsong",
+      "commit": "a12aadc6a0c195e49a7125dae24a82cca7dd7a0a",
+      "path": "04_insight/team_share_20261012.md",
+      "preserved_copy": "references/team_review_05/minsong/04_insight/team_share_20261012.md",
+      "sha256": "e6179f5a23dd0a3961758b91f5686b98815c6c1be7ae508f74bd8dd768593447",
+      "git_blob_id": "0d38695fbb28e28013a1454d2b801731cb65f2a0",
+      "source_url": "https://github.com/lg-ax-core-project/DataResearch/blob/a12aadc6a0c195e49a7125dae24a82cca7dd7a0a/04_insight/team_share_20261012.md",
+      "kind": "team_reference_not_official_policy"
+    },
+    {
+      "branch": "minsong",
+      "commit": "a12aadc6a0c195e49a7125dae24a82cca7dd7a0a",
+      "path": "04_insight/lg_ai_chat_answers_20261012.md",
+      "preserved_copy": "references/team_review_05/minsong/04_insight/lg_ai_chat_answers_20261012.md",
+      "sha256": "edb4d02e01fdc759b4ba7d643bcc9281c3dfa6ef66448f7a055c5c577aed4f7c",
+      "git_blob_id": "f6d59f629600046bce1e9c275dbab91e27cc67e5",
+      "source_url": "https://github.com/lg-ax-core-project/DataResearch/blob/a12aadc6a0c195e49a7125dae24a82cca7dd7a0a/04_insight/lg_ai_chat_answers_20261012.md",
+      "kind": "team_reference_not_official_policy"
+    },
+    {
+      "branch": "minsong",
+      "commit": "a12aadc6a0c195e49a7125dae24a82cca7dd7a0a",
+      "path": "04_insight/callcenter_questions_20261012.md",
+      "preserved_copy": "references/team_review_05/minsong/04_insight/callcenter_questions_20261012.md",
+      "sha256": "c8c972061488410ecd78c263d7613faa0589df0a26da5756e9495613be17a802",
+      "git_blob_id": "6bb7c6a44c3568e6ae03ce7bf66e882fa8849b31",
+      "source_url": "https://github.com/lg-ax-core-project/DataResearch/blob/a12aadc6a0c195e49a7125dae24a82cca7dd7a0a/04_insight/callcenter_questions_20261012.md",
+      "kind": "team_reference_not_official_policy"
+    },
+    {
+      "branch": "minsong",
+      "commit": "a12aadc6a0c195e49a7125dae24a82cca7dd7a0a",
+      "path": "04_insight/qa_findings.md",
+      "preserved_copy": "references/team_review_05/minsong/04_insight/qa_findings.md",
+      "sha256": "edfb29d1379d33abc45b893d59a286dfba1a8ba89ce5dec3c4dc6054e6421879",
+      "git_blob_id": "d8b57c45dcbe7be942b4aaf9325e69544911b9ed",
+      "source_url": "https://github.com/lg-ax-core-project/DataResearch/blob/a12aadc6a0c195e49a7125dae24a82cca7dd7a0a/04_insight/qa_findings.md",
+      "kind": "team_reference_not_official_policy"
+    }
+  ],
+  "read_method": "별도 워크스페이스 bare Git 저장소에 원격 두 브랜치의 최신 커밋만 읽기용 fetch. D 작업 저장소 브랜치/파일/git refs 변경 없음. 저장소 코드는 실행하지 않음.",
+  "data_audit": {
+    "raw_rows": 12834,
+    "raw_sha256": "f7a546b3db4ebd00a50ac99c242018ab9c615503a679f192362ad9d896ef6dcb",
+    "raw_preserved_copy": "references/team_review_05/khh/raw/kca_relief_20260630.csv",
+    "encoding": "cp949",
+    "selected_rows": 21,
+    "source_row_basis": "CSV 물리적 줄 기준: 헤더1, 첫 데이터2. 모든21행 원본 필드·해시·행 위치 대조.",
+    "all_selected_rows_match": true,
+    "all_air_rows_covered": true,
+    "by_product": {
+      "공기청정기대여(렌트)": 12,
+      "공기청정기": 9
+    },
+    "by_product_and_reason": {
+      "공기청정기대여(렌트)": {
+        "계약해제.해지/위약금": 8,
+        "품질(물품/용역)": 3,
+        "부당행위": 1
+      },
+      "공기청정기": {
+        "안전(제품/시설)": 1,
+        "청약철회": 2,
+        "AS불만": 3,
+        "품질(물품/용역)": 3
+      }
+    },
+    "matched_existing_local_files": [
+      "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20260630.csv",
+      "D:\\core-project\\cx-agent-planning\\태민자료조사\\coreProject\\data\\품목별 상담 현황\\한국소비자원_소비자 피해구제 정보_20260630.csv"
+    ],
+    "identical_csv_on_minsong": false,
+    "independent_evidence_families": 1,
+    "not_1372_counseling_population": true,
+    "not_lg_or_moving_specific": true,
+    "minsong_csv_comparison": {
+      "sha256": "abb3f87c2c12a1f4c6278c385766c26f567845a5f55d34951a5ca4ddb20a471c",
+      "rows": 12834,
+      "headers_match": true,
+      "ordered_records_match": true,
+      "record_multisets_match": true,
+      "byte_identical": false,
+      "lf_normalized_bytes_equal": true,
+      "interpretation": "바이트 차이와 내용 차이 구분. 같은 제공기관·기준분기의 원자료는 독립 조사로 중복 계산하지 않음."
+    }
+  },
+  "draft_statistic_search": {
+    "matches": [
+      "48058365e1406b073082e1170645b95ede172101:docs/LG_MOVE_CARE_DATA_GUIDE.md:88:- **기획안 통계:** 1372 상담 1,847,674건, 공기청정기 렌탈 1,423건의 원본은 이 브랜치에 없다. `552/1423=38.79%`와 이를 11.78%와 비교한 3.29배의 산술만 확인했다. 기간·품목 코드·결측 처리·분모·추출 파일을 확보해야 재현할 수 있다.",
+      "48058365e1406b073082e1170645b95ede172101:docs/LG_MOVE_CARE_DATA_GUIDE.md:99:이는 **2026년 2분기 피해구제 접수의 작은 표본**이다. `공기청정기` 분류만으로 거래형태를 모두 구매라고 확정하지 않는다. LG 고객·이사 원인을 식별하지 못하며, 1372 상담 비율 38.79%나 렌탈/구매 3.29배를 재현하지 않는다. 이 표본은 별도 탐색 결과 또는 품목 필터 예시로 사용한다. 0건이 있는 비교에서 비율 배수를 만들지 않는다.",
+      "48058365e1406b073082e1170645b95ede172101:docs/lg_move_care_data_audit.json:591:        \"552/1423_percent\": 38.79,",
+      "48058365e1406b073082e1170645b95ede172101:docs/lg_move_care_sources.json:8:    \"statistics\": \"사용자 제공 1,847,674건 등의 원본 집계를 재현하지 않음. 552/1423=38.79%, 이를11.78%와 비교한3.29배의 산술만 확인.\","
+    ],
+    "original_1372_dataset_found": false,
+    "arithmetic_only": {
+      "552_over_1423_percent": 38.791286015460294,
+      "ratio_to_11_78_percent": 3.292978439342979
+    },
+    "arithmetic_not_reproduction": true
+  },
+  "team_design_status": "팀 브랜치 문서도 설계 초안·미구현으로 표기. 최종 공통 인터페이스 합의로 간주하지 않음.",
+  "warnings": [
+    "팀의 19개 PASS는 이번에 실행한 테스트 결과가 아님",
+    "공기청정기 검색 기능 이름이 기준안 search_contract_terms, 사용자 초안 search_terms, 팀 공기청정기 설계안 search_policy로 다름. 변경/통합하지 않음",
+    "minsong의 설치 후 청약철회 불가라는 요약은 단순변심·법정 예외·계약 유형을 구분하기 전 공기청정기 일반 정답으로 채택 보류",
+    "팀 AI Chat 기록은 해당 문서 자체가 참고용·공식 근거 아님으로 표시. 수치·면제 확정 근거에서 제외"
+  ]
+}

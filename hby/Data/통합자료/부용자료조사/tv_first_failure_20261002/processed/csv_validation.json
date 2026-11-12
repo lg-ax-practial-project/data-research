@@ -1,0 +1,41 @@
+{
+  "encoding": "cp949(strict)",
+  "source_sha256": "be5ad6ab3e2d6becbf6a32fe8f432c7bb2f575af10c017a42ce5e89bbffdf9d8",
+  "source_rows": 1332,
+  "columns": [
+    "번호",
+    "품목명",
+    "구분",
+    "질문",
+    "답변"
+  ],
+  "tv_matching_rule": "품목명.strip() == 'TV'",
+  "tv_rows": 26,
+  "duplicate_number_count": 0,
+  "tv_exact_duplicate_question_count": 0,
+  "missing_counts": {
+    "번호": 0,
+    "품목명": 0,
+    "구분": 0,
+    "질문": 0,
+    "답변": 0
+  },
+  "core_reference_count": 12,
+  "supplemental_count": 14,
+  "first_failure_explicit_count": 0,
+  "history_counts": {
+    "고장 이력 분석 대상 아님": 15,
+    "고장 이력 불명": 5,
+    "초기 고장 — 첫 고장 여부 불명": 2,
+    "반복 증상/교환 후 재고장": 4
+  },
+  "quarantine_ids": [
+    "KCA-STD-TV-0019"
+  ],
+  "limitations": [
+    "행은 표준답변 단위; 개별 사건·고객 수 아님",
+    "분류는 조사자 정성 코딩; 문의 빈도 통계 아님",
+    "13/20은 유사 주제지만 원문이 달라 모두 보존",
+    "개별 답변일·제조사·모델 항목 없음"
+  ]
+}

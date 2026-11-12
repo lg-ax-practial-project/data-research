@@ -1,0 +1,278 @@
+{
+  "prepared_on_kst": "2026-10-13",
+  "original_questions": "reports/RAG_검증질문_20개_초안.md",
+  "original_questions_sha256": "a6d458dff0b36968095cba6afecf8ab6bd7b20e375da86c7079192c1b1ad8c53",
+  "question_count": 20,
+  "purpose": "기존 질문과 후보 근거의 검토용 연결. 팀 승인 정답셋·검색 실행 결과·공통 API 명세가 아님.",
+  "policy_index_allowed": false,
+  "retrieval_test_executed": false,
+  "agent_evaluation_executed": false,
+  "items": [
+    {
+      "question_id": "N01",
+      "question": "LG 공기청정기도 구독이 되나요?",
+      "route": "policy_evidence",
+      "candidate_evidence_ids": [
+        "MC-E027"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "예시 공기청정기의 구독 운영. 팀의 최종 모델로 확정하지 않음.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "N02",
+      "question": "방문은 몇 개월마다 오나요?",
+      "route": "policy_evidence",
+      "candidate_evidence_ids": [
+        "MC-E018",
+        "MC-E020",
+        "MC-E022",
+        "MC-E023"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "모델·요금제·방문/자가관리와 관리 항목을 구분. 주기 차이를 임의 통합하지 않음.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "N03",
+      "question": "5년 약정, 14개월 사용했는데 위약금 기준은?",
+      "route": "policy_evidence",
+      "candidate_evidence_ids": [
+        "MC-E003",
+        "MC-E004",
+        "MC-E006"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "LG 안내와 고시의 역할·기간 기준을 함께 반환. 계약 버전 확인 전 확정 계산 금지.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "N04",
+      "question": "계약기간이 2년인 상품이면요?",
+      "route": "policy_evidence",
+      "candidate_evidence_ids": [
+        "MC-E003"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "2년 상품의 별도 비율 조건을 보존.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "N05",
+      "question": "할인받는 월요금으로 계산하나요?",
+      "route": "policy_evidence",
+      "candidate_evidence_ids": [
+        "MC-E003",
+        "MC-E026"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "할인 전 기본요금과 선납 정산을 구분. 실제 금액 계산은 별도.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "N06",
+      "question": "공기청정기 회수비가 35,000원인가요, 39,000원인가요?",
+      "route": "policy_evidence",
+      "candidate_evidence_ids": [
+        "MC-E001",
+        "MC-E002"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "39,000원/35,000원 모두 반환하고 날짜의 의미·계약서 금액을 확인.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "N07",
+      "question": "의무사용기간이 끝났으니 해지비용도 없죠?",
+      "route": "policy_evidence",
+      "candidate_evidence_ids": [
+        "MC-E001",
+        "MC-E002",
+        "MC-E010",
+        "MC-E012"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "의무사용기간·총계약기간·소유권 조건과 해지 비용 항목을 구분.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "N08",
+      "question": "실제 관리 불가가 확인된 새 주소로 이사해요.",
+      "route": "policy_evidence",
+      "candidate_evidence_ids": [
+        "MC-E005",
+        "MC-E006"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "고시의 관리 불가 이사 기준과 계약 적용·별도 비용을 함께 안내.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "N09",
+      "question": "해외 이주 증빙을 준비했어요.",
+      "route": "policy_evidence",
+      "candidate_evidence_ids": [
+        "MC-E005",
+        "MC-E006"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "해외 이주 증빙·위약금50%·부대비용의 범위를 보존.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "N10",
+      "question": "주소 변경이나 방문 요청을 어디서 해요?",
+      "route": "policy_evidence",
+      "candidate_evidence_ids": [
+        "MC-E011",
+        "MC-E013"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "공식 주소 변경/방문 요청 채널 안내. 처리 완료를 주장하지 않음.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "N11",
+      "question": "복합필터가 12개월인가요, 13개월인가요?",
+      "route": "policy_evidence",
+      "candidate_evidence_ids": [
+        "MC-E018",
+        "MC-E019",
+        "MC-E022"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "12개월/영상설명13개월 근거와 모델·계약 미확인 상태를 함께 반환.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "N12",
+      "question": "위약금 외 비용을 모르는 고객이 많다는 근거는?",
+      "route": "cx_reference_only",
+      "candidate_evidence_ids": [],
+      "extra_source_ids": [
+        "KCA-SUBSCRIPTION-REPORT-001"
+      ],
+      "expected_handling": "KCA 설문27.8%,500명·기간·모집단을 CX 원본에서 검토. 계약 정책 색인과 분리.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "A01",
+      "question": "해지하고 싶어요.",
+      "route": "clarification_with_evidence",
+      "candidate_evidence_ids": [
+        "MC-E007",
+        "MC-E003",
+        "MC-E001",
+        "MC-E002"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "계약 유형·모델·성립일·의무기간·해지일·사유를 확인.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "A02",
+      "question": "강원도 산간으로 이사해요.",
+      "route": "clarification_with_evidence",
+      "candidate_evidence_ids": [
+        "MC-E005",
+        "MC-E006"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "지역명으로 관리 불가를 판정하지 않음. 정확한 주소·관리 유형·공식 확인 결과 필요.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "A03",
+      "question": "공기청정기를 제가 관리하고 있어요. 이사하면 면제죠?",
+      "route": "clarification_with_evidence",
+      "candidate_evidence_ids": [
+        "MC-E005",
+        "MC-E018",
+        "MC-E024",
+        "MC-E025"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "자가관리/방문관리 및 가전구독/별도 케어십을 구분. 이사 면제 자동 적용 금지.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "A04",
+      "question": "계약서는 없는데 1년쯤 썼어요.",
+      "route": "clarification_with_evidence",
+      "candidate_evidence_ids": [
+        "MC-E001",
+        "MC-E002",
+        "MC-E003"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "대략적인 사용기간으로 버전·경계일·회수비를 추정하지 않음.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "O01",
+      "question": "그냥 위약금 없애 주세요.",
+      "route": "scope_guard_with_evidence",
+      "candidate_evidence_ids": [
+        "MC-E005",
+        "MC-E006"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "면제를 약속하지 않고 적용 사유·근거·상담 확인 필요를 설명.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "O02",
+      "question": "워시타워111,000원과 무료 이전을 공기청정기에 적용해 주세요.",
+      "route": "scope_guard_with_evidence",
+      "candidate_evidence_ids": [
+        "MC-E001",
+        "MC-E002",
+        "MC-E014",
+        "MC-E015"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "워시타워의 금액·혜택을 공기청정기에 전용하지 않음.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "O03",
+      "question": "이 약관이면 소송에서 이기나요?",
+      "route": "scope_guard_with_evidence",
+      "candidate_evidence_ids": [
+        "MC-E006"
+      ],
+      "extra_source_ids": [],
+      "expected_handling": "분쟁해결기준 성격을 설명하고 소송 결과는 판단하지 않음.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    },
+    {
+      "question_id": "O04",
+      "question": "날짜·처리 유형·비용을 정하지 않았지만 알아서 예약해요.",
+      "route": "agent_execution_outside_rag",
+      "candidate_evidence_ids": [],
+      "extra_source_ids": [],
+      "expected_handling": "구체적인 선택·승인 없는 예약은 Agent 실행 평가 항목. 검색 근거로 실행 권한 부여 금지.",
+      "execution_status": "not_executed",
+      "policy_index_allowed": false
+    }
+  ]
+}

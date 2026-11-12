@@ -1,0 +1,625 @@
+[콘텐츠 바로가기](https://www.data.go.kr/data/15120072/fileData.do#contents) [푸터 바로가기](https://www.data.go.kr/data/15120072/fileData.do#krds-footer)
+
+이 누리집은 대한민국 공식 전자정부 누리집입니다.
+
+## [DATA.GO.KR 공공데이터포털](https://www.data.go.kr/index.do "메인으로 바로가기")
+
+- [English](https://www.data.go.kr/en/index.do "영문으로 보기")
+
+로그인회원가입전체메뉴
+
+전체메뉴 열기
+
+- 공공데이터
+
+
+
+
+
+
+
+
+## 공공데이터
+
+
+
+  - [AI 검색](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [데이터목록](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [데이터 큐레이션](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [국가중점데이터](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [공공데이터 제공신청](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [분쟁조정 신청](https://www.data.go.kr/data/15120072/fileData.do#)
+
+- 데이터활용
+
+
+
+
+
+
+
+
+## 데이터활용
+
+
+
+  - [공공데이터맵](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [공공데이터 시각화](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [국민참여지도](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [위치정보 시각화](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [공공데이터 활용사례](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [공공데이터 우수사례](https://www.data.go.kr/data/15120072/fileData.do#)
+
+- [기업공공데이터 문제해결지원센터](https://www.data.go.kr/data/15120072/fileData.do#)
+- 정보공유
+
+
+
+
+
+
+
+
+## 정보공유
+
+
+
+  - [공공 Git저장소](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [데이터 공유하기](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [공지사항](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [자료실](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [포털뉴스](https://www.data.go.kr/data/15120072/fileData.do#)
+
+- 이용안내
+
+
+
+
+
+
+
+
+## 이용안내
+
+
+
+  - [문의하기](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [소개](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [이용가이드](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [정책](https://www.data.go.kr/data/15120072/fileData.do#)
+  - [품질관리](https://www.data.go.kr/data/15120072/fileData.do#)
+
+- 홈
+- 회원가입
+- [English](https://www.data.go.kr/en/index.do)
+
+로그인을 해주세요
+
+- [공공데이터](https://www.data.go.kr/data/15120072/fileData.do#mGnb-anchor0)
+- [데이터활용](https://www.data.go.kr/data/15120072/fileData.do#mGnb-anchor1)
+- [기업공공데이터 문제해결지원센터](https://www.data.go.kr/data/15120072/fileData.do#mGnb-anchor2)
+- [정보공유](https://www.data.go.kr/data/15120072/fileData.do#mGnb-anchor3)
+- [이용안내](https://www.data.go.kr/data/15120072/fileData.do#mGnb-anchor4)
+
+## 공공데이터
+
+- [AI 검색](https://www.data.go.kr/data/15120072/fileData.do#)
+- [데이터목록](https://www.data.go.kr/data/15120072/fileData.do#)
+- [데이터 큐레이션](https://www.data.go.kr/data/15120072/fileData.do#)
+- [국가중점데이터](https://www.data.go.kr/data/15120072/fileData.do#)
+- [공공데이터 제공신청](https://www.data.go.kr/data/15120072/fileData.do#)
+- [분쟁조정 신청](https://www.data.go.kr/data/15120072/fileData.do#)
+
+## 데이터활용
+
+- [공공데이터맵](https://www.data.go.kr/data/15120072/fileData.do#)
+- [공공데이터 시각화](https://www.data.go.kr/data/15120072/fileData.do#)
+- [국민참여지도](https://www.data.go.kr/data/15120072/fileData.do#)
+- [위치정보 시각화](https://www.data.go.kr/data/15120072/fileData.do#)
+- [공공데이터 활용사례](https://www.data.go.kr/data/15120072/fileData.do#)
+- [공공데이터 우수사례](https://www.data.go.kr/data/15120072/fileData.do#)
+
+## [기업공공데이터 문제해결지원센터](https://www.data.go.kr/data/15120072/fileData.do\#)
+
+## 정보공유
+
+- [공공 Git저장소](https://www.data.go.kr/data/15120072/fileData.do#)
+- [데이터 공유하기](https://www.data.go.kr/data/15120072/fileData.do#)
+- [공지사항](https://www.data.go.kr/data/15120072/fileData.do#)
+- [자료실](https://www.data.go.kr/data/15120072/fileData.do#)
+- [포털뉴스](https://www.data.go.kr/data/15120072/fileData.do#)
+
+## 이용안내
+
+- [문의하기](https://www.data.go.kr/data/15120072/fileData.do#)
+- [소개](https://www.data.go.kr/data/15120072/fileData.do#)
+- [이용가이드](https://www.data.go.kr/data/15120072/fileData.do#)
+- [정책](https://www.data.go.kr/data/15120072/fileData.do#)
+- [품질관리](https://www.data.go.kr/data/15120072/fileData.do#)
+
+전체메뉴 닫기
+
+DATA.GO.KR 공공데이터포털
+
+### 공공데이터
+
+- [AI 검색](https://www.data.go.kr/data/15120072/fileData.do#)
+- [데이터목록](https://www.data.go.kr/data/15120072/fileData.do#)
+- [데이터 큐레이션](https://www.data.go.kr/data/15120072/fileData.do#)
+- [국가중점데이터](https://www.data.go.kr/data/15120072/fileData.do#)
+- [공공데이터 제공신청](https://www.data.go.kr/data/15120072/fileData.do#)
+- [분쟁조정 신청](https://www.data.go.kr/data/15120072/fileData.do#)
+
+### 데이터활용
+
+- [공공데이터맵](https://www.data.go.kr/data/15120072/fileData.do#)
+- [공공데이터 시각화](https://www.data.go.kr/data/15120072/fileData.do#)
+- [국민참여지도](https://www.data.go.kr/data/15120072/fileData.do#)
+- [위치정보 시각화](https://www.data.go.kr/data/15120072/fileData.do#)
+- [공공데이터 활용사례](https://www.data.go.kr/data/15120072/fileData.do#)
+- [공공데이터 우수사례](https://www.data.go.kr/data/15120072/fileData.do#)
+
+### [기업공공데이터 문제해결지원센터](https://www.data.go.kr/data/15120072/fileData.do\#)
+
+### 정보공유
+
+- [공공 Git저장소](https://www.data.go.kr/data/15120072/fileData.do#)
+- [데이터 공유하기](https://www.data.go.kr/data/15120072/fileData.do#)
+- [공지사항](https://www.data.go.kr/data/15120072/fileData.do#)
+- [자료실](https://www.data.go.kr/data/15120072/fileData.do#)
+- [포털뉴스](https://www.data.go.kr/data/15120072/fileData.do#)
+
+### 이용안내
+
+- [문의하기](https://www.data.go.kr/data/15120072/fileData.do#)
+- [소개](https://www.data.go.kr/data/15120072/fileData.do#)
+- [이용가이드](https://www.data.go.kr/data/15120072/fileData.do#)
+- [정책](https://www.data.go.kr/data/15120072/fileData.do#)
+- [품질관리](https://www.data.go.kr/data/15120072/fileData.do#)
+
+회원회원가입로그인바로가기 링크[공공데이터전략위원회](https://www.data.go.kr/data/15120072/fileData.do#!)[공공데이터분쟁조정위원회](https://www.data.go.kr/data/15120072/fileData.do#!)[공공데이터 활용 창업경진대회](https://www.data.go.kr/data/15120072/fileData.do#!)[공공데이터 지원 오픈스퀘어-D](https://www.data.go.kr/data/15120072/fileData.do#!)[오픈데이터 포럼](https://www.data.go.kr/data/15120072/fileData.do#! "새창으로 이동")
+
+전체메뉴 닫기
+
+1. [홈](https://www.data.go.kr/index.do)
+2. 공공데이터
+3. 데이터목록
+
+CSV
+
+새창 열림
+
+새창 열림
+페이스북 공유하기
+
+
+새창 열림
+
+새창 열림
+엑스 공유하기
+
+
+새창 열림
+
+새창 열림
+URL 복사하기
+
+
+# 한국소비자원\_품목별 상담 현황
+
+QuickAISummary
+
+**정책 수립 지원** 한국소비자원의 품목별 상담 현황은 전월·전년 대비 증감률을 제공하여 정책 입안 시 시급성을 판단하는 근거가 됩니다. 특히 상담 건수가 급증한 품목은 소비자 보호 강화 조치의 우선순위로 지정될 수 있습니다. 이를 통해 행정기관은 효율적인 예산 배분과 신속한 대응 방안을 마련하게 됩니다. 또한, 데이터 기반 정책은 투명성을 높여 국민 신뢰를 확보하는 데 기여합니다.
+
+**시장 트렌드 분석** 상담 건수 상위 500개 품목은 현재 시장에서 소비자 관심이 집중된 영역을 반영합니다. 전년 동월 대비 증가율이 높은 품목은 신제품 출시나 마케팅 전략에 활용될 수 있습니다. 기업은 이 정보를 통해 경쟁사 대비 차별화 포인트를 도출하고, 소비자 요구에 맞는 제품 개발 방향을 설정합니다. 따라서 데이터는 시장 예측과 전략 수립에 필수적인 자료가 됩니다.
+
+**기업 리스크 관리** 상담 현황은 특정 품목에서 발생하는 문제점을 조기에 포착할 수 있는 신호탄입니다. 기업은 급증하는 상담 건수를 모니터링하여 품질 개선이나 사후 관리 계획을 수립합니다. 이를 통해 리콜·소송 등 큰 비용이 발생하기 전에 예방 조치를 취할 수 있습니다. 데이터 기반 리스크 관리는 기업의 지속 가능한 성장에 중요한 역할을 합니다.
+
+**소비자 교육 및 홍보** 상담 데이터는 소비자에게 위험성이 높은 품목을 알리는 근거 자료로 활용됩니다. 소비자원은 증감률이 높은 품목을 중심으로 교육 캠페인을 전개하여 사전 예방 효과를 높일 수 있습니다. 또한, 실제 상담 사례를 공유함으로써 소비자의 권리 의식을 강화하고, 올바른 구매 판단을 돕습니다. 이러한 홍보 활동은 소비자 보호 문화 확산에 크게 이바지합니다.
+
+관심목록에 추가
+
+0
+
+0
+좋아요
+
+
+0
+
+0
+싫어요
+
+
+- 파일데이터 _선택됨_
+- 오픈 API
+- 추천데이터
+
+이 페이지의 구성
+
+데이터 상세
+
+- [파일데이터 정보](https://www.data.go.kr/data/15120072/fileData.do#tab-layer-file-01 "페이지 내 이동")
+- [표준 메타데이터](https://www.data.go.kr/data/15120072/fileData.do#tab-layer-file-02 "페이지 내 이동")
+- [이용 조건 및 라이선스 정보](https://www.data.go.kr/data/15120072/fileData.do#tab-layer-file-03 "페이지 내 이동")
+- [미리보기](https://www.data.go.kr/data/15120072/fileData.do#tab-layer-file-04 "페이지 내 이동")
+- [주기성 과거 데이터](https://www.data.go.kr/data/15120072/fileData.do#tab-layer-file-05 "페이지 내 이동")
+
+도움말
+
+- 공공데이터활용지원센터는 공공데이터포털에 개방되는 3단계 이상의 오픈 포맷 파일데이터를 오픈 API(RestAPI 기반의 JSON/XML)로 자동변환하여 제공합니다.
+- 오픈 API를 활용하기 위해서는 공공데이터포털 회원 가입 및 활용신청이 필요하며, 활용 관련 문의는 공공데이터활용지원센터로 연락주시기 바랍니다.
+- 데이터 자체에 대한 문의는 아래 제공기관의 관리부서 전화번호로 연락주시기 바랍니다.
+- 파일데이터는 로그인 없이 다운로드를 통해 이용하실 수 있습니다.
+
+- CSV
+
+한국소비자원\_품목별 상담 현황
+
+
+
+
+
+다운로드
+
+
+### 파일데이터 정보
+
+**데이터 오류·개선 의견이 있으신가요?** 데이터 개선요청오류신고 및 문의
+
+#### 기본 정보
+
+- **파일데이터명**
+한국소비자원\_품목별 상담 현황\_20260731
+
+- **분류체계**
+일반공공행정 \- 일반행정
+
+- **제공기관**
+[한국소비자원](https://www.data.go.kr/tcs/dss/selectDataSetList.do?dType=&keyword=&orgNm=%ED%95%9C%EA%B5%AD%EC%86%8C%EB%B9%84%EC%9E%90%EC%9B%90&conditionType=search "새창으로 이동")
+
+- **관리부서명**
+AI디지털실
+
+- **관리부서 전화번호**
+043-880-5785
+
+- **보유근거**
+
+- **수집방법**
+
+- **업데이트 주기**
+월간
+
+- **차기 등록 예정일**
+2026-10-02
+
+
+#### 상세 및 제공정보
+
+- **설명**
+1372 소비자상담센터에 접수된 소비자상담 데이터를 기반으로 품목별 상담 접수 현황을 제공합니다. 이 데이터는 상위 다발 품목 500개에 대한 상담 건수를 포함하며, 품목별로 전월 대비 및 전년 동월 대비 상담 건수의 증감률을 함께 확인할 수 있습니다. 이를 통해 최근 소비자상담이 다발한 주요 품목을 파악하고, 변화 추이를 분석하는 데 매우 유용합니다. 해당 정보는 소비자 권익 증진 관련 정책 수립과 시장 동향 모니터링에 중요한 자료로 활용될 수 있습니다.
+
+
+
+1372소비자상담센터 : 공정거래위원회가 운영하고 한국소비자단체협의회, 한국소비자원, 광역지자체가 참여하여 상담을 수행하는 전국 단위 소비자 상담 통합 콜센터
+
+- **데이터 항목(컬럼) 정보**
+
+
+데이터 항목(컬럼) 정보 펼쳐보기
+컬럼 정의서 다운로드
+
+
+
+
+
+
+
+
+| 항목명 | 항목명(영문명) | 항목 설명 | 도메인분류 | 데이터타입 | 최대길이 | 표현방식 | 단위 | 생성출처 | 코드 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 정보시스템명 | DB명 | Table명 |
+| --- | --- | --- |
+| 연도 |  | 등록일자(연도) |  | 가변문자형(VARCHAR) | 4 |  | - |  |  |  | - |
+| 월 |  | 등록일자(월) |  | 가변문자형(VARCHAR) | 2 |  | - |  |  |  | - |
+| 품목명 |  | 품목명(소분류) |  | 가변문자형(VARCHAR) | 20 |  | - |  |  |  | - |
+| 상담건수 |  | 해당 월에 접수된 상담건수 |  | 가변문자형(VARCHAR) | 10 |  | - |  |  |  | - |
+| 전월대비 증감률 |  | 전월대비 증감률((현월 상담건수-전월 상담건수)/전월 상담건수) |  | 가변문자형(VARCHAR) | 10 |  | - |  |  |  | - |
+| 전년동월대비 증감률 |  | 전년동월 대비 증감률((현월 상담건수-전년동월 상담건수)/전년동월 상담건수) |  | 가변문자형(VARCHAR) | 10 |  | - |  |  |  | - |
+
+데이터 항목 표로 항목명, 항목명(영문명), 항목 설명, 도메인분류, 데이터타입, 최대길이, 표현방식, 단위, 생성출처(정보시스템명, DB명, Table명), 코드로 구성되어있습니다.
+
+- **매체유형**
+텍스트
+
+- **확장자**
+CSV
+
+- **전체 행**
+500
+
+- **키워드**
+1372소비자상담센터,소비자상담,품목별,증감률,상담현황
+
+- **데이터 한계**
+
+- **공간범위**
+
+- **시간범위**
+
+- **제공형태**
+공공데이터포털에서 다운로드(원문파일등록)
+
+- **다운로드(바로가기)**
+1629
+
+- **등록일**
+2026-08-21
+
+- **수정일**
+2026-09-14
+
+- **기타 유의사항**
+
+
+### 표준 메타데이터
+
+※ 데이터 연계 및 검색을 위한 표준 메타데이터입니다.
+
+[Schema.org](https://www.data.go.kr/catalog/15120072/fileData.json "새창으로 이동") [DCAT](https://www.data.go.kr/biz/dcat/metadata/15120072.do "새창으로 이동")
+
+### 이용 조건 및 라이선스 정보
+
+- **비용부과유무**
+무료
+
+- **비용부과기준 및 단위**
+건
+
+- **이용허락범위**
+[이용허락범위 제한 없음](https://www.data.go.kr/ugs/selectPortalPolicyView.do "새 창으로 공공데이터포털 정책 열기")
+
+
+이 페이지의 구성
+
+데이터 상세
+
+- [오픈API 정보](https://www.data.go.kr/data/15120072/fileData.do#tab-layer-openapi-01)
+- [표준 메타데이터](https://www.data.go.kr/data/15120072/fileData.do#tab-layer-openapi-02)
+- [이용 조건 및 라이선스 정보](https://www.data.go.kr/data/15120072/fileData.do#tab-layer-openapi-03)
+- [활용명세](https://www.data.go.kr/data/15120072/fileData.do#tab-layer-openapi-04)
+
+도움말
+
+- 공공데이터활용지원센터는 공공데이터포털에 개방되는 3단계 이상의 오픈 포맷 파일데이터를 오픈 API(RestAPI 기반의 JSON/XML)로 자동변환하여 제공합니다.
+- 오픈 API를 활용하기 위해서는 공공데이터포털 회원 가입 및 활용신청이 필요하며, 활용 관련 문의는 공공데이터활용지원센터로 연락주시기 바랍니다.
+- 파일데이터는 로그인 없이 다운로드를 통해 이용하실 수 있습니다.
+
+- XMLJSON
+한국소비자원\_품목별 상담 현황
+
+
+
+
+활용신청
+
+
+### 오픈API 정보
+
+**데이터 오류 신고·문의가 필요하신가요?** 오류신고 및 문의
+
+#### 기본 정보
+
+- **파일데이터명**
+한국소비자원\_품목별 상담 현황\_20260731
+
+- **분류체계**
+일반공공행정 \- 일반행정
+
+- **제공기관**
+[한국소비자원](https://www.data.go.kr/tcs/dss/selectDataSetList.do?dType=&keyword=&orgNm=%ED%95%9C%EA%B5%AD%EC%86%8C%EB%B9%84%EC%9E%90%EC%9B%90&conditionType=search "새창으로 이동")
+
+- **관리부서명**
+공공데이터활용지원센터
+
+- **관리부서 전화번호**
+1566-0025
+
+- **보유근거**
+
+- **수집방법**
+
+- **업데이트 주기**
+월간
+
+- **차기 등록 예정일**
+2026-10-02
+
+
+#### 상세 및 제공정보
+
+- **설명**
+1372 소비자상담센터에 접수된 소비자상담 데이터를 기반으로 품목별 상담 접수 현황을 제공합니다. 이 데이터는 상위 다발 품목 500개에 대한 상담 건수를 포함하며, 품목별로 전월 대비 및 전년 동월 대비 상담 건수의 증감률을 함께 확인할 수 있습니다. 이를 통해 최근 소비자상담이 다발한 주요 품목을 파악하고, 변화 추이를 분석하는 데 매우 유용합니다. 해당 정보는 소비자 권익 증진 관련 정책 수립과 시장 동향 모니터링에 중요한 자료로 활용될 수 있습니다.
+
+
+
+1372소비자상담센터 : 공정거래위원회가 운영하고 한국소비자단체협의회, 한국소비자원, 광역지자체가 참여하여 상담을 수행하는 전국 단위 소비자 상담 통합 콜센터
+
+- **매체유형**
+텍스트
+
+- **확장자**
+XML, JSON
+
+- **전체 행**
+500
+
+- **키워드**
+1372소비자상담센터,소비자상담,품목별,증감률,상담현황
+
+- **데이터 한계**
+
+- **공간범위**
+
+- **시간범위**
+
+- **제공형태**
+공공데이터포털에서 다운로드(원문파일등록)
+
+- **활용신청**
+6
+
+- **등록일**
+2026-08-21
+
+- **수정일**
+2026-09-14
+
+- **기타 유의사항**
+
+
+### 표준 메타데이터
+
+※ 데이터 연계 및 검색을 위한 표준 메타데이터입니다.
+
+[Schema.org](https://www.data.go.kr/catalog/15120072/fileData.json "새창으로 이동") [DCAT](https://www.data.go.kr/biz/dcat/metadata/15120072.do "새창으로 이동")
+
+### 이용 조건 및 라이선스 정보
+
+- **비용부과유무**
+무료
+
+- **비용부과기준 및 단위**
+건
+
+- **이용허락범위**
+[이용허락범위 제한 없음](https://www.data.go.kr/ugs/selectPortalPolicyView.do "새 창으로 공공데이터포털 정책 열기")
+
+
+### 활용명세
+
+오픈 API 명세 확인 가이드가이드 다운로드
+
+![Swagger UI](<Base64-Image-Removed>)Explore
+
+[![Online validator badge](https://validator.swagger.io/validator?url=https%3A%2F%2Finfuser.odcloud.kr%2Foas%2Fdocs%3Fnamespace%3D15120072%2Fv1)](https://validator.swagger.io/validator/debug?url=https%3A%2F%2Finfuser.odcloud.kr%2Foas%2Fdocs%3Fnamespace%3D15120072%2Fv1)
+
+웹기반 오픈 API 활용 명세서인 Swagger UI는 마이크로소프트 엣지, 크롬, 사파리, 네이버 웨일 등에서 확인할 수 있습니다.
+
+이 페이지의 구성
+
+데이터 상세
+
+- [다른 사용자들이 활용한 데이터](https://www.data.go.kr/data/15120072/fileData.do#tab-layer-recommend_01)
+- [이 데이터와 유사한 데이터](https://www.data.go.kr/data/15120072/fileData.do#tab-layer-recommend_02)
+
+#### 다른 사용자들이 활용한 데이터
+
+로그인 후 다른 사용자들이 활용한 데이터를 추천받아 보세요. [로그인 하기](https://www.data.go.kr/uim/login/loginView.do)
+
+#### 이 데이터와 유사한 데이터
+
+목록으로 돌아가기
+
+## 오픈API 에러코드 안내
+
+| 에러메시지 | 에러코드 | 설명 |
+| --- | --- | --- |
+| APPLICATION\_ERROR | 01 | GW 내부 처리 중 예기치 않은 오류가 발생했습니다. 잠시 후 다시 호출하고, 문제가 반복되면 활용지원센터로 문의해 주세요. |
+| HTTP\_ERROR | 04 | 허용되지 않은 HTTP 요청이거나 기관 API 응답 처리에 실패했습니다. 요청 방식과 호출 URL을 확인해 주세요. |
+| SERVICETIMEOUT\_ERROR | 05 | 기관 API 또는 GW 연계 서비스와의 연결에 실패했거나 응답 대기시간을 초과했습니다. 잠시 후 다시 호출해 주세요. |
+| INVALID\_REQUEST\_PARAMETER\_ERROR | 10 | 요청 파라미터의 값이나 형식이 올바르지 않습니다. API 명세에서 파라미터 이름, 형식 및 허용값을 확인해 주세요. |
+| NO\_OPENAPI\_SERVICE\_ERROR | 12 | 요청한 오픈API 서비스가 존재하지 않거나 폐기되었습니다. 호출 URL에 오타가 없는지 확인해 주세요. |
+| SERVICE\_KEY\_IS\_NULL | 20 | 요청에 API 인증키가 포함되지 않았습니다. 공공데이터포털에서 발급받은 인증키를 요청 파라미터에 포함해 주세요. |
+| PERMISSION\_DENIED | 20 | GW 접근 권한 검사에서 요청이 거부되었습니다. 해당 API의 활용신청 및 접근 권한을 확인해 주세요. |
+| LIMITED\_NUMBER\_OF\_SERVICE\_REQUESTS\_EXCEEDS\_ERROR | 22 | API 서비스의 일일 호출 허용량을 초과했습니다. 호출량이 초기화된 이후 다시 이용하거나 트래픽 증설을 신청해 주세요. |
+| LIMITED\_NUMBER\_OF\_SERVICE\_REQUESTS\_PER\_SECOND\_EXCEEDS\_ERROR | 23 | 짧은 시간에 많은 요청이 발생하여 초당 호출 허용량을 초과했습니다. 잠시 후 다시 호출해 주세요. |
+| BLACKLIST\_IP\_ACCESS\_ERROR | 29 | 차단된 IP에서 호출한 요청입니다. 호출 서버의 IP를 확인하고, 차단 해제가 필요한 경우 활용지원센터로 문의해 주세요. |
+
+오픈 API에 대한 에러코드를 에러메시지, 에러코드, 설명 순으로 안내하는 표입니다.
+
+### 인증 에러
+
+| 에러메시지 | 에러코드 | 설명 |
+| --- | --- | --- |
+| SERVICE\_ACCESS\_DENIED\_ERROR | 20 | 해당 API 서비스에 대한 이용 권한이 확인되지 않습니다. 활용신청 여부와 승인 또는 일시중지 상태를 확인해 주세요. |
+| SERVICE\_KEY\_IS\_NOT\_REGISTERED\_ERROR | 30 | 등록되지 않은 API 인증키입니다. 인증키가 정확한지와 해당 서비스의 활용신청이 정상적으로 완료되었는지 확인해 주세요. |
+| DEADLINE\_HAS\_EXPIRED\_ERROR | 31 | API 인증키의 사용 기한이 만료되었습니다. 공공데이터포털에서 이용 기간을 확인하거나 갱신해 주세요. |
+
+오픈 API에 대한 인증 에러코드를 에러메시지, 에러코드, 설명 순으로 안내하는 표입니다.
+
+닫기
+
+닫기
+
+페이지 상단으로 이동
+
+
+관련기관
+
+- [행정안전부](https://www.mois.go.kr/ "새창으로 이동")
+- [한국지능정보사회진흥원](https://www.nia.or.kr/ "새창으로 이동")
+- [오픈데이터포럼](https://www.odf.or.kr/ "새창으로 이동")
+- [국가정보자원관리원](https://www.nirs.go.kr/ "새창으로 이동")
+- [한국지역정보개발원](https://www.klid.or.kr/ "새창으로 이동")
+
+지역별 데이터포털
+
+- [서울 열린데이터광장](https://data.seoul.go.kr/ "새창으로 이동")
+- [경기데이터드림](https://data.gg.go.kr/ "새창으로 이동")
+- [부산데이터웨이브](https://data.busan.go.kr/ "새창으로 이동")
+- [D-데이터허브](https://data.daegu.go.kr/ "새창으로 이동")
+- [인천데이터포털](https://data.incheon.go.kr/ "새창으로 이동")
+- [울산광역시 데이터포털](https://data.ulsan.go.kr/ "새창으로 이동")
+- [전남광주통합특별시 빅데이터 플랫폼](https://bigdata.gwangju.go.kr/ "새창으로 이동")
+- [대전광역시 데이터포털](https://openlab.daejeon.go.kr/ "새창으로 이동")
+- [세종특별자치시 데이터포털](https://www.sejong.go.kr/ "새창으로 이동")
+- [충청북도 데이터허브](https://data.chungbuk.go.kr/ "새창으로 이동")
+
+분야별 데이터포털
+
+- [기상자료개방포털](https://data.kma.go.kr/ "새창으로 이동")
+- [국토교통부 공간정보오픈플랫폼](https://www.vworld.kr/ "새창으로 이동")
+- [환경부 환경데이터포털](https://www.bigdata-environment.kr/ "새창으로 이동")
+- [문화데이터광장](https://www.culture.go.kr/ "새창으로 이동")
+- [농림축산식품 공공데이터포털](https://data.mafra.go.kr/ "새창으로 이동")
+- [보건의료빅데이터개방시스템](https://opendata.hira.or.kr/ "새창으로 이동")
+- [식품의약품안전처 데이터포털](https://www.foodsafetykorea.go.kr/ "새창으로 이동")
+- [교육통계서비스](https://kess.kedi.re.kr/ "새창으로 이동")
+
+[공공데이터포털 바로가기](https://www.data.go.kr/index.do "메인으로 바로가기")
+
+(30112) 세종특별자치시 도움6로 42
+
+- **대표전화[1566-0025](tel:1566-0025 "바로 전화 걸기") \| (유료, 평일 09시-18시)**
+- [**운영자 메일 상담opendata\_help@nia.or.kr**](mailto:opendata_help@nia.or.kr "이메일 바로가기")
+
+[이용가이드](https://www.data.go.kr/ugs/selectPublicDataUseGuideView.do) [분쟁조정 신청](https://www.data.go.kr/tcs/dor/insertTrublMdatReqstProcssView.do) [문의하기](https://www.data.go.kr/bbs/faq/selectFaqList.do)
+
+[유튜브](https://www.youtube.com/@koropendata "유튜브 새 창 열기") [X](https://twitter.com/koreadataportal "X 새 창 열기") [페이스북](http://www.facebook.com/koreadataportal "페이스북 새 창 열기") [블로그](http://blog.naver.com/nia_korea "블로그 새 창 열기")
+
+[이용약관](https://www.data.go.kr/ugs/selectPortalPolicyView.do#use_stplat) [개인정보처리방침](https://www.data.go.kr/ugs/selectPortalPolicyView.do#indvdlinfo_process) [공공데이터포털 소개](https://www.data.go.kr/ugs/selectPortalInfoView.do#portal_info)
+
+© Ministry of the Interior and Safety. All rights reserved.
+
+행정안전부이 누리집은 행정안전부 누리집입니다.
+
+## 활용신청
+
+기업회원입니다. 활용신청할 서비스키를 선택해주세요
+
+
+프로젝트 서비스키개인 서비스키
+
+닫기
+
+## 자동등록방지
+
+![보안문자](https://www.data.go.kr/captcha)
+
+새로고침 음성듣기
+
+닫기확인
+
+닫기

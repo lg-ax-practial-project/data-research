@@ -1,0 +1,311 @@
+{
+  "name": "네이버 카페 - 맘카페 에어컨 고장·AS 글의 맞벌이 신호 수집",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "8deced16-d9a8-46b8-b358-50bc0c1c6c13",
+      "name": "수동 실행",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a1",
+              "name": "clientId",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "a2",
+              "name": "clientSecret",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "a3",
+              "name": "baseQueries",
+              "value": "LG 에어컨 고장,LG 에어컨 AS,LG 에어컨 수리,휘센 고장,휘센 AS,엘지 에어컨 고장",
+              "type": "string"
+            },
+            {
+              "id": "a4",
+              "name": "signalQueries",
+              "value": "에어컨 고장 맞벌이,에어컨 AS 맞벌이,에어컨 고장 워킹맘,에어컨 수리 워킹맘,에어컨 기사 방문 출근,에어컨 AS 퇴근 후,에어컨 수리 반차,에어컨 AS 평일 회사",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "094636b9-bcf5-4d93-b790-aec70f3a5132",
+      "name": "설정",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 기본 검색어(비율 계산용)와 맞벌이 신호 검색어(사례 수집용)를 구분해서 요청 목록을 만든다\nconst cfg = $input.first().json;\nconst split = (v) => String(v || '').split(',').map(s => s.trim()).filter(Boolean);\nconst groups = [['기본', split(cfg.baseQueries)], ['맞벌이신호', split(cfg.signalQueries)]];\nconst sorts = ['sim', 'date'];          // 정확도순 + 최신순 (둘 다 받아서 중복 제거)\nconst out = [];\nfor (const [group, qs] of groups) {\n  for (const q of qs) {\n    for (const s of sorts) {\n      for (let start = 1; start <= 901; start += 100) {   // 네이버 API는 start 최대 1000\n        out.push({ json: { query: q, group, sort: s, start } });\n      }\n    }\n  }\n}\nreturn out;"
+      },
+      "id": "9e2e52ee-b8a2-45d5-a114-793d79e31031",
+      "name": "요청목록 생성",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://openapi.naver.com/v1/search/cafearticle.json",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ $json.query }}"
+            },
+            {
+              "name": "display",
+              "value": "100"
+            },
+            {
+              "name": "start",
+              "value": "={{ $json.start }}"
+            },
+            {
+              "name": "sort",
+              "value": "={{ $json.sort }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Naver-Client-Id",
+              "value": "={{ $('설정').first().json.clientId }}"
+            },
+            {
+              "name": "X-Naver-Client-Secret",
+              "value": "={{ $('설정').first().json.clientSecret }}"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 300
+            }
+          }
+        }
+      },
+      "id": "0f09c08c-8436-431d-aba8-3c2468238ac1",
+      "name": "네이버 카페글 검색",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        660,
+        300
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "const reqs = $('요청목록 생성').all();\nconst clean = (s) => String(s || '')\n  .replace(/<[^>]*>/g, '')\n  .replace(/&quot;/g, '\"').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')\n  .replace(/&apos;|&#39;/g, \"'\").replace(/\\s+/g, ' ').trim();\n\n// 카페 유형 (기존 6,247건 수집과 같은 규칙, 업체 카페는 따로 표시)\nconst cafeRules = [\n  ['업체·영업',     /설치|세척|청소업|수리|렌탈|이전설치|시공|매입|창업/],\n  ['육아·맘카페',   /맘|육아|아기|베이비|키즈|아가|엄마|임신|출산/],\n  ['신혼·결혼',     /신혼|결혼|웨딩|예비부부|혼수/],\n  ['입주·인테리어', /인테리어|입주|아파트|이사|부동산|리모델링|하우스/],\n  ['지역·생활',     /맛집|동네|지역|시$|구$|군$|생활|주부|살림/],\n];\nconst postRules = [\n  ['고장·AS',     /고장|수리|AS|as|A\\/S|에러|오류|안\\s?나|안\\s?켜|안\\s?돼|안\\s?되|누수|물\\s?샘|물이|소음|냄새|이상|결로|얼음|꺼져|꺼짐|불량|서비스센터|기사님|출장/],\n  ['설치·이전',   /설치|이전|철거|배관|타공|브라켓|재설치/],\n  ['구매고민',    /추천|비교|가격|뭐가|살까|구매|구입|견적|할인|특가|최저가|vs|VS|신제품/],\n  ['청소·관리',   /청소|필터|세척|관리|곰팡이/],\n];\nconst pick = (rules, text, fallback) => { for (const [n, re] of rules) if (re.test(text)) return n; return fallback; };\n\n// 맞벌이 신호어 (제목+요약에서 찾음)\nconst SIGNALS = ['맞벌이','워킹맘','직장맘','출근','퇴근','회사','직장','근무','반차','연차','휴가','평일','낮에','어린이집','등원','하원','등하원','돌봄','야근','출장 중','시터','이모님'];\n// 막힌 점\nconst blockRules = [\n  ['연락·연결', /연락|전화|통화|연결|상담원|콜센터|고객센터|답이 없|안 받/],\n  ['방문 일정', /방문|일정|예약|시간|주말|토요일|저녁|날짜|오전|오후|기사님?\\s?(오|와)/],\n  ['대기',      /대기|기다|밀려|일주일|며칠|2주|열흘|한참/],\n  ['비용',      /비용|출장비|수리비|유상|무상|돈|만원/],\n];\nconst brand = (t) => /LG|엘지|휘센|whisen|WHISEN/i.test(t) ? 'LG' : (/삼성|무풍|캐리어|위니아|대우|신일|파세코|센추리/.test(t) ? '타사' : '불명');\n\nconst seen = new Set();\nconst rows = [];\nfor (const it of $input.all()) {\n  const items = it.json && it.json.items;\n  if (!Array.isArray(items)) continue;      // 오류 응답은 건너뜀\n  const idx = it.pairedItem && it.pairedItem.item;\n  const req = (reqs[idx] && reqs[idx].json) || {};\n  for (const p of items) {\n    const link = p.link || '';\n    if (!link || seen.has(link)) continue;\n    seen.add(link);\n    const cafe = clean(p.cafename);\n    const title = clean(p.title);\n    const desc = clean(p.description);\n    const text = title + ' ' + desc;\n    const sig = SIGNALS.filter(w => text.includes(w));\n    const blocks = blockRules.filter(([, re]) => re.test(text)).map(([n]) => n);\n    rows.push({ json: {\n      카페명: cafe,\n      카페주소: p.cafeurl || '',\n      카페유형: pick(cafeRules, cafe, '기타·미분류'),\n      글성격: pick(postRules, text, '기타'),\n      브랜드: brand(text),\n      맞벌이신호: sig.length ? 'Y' : 'N',\n      신호어: sig.join(' '),\n      막힌점: blocks.join(' '),\n      제목: title,\n      요약: desc,\n      링크: link,\n      검색어: req.query || '',\n      검색어그룹: req.group || '',\n    }});\n  }\n}\nif (!rows.length) throw new Error('수집된 글이 없습니다. 설정 노드의 Client ID/Secret과 검색 API 권한(검색)을 확인하세요.');\nreturn rows;"
+      },
+      "id": "efc0732d-70c3-43b7-80a2-ab2fc0199c82",
+      "name": "정리·분류",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "csv",
+        "options": {
+          "fileName": "naver_cafe_맘카페_맞벌이_원본.csv",
+          "headerRow": true
+        }
+      },
+      "id": "f4928d53-525f-43b5-afd6-851f2ab5e45c",
+      "name": "원본 CSV",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1100,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 비율은 '기본' 검색어로 모은 글로만 계산한다 (맞벌이 검색어로 모은 글을 넣으면 비율이 부풀려짐)\nconst all = $input.all().map(i => i.json);\nconst out = [];\nconst add = (구분, 항목, 건수, 분모, 비고 = '') =>\n  out.push({ json: { 구분, 항목, 건수, '비율(%)': 분모 ? Math.round(건수 / 분모 * 1000) / 10 : '', 분모: 분모 || '', 비고 } });\nconst cnt = (rows, f) => rows.filter(f).length;\n\nconst base = all.filter(r => r.검색어그룹 === '기본');\nadd('전체', '수집 글(중복 제거)', all.length, 0, '기본+맞벌이신호 검색어');\nadd('전체', '기본 검색어 글', base.length, 0);\nfor (const [label, rows] of [['기본 · 전체 브랜드', base], ['기본 · LG만', base.filter(r => r.브랜드 === 'LG')]]) {\n  const mom = rows.filter(r => r.카페유형 === '육아·맘카페');\n  const momAS = mom.filter(r => r.글성격 === '고장·AS');\n  const momASsig = momAS.filter(r => r.맞벌이신호 === 'Y');\n  const restAS = rows.filter(r => r.카페유형 !== '육아·맘카페' && r.카페유형 !== '업체·영업' && r.글성격 === '고장·AS');\n  add(label, '맘카페 글', mom.length, rows.length, '전체 글 중');\n  add(label, '맘카페 고장·AS 글', momAS.length, mom.length, '맘카페 글 중');\n  add(label, '★ 맘카페 고장·AS 중 맞벌이 신호', momASsig.length, momAS.length, '맘카페 고장·AS 글 중');\n  add(label, '비교: 다른 고객 카페 고장·AS 중 맞벌이 신호', cnt(restAS, r => r.맞벌이신호 === 'Y'), restAS.length, '업체·맘카페 제외');\n  for (const b of ['연락·연결', '방문 일정', '대기', '비용'])\n    add(label, '맞벌이 신호 글의 막힌 점: ' + b, cnt(momASsig, r => r.막힌점.includes(b)), momASsig.length, '중복 가능');\n}\n// 신호어별 (맘카페 고장·AS, 전체 그룹)\nconst momASall = all.filter(r => r.카페유형 === '육아·맘카페' && r.글성격 === '고장·AS');\nconst wc = new Map();\nfor (const r of momASall) for (const w of r.신호어.split(' ').filter(Boolean)) wc.set(w, (wc.get(w) || 0) + 1);\nfor (const [w, n] of [...wc.entries()].sort((a, b) => b[1] - a[1])) add('신호어(맘카페 고장·AS, 전체 검색어)', w, n, momASall.length);\n// 검색어별 수집량\nconst qc = new Map();\nfor (const r of all) qc.set(r.검색어그룹 + ' | ' + r.검색어, (qc.get(r.검색어그룹 + ' | ' + r.검색어) || 0) + 1);\nfor (const [q, n] of qc) add('검색어별 수집', q, n, all.length);\nreturn out;"
+      },
+      "id": "5c88286b-a43f-41d7-8b37-0a65c8344421",
+      "name": "집계",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "csv",
+        "options": {
+          "fileName": "naver_cafe_맘카페_맞벌이_집계.csv",
+          "headerRow": true
+        }
+      },
+      "id": "dbcb5b65-13ab-438c-805e-56ecdc187fd6",
+      "name": "집계 CSV",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1320,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 사람이 읽고 확인할 후보: 맘카페 · 고장·AS · 맞벌이 신호 있음\nreturn $input.all().filter(i => i.json.카페유형 === '육아·맘카페' && i.json.글성격 === '고장·AS' && i.json.맞벌이신호 === 'Y')\n  .map(i => ({ json: { ...i.json, '사람확인(맞벌이 맞음 Y/N)': '' } }));"
+      },
+      "name": "맞벌이 후보 추리기",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        640
+      ],
+      "id": "3ee18326-d6a5-4c19-be0f-43fdf5d8ebac"
+    },
+    {
+      "parameters": {
+        "operation": "csv",
+        "options": {
+          "fileName": "naver_cafe_맘카페_맞벌이후보.csv",
+          "headerRow": true
+        }
+      },
+      "id": "2e03f117-048b-4d10-ac1e-b4b81d708534",
+      "name": "맞벌이 후보 CSV",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1320,
+        640
+      ]
+    }
+  ],
+  "connections": {
+    "수동 실행": {
+      "main": [
+        [
+          {
+            "node": "설정",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "설정": {
+      "main": [
+        [
+          {
+            "node": "요청목록 생성",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "요청목록 생성": {
+      "main": [
+        [
+          {
+            "node": "네이버 카페글 검색",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "네이버 카페글 검색": {
+      "main": [
+        [
+          {
+            "node": "정리·분류",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "정리·분류": {
+      "main": [
+        [
+          {
+            "node": "원본 CSV",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "집계",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "맞벌이 후보 추리기",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "집계": {
+      "main": [
+        [
+          {
+            "node": "집계 CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "맞벌이 후보 추리기": {
+      "main": [
+        [
+          {
+            "node": "맞벌이 후보 CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {}
+}

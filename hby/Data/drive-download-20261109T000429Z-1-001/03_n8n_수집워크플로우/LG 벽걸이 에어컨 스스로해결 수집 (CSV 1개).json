@@ -1,0 +1,264 @@
+{
+  "name": "LG 벽걸이 에어컨 스스로해결 수집 (CSV 1개)",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "341da786-e1af-46ee-92f9-bea80411e12a",
+      "name": "시작(수동 실행)",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 벽걸이형만 수집 (링크의 subCategory / productCode / 목록 총 페이지 수)\nconst TYPES = [\n  { type: '벽걸이형', key: 'wall',   subCategory: 'CT50019214', productCode: 'WASRA', total: 229 },\n];\nconst out = [];\nfor (const t of TYPES) {\n  const pages = Math.ceil(t.total / 10) + 1; // 한 페이지 10건, 여유로 +1 (빈 페이지는 자동으로 무시됨)\n  for (let p = 1; p <= pages; p++) out.push({ json: { ...t, page: p } });\n}\nreturn out;\n"
+      },
+      "id": "79bf9c6b-b3c8-4270-a558-86bfd3c3d9b5",
+      "name": "설정 및 페이지 펼치기",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.lge.co.kr/support/solutions/searchSolutions.lgajax",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
+            },
+            {
+              "name": "X-Requested-With",
+              "value": "XMLHttpRequest"
+            },
+            {
+              "name": "Referer",
+              "value": "https://www.lge.co.kr/support/solutions"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "form-urlencoded",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "category",
+              "value": "CT50019183"
+            },
+            {
+              "name": "subCategory",
+              "value": "={{ $json.subCategory }}"
+            },
+            {
+              "name": "productCode",
+              "value": "={{ $json.productCode }}"
+            },
+            {
+              "name": "sort",
+              "value": "update"
+            },
+            {
+              "name": "page",
+              "value": "={{ $json.page }}"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 300
+            }
+          }
+        }
+      },
+      "id": "78ad7473-c887-4159-93b0-b414c0c323ed",
+      "name": "목록 조회",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        448,
+        0
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 3000
+    },
+    {
+      "parameters": {
+        "jsCode": "// 목록 응답 → 글 한 건당 한 행. (유형 정보는 앞 노드에서 같은 순서로 가져옴)\nconst metas = $('설정 및 페이지 펼치기').all();\nconst rows = [];\nconst seen = new Set();\n$input.all().forEach((it, i) => {\n  const meta = metas[i].json;\n  const list = (it.json && it.json.data && it.json.data.listData) || [];\n  for (const r of list) {\n    const path = String(r.url || '').split('?')[0];\n    if (!path) continue;\n    const k = meta.key + '|' + path;\n    if (seen.has(k)) continue;\n    seen.add(k);\n    rows.push({ json: {\n      key: meta.key, type: meta.type, expected: meta.total,\n      cateName: r.cateName || '', sympSubName: r.sympSubName || '', topic: r.topic || '',\n      title: r.title || '', date: r.date || '', views: String(r.view || '').replace(/,/g, ''),\n      path, fetchUrl: 'https://www.lge.co.kr' + path,\n    }});\n  }\n});\nreturn rows;\n"
+      },
+      "id": "ad3580b3-32e3-488a-a6eb-f162b91db4ec",
+      "name": "목록 정리",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        672,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.fetchUrl }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
+            },
+            {
+              "name": "Referer",
+              "value": "https://www.lge.co.kr/support/solutions"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 300
+            }
+          },
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          }
+        }
+      },
+      "id": "890e870a-a561-4e3e-881b-44957164472d",
+      "name": "상세 조회",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        880,
+        0
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 3000,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 상세 HTML → 본문 텍스트 → 유형별 CSV(UTF-8 BOM, 엑셀에서 한글 정상 표시)\nconst metas = $('목록 정리').all();\nconst pages = $input.all();\n\nfunction extractView(html) {\n  const m = /<div[^>]*class=\"[^\"]*\\bview-content\\b[^\"]*\"[^>]*>/i.exec(html);\n  if (!m) return '';\n  let i = m.index + m[0].length, depth = 1;\n  const re = /<(\\/?)div\\b[^>]*>/gi; re.lastIndex = i;\n  let x;\n  while ((x = re.exec(html))) {\n    depth += x[1] ? -1 : 1;\n    if (depth === 0) return html.slice(i, x.index);\n  }\n  return html.slice(i);\n}\nfunction toText(h) {\n  return h\n    .replace(/<!--[\\s\\S]*?-->/g, '')\n    .replace(/<(style|script|noscript)[\\s\\S]*?<\\/\\1>/gi, '')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<li[^>]*>/gi, '\\n- ')\n    .replace(/<\\/(p|div|tr|h[1-6]|ul|ol|table)>/gi, '\\n')\n    .replace(/<\\/(td|th)>/gi, ' | ')\n    .replace(/<[^>]+>/g, '')\n    .replace(/&nbsp;/g, ' ').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '\"').replace(/&#39;/g, \"'\")\n    .replace(/&#(\\d+);/g, (_, n) => String.fromCharCode(+n)).replace(/&amp;/g, '&')\n    .replace(/[ \\t ]+/g, ' ').replace(/ *\\n */g, '\\n').replace(/\\n{3,}/g, '\\n\\n').trim();\n}\nconst esc = v => '\"' + String(v ?? '').replace(/\"/g, '\"\"') + '\"';\nconst today = new Date().toISOString().slice(0, 10);\nconst HEAD = ['제품유형', '중분류', '증상분류', '토픽', '제목', '본문', '작성일', '조회수', '원문URL', '수집일'];\n\nconst groups = {};\npages.forEach((p, i) => {\n  const m = metas[i].json;\n  const raw = typeof p.json.data === 'string' ? p.json.data : '';\n  const body = toText(extractView(raw));\n  (groups[m.key] = groups[m.key] || { type: m.type, expected: m.expected, rows: [], empty: 0 });\n  if (!body) groups[m.key].empty++;\n  groups[m.key].rows.push([m.type, m.cateName, m.sympSubName, m.topic, m.title, body, m.date, m.views, 'https://www.lge.co.kr' + m.path, today]);\n});\n\nconst out = [];\nfor (const [key, g] of Object.entries(groups)) {\n  const csv = '﻿' + [HEAD, ...g.rows].map(r => r.map(esc).join(',')).join('\\r\\n');\n  const fileName = `lg_aircon_${key}.csv`;\n  const binary = { data: await this.helpers.prepareBinaryData(Buffer.from(csv, 'utf8'), fileName, 'text/csv') };\n  out.push({ json: { fileName, type: g.type, 수집건수: g.rows.length, 목록총건수: g.expected, 본문비어있는건수: g.empty }, binary });\n}\nreturn out;\n"
+      },
+      "id": "138b5f0c-5e1b-42a2-9656-0f46b0e7e3a1",
+      "name": "본문 정리 및 CSV 만들기",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1104,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $json.fileName }}",
+        "options": {}
+      },
+      "id": "9f87ed4d-d0ad-45e6-9b80-9d7206093807",
+      "name": "CSV 파일 저장",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        1328,
+        0
+      ],
+      "disabled": true
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "시작(수동 실행)": {
+      "main": [
+        [
+          {
+            "node": "설정 및 페이지 펼치기",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "설정 및 페이지 펼치기": {
+      "main": [
+        [
+          {
+            "node": "목록 조회",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "목록 조회": {
+      "main": [
+        [
+          {
+            "node": "목록 정리",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "목록 정리": {
+      "main": [
+        [
+          {
+            "node": "상세 조회",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "상세 조회": {
+      "main": [
+        [
+          {
+            "node": "본문 정리 및 CSV 만들기",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "본문 정리 및 CSV 만들기": {
+      "main": [
+        [
+          {
+            "node": "CSV 파일 저장",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "34437df4-eef3-459b-9931-341c11aa8576",
+  "meta": {
+    "instanceId": "ab9f9699cb762f4a1fe3301e9ccaf6c0aeb08a34a8014fa9c9318ca2785ed0aa"
+  },
+  "nodeGroups": [],
+  "id": "T7e4TobJpiIGyWFz",
+  "tags": []
+}

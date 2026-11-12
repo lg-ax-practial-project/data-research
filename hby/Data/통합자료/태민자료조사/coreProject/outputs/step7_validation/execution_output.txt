@@ -1,0 +1,13 @@
+RECHECK_1 quality 3205/5554=57.71%
+RECHECK_2 direct_remedy 183/416=43.99% scope=2026Q2
+RAW_THREE_REMEDIES 147/416=35.34% settlement_and_standard_application=not_recorded
+RECHECK_3 ac_peak 1964/100.5=19.54x winter_months=14
+TREND appliance 2298/2392=-3.93%
+TREND all 63671/57657=+10.43%
+TREND appliance_share 4.15%->3.61%
+FAQ 30/71=42.25%
+SMALL 2026Q2 원문 처리결과별 건수 count= 6 부당행위시정:3, 처리불능:4, 취하,중지:8, 계약해제:9, 처리중:17, 교환:24
+SMALL 2026Q2 처리결과 품목별 분모 count= 13 식기건조기:1, 냉동고:4, 워시타워:5, 의류관리기:5, 제습기:5, 오븐·전자레인지:7, 의류건조기:8, 공기청정기:9, 김치냉장고:15, 인덕션레인지:16, 가습기:19, 식기세척기:21, 정수기:24
+SMALL 가전 피해구제 품목별 분모 count= 2 식기건조기:14, 워시타워:18
+SMALL 표준답변 질문유형별 건수 count= 7 감가상각·보상액:3, 부품:3, 수리·고장 일반:5, 보증기간·무상수리:9, 설치·배송:13, 교환·환급:15, 기타:23
+SMALL 표준답변 품목별 분모 count= 3 냉장고:22, 룸에어컨:23, TV:26
