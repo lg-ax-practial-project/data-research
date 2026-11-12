@@ -1,5 +1,0 @@
-# 아래 경로를 변경하는 PR은 코드 오너 승인 없이는 병합할 수 없음
-# (Ruleset에서 "Require review from Code Owners"를 켜야 적용됨)
-
-/decisions/   @Ahnjiseong
-/.github/     @Ahnjiseong
