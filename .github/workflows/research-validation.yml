@@ -1,0 +1,143 @@
+name: Research Validation
+
+on:
+  pull_request:
+    branches: [main]
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+      - edited
+      - labeled
+      - unlabeled
+
+# 같은 PR에서 연달아 실행될 때 이전 실행을 취소 (자동 병합 켜기/끄기 꼬임 방지)
+concurrency:
+  group: research-validation-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  validate-research:
+    name: validate-research
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate PR title
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        shell: bash
+        run: |
+          if ! [[ "$PR_TITLE" =~ ^(docs|data|fix|chore):[[:space:]].+ ]]; then
+            echo "::error::PR 제목 형식 오류 — 'docs: 조사 주제' 형식으로 작성하세요"
+            echo "예시: docs: 공기청정기 고객 리뷰 조사"
+            exit 1
+          fi
+
+      - name: Validate research files
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os
+          import subprocess
+          from pathlib import Path
+
+          allowed_ext = {
+              ".md", ".txt", ".csv", ".json",
+              ".pdf", ".xlsx", ".png", ".jpg", ".jpeg",
+          }
+          allowed_names = {".gitignore", ".gitkeep", "LICENSE", "CODEOWNERS"}
+          ignored_dirs = {".git", ".github"}
+          max_size = 20 * 1024 * 1024
+          errors = []
+
+          # 1) 레포 전체 파일 형식·용량 검사
+          for path in Path(".").rglob("*"):
+              if not path.is_file():
+                  continue
+              if any(part in ignored_dirs for part in path.parts):
+                  continue
+              if path.name not in allowed_names and path.suffix.lower() not in allowed_ext:
+                  errors.append(f"허용되지 않은 파일: {path}")
+              if path.stat().st_size > max_size:
+                  errors.append(f"20MB 초과 파일 (외부 저장소 링크로 대체): {path}")
+
+          # 2) 이번 PR에서 추가·수정된 research/ 문서의 출처·조사일 검사
+          result = subprocess.run(
+              ["git", "diff", "--name-only", "--diff-filter=AM", "-z",
+               f"{os.environ['BASE_SHA']}...HEAD"],
+              capture_output=True, check=True,
+          )
+          changed = [os.fsdecode(n) for n in result.stdout.split(b"\0") if n]
+
+          for name in changed:
+              path = Path(name)
+              if path.suffix.lower() != ".md" or not path.is_relative_to("research"):
+                  continue
+              content = path.read_text(encoding="utf-8")
+              for key in ("출처:", "조사일:"):
+                  if key not in content:
+                      errors.append(f"{key} 누락: {name}")
+
+          if errors:
+              for e in errors:
+                  print(f"::error::{e}")
+              raise SystemExit(1)
+
+          print("Research validation passed")
+          PY
+
+  auto-merge:
+    needs: validate-research
+    if: >-
+      github.event.pull_request.draft == false &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Enable or skip auto-merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          REPO: ${{ github.repository }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+        shell: bash
+        run: |
+          files=$(gh pr view "$PR_URL" --json files --jq '.files[].path')
+          labels=$(gh pr view "$PR_URL" --json labels --jq '.labels[].name')
+
+          # 보조 장치: 실제 차단은 Ruleset + CODEOWNERS가 담당
+          if echo "$files" | grep -qE '^(decisions/|\.github/)' ||
+             echo "$labels" | grep -qx 'needs-review'; then
+            echo "사람 검토 대상 PR — 자동 병합 해제"
+            gh pr merge --disable-auto "$PR_URL" || true
+            exit 0
+          fi
+
+          echo "자동 Squash Merge 설정"
+          gh pr merge --auto --squash "$PR_URL"
+
+          # 봇이 병합한 경우 브랜치 자동 삭제가 동작하지 않으므로 직접 삭제
+          sleep 5
+          state=$(gh pr view "$PR_URL" --json state --jq '.state')
+          if [ "$state" = "MERGED" ]; then
+            echo "병합 완료 — 작업 브랜치 삭제: $HEAD_REF"
+            gh api -X DELETE "repos/$REPO/git/refs/heads/$HEAD_REF" || true
+          else
+            echo "아직 병합 대기 중 (state: $state) — 브랜치는 병합 후 수동 정리"
+          fi
