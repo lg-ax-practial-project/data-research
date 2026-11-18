@@ -1,0 +1,41 @@
+# Local backups, preserved source material, and cleanup tools
+/.local/
+
+# Credentials and private tool configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+/.aws/
+/.codex/
+*.pem
+*.key
+
+# Python environments and generated caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS, editor, and Office temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+.~lock.*#
+*.swp
+*.swo
+*.tmp
+*.log
+
+# Local databases and their transaction files
+*.sqlite
+*.sqlite3
+*.db
+*.sqlite-wal
+*.sqlite-shm
+*.db-wal
+*.db-shm
