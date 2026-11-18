@@ -1,0 +1,557 @@
+{
+  "name": "세탁 고민 수집 - 네이버 API HUB + LG 세탁기 유튜브 - CSV 출력",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "node-1",
+      "name": "실행",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "key-0",
+              "name": "X-NCP-APIGW-API-KEY-ID",
+              "value": "PUT_NCP_API_KEY_ID_HERE",
+              "type": "string"
+            },
+            {
+              "id": "key-1",
+              "name": "X-NCP-APIGW-API-KEY",
+              "value": "PUT_NCP_API_KEY_HERE",
+              "type": "string"
+            },
+            {
+              "id": "key-2",
+              "name": "YOUTUBE_API_KEY",
+              "value": "PUT_YOUTUBE_API_KEY_HERE",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "node-2",
+      "name": "API 키 입력",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const c=$input.first().json;\nfor(const k of ['X-NCP-APIGW-API-KEY-ID','X-NCP-APIGW-API-KEY','YOUTUBE_API_KEY']) {\n if(!c[k] || c[k].startsWith('PUT_')) throw new Error('API 키 입력 노드에서 '+k+' 값을 입력하세요.');\n c[k]=c[k].trim();\n}\nreturn [{json:c}];",
+        "mode": "runOnceForAllItems"
+      },
+      "id": "node-3",
+      "name": "설정 확인",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const queries=['같이 빨아도 되나요','같이 세탁해도 되나요','수건 옷 같이 세탁','흰옷 색깔옷 같이 세탁','청바지 티셔츠 같이 세탁','단독세탁 꼭 해야','분리세탁 기준','빨래 분류 귀찮다'];\nreturn queries.flatMap(query=>['kin','cafearticle','blog'].map(source=>({json:{query,source}})));",
+        "mode": "runOnceForAllItems"
+      },
+      "id": "node-4",
+      "name": "네이버 요청 목록",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        660,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "=https://naverapihub.apigw.ntruss.com/search/v1/{{$json.source}}",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{$json.query}}"
+            },
+            {
+              "name": "display",
+              "value": "30"
+            },
+            {
+              "name": "start",
+              "value": "1"
+            },
+            {
+              "name": "sort",
+              "value": "sim"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-NCP-APIGW-API-KEY-ID",
+              "value": "={{$('설정 확인').first().json['X-NCP-APIGW-API-KEY-ID']}}"
+            },
+            {
+              "name": "X-NCP-APIGW-API-KEY",
+              "value": "={{$('설정 확인').first().json['X-NCP-APIGW-API-KEY']}}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000,
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 500
+            }
+          },
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "node-5",
+      "name": "네이버 검색 API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        880,
+        200
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "function clean(s){return String(s??'').replace(/<[^>]*>/g,'').replace(/&quot;/g,'\"').replace(/&#39;|&apos;/g,\"'\").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}\nconst records=new Map(),requests=[],errors=[];\nfor(const [i,item] of $input.all().entries()) {\n const context=$('네이버 요청 목록').itemMatching(i).json;\n const r=item.json,b=r.body??{};\n if(r.error||r.statusCode!==200||!Array.isArray(b.items)) {errors.push({stage:'naver_search',source:context.source,query:context.query,status_code:r.statusCode??null,message:'검색 실패: 키·권한·한도 또는 네트워크 상태를 확인하세요.'});continue;}\n requests.push({...context,returned:b.items.length,total_reported:b.total??null});\n for(const v of b.items){\n  const key=context.source+':'+v.link;\n  if(records.has(key)){const old=records.get(key);if(!old.matched_queries.includes(context.query))old.matched_queries.push(context.query);continue;}\n  records.set(key,{platform:'naver',source:context.source,url:v.link,title:clean(v.title),text:clean(v.description),text_scope:'search_result_description_not_full_body',published_at:v.postdate??null,matched_queries:[context.query],review_status:'미검토'});\n }\n}\nreturn [{json:{records:[...records.values()],requests,errors}}];",
+        "mode": "runOnceForAllItems"
+      },
+      "id": "node-6",
+      "name": "네이버 결과 정리",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return ['LG 트롬 세탁기 사용법','LG 워시타워 사용 후기','LG 세탁기 세탁 코스'].map(query=>({json:{query}}));",
+        "mode": "runOnceForAllItems"
+      },
+      "id": "node-7",
+      "name": "유튜브 검색어",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1320,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://www.googleapis.com/youtube/v3/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "part",
+              "value": "snippet"
+            },
+            {
+              "name": "type",
+              "value": "video"
+            },
+            {
+              "name": "q",
+              "value": "={{$json.query}}"
+            },
+            {
+              "name": "maxResults",
+              "value": "5"
+            },
+            {
+              "name": "relevanceLanguage",
+              "value": "ko"
+            },
+            {
+              "name": "regionCode",
+              "value": "KR"
+            },
+            {
+              "name": "order",
+              "value": "relevance"
+            },
+            {
+              "name": "key",
+              "value": "={{$('설정 확인').first().json.YOUTUBE_API_KEY}}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000,
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 500
+            }
+          },
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "node-8",
+      "name": "유튜브 영상 검색",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1540,
+        200
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "function clean(s){return String(s??'').replace(/<[^>]*>/g,'').replace(/&quot;/g,'\"').replace(/&#39;|&apos;/g,\"'\").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}\nconst videos=new Map(),errors=[];\nfor(const [i,item] of $input.all().entries()){\n const query=$('유튜브 검색어').itemMatching(i).json.query,r=item.json,b=r.body??{};\n if(r.error||r.statusCode!==200||!Array.isArray(b.items)){errors.push({stage:'youtube_search',query,status_code:r.statusCode??null,message:'영상 검색 실패: YouTube Data API 활성화·키·한도를 확인하세요.'});continue;}\n for(const v of b.items){const id=v.id?.videoId;if(!id)continue;if(videos.has(id)){const old=videos.get(id);if(!old.matched_queries.includes(query))old.matched_queries.push(query);continue;}\n videos.set(id,{video_id:id,video_title:clean(v.snippet?.title),channel_title:clean(v.snippet?.channelTitle),video_url:'https://www.youtube.com/watch?v='+id,matched_queries:[query]});}\n}\nconst selected=[...videos.values()].slice(0,10);\nif(!selected.length)return [{json:{video_id:'',search_errors:errors}}];\nreturn selected.map((v,i)=>({json:{...v,...(i===0?{search_errors:errors}:{})}}));",
+        "mode": "runOnceForAllItems"
+      },
+      "id": "node-9",
+      "name": "영상 목록",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1760,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "has-video",
+              "leftValue": "={{$json.video_id}}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "node-10",
+      "name": "수집할 영상 있음",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1980,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://www.googleapis.com/youtube/v3/commentThreads",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "part",
+              "value": "snippet"
+            },
+            {
+              "name": "videoId",
+              "value": "={{$json.video_id}}"
+            },
+            {
+              "name": "maxResults",
+              "value": "100"
+            },
+            {
+              "name": "order",
+              "value": "time"
+            },
+            {
+              "name": "textFormat",
+              "value": "plainText"
+            },
+            {
+              "name": "key",
+              "value": "={{$('설정 확인').first().json.YOUTUBE_API_KEY}}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000,
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 500
+            }
+          },
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          },
+          "pagination": {
+            "pagination": {
+              "paginationMode": "updateAParameterInEachRequest",
+              "parameters": {
+                "parameters": [
+                  {
+                    "type": "qs",
+                    "name": "pageToken",
+                    "value": "={{$response.body.nextPageToken || \"\"}}"
+                  }
+                ]
+              },
+              "paginationCompleteWhen": "other",
+              "completeExpression": "={{$response.statusCode !== 200 || !$response.body.nextPageToken}}",
+              "limitPagesFetched": true,
+              "maxRequests": 2,
+              "requestInterval": 500
+            }
+          }
+        }
+      },
+      "id": "node-11",
+      "name": "유튜브 댓글 수집",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2200,
+        100
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "const naver=$('네이버 결과 정리').first().json;\nconst candidates=$('영상 목록').all().map(v=>v.json);\nconst errors=[...naver.errors,...candidates.flatMap(v=>v.search_errors??[])];\nconst videos=candidates.filter(v=>v.video_id).map(({search_errors,...v})=>v);\nconst comments=new Map(),coverage=new Map();\nfor(const [i,item] of $input.all().entries()){\n const r=item.json;\n if(!r.body&&!r.error&&!r.statusCode)continue;\n const ctx=$('영상 목록').itemMatching(i).json;\n const b=r.body??{};\n if(r.error||r.statusCode!==200||!Array.isArray(b.items)){\n  errors.push({stage:'youtube_comments',video_id:ctx.video_id,status_code:r.statusCode??null,reason:b.error?.errors?.[0]?.reason??'request_failed',message:'댓글 수집 실패 또는 댓글 비활성화. 해당 영상은 건너뛰었습니다.'});continue;\n }\n const cv=coverage.get(ctx.video_id)??{video_id:ctx.video_id,pages_fetched:0,comments_returned:0,more_pages_available:false};\n cv.pages_fetched++;cv.comments_returned+=b.items.length;cv.more_pages_available=Boolean(b.nextPageToken);coverage.set(ctx.video_id,cv);\n for(const t of b.items){const c=t.snippet?.topLevelComment,s=c?.snippet;if(!c?.id||!s)continue;\n comments.set(c.id,{platform:'youtube',source:'top_level_comment',comment_id:c.id,video_id:ctx.video_id,video_title:ctx.video_title,channel_title:ctx.channel_title,url:'https://www.youtube.com/watch?v='+ctx.video_id+'&lc='+c.id,text:s.textOriginal??s.textDisplay??'',published_at:s.publishedAt??null,updated_at:s.updatedAt??null,like_count:s.likeCount??0,reply_count:t.snippet?.totalReplyCount??0,matched_queries:ctx.matched_queries,review_status:'미검토'});}\n}\nconst records=[...naver.records,...comments.values()];\nconst status=errors.length?(records.length?'partial_success':'failed'):'success';\nconst report={schema_version:1,collected_at:new Date().toISOString(),status,summary:{naver_records:naver.records.length,youtube_videos:videos.length,youtube_comments:comments.size,errors:errors.length},scope:{naver:'검색어별·출처별 정확도순 첫 30건. 본문 전체 아님.',youtube:'검색어 3개 × 영상 최대 5개 검색, 중복 제거 후 최대 10개 영상. 영상별 최신 최상위 댓글 최대 2페이지(200건), 대댓글 제외.',deduplication:'이번 실행 안에서만 중복 제거. 재실행 간 중복 제거 및 누적 저장 없음.',classification:'AI 분류 및 키워드 필터링 없음. 자동 검색한 영상과 모든 결과의 관련성은 직접 검토 필요.'},naver_requests:naver.requests,youtube_videos:videos,youtube_coverage:[...coverage.values()],errors,records};\nreturn [{json:report}];",
+        "mode": "runOnceForAllItems"
+      },
+      "id": "node-12",
+      "name": "수집 결과 정리",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2450,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const report=$input.first().json;\nconst columns=['collected_at','platform','source','title','video_title','channel_title','text','url','published_at','updated_at','video_id','comment_id','like_count','reply_count','matched_queries','text_scope','review_status'];\nfunction cell(value){\n let text=Array.isArray(value)?value.join(' | '):String(value??'');\n // Prevent spreadsheet formula execution for externally supplied text.\n if(typeof value!=='number' && /^[\\s]*[=+@-]/.test(text))text=\"'\"+text;\n return '\"'+text.replace(/\"/g,'\"\"')+'\"';\n}\nconst rows=[columns.map(cell).join(',')];\nfor(const record of report.records) rows.push(columns.map(key=>cell(key==='collected_at'?report.collected_at:record[key])).join(','));\n// UTF-8 BOM and CRLF for Korean text in Excel; quoted values preserve commas/newlines.\nconst csv='\\uFEFF'+rows.join('\\r\\n')+'\\r\\n';\nconst stamp=report.collected_at.replace(/[:.]/g,'-');\nconst filename='laundry-research-'+stamp+'.csv';\nconst {records,...log}=report;\nlog.csv_notes='UTF-8 BOM, CRLF. matched_queries joined with |. Formula-like text is prefixed with an apostrophe for spreadsheet safety.';\nreturn [{json:{...report.summary,status:report.status,file_name:filename,errors:report.errors},binary:{\n data:{data:Buffer.from(csv,'utf8').toString('base64'),mimeType:'text/csv',fileName:filename,fileExtension:'csv'},\n collection_log:{data:Buffer.from(JSON.stringify(log,null,2),'utf8').toString('base64'),mimeType:'application/json',fileName:'collection-log-'+stamp+'.json',fileExtension:'json'}\n}}];",
+        "mode": "runOnceForAllItems"
+      },
+      "id": "node-13",
+      "name": "CSV 다운로드",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2700,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "width": 940,
+        "height": 300,
+        "content": "## 사용 방법\n1. API 키 입력 노드에 X-NCP-APIGW-API-KEY-ID / X-NCP-APIGW-API-KEY / YOUTUBE_API_KEY 입력\n2. Execute workflow 실행\n3. 마지막 CSV 다운로드 노드 → Binary → data → Download\n\nCSV: 한글용 UTF-8 BOM, 글/댓글당 한 행. matched_queries는 | 로 연결.\ncollection_log 파일에는 수집 조건·오류·영상별 수집 범위가 기록됩니다.\nNAVER API HUB 검색 API 사용 설정과 Google Cloud의 YouTube Data API v3 활성화가 필요합니다.\nAI 분류 없음. 제목·검색 요약·링크와 최상위 댓글을 CSV로 내보냅니다. 본문·대댓글 수집 없음.\n기본 제한: 네이버 8검색어 × 3출처 × 30건 / YouTube 최대 10영상 × 200댓글.\nAPI 키를 입력한 워크플로·실행 데이터는 공유하지 마세요.\n수동 실행 전용. 별도 클라우드 저장소나 유료 서비스 생성 없음."
+      },
+      "id": "node-14",
+      "name": "사용 안내",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        100,
+        -160
+      ]
+    }
+  ],
+  "connections": {
+    "실행": {
+      "main": [
+        [
+          {
+            "node": "API 키 입력",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "API 키 입력": {
+      "main": [
+        [
+          {
+            "node": "설정 확인",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "설정 확인": {
+      "main": [
+        [
+          {
+            "node": "네이버 요청 목록",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "네이버 요청 목록": {
+      "main": [
+        [
+          {
+            "node": "네이버 검색 API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "네이버 검색 API": {
+      "main": [
+        [
+          {
+            "node": "네이버 결과 정리",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "네이버 결과 정리": {
+      "main": [
+        [
+          {
+            "node": "유튜브 검색어",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "유튜브 검색어": {
+      "main": [
+        [
+          {
+            "node": "유튜브 영상 검색",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "유튜브 영상 검색": {
+      "main": [
+        [
+          {
+            "node": "영상 목록",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "영상 목록": {
+      "main": [
+        [
+          {
+            "node": "수집할 영상 있음",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "수집할 영상 있음": {
+      "main": [
+        [
+          {
+            "node": "유튜브 댓글 수집",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "수집 결과 정리",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "유튜브 댓글 수집": {
+      "main": [
+        [
+          {
+            "node": "수집 결과 정리",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "수집 결과 정리": {
+      "main": [
+        [
+          {
+            "node": "CSV 다운로드",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "tags": []
+}
