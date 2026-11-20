@@ -1,0 +1,297 @@
+{
+  "research_date": "2026-11-09",
+  "packaged_date": "2026-11-18",
+  "source_commit": "a28352d33c1e1c593139f6fb8397acbdbb3aa1dc",
+  "file_count": 32,
+  "note": "Existing CSV/JSON output values and contents are preserved. Git may normalize CRLF to LF. bytes/sha256 describe the Git blob; original_bytes/original_sha256 describe the backed-up source. Paths inside outputs remain historical identifiers.",
+  "files": [
+    {
+      "file": "검증_v1/전체_자료목록.csv",
+      "original_file": "research/topic-discovery/검증_v1/전체_자료목록.csv",
+      "bytes": 120052,
+      "sha256": "a2b8e71e02ed801c8acd61d7c726032ad4476803eba541960e4b3733139ffa90",
+      "original_bytes": 121041,
+      "original_sha256": "9aedd7d19fa0538900a6e97b813b4ef3537b950564f4e7ad7d9352642de6d5cc",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v1/피해구제_연도별.csv",
+      "original_file": "research/topic-discovery/검증_v1/피해구제_연도별.csv",
+      "bytes": 165,
+      "sha256": "158a40816b9d5bffd408203312b44306964fa218013214e294bfa1f040dce49b",
+      "original_bytes": 169,
+      "original_sha256": "3b745a5596da52bf68e7a0d38301fa773f48143250820245845a73deca831875",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v1/피해구제_원본파일별.csv",
+      "original_file": "research/topic-discovery/검증_v1/피해구제_원본파일별.csv",
+      "bytes": 1606,
+      "sha256": "2be31e362ab6d7a00a7e7ec99500f6fce388414148f7e07d7de546de187dc4f4",
+      "original_bytes": 1617,
+      "original_sha256": "c15e7df28e702766a5f03823cd70fd9f16836c335615ab7e58247bf18ef8c280",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v2/TV_표준질문_원본대조.csv",
+      "original_file": "research/topic-discovery/검증_v2/TV_표준질문_원본대조.csv",
+      "bytes": 6435,
+      "sha256": "f2d6e77e8aeff999271854cc3f9b564b670e92efbb020d685cfd0dbf01d6716b",
+      "original_bytes": 6462,
+      "original_sha256": "ba847ca6f625ae4dcf63439e6f55ef6321f351c13c7fd25b487108b0d1ee94c4",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v2/공식통계_동일파일사본.csv",
+      "original_file": "research/topic-discovery/검증_v2/공식통계_동일파일사본.csv",
+      "bytes": 3549,
+      "sha256": "7eb3ec68d5bda491983af5f3cf8e9920376ef64038490ac7b3bead55a1641547",
+      "original_bytes": 3559,
+      "original_sha256": "7bfe6edbdbb01cd10d34f041a4436b66b2740f52430df88c0e8cc2e81967d20f",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v2/수치_재검산.csv",
+      "original_file": "research/topic-discovery/검증_v2/수치_재검산.csv",
+      "bytes": 1536,
+      "sha256": "3cea2c0c031430e19fb49448d4fa36cd2ece045c22fd3f4c471a628ed38c3555",
+      "original_bytes": 1557,
+      "original_sha256": "0544df948ccd13165b1cc74ece02675ade93d3c6ff42de6ac410aafe1c27e234",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v2/에어컨_월별_원본대조.csv",
+      "original_file": "research/topic-discovery/검증_v2/에어컨_월별_원본대조.csv",
+      "bytes": 5143,
+      "sha256": "73b0120d7b70ea0609fbcac83ca2275ebcca520b3ac41d3f6d2b3003da040408",
+      "original_bytes": 5176,
+      "original_sha256": "d0994bd9f0cbda5baa717e86ae5bd1dc928f010755c969d7fc6c9770c05843d3",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v2/우선엑셀_시트목록.csv",
+      "original_file": "research/topic-discovery/검증_v2/우선엑셀_시트목록.csv",
+      "bytes": 2852,
+      "sha256": "58a821f8640a8e7942d1cb3d270eac15ce805344cc449d3d2f492bd7c2aa8dc1",
+      "original_bytes": 2869,
+      "original_sha256": "617ad18da632985cdea2b0ac277f0ec58c8114924a13307d0cc8a39c51f0ea40",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v2/유튜브3차_표본_열구조.csv",
+      "original_file": "research/topic-discovery/검증_v2/유튜브3차_표본_열구조.csv",
+      "bytes": 570,
+      "sha256": "99dee8cf38eae500c8be770f0e1d8f2af3d7ac430ef2d0069f42dfad97d4192a",
+      "original_bytes": 594,
+      "original_sha256": "0d8bafc52a8b5da0231fa8cc700a3d14d06128b1fc489ac4576407a97a33ffc6",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v2/전체_자료목록.csv",
+      "original_file": "research/topic-discovery/검증_v2/전체_자료목록.csv",
+      "bytes": 120052,
+      "sha256": "a2b8e71e02ed801c8acd61d7c726032ad4476803eba541960e4b3733139ffa90",
+      "original_bytes": 121041,
+      "original_sha256": "9aedd7d19fa0538900a6e97b813b4ef3537b950564f4e7ad7d9352642de6d5cc",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v2/집계결과.json",
+      "original_file": "research/topic-discovery/검증_v2/집계결과.json",
+      "bytes": 3413,
+      "sha256": "d5bc76bea94dd9ebec8650da6e94d6aa230635b2c4314744b201f9f160adaaee",
+      "original_bytes": 3556,
+      "original_sha256": "12a549ef522637c32f41463ec1a4748348b9455efd6c7b4addb632ec01bb410c",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v2/피해구제_연도별.csv",
+      "original_file": "research/topic-discovery/검증_v2/피해구제_연도별.csv",
+      "bytes": 165,
+      "sha256": "158a40816b9d5bffd408203312b44306964fa218013214e294bfa1f040dce49b",
+      "original_bytes": 169,
+      "original_sha256": "3b745a5596da52bf68e7a0d38301fa773f48143250820245845a73deca831875",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v2/피해구제_원본파일별.csv",
+      "original_file": "research/topic-discovery/검증_v2/피해구제_원본파일별.csv",
+      "bytes": 1606,
+      "sha256": "2be31e362ab6d7a00a7e7ec99500f6fce388414148f7e07d7de546de187dc4f4",
+      "original_bytes": 1617,
+      "original_sha256": "c15e7df28e702766a5f03823cd70fd9f16836c335615ab7e58247bf18ef8c280",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v3/TV_표준질문_원본대조.csv",
+      "original_file": "research/topic-discovery/검증_v3/TV_표준질문_원본대조.csv",
+      "bytes": 6435,
+      "sha256": "f2d6e77e8aeff999271854cc3f9b564b670e92efbb020d685cfd0dbf01d6716b",
+      "original_bytes": 6462,
+      "original_sha256": "ba847ca6f625ae4dcf63439e6f55ef6321f351c13c7fd25b487108b0d1ee94c4",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v3/공식통계_동일파일사본.csv",
+      "original_file": "research/topic-discovery/검증_v3/공식통계_동일파일사본.csv",
+      "bytes": 3549,
+      "sha256": "7eb3ec68d5bda491983af5f3cf8e9920376ef64038490ac7b3bead55a1641547",
+      "original_bytes": 3559,
+      "original_sha256": "7bfe6edbdbb01cd10d34f041a4436b66b2740f52430df88c0e8cc2e81967d20f",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v3/수치_재검산.csv",
+      "original_file": "research/topic-discovery/검증_v3/수치_재검산.csv",
+      "bytes": 1535,
+      "sha256": "28067a753bf157f1fd5929f15a77b962aae3935f836f14b8ff7600750a8695c0",
+      "original_bytes": 1556,
+      "original_sha256": "76243702656ccc44e67463a3aeccdeaff07f5d706d1572d31539b0e1fbd6b5b8",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v3/에어컨_월별_원본대조.csv",
+      "original_file": "research/topic-discovery/검증_v3/에어컨_월별_원본대조.csv",
+      "bytes": 5143,
+      "sha256": "73b0120d7b70ea0609fbcac83ca2275ebcca520b3ac41d3f6d2b3003da040408",
+      "original_bytes": 5176,
+      "original_sha256": "d0994bd9f0cbda5baa717e86ae5bd1dc928f010755c969d7fc6c9770c05843d3",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v3/우선엑셀_시트목록.csv",
+      "original_file": "research/topic-discovery/검증_v3/우선엑셀_시트목록.csv",
+      "bytes": 2852,
+      "sha256": "58a821f8640a8e7942d1cb3d270eac15ce805344cc449d3d2f492bd7c2aa8dc1",
+      "original_bytes": 2869,
+      "original_sha256": "617ad18da632985cdea2b0ac277f0ec58c8114924a13307d0cc8a39c51f0ea40",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v3/유튜브3차_표본_열구조.csv",
+      "original_file": "research/topic-discovery/검증_v3/유튜브3차_표본_열구조.csv",
+      "bytes": 570,
+      "sha256": "99dee8cf38eae500c8be770f0e1d8f2af3d7ac430ef2d0069f42dfad97d4192a",
+      "original_bytes": 594,
+      "original_sha256": "0d8bafc52a8b5da0231fa8cc700a3d14d06128b1fc489ac4576407a97a33ffc6",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v3/전체_자료목록.csv",
+      "original_file": "research/topic-discovery/검증_v3/전체_자료목록.csv",
+      "bytes": 120052,
+      "sha256": "a2b8e71e02ed801c8acd61d7c726032ad4476803eba541960e4b3733139ffa90",
+      "original_bytes": 121041,
+      "original_sha256": "9aedd7d19fa0538900a6e97b813b4ef3537b950564f4e7ad7d9352642de6d5cc",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v3/집계결과.json",
+      "original_file": "research/topic-discovery/검증_v3/집계결과.json",
+      "bytes": 3413,
+      "sha256": "5080622b1442157cddc19f6c779e5fbe7472aa3458270050a9f9e9f8de2ece34",
+      "original_bytes": 3556,
+      "original_sha256": "48e9eca744f9f6635db62ff344d707098bed26e3f82cc0a633261d59ea13c028",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v3/피해구제_연도별.csv",
+      "original_file": "research/topic-discovery/검증_v3/피해구제_연도별.csv",
+      "bytes": 165,
+      "sha256": "158a40816b9d5bffd408203312b44306964fa218013214e294bfa1f040dce49b",
+      "original_bytes": 169,
+      "original_sha256": "3b745a5596da52bf68e7a0d38301fa773f48143250820245845a73deca831875",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "검증_v3/피해구제_원본파일별.csv",
+      "original_file": "research/topic-discovery/검증_v3/피해구제_원본파일별.csv",
+      "bytes": 1606,
+      "sha256": "2be31e362ab6d7a00a7e7ec99500f6fce388414148f7e07d7de546de187dc4f4",
+      "original_bytes": 1617,
+      "original_sha256": "c15e7df28e702766a5f03823cd70fd9f16836c335615ab7e58247bf18ef8c280",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "목적선정15사례_메인판정.csv",
+      "original_file": "research/topic-discovery/목적선정15사례_메인판정.csv",
+      "bytes": 3502,
+      "sha256": "3825a1e7bdf1f9e8d33c51a484a48321aa4ded237a8bc6b1c07c97c70074f57d",
+      "original_bytes": 3518,
+      "original_sha256": "f6b5a66504b769fb73e02b012ef695fc2f35f69cb4b1d35e2f1a1837a75a3d95",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "인사이트_근거표.csv",
+      "original_file": "research/topic-discovery/인사이트_근거표.csv",
+      "bytes": 10516,
+      "sha256": "26073df0080614f996d9a4dfa4f5ccc8da2c23eef923fe9b4abfb2e021062867",
+      "original_bytes": 10529,
+      "original_sha256": "0edeffc5b97d70f020ef236062f41c7beccbb2c536e36dee1ccec207d7be8930",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "정성검토_v1/라벨_재집계.csv",
+      "original_file": "research/topic-discovery/정성검토_v1/라벨_재집계.csv",
+      "bytes": 19129,
+      "sha256": "d942646bb192e86a461da7e329512fdfeb7480ffa5b2378f42c833bce50fec2b",
+      "original_bytes": 19197,
+      "original_sha256": "575a649983fd4828a2e39b2ba764048c852b11186e2705d93adda070e49939cf",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "정성검토_v1/목적선정_사례발췌.csv",
+      "original_file": "research/topic-discovery/정성검토_v1/목적선정_사례발췌.csv",
+      "bytes": 8327,
+      "sha256": "77809f870b63fd02e3ac194e2ddb8848e268822247f1ffd299e6f8af67245d09",
+      "original_bytes": 8343,
+      "original_sha256": "8a2b1a1a5667f80a6c23f2aaed1e27eaf949e98ac19b4be53eeffdaf10321923",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "주요비율_계산.csv",
+      "original_file": "research/topic-discovery/주요비율_계산.csv",
+      "bytes": 817,
+      "sha256": "d9e42a2b7eba6342acac05310c32fa637ae7a7851a3e9499079cac4527c5104e",
+      "original_bytes": 828,
+      "original_sha256": "1eac8fea7a2db0ecbb306d9aad714ca104db155b425f7171c76351ad65acd001",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "추적검증_v1/가공본_수집본_행연결.csv",
+      "original_file": "research/topic-discovery/추적검증_v1/가공본_수집본_행연결.csv",
+      "bytes": 1054819,
+      "sha256": "a2e6ef5869edd059d447749f0133a142c26ef5c50bee1174f313ef1018327051",
+      "original_bytes": 1058653,
+      "original_sha256": "5262b16f62b7c7945c0df9f4622c992a0df64231fa2156244182a9905baef3a8",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "추적검증_v1/추적검증_요약.json",
+      "original_file": "research/topic-discovery/추적검증_v1/추적검증_요약.json",
+      "bytes": 608,
+      "sha256": "e6ad6b812d64e7ca9071f2832e458ae4c6967ea5981fdec43c5f72868bd16a70",
+      "original_bytes": 630,
+      "original_sha256": "741684ab5436b814b9a89446ee2abca98d7754a54fb538d776075bc04332790c",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "추적검증_v2/가공본_수집본_행연결.csv",
+      "original_file": "research/topic-discovery/추적검증_v2/가공본_수집본_행연결.csv",
+      "bytes": 1105067,
+      "sha256": "32814b9a426e7203e74317e963c04954e76b424d10aa441346cb472e3e1a3e6e",
+      "original_bytes": 1108901,
+      "original_sha256": "0b5bd9060e8f89dd2f3d2ac71b22d7275c2fb872d7b3f05b44935c11164fafca",
+      "git_line_endings_normalized": true
+    },
+    {
+      "file": "추적검증_v2/추적검증_요약.json",
+      "original_file": "research/topic-discovery/추적검증_v2/추적검증_요약.json",
+      "bytes": 759,
+      "sha256": "9922ea873b79a6e8bb60bf3549e89e2c961bda4aa7c1594c5235b2544df71ef1",
+      "original_bytes": 784,
+      "original_sha256": "f9f5f83bf51aaa471bd8cac424b98baa72d0c3be83ad48fc894ebc0e7a203ebe",
+      "git_line_endings_normalized": true
+    }
+  ]
+}
