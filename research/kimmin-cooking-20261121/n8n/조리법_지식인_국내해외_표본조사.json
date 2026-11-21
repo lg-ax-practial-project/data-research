@@ -1,0 +1,367 @@
+{
+  "name": "지식iN 조리법 검색 - 국내·해외 단서 비교",
+  "active": false,
+  "nodes": [
+    {
+      "name": "시작",
+      "id": "2588ff21-f5e9-48b2-8d76-06f419f55c10",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        250
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "API 키 설정",
+      "id": "42376f12-d8b7-4085-b7da-5ffeb0033d3b",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        230,
+        250
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c97e79d1-d0f1-492c-9864-e4b4e92b58f3",
+              "name": "NAVER_ID",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "881e8a67-e860-440c-bb5e-a3583c0ae279",
+              "name": "NAVER_SECRET",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "name": "검색 요청 준비",
+      "id": "ab600952-afcf-43f3-ad97-26e1ac16e27f",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        460,
+        250
+      ],
+      "parameters": {
+        "jsCode": "\nconst {NAVER_ID,NAVER_SECRET}=$input.first().json;\nif(!NAVER_ID||!NAVER_SECRET)throw Error('네이버 NCP ID·Secret을 입력하세요.');\nreturn Array.from({length:20},(_,i)=>({json:{\n url:'https://naverapihub.apigw.ntruss.com/search/v1/kin?query='+encodeURIComponent('조리법')+'&display=50&sort=sim&start='+(i*50+1),\n headers:{'X-NCP-APIGW-API-KEY-ID':NAVER_ID,'X-NCP-APIGW-API-KEY':NAVER_SECRET}\n}}));\n",
+        "mode": "runOnceForAllItems"
+      }
+    },
+    {
+      "name": "검색 API 호출",
+      "id": "aab96aa7-473f-4eeb-af8c-d7c705ef1310",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        690,
+        250
+      ],
+      "parameters": {
+        "url": "={{$json.url}}",
+        "options": {
+          "timeout": 60000,
+          "batching": {
+            "batch": {
+              "batchSize": 2,
+              "batchInterval": 500
+            }
+          },
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        },
+        "sendHeaders": true,
+        "specifyHeaders": "json",
+        "jsonHeaders": "={{ JSON.stringify($json.headers || {}) }}"
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "name": "표본 집계",
+      "id": "f6ced83d-2b9c-43ea-af7c-b1722a0e9007",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        920,
+        250
+      ],
+      "parameters": {
+        "jsCode": "\nconst results=$input.all(); const rows=new Map(), totals=[];\nlet success=0;\nfor(const {json:r} of results){\n const b=r.body;\n if(Number(r.statusCode)!==200||!Array.isArray(b?.items))continue;\n success++;if(Number.isFinite(b.total))totals.push(b.total);\n for(const v of b.items){\n  const link=String(v.link||'');\n  if(!/^https?:\\/\\/(?:m\\.)?kin\\.naver\\.com\\/qna\\/detail\\.naver\\?/i.test(link))continue;\n  const id=link.match(/[?&]docId=(\\d+)(?:[&#]|$)/i)?.[1];\n  if(id&&!rows.has(id))rows.set(id,{title:String(v.title||'').replace(/<\\/?b>/gi,'').replace(/&quot;/g,'\"').replace(/&amp;/g,'&'),link,url:link.replace(/^https?:\\/\\/(?:m\\.)?kin\\.naver\\.com/i,'https://kin.naver.com')});\n }\n}\nif(!success)throw Error('지식iN 검색 응답을 읽지 못했습니다. 검색 API 호출의 HTTP 상태를 확인하세요.');\nreturn [{json:{rows:[...rows.values()],total:totals[0]??null,success,failed:results.length-success}}];\n",
+        "mode": "runOnceForAllItems"
+      }
+    },
+    {
+      "name": "엑셀 다운로드",
+      "id": "5429f63e-d134-40b1-83c3-07dc6d6826de",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2300,
+        250
+      ],
+      "parameters": {
+        "jsCode": "const report=$input.first().json;\n const esc=s=>String(s??'').replace(/[\\x00-\\x08\\x0B\\x0C\\x0E-\\x1F]/g,'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\"/g,'&quot;').replace(/'/g,'&apos;');\n const columns=['제목','질문자 본문','원본 링크','식품 구분 후보'];\n const specs=[{name:'검색건수',columns:['항목','건수','전체 수집 질문 대비'],rows:report.summary,widths:[50,18,24],linkColumn:-1},{name:'질문목록',columns,rows:report.cases,widths:[48,110,60,30],linkColumn:2}];\n const files=[];const put=(name,text)=>files.push({name,data:Buffer.from(text,'utf8')});\n const letter=i=>{let s='';for(i++;i;i=Math.floor((i-1)/26))s=String.fromCharCode(65+(i-1)%26)+s;return s;};\n for(const [index,spec]of specs.entries()){const rows=[spec.columns,...spec.rows.map(r=>spec.columns.map(c=>r[c]??''))],links=[];\n  const xmlRows=rows.map((row,i)=>'<row r=\"'+(i+1)+'\" ht=\"'+(i===0?28:spec.linkColumn<0?46:110)+'\" customHeight=\"1\">'+row.map((value,j)=>{const ref=letter(j)+(i+1),style=i===0?1:j===spec.linkColumn?3:2;if(i&&j===spec.linkColumn&&/^https?:\\/\\//i.test(String(value)))links.push({ref,url:String(value),id:'h'+i});if(typeof value==='number'&&Number.isFinite(value))return '<c r=\"'+ref+'\" s=\"'+style+'\"><v>'+value+'</v></c>';return '<c r=\"'+ref+'\" s=\"'+style+'\" t=\"inlineStr\"><is><t xml:space=\"preserve\">'+esc(String(value).slice(0,32700))+'</t></is></c>';}).join('')+'</row>').join('');\n  const sheet='<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><worksheet xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><dimension ref=\"A1:'+letter(spec.columns.length-1)+rows.length+'\"/><sheetViews><sheetView workbookViewId=\"0\"><pane ySplit=\"1\" topLeftCell=\"A2\" activePane=\"bottomLeft\" state=\"frozen\"/></sheetView></sheetViews><sheetFormatPr defaultRowHeight=\"20\"/><cols>'+spec.widths.map((width,j)=>'<col min=\"'+(j+1)+'\" max=\"'+(j+1)+'\" width=\"'+width+'\" customWidth=\"1\"/>').join('')+'</cols><sheetData>'+xmlRows+'</sheetData><autoFilter ref=\"A1:'+letter(spec.columns.length-1)+rows.length+'\"/>'+(links.length?'<hyperlinks>'+links.map(l=>'<hyperlink ref=\"'+l.ref+'\" r:id=\"'+l.id+'\"/>').join('')+'</hyperlinks>':'')+'</worksheet>';\n  put('xl/worksheets/sheet'+(index+1)+'.xml',sheet);if(links.length)put('xl/worksheets/_rels/sheet'+(index+1)+'.xml.rels','<?xml version=\"1.0\" encoding=\"UTF-8\"?><Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">'+links.map(l=>'<Relationship Id=\"'+l.id+'\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink\" Target=\"'+esc(l.url)+'\" TargetMode=\"External\"/>').join('')+'</Relationships>');\n }\n put('[Content_Types].xml','<?xml version=\"1.0\" encoding=\"UTF-8\"?><Types xmlns=\"http://schemas.openxmlformats.org/package/2006/content-types\"><Default Extension=\"rels\" ContentType=\"application/vnd.openxmlformats-package.relationships+xml\"/><Default Extension=\"xml\" ContentType=\"application/xml\"/><Override PartName=\"/xl/workbook.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml\"/><Override PartName=\"/xl/styles.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml\"/>'+specs.map((_,i)=>'<Override PartName=\"/xl/worksheets/sheet'+(i+1)+'.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml\"/>').join('')+'</Types>');\n put('_rels/.rels','<?xml version=\"1.0\" encoding=\"UTF-8\"?><Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\"><Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument\" Target=\"xl/workbook.xml\"/></Relationships>');\n put('xl/workbook.xml','<?xml version=\"1.0\" encoding=\"UTF-8\"?><workbook xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><sheets>'+specs.map((s,i)=>'<sheet name=\"'+esc(s.name)+'\" sheetId=\"'+(i+1)+'\" r:id=\"rId'+(i+1)+'\"/>').join('')+'</sheets></workbook>');\n put('xl/_rels/workbook.xml.rels','<?xml version=\"1.0\" encoding=\"UTF-8\"?><Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">'+specs.map((_,i)=>'<Relationship Id=\"rId'+(i+1)+'\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet\" Target=\"worksheets/sheet'+(i+1)+'.xml\"/>').join('')+'<Relationship Id=\"styles\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles\" Target=\"styles.xml\"/></Relationships>');\n put('xl/styles.xml','<?xml version=\"1.0\" encoding=\"UTF-8\"?><styleSheet xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><fonts count=\"3\"><font><sz val=\"11\"/><name val=\"맑은 고딕\"/></font><font><b/><color rgb=\"FFFFFFFF\"/><sz val=\"11\"/><name val=\"맑은 고딕\"/></font><font><color rgb=\"FF0563C1\"/><u/><sz val=\"11\"/><name val=\"맑은 고딕\"/></font></fonts><fills count=\"3\"><fill><patternFill patternType=\"none\"/></fill><fill><patternFill patternType=\"gray125\"/></fill><fill><patternFill patternType=\"solid\"><fgColor rgb=\"FF263D4F\"/><bgColor indexed=\"64\"/></patternFill></fill></fills><borders count=\"1\"><border><left/><right/><top/><bottom/><diagonal/></border></borders><cellStyleXfs count=\"1\"><xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\"/></cellStyleXfs><cellXfs count=\"4\"><xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\" xfId=\"0\"/><xf numFmtId=\"0\" fontId=\"1\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyAlignment=\"1\"><alignment vertical=\"center\" wrapText=\"1\"/></xf><xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyAlignment=\"1\"><alignment vertical=\"top\" wrapText=\"1\"/></xf><xf numFmtId=\"0\" fontId=\"2\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyAlignment=\"1\"><alignment vertical=\"top\" wrapText=\"1\"/></xf></cellXfs><cellStyles count=\"1\"><cellStyle name=\"Normal\" xfId=\"0\" builtinId=\"0\"/></cellStyles></styleSheet>');\n const crcTable=Array.from({length:256},(_,n)=>{let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;return c>>>0;});const crc32=data=>{let c=0xFFFFFFFF;for(const byte of data)c=crcTable[(c^byte)&255]^(c>>>8);return (c^0xFFFFFFFF)>>>0;};\n const parts=[],central=[];let offset=0;for(const f of files){const name=Buffer.from(f.name,'utf8'),crc=crc32(f.data),h=Buffer.alloc(30);h.writeUInt32LE(0x04034b50,0);h.writeUInt16LE(20,4);h.writeUInt16LE(0x0800,6);h.writeUInt16LE(0,8);h.writeUInt16LE(0x21,12);h.writeUInt32LE(crc,14);h.writeUInt32LE(f.data.length,18);h.writeUInt32LE(f.data.length,22);h.writeUInt16LE(name.length,26);parts.push(h,name,f.data);const c=Buffer.alloc(46);c.writeUInt32LE(0x02014b50,0);c.writeUInt16LE(20,4);c.writeUInt16LE(20,6);c.writeUInt16LE(0x0800,8);c.writeUInt16LE(0x21,14);c.writeUInt32LE(crc,16);c.writeUInt32LE(f.data.length,20);c.writeUInt32LE(f.data.length,24);c.writeUInt16LE(name.length,28);c.writeUInt32LE(offset,42);central.push(c,name);offset+=h.length+name.length+f.data.length;}\n const directory=Buffer.concat(central),end=Buffer.alloc(22);end.writeUInt32LE(0x06054b50,0);end.writeUInt16LE(files.length,8);end.writeUInt16LE(files.length,10);end.writeUInt32LE(directory.length,12);end.writeUInt32LE(offset,16);const xlsx=Buffer.concat([...parts,directory,end]);const name='cooking-method-kin-'+report.collected_at.replace(/[:.]/g,'-')+'.xlsx';\n const file={data:xlsx.toString('base64'),mimeType:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',fileName:name,fileExtension:'xlsx'};\n return [{json:{file_name:name,sample:report.cases.length,bytes:xlsx.length},binary:{data:file}}];",
+        "mode": "runOnceForAllItems"
+      }
+    },
+    {
+      "name": "사용 안내",
+      "id": "eef3a3fb-fbcb-4442-9651-35db202ec27a",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        220,
+        -180
+      ],
+      "parameters": {
+        "width": 750,
+        "height": 380,
+        "content": "## 조리법 지식iN 검색\n검색어 조리법 하나. 정확도순 50건씩 최대 20페이지. 같은 질문 ID만 1건으로 계산. 본문의 국가·제품 표현을 기준으로 후보를 표시합니다. 국내·해외 단서가 없는 글과 본문 미확보도 전체 수집 질문을 분모로 집계합니다. 질문이 실제 조리법 문의인지, 포장식품인지, 식품 출처가 맞는지 발표 전 원문을 확인하세요."
+      }
+    },
+    {
+      "name": "원문 요청 준비",
+      "id": "4a0e418f-16ea-4be9-be22-1189173469b1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1150,
+        250
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst {rows}=$input.first().json;\nreturn rows.length?rows.map(row=>({json:row})):[{json:{skip:true,url:'https://kin.naver.com/robots.txt'}}];\n"
+      }
+    },
+    {
+      "name": "공개 원문 요청",
+      "id": "ee65f9ef-0695-41c8-a6da-d22d276cc40c",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1380,
+        250
+      ],
+      "parameters": {
+        "url": "={{$json.url}}",
+        "options": {
+          "timeout": 20000,
+          "batching": {
+            "batch": {
+              "batchSize": 2,
+              "batchInterval": 700
+            }
+          },
+          "redirect": {
+            "redirect": {
+              "followRedirects": false
+            }
+          },
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "text",
+              "outputPropertyName": "questionHtml"
+            }
+          }
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130.0.0.0 Safari/537.36"
+            }
+          ]
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "name": "작성자 본문 추출",
+      "id": "294ef341-a1b6-4d78-baf7-aaaef9d9ffe2",
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        1840,
+        250
+      ],
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "dataPropertyName": "body",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "kinQuestion",
+              "cssSelector": ".contentArea._contentWrap .questionDetail",
+              "returnValue": "text"
+            }
+          ]
+        },
+        "options": {},
+        "sourceData": "json"
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "name": "실사용 근거와 비율 집계",
+      "id": "1f000d35-42dd-410e-81a2-f0432701e934",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2070,
+        250
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst search=$('표본 집계').first().json, req=$('원문 요청 준비').all(), res=$('공개 원문 요청').all();\nconst cases=$input.all().flatMap((x,i)=>{\n const r=req[i]?.json;if(!r||r.skip)return [];\n return [{제목:r.title,'질문자 본문':Number(res[i]?.json.statusCode)===200?String(x.json.kinQuestion||'').trim():'','원본 링크':r.link}];\n});\nconst fetched=res.filter(x=>Number(x.json.statusCode)===200&&[x.json.questionHtml,x.json.data,x.json.body].some(v=>typeof v==='string'&&v.trim())).length;\nconst found=cases.filter(r=>r['질문자 본문']).length;\nconst summary=[{항목:'지식iN API 전체 검색 건수',건수:search.total??'미제공'},{항목:'최대 20페이지 수집 질문 (중복 제거)',건수:search.rows.length},{항목:'질문자 본문 확보',건수:found},{항목:'HTTP 200 HTML 확보',건수:fetched},{항목:'본문 미확보',건수:cases.length-found},{항목:'검색 실패 페이지',건수:search.failed}];\nconst labels=['해외 식품 명시','국내 식품 명시','국내·해외 혼재','원산지 불명·대상 미확인','본문 미확보'];\nconst foreign=/(?:해외|수입|외국산)\\s*(?:가공\\s*)?(?:식품|제품|간편식|냉동식품)|(?:일본|중국|미국|태국|베트남|대만|유럽|독일|프랑스|이탈리아)\\s*(?:산\\s*(?:식품|제품|라면|카레)|(?:여행\\s*중\\s*)?에서\\s*(?:사\\s*온|샀|구매한)|현지에서\\s*(?:사\\s*온|샀|구매한))/;\nconst domestic=/(?:국내산|국산|국내\\s*제조)\\s*(?:가공\\s*)?(?:식품|제품|간편식|냉동식품|라면|밀키트)|(?:국내|한국)에서\\s*(?:제조|생산)(?:한|된)/;\nfor(const r of cases){\n const body=r['질문자 본문'];\n const f=foreign.test(body),d=domestic.test(body);\n r['식품 구분 후보']=!body?labels[4]:f&&d?labels[2]:f?labels[0]:d?labels[1]:labels[3];\n}\nfor(const label of labels){\n const count=cases.filter(r=>r['식품 구분 후보']===label).length;\n summary.push({항목:label,건수:count,'전체 수집 질문 대비':cases.length?(count/cases.length*100).toFixed(1)+'%':'계산 불가'});\n}\nreturn [{json:{cases,summary,collected_at:new Date().toISOString()}}];\n"
+      }
+    },
+    {
+      "name": "본문 응답 정리",
+      "id": "fef15491-ebb0-4fce-b287-9749989fd73a",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1610,
+        250
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return $input.all().map((x,i)=>{\n const r=x.json, html=[r.questionHtml,r.data,r.body].find(v=>typeof v==='string'&&v.trim());\n return {json:{body:Number(r.statusCode)===200&&html?html:'<html></html>'},pairedItem:{item:i}};\n});"
+      }
+    }
+  ],
+  "connections": {
+    "시작": {
+      "main": [
+        [
+          {
+            "node": "API 키 설정",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "API 키 설정": {
+      "main": [
+        [
+          {
+            "node": "검색 요청 준비",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "검색 요청 준비": {
+      "main": [
+        [
+          {
+            "node": "검색 API 호출",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "검색 API 호출": {
+      "main": [
+        [
+          {
+            "node": "표본 집계",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "표본 집계": {
+      "main": [
+        [
+          {
+            "node": "원문 요청 준비",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "원문 요청 준비": {
+      "main": [
+        [
+          {
+            "node": "공개 원문 요청",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "공개 원문 요청": {
+      "main": [
+        [
+          {
+            "node": "본문 응답 정리",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "본문 응답 정리": {
+      "main": [
+        [
+          {
+            "node": "작성자 본문 추출",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "작성자 본문 추출": {
+      "main": [
+        [
+          {
+            "node": "실사용 근거와 비율 집계",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "실사용 근거와 비율 집계": {
+      "main": [
+        [
+          {
+            "node": "엑셀 다운로드",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "saveExecutionProgress": false
+  },
+  "pinData": {}
+}

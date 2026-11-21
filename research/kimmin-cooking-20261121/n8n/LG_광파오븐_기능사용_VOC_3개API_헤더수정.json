@@ -1,0 +1,386 @@
+{
+  "name": "LG 광파오븐 기능 사용 VOC 조사 - 헤더 수정",
+  "active": false,
+  "nodes": [
+    {
+      "name": "시작",
+      "id": "2588ff21-f5e9-48b2-8d76-06f419f55c10",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        250
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "API 키 설정",
+      "id": "42376f12-d8b7-4085-b7da-5ffeb0033d3b",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        250
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "afdad791-dad4-4685-bd02-9ac1e336654d",
+              "name": "YOUTUBE_KEY",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "c97e79d1-d0f1-492c-9864-e4b4e92b58f3",
+              "name": "NAVER_ID",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "881e8a67-e860-440c-bb5e-a3583c0ae279",
+              "name": "NAVER_SECRET",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "4a030aba-f07b-4b4b-99bc-404a7518bb86",
+              "name": "SERPAPI_KEY",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "a1950e30-e1a0-4996-8800-1ea9967de2ee",
+              "name": "NAVER_AUTH",
+              "value": "NCP",
+              "type": "string"
+            },
+            {
+              "id": "ca4613d4-dff5-43ad-9b05-13f4770dae33",
+              "name": "GOOGLE_PAGES",
+              "value": 3,
+              "type": "number"
+            },
+            {
+              "id": "7dae873d-cd87-4ebe-983a-7d99d0ca6c74",
+              "name": "NAVER_PAGES",
+              "value": 2,
+              "type": "number"
+            },
+            {
+              "id": "6f2bdc00-5285-44f7-b116-ba6a21a494df",
+              "name": "VIDEO_LIMIT",
+              "value": 70,
+              "type": "number"
+            },
+            {
+              "id": "836b0bfb-d8ac-4925-97c5-2077e63099b0",
+              "name": "SINCE",
+              "value": "2021-01-01",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "name": "검색 요청 준비",
+      "id": "ab600952-afcf-43f3-ad97-26e1ac16e27f",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        250
+      ],
+      "parameters": {
+        "jsCode": "\nconst c=$input.first().json;\nfor(const k of ['YOUTUBE_KEY','NAVER_ID','NAVER_SECRET','SERPAPI_KEY']) if(!String(c[k]||'').trim())throw Error('API 키 설정에 '+k+'를 입력하세요.');\nconst limits={GOOGLE_PAGES:10,NAVER_PAGES:10,VIDEO_LIMIT:200};\nfor(const [k,max] of Object.entries(limits))if(!Number.isInteger(c[k])||c[k]<1||c[k]>max)throw Error(k+' 범위: 1~'+max);\nconst [year,month,day]=c.SINCE.split('-');\nconst terms=['LG 광파오븐','엘지 광파오븐','디오스 광파오븐','LG 광파 오븐 사용 후기','LG 광파오븐 사용법','LG 광파오븐 요리','LG 광파오븐 전자레인지','LG 광파오븐 에어프라이어','LG 광파오븐 기능만','LG 광파오븐 활용 못','LG 광파오븐 잘 안 써요','LG 광파오븐 불편','디오스 광파오븐 전자렌지만','LG 광파오븐 기능 어렵다'];\nconst enc=o=>Object.entries(o).map(([k,v])=>k+'='+encodeURIComponent(v)).join('&');\nconst out=[];\nconst push=(source,query,url,headers={})=>out.push({json:{source,query,url,headers}});\nfor(const [i,q] of terms.entries()){\n const group=i<6?'일반':'유형 탐색';\n for(let page=0;page<c.GOOGLE_PAGES;page++)push('Google',group+' | '+q,'https://serpapi.com/search.json?'+enc({engine:'google',q:q.replace(/전자레인지/g,'(\"전자렌지\" OR \"전자레인지\")').replace(/에어프라이어/g,'(\"에어프라이어\" OR \"에어프라이기\")'),gl:'kr',hl:'ko',start:page*10,tbs:'cdr:1,cd_min:'+month+'/'+day+'/'+year,api_key:c.SERPAPI_KEY}));\n const classic=c.NAVER_AUTH==='NAVER';\n const headers=classic?{'X-Naver-Client-Id':c.NAVER_ID,'X-Naver-Client-Secret':c.NAVER_SECRET}:{'X-NCP-APIGW-API-KEY-ID':c.NAVER_ID,'X-NCP-APIGW-API-KEY':c.NAVER_SECRET};\n for(const category of ['blog','kin','cafearticle'])for(let page=0;page<c.NAVER_PAGES;page++)push('네이버 '+category,group+' | '+q,(classic?'https://openapi.naver.com/v1/search/'+category+'.json':'https://naverapihub.apigw.ntruss.com/search/v1/'+category)+'?'+enc({query:q,display:100,start:page*100+1,sort:'sim'}),headers);\n if(i<10)push('YouTube 영상',group+' | '+q,'https://www.googleapis.com/youtube/v3/search?'+enc({part:'snippet',type:'video',maxResults:50,q,publishedAfter:c.SINCE+'T00:00:00Z',regionCode:'KR',key:c.YOUTUBE_KEY}));\n}\nreturn out;\n",
+        "mode": "runOnceForAllItems"
+      }
+    },
+    {
+      "name": "검색 API 호출",
+      "id": "aab96aa7-473f-4eeb-af8c-d7c705ef1310",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        660,
+        250
+      ],
+      "parameters": {
+        "url": "={{$json.url}}",
+        "options": {
+          "timeout": 60000,
+          "batching": {
+            "batch": {
+              "batchSize": 2,
+              "batchInterval": 500
+            }
+          },
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        },
+        "sendHeaders": true,
+        "specifyHeaders": "json",
+        "jsonHeaders": "={{ JSON.stringify($json.headers || {}) }}"
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "name": "댓글 요청 준비",
+      "id": "e3b2fce6-1590-4b5d-91ce-bcb274c3f877",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        250
+      ],
+      "parameters": {
+        "jsCode": "\nconst c=$('API 키 설정').first().json;\nconst req=$('검색 요청 준비').all();\nconst videos=new Map();\nfor(const [i,x] of $input.all().entries()){\n const q=req[i]?.json;\n if(q?.source!=='YouTube 영상')continue;\n for(const v of x.json.body?.items||[]){\n  const title=v.snippet?.title||'', desc=v.snippet?.description||'';\n  if(!/광파\\s*오븐/.test(title+' '+desc)||!/lg|엘지|디오스/i.test(title+' '+desc+' '+v.snippet?.channelTitle))continue;\n  if(v.id?.videoId&&!videos.has(v.id.videoId))videos.set(v.id.videoId,{id:v.id.videoId,title,query:q.query});\n }\n}\nreturn [...videos.values()].slice(0,c.VIDEO_LIMIT).map(v=>({json:{...v,url:'https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&textFormat=plainText&order=relevance&maxResults=100&videoId='+v.id+'&key='+encodeURIComponent(c.YOUTUBE_KEY)}}));\n",
+        "mode": "runOnceForAllItems"
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "name": "YouTube 댓글 조회",
+      "id": "c876de8c-ee9b-4978-8f39-55309536665b",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1100,
+        250
+      ],
+      "parameters": {
+        "url": "={{$json.url || 'https://www.googleapis.com/youtube/v3/commentThreads'}}",
+        "options": {
+          "timeout": 60000,
+          "batching": {
+            "batch": {
+              "batchSize": 2,
+              "batchInterval": 500
+            }
+          },
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "name": "이동 링크 준비",
+      "id": "6fd45312-2c3b-4847-b1ee-b6755b9b4af7",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1320,
+        250
+      ],
+      "parameters": {
+        "jsCode": "\nconst req=$('검색 요청 준비').all(), out=new Set();\nfor(const [i,x] of $('검색 API 호출').all().entries()){\n if(req[i]?.json.source!=='Google')continue;\n for(const v of x.json.body?.organic_results||[])if(/^https:\\/\\/www\\.google\\.com\\/goto\\?[^\\s#]+$/i.test(v.link||''))out.add(v.link);\n}\nreturn out.size?[...out].map(url=>({json:{url}})):[{json:{url:'https://www.google.com/generate_204',skip:true}}];\n",
+        "mode": "runOnceForAllItems"
+      }
+    },
+    {
+      "name": "Google 원문 주소 확인",
+      "id": "9ed29798-fcd3-4683-845b-8017706d17a9",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1540,
+        250
+      ],
+      "parameters": {
+        "url": "={{$json.url}}",
+        "options": {
+          "timeout": 60000,
+          "batching": {
+            "batch": {
+              "batchSize": 2,
+              "batchInterval": 500
+            }
+          },
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "text"
+            }
+          },
+          "redirect": {
+            "redirect": {
+              "followRedirects": false
+            }
+          }
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0"
+            }
+          ]
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "name": "표본 집계",
+      "id": "f6ced83d-2b9c-43ea-af7c-b1722a0e9007",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1760,
+        250
+      ],
+      "parameters": {
+        "jsCode": "\nconst since=$('API 키 설정').first().json.SINCE;\nconst links=new Map(), requests=$('이동 링크 준비').all();\nfor(const [i,x] of $input.all().entries()){\n const q=requests[i]?.json;\n const target=x.json.headers?.location||'';\n if(!q?.skip&&/^https?:\\/\\/[^\\s]+$/i.test(target)&&!/^https?:\\/\\/(www\\.)?google\\./i.test(target))links.set(q.url,target);\n}\nconst req=$('검색 요청 준비').all(), rows=new Map(),stats={}, errors={};\nconst clean=s=>String(s||'').replace(/<[^>]*>/g,'').replace(/&quot;/g,'\"').replace(/&#39;|&apos;/g,\"'\").replace(/&amp;/g,'&').replace(/\\s+/g,' ').trim();\nconst date=s=>{ const m=String(s||'').match(/^(20\\d{2})[.\\/-]?(\\d{1,2})[.\\/-]?(\\d{1,2})(?=$|T|\\.|\\s)/);return m?m[1]+'-'+m[2].padStart(2,'0')+'-'+m[3].padStart(2,'0'):''; };\nconst types=[\n ['전자레인지 위주·전용',/(?:전자레인지|전자렌지|렌지)\\s*(?:기능\\s*)?(?:만|위주로|로만)/],\n ['에어프라이어 위주·전용',/(?:에어\\s*프라이[어기]|에어프라이|에프)\\s*(?:기능\\s*)?(?:만|위주로|로만)/],\n ['오븐 모드 위주·전용',/오븐\\s*(?:모드|기능)\\s*(?:만|위주로|로만)/],\n ['데우기·해동 위주',/(?:데우기|데우는\\s*용도|해동|데움)\\s*(?:기능\\s*)?(?:만|위주로|로만)/],\n ['기능 활용 어려움',/(?:기능|모드|사용법).{0,20}(?:모르|어려|헷갈)|제대로\\s*(?:못\\s*쓰|못\\s*쓰고|못\\s*써)|활용.{0,8}(?:못|어렵)|(?:오븐|에어프라이어)\\s*(?:기능|모드).{0,10}(?:안\\s*쓰|안\\s*써|거의\\s*안)/],\n ['가전 자체를 잘 안 씀',/(?:거의|잘|별로)\\s*안\\s*(?:쓰|써|사용)|손이\\s*안\\s*가/],\n];\nfunction collect(source,query,title,body,url,rawDate,video=false){\n title=clean(title);body=clean(body);const s=video?body:title+' '+body;\n if(video?!/[가-힣]/.test(body):!(/광파\\s*오븐/.test(s)&&/lg|엘지|디오스/i.test(s)))return;\n const d=date(rawDate);if(d&&d<since){stats['기간 이전 제외']=(stats['기간 이전 제외']||0)+1;return;}\n const key=url.replace(/^http:/,'https:').replace(/#.*$/,'').replace(/([?&])(?:utm_[a-z_]+|fbclid|gclid)=[^&]*&?/gi,'$1').replace(/[?&\\/]$/,'').replace(/:\\/\\/m\\.(blog|cafe|kin)\\.naver\\.com/,'://$1.naver.com');\n if(rows.has(key))return;\n const own=/(?:쓰고|써요|씁니다|쓰네요|써왔|쓰는데|쓰다가|사용\\s*(?:중|하고\\s*있|합니다|해요)|돌려요|돌리고|샀는데|구매했|모르겠|헷갈려|못\\s*쓰|못\\s*써|손이\\s*안\\s*가|안\\s*써|안\\s*쓰)/.test(s);\n const matches=own?types.map(([label,re])=>[label,re.exec(s)]).filter(([,m])=>m):[];\n rows.set(key,{'작성일':d||'미확인','출처':source,'제목·영상':title,'내용':body,'링크':url,'검색어':query,'사용 패턴 후보':matches.map(([label])=>label).join(' / '),'근거 표현':matches.map(([,m])=>s.slice(Math.max(0,m.index-10),m.index+m[0].length+34)).join(' / '),'최종 검토':'','최종 유형':''});\n}\nfor(const [i,x]of $('검색 API 호출').all().entries()){\n const q=req[i]?.json;if(!q)continue;const b=x.json.body||{};\n stats[q.source]=(stats[q.source]||0)+1;\n if(x.json.statusCode!==200||b.error||b.errorCode){const k=q.source+' HTTP '+(x.json.statusCode||'연결 오류')+(x.json.statusCode===200?' / 검색 응답 메시지':'');errors[k]=(errors[k]||0)+1;continue;}\n if(q.source==='YouTube 영상')continue;\n for(const v of (q.source==='Google'?b.organic_results:b.items)||[]){\n  const raw=String(v.link||'');const url=links.get(raw)||raw;\n  if(/^https:\\/\\/www\\.google\\.com\\/goto\\?/i.test(url)){stats['Google 주소 확인 실패']=(stats['Google 주소 확인 실패']||0)+1;continue;}\n  if(!/^https?:\\/\\/[^\\s]+$/i.test(url))continue;\n  collect(q.source,q.query,v.title,v.snippet||v.description,url,v.postdate||v.date);\n }\n}\nconst searchResponses=$('검색 API 호출').all();\nif (!searchResponses.some(item => Number(item.json.statusCode) === 200)) {\n const messages=searchResponses.map(item => String(item.json.error?.message || item.json.error || '')).filter(Boolean);\n const headerError=messages.some(message => /JSON Headers/i.test(message));\n if(headerError) throw Error('검색 API 호출에서 JSON Headers 해석에 실패했습니다.');\n throw Error('검색 API가 HTTP 200 응답을 한 건도 반환하지 않았습니다. 검색 API 호출 노드에서 응답 상태와 API 설정을 확인하세요.');\n}\nconst commentReq=$('댓글 요청 준비').all();\nfor(const [i,x] of $('YouTube 댓글 조회').all().entries()){\n const v=commentReq[i]?.json;if(!v?.id)continue;\n stats['YouTube 댓글 요청']=(stats['YouTube 댓글 요청']||0)+1;\n if(x.json.statusCode!==200){const k='YouTube 댓글 HTTP '+(x.json.statusCode||'연결 오류');errors[k]=(errors[k]||0)+1;continue;}\n for(const item of x.json.body?.items||[]){\n  const c=item.snippet?.topLevelComment;if(!c?.id)continue;\n  collect('YouTube 댓글',v.query,v.title,c.snippet?.textOriginal||c.snippet?.textDisplay,'https://www.youtube.com/watch?v='+v.id+'&lc='+c.id,c.snippet?.publishedAt,true);\n }\n}\nconst cases=[...rows.values()],summary=[];\nfunction row(항목,건수,비율,설명){summary.push({항목,건수,비율,설명});}\nfor(const [label,subset] of [['전체 수집 표본',cases],['일반 검색 표본',cases.filter(x=>x['검색어'].startsWith('일반'))],['검색 문서 표본',cases.filter(x=>x['출처']!=='YouTube 댓글')],['YouTube 댓글 표본',cases.filter(x=>x['출처']==='YouTube 댓글')]]){\n row(label,subset.length,'','URL 중복 정리 후. 댓글 표본에는 관련 영상의 한글 댓글이 포함됩니다.');\n for(const [t] of types){\n  const n=subset.filter(x=>x['사용 패턴 후보'].split(' / ').includes(t)).length;\n  row(label+' · '+t,n,subset.length?(100*n/subset.length).toFixed(1)+'%':'계산 불가','검색 요약·댓글에서 표현이 일치한 후보. 복수 유형 가능.');\n }\n}\nrow('작성일 미확인',cases.filter(x=>x['작성일']==='미확인').length,'','전체 표본에 포함. 발표 전 게시일 확인 필요.');\nfor(const [k,v] of Object.entries({...stats,...errors}))row(k,v,'','요청 또는 제외 건수');\nrow('해석 범위','','','검색·댓글 표본 기준. 제품 이용자 전체의 비율이나 고유 사용자 수로 해석할 수 없습니다. 확정 건수는 원문 검토 후 집계하세요.');\nreturn [{json:{cases,summary,collected_at:new Date().toISOString(),counts:{sample:cases.length},errors}}];\n",
+        "mode": "runOnceForAllItems"
+      }
+    },
+    {
+      "name": "엑셀 다운로드",
+      "id": "5429f63e-d134-40b1-83c3-07dc6d6826de",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1980,
+        250
+      ],
+      "parameters": {
+        "jsCode": "const report=$input.first().json;\n const esc=s=>String(s??'').replace(/[\\x00-\\x08\\x0B\\x0C\\x0E-\\x1F]/g,'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\"/g,'&quot;').replace(/'/g,'&apos;');\n const columns=['작성일','출처','제목·영상','내용','링크','검색어','사용 패턴 후보','근거 표현','최종 검토','최종 유형'];\n const specs=[{name:'표본과 검토',columns,rows:report.cases,widths:[16,22,48,76,50,38,35,52,16,22],linkColumn:4},{name:'조사요약',columns:['항목','건수','비율','설명'],rows:report.summary,widths:[53,12,15,90],linkColumn:-1}];\n const files=[];const put=(name,text)=>files.push({name,data:Buffer.from(text,'utf8')});\n const letter=i=>{let s='';for(i++;i;i=Math.floor((i-1)/26))s=String.fromCharCode(65+(i-1)%26)+s;return s;};\n for(const [index,spec]of specs.entries()){const rows=[spec.columns,...spec.rows.map(r=>spec.columns.map(c=>r[c]??''))],links=[];\n  const xmlRows=rows.map((row,i)=>'<row r=\"'+(i+1)+'\" ht=\"'+(i===0?28:spec.linkColumn<0?46:110)+'\" customHeight=\"1\">'+row.map((value,j)=>{const ref=letter(j)+(i+1),style=i===0?1:j===spec.linkColumn?3:2;if(i&&j===spec.linkColumn&&/^https?:\\/\\//i.test(String(value)))links.push({ref,url:String(value),id:'h'+i});if(typeof value==='number'&&Number.isFinite(value))return '<c r=\"'+ref+'\" s=\"'+style+'\"><v>'+value+'</v></c>';return '<c r=\"'+ref+'\" s=\"'+style+'\" t=\"inlineStr\"><is><t xml:space=\"preserve\">'+esc(String(value).slice(0,32700))+'</t></is></c>';}).join('')+'</row>').join('');\n  const sheet='<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><worksheet xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><dimension ref=\"A1:'+letter(spec.columns.length-1)+rows.length+'\"/><sheetViews><sheetView workbookViewId=\"0\"><pane ySplit=\"1\" topLeftCell=\"A2\" activePane=\"bottomLeft\" state=\"frozen\"/></sheetView></sheetViews><sheetFormatPr defaultRowHeight=\"20\"/><cols>'+spec.widths.map((width,j)=>'<col min=\"'+(j+1)+'\" max=\"'+(j+1)+'\" width=\"'+width+'\" customWidth=\"1\"/>').join('')+'</cols><sheetData>'+xmlRows+'</sheetData><autoFilter ref=\"A1:'+letter(spec.columns.length-1)+rows.length+'\"/>'+(links.length?'<hyperlinks>'+links.map(l=>'<hyperlink ref=\"'+l.ref+'\" r:id=\"'+l.id+'\"/>').join('')+'</hyperlinks>':'')+'</worksheet>';\n  put('xl/worksheets/sheet'+(index+1)+'.xml',sheet);if(links.length)put('xl/worksheets/_rels/sheet'+(index+1)+'.xml.rels','<?xml version=\"1.0\" encoding=\"UTF-8\"?><Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">'+links.map(l=>'<Relationship Id=\"'+l.id+'\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink\" Target=\"'+esc(l.url)+'\" TargetMode=\"External\"/>').join('')+'</Relationships>');\n }\n put('[Content_Types].xml','<?xml version=\"1.0\" encoding=\"UTF-8\"?><Types xmlns=\"http://schemas.openxmlformats.org/package/2006/content-types\"><Default Extension=\"rels\" ContentType=\"application/vnd.openxmlformats-package.relationships+xml\"/><Default Extension=\"xml\" ContentType=\"application/xml\"/><Override PartName=\"/xl/workbook.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml\"/><Override PartName=\"/xl/styles.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml\"/>'+specs.map((_,i)=>'<Override PartName=\"/xl/worksheets/sheet'+(i+1)+'.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml\"/>').join('')+'</Types>');\n put('_rels/.rels','<?xml version=\"1.0\" encoding=\"UTF-8\"?><Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\"><Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument\" Target=\"xl/workbook.xml\"/></Relationships>');\n put('xl/workbook.xml','<?xml version=\"1.0\" encoding=\"UTF-8\"?><workbook xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><sheets>'+specs.map((s,i)=>'<sheet name=\"'+esc(s.name)+'\" sheetId=\"'+(i+1)+'\" r:id=\"rId'+(i+1)+'\"/>').join('')+'</sheets></workbook>');\n put('xl/_rels/workbook.xml.rels','<?xml version=\"1.0\" encoding=\"UTF-8\"?><Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">'+specs.map((_,i)=>'<Relationship Id=\"rId'+(i+1)+'\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet\" Target=\"worksheets/sheet'+(i+1)+'.xml\"/>').join('')+'<Relationship Id=\"styles\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles\" Target=\"styles.xml\"/></Relationships>');\n put('xl/styles.xml','<?xml version=\"1.0\" encoding=\"UTF-8\"?><styleSheet xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><fonts count=\"3\"><font><sz val=\"11\"/><name val=\"맑은 고딕\"/></font><font><b/><color rgb=\"FFFFFFFF\"/><sz val=\"11\"/><name val=\"맑은 고딕\"/></font><font><color rgb=\"FF0563C1\"/><u/><sz val=\"11\"/><name val=\"맑은 고딕\"/></font></fonts><fills count=\"3\"><fill><patternFill patternType=\"none\"/></fill><fill><patternFill patternType=\"gray125\"/></fill><fill><patternFill patternType=\"solid\"><fgColor rgb=\"FF263D4F\"/><bgColor indexed=\"64\"/></patternFill></fill></fills><borders count=\"1\"><border><left/><right/><top/><bottom/><diagonal/></border></borders><cellStyleXfs count=\"1\"><xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\"/></cellStyleXfs><cellXfs count=\"4\"><xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\" xfId=\"0\"/><xf numFmtId=\"0\" fontId=\"1\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyAlignment=\"1\"><alignment vertical=\"center\" wrapText=\"1\"/></xf><xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyAlignment=\"1\"><alignment vertical=\"top\" wrapText=\"1\"/></xf><xf numFmtId=\"0\" fontId=\"2\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyAlignment=\"1\"><alignment vertical=\"top\" wrapText=\"1\"/></xf></cellXfs><cellStyles count=\"1\"><cellStyle name=\"Normal\" xfId=\"0\" builtinId=\"0\"/></cellStyles></styleSheet>');\n const crcTable=Array.from({length:256},(_,n)=>{let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;return c>>>0;});const crc32=data=>{let c=0xFFFFFFFF;for(const byte of data)c=crcTable[(c^byte)&255]^(c>>>8);return (c^0xFFFFFFFF)>>>0;};\n const parts=[],central=[];let offset=0;for(const f of files){const name=Buffer.from(f.name,'utf8'),crc=crc32(f.data),h=Buffer.alloc(30);h.writeUInt32LE(0x04034b50,0);h.writeUInt16LE(20,4);h.writeUInt16LE(0x0800,6);h.writeUInt16LE(0,8);h.writeUInt16LE(0x21,12);h.writeUInt32LE(crc,14);h.writeUInt32LE(f.data.length,18);h.writeUInt32LE(f.data.length,22);h.writeUInt16LE(name.length,26);parts.push(h,name,f.data);const c=Buffer.alloc(46);c.writeUInt32LE(0x02014b50,0);c.writeUInt16LE(20,4);c.writeUInt16LE(20,6);c.writeUInt16LE(0x0800,8);c.writeUInt16LE(0x21,14);c.writeUInt32LE(crc,16);c.writeUInt32LE(f.data.length,20);c.writeUInt32LE(f.data.length,24);c.writeUInt16LE(name.length,28);c.writeUInt32LE(offset,42);central.push(c,name);offset+=h.length+name.length+f.data.length;}\n const directory=Buffer.concat(central),end=Buffer.alloc(22);end.writeUInt32LE(0x06054b50,0);end.writeUInt16LE(files.length,8);end.writeUInt16LE(files.length,10);end.writeUInt32LE(directory.length,12);end.writeUInt32LE(offset,16);const xlsx=Buffer.concat([...parts,directory,end]);const name='lg-lightwave-oven-voc-'+report.collected_at.replace(/[:.]/g,'-')+'.xlsx';\n return [{json:{file_name:name,sample:report.cases.length},binary:{data:{data:xlsx.toString('base64'),mimeType:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',fileName:name,fileExtension:'xlsx'}}}];",
+        "mode": "runOnceForAllItems"
+      }
+    },
+    {
+      "name": "사용 안내",
+      "id": "eef3a3fb-fbcb-4442-9651-35db202ec27a",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        220,
+        -180
+      ],
+      "parameters": {
+        "width": 750,
+        "height": 380,
+        "content": "## LG 광파오븐 사용 패턴 조사\nAPI 키 설정을 채우고 전체 실행합니다. 네이버 기본은 이전에 사용한 NCP Gateway입니다. 개발자센터 키라면 NAVER_AUTH를 NAVER로 변경하세요.\n기본 42회 SerpApi, 84회 네이버, 10회 YouTube 영상 검색과 최대 70회 댓글 조회. 영상당 인기순 최상위 댓글 첫 페이지(최대 100개).\n검색 문서는 제목·검색 요약, 댓글은 최상위 댓글 본문을 분류합니다. 원문 확인 후 후보를 확정하세요. 2021년 이후 검색을 목표로 하며 작성일 미확인은 별도 표시합니다.\n엑셀 다운로드 → Binary → Download"
+      }
+    }
+  ],
+  "connections": {
+    "시작": {
+      "main": [
+        [
+          {
+            "node": "API 키 설정",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "API 키 설정": {
+      "main": [
+        [
+          {
+            "node": "검색 요청 준비",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "검색 요청 준비": {
+      "main": [
+        [
+          {
+            "node": "검색 API 호출",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "검색 API 호출": {
+      "main": [
+        [
+          {
+            "node": "댓글 요청 준비",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "댓글 요청 준비": {
+      "main": [
+        [
+          {
+            "node": "YouTube 댓글 조회",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube 댓글 조회": {
+      "main": [
+        [
+          {
+            "node": "이동 링크 준비",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "이동 링크 준비": {
+      "main": [
+        [
+          {
+            "node": "Google 원문 주소 확인",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google 원문 주소 확인": {
+      "main": [
+        [
+          {
+            "node": "표본 집계",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "표본 집계": {
+      "main": [
+        [
+          {
+            "node": "엑셀 다운로드",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {}
+}
