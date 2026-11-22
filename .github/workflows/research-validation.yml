@@ -141,3 +141,4 @@ jobs:
           else
             echo "아직 병합 대기 중 (state: $state) — 브랜치는 병합 후 수동 정리"
           fi
+# test
